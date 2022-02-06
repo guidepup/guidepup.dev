@@ -5,8 +5,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Guidepup",
   tagline: "Screen-reader driver for automation",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://www.guidepup.dev",
   baseUrl: "/",
+  trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
