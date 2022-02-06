@@ -11,7 +11,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "guidepup",
-  projectName: "guidepup-docs",
+  projectName: "guidepup.dev",
 
   presets: [
     [
@@ -20,7 +20,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/guidpup/guidepup-docs/tree/main/",
+          editUrl: "https://github.com/guidpup/guidepup.dev/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
