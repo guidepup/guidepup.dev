@@ -6,6 +6,7 @@
   flex: 1 0 auto;
   color: #fff;
   background: #1d2c31;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 966px) {
