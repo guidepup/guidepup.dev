@@ -21,7 +21,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/guidpup/guidepup.dev/tree/main/",
+          editUrl: "https://github.com/guidepup/guidepup.dev/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
