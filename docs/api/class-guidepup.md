@@ -6,6 +6,13 @@ title: "Guidepup Library"
 
 Guidepup provides a reliable set of APIs to automate screen-readers through JavaScript.
 
+Current screen-reader support:
+
+- [x] VoiceOver for MacOS
+- [ ] NVDA for Windows (WIP)
+- [ ] VoiceOver on iOS
+- [ ] Talkback on Android
+
 Here's a typical example:
 
 ```ts
