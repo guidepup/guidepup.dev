@@ -53,9 +53,9 @@ Key codes for MacOS.
 
 Modifier keys for MacOS.
 
-## guidepup.macOSquit {#guidepup-macos-quit}
+## guidepup.macOSQuit {#guidepup-macos-quit}
 
-**Type:** &#60;[macOSquit]&#62;
+**Type:** &#60;[macOSQuit]&#62;
 
 Quits a MacOS application if running.
 
@@ -81,7 +81,7 @@ This class can be used to launch VoiceOver.
 [macosapplications]: ./class-macos-applications "MacOSApplications"
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
-[macosquit]: ./class-macos-quit "macOSquit"
+[macosquit]: ./class-macos-quit "macOSQuit"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "VoiceOverKeyCodeCommands"
 [voiceover]: ./class-voiceover "VoiceOver"
