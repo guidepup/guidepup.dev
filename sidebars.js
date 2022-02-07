@@ -4,7 +4,21 @@ const sidebars = {
     {
       type: "category",
       label: "Introduction",
-      items: [{ type: "doc", id: "intro" }],
+      items: [
+        { type: "doc", id: "intro" },
+        { type: "doc", id: "support" },
+        { type: "doc", id: "release" },
+      ],
+      collapsed: false,
+    },
+    {
+      type: "category",
+      label: "Guides",
+      items: [
+        { type: "doc", id: "guides/environment" },
+        { type: "doc", id: "guides/nvda" },
+        { type: "doc", id: "guides/voiceover" },
+      ],
       collapsed: false,
     },
   ],

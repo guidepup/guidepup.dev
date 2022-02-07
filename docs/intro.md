@@ -23,6 +23,10 @@ Setup your environment for screen-reader automation with [`@guidepup/setup`](htt
 npx @guidepup/setup
 ```
 
+For some operating systems, enabling automation of screen-readers is tightly controlled. This CLI handles the setup for your OS.
+
+In some cases manual configuration may be required - checkout these [guides to setup your environment](./guides/environment).
+
 ## Installation {#installation}
 
 Install Guidepup to your project.
