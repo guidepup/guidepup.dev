@@ -4,10 +4,10 @@ title: "ScreenReader"
 
 Base interface for screen-reader classes such as [VoiceOver].
 
-- [`static` ScreenReader.default()](./class-screenreader#screenreader-default)
-- [`static` ScreenReader.detect()](./class-screenreader#screenreader-detect)
 - [screenReader.act([options])](./class-screenreader#screenreader-act)
 - [screenReader.click([options])](./class-screenreader#screenreader-click)
+- [ScreenReader.default()](./class-screenreader#screenreader-default)
+- [ScreenReader.detect()](./class-screenreader#screenreader-detect)
 - [screenReader.interact([options])](./class-screenreader#screenreader-interact)
 - [screenReader.itemText([options])](./class-screenreader#screenreader-item-text)
 - [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
@@ -26,18 +26,6 @@ Base interface for screen-reader classes such as [VoiceOver].
 - [screenReader.cursor](./class-screenreader#screenreader-cursor)
 - [screenReader.keyboard](./class-screenreader#screenreader-keyboard)
 - [screenReader.mouse](./class-screenreader#screenreader-mouse)
-
-## `static` ScreenReader.default() {#screenreader-default}
-
-Detect whether the screen-reader is the default screen reader for the current OS.
-
-**Returns:** &#60;[Promise]<[boolean]>&#62;
-
-## `static` ScreenReader.detect() {#screenreader-detect}
-
-Detect whether the screen-reader is supported for the current OS.
-
-**Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## screenReader.act([options]) {#screenreader-act}
 
@@ -58,6 +46,18 @@ Click the mouse.
 - **Optional:** `options` &#60;[ClickOptions]&#62; Click options.
 
 **Returns:** &#60;[Promise]<[void]>&#62;
+
+## ScreenReader.default() {#screenreader-default}
+
+Detect whether the screen-reader is the default screen reader for the current OS.
+
+**Returns:** &#60;[Promise]<[boolean]>&#62;
+
+## ScreenReader.detect() {#screenreader-detect}
+
+Detect whether the screen-reader is supported for the current OS.
+
+**Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## screenReader.interact([options]) {#screenreader-interact}
 

@@ -18,10 +18,10 @@ const { voiceOver } = require("@guidepup/guidepup");
 })();
 ```
 
-- [`static` VoiceOver.default()](./class-voiceover#voiceover-default)
-- [`static` VoiceOver.detect()](./class-voiceover#voiceover-detect)
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
 - [voiceOver.click([options])](./class-voiceover#voiceover-click)
+- [VoiceOver.default()](./class-voiceover#voiceover-default)
+- [VoiceOver.detect()](./class-voiceover#voiceover-detect)
 - [voiceOver.interact([options])](./class-voiceover#voiceover-interact)
 - [voiceOver.itemText([options])](./class-voiceover#voiceover-item-text)
 - [voiceOver.itemTextLog()](./class-voiceover#voiceover-item-text-log)
@@ -40,18 +40,6 @@ const { voiceOver } = require("@guidepup/guidepup");
 - [voiceOver.cursor](./class-voiceover#voiceover-cursor)
 - [voiceOver.keyboard](./class-voiceover#voiceover-keyboard)
 - [voiceOver.mouse](./class-voiceover#voiceover-mouse)
-
-## `static` VoiceOver.default() {#voiceover-default}
-
-Detect whether VoiceOver is the default screen reader for the current OS.
-
-**Returns:** &#60;[Promise]<[boolean]>&#62;
-
-## `static` VoiceOver.detect() {#voiceover-detect}
-
-Detect whether VoiceOver is supported for the current OS.
-
-**Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## voiceOver.act([options]) {#voiceover-act}
 
@@ -74,6 +62,18 @@ Click the mouse.
 - **Optional:** `options` &#60;[ClickOptions]&#62; Click options.
 
 **Returns:** &#60;[Promise]<[void]>&#62;
+
+## VoiceOver.default() {#voiceover-default}
+
+Detect whether VoiceOver is the default screen reader for the current OS.
+
+**Returns:** &#60;[Promise]<[boolean]>&#62;
+
+## VoiceOver.detect() {#voiceover-detect}
+
+Detect whether VoiceOver is supported for the current OS.
+
+**Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## voiceOver.interact([options]) {#voiceover-interact}
 
