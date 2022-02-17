@@ -16,14 +16,13 @@ Current screen-reader support:
 Here's a typical example:
 
 ```ts
-const { VoiceOver } = require("@guidepup/guidepup");
+const { voiceOver } = require("@guidepup/guidepup");
 
 (async () => {
-  const vo = new VoiceOver();
-  await vo.start();
-  await vo.next();
+  await voiceOver.start();
+  await voiceOver.next();
   // other actions...
-  await vo.stop();
+  await voiceOver.stop();
 })();
 ```
 
@@ -34,7 +33,7 @@ const { VoiceOver } = require("@guidepup/guidepup");
 - [guidepup.macOSQuit](./class-guidepup#guidepup-macos-quit)
 - [guidepup.VoiceOverCommanderCommands](./class-guidepup#guidepup-voiceover-commander-commands)
 - [guidepup.voiceOverKeyCodeCommands](./class-guidepup#guidepup-voiceover-key-code-commands)
-- [guidepup.VoiceOver](./class-guidepup#guidepup-voiceover)
+- [guidepup.voiceOver](./class-guidepup#guidepup-voiceover)
 
 ## guidepup.macOSActivate {#guidepup-macos-activate}
 
@@ -78,11 +77,11 @@ Quits a MacOS application if running.
 
 [Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
-## guidepup.VoiceOver {#guidepup-voiceover}
+## guidepup.voiceOver {#guidepup-voiceover}
 
 **Type:** &#60;[VoiceOver]&#62;
 
-This class can be used to launch VoiceOver.
+This object can be used to launch and control VoiceOver.
 
 [macosactivate]: ./class-macos-activate "macOSActivate"
 [macosapplications]: ./class-macos-applications "MacOSApplications"

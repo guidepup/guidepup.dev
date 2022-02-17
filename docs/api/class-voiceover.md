@@ -4,18 +4,17 @@ title: "VoiceOver"
 
 **Implements:** [ScreenReader]
 
-A VoiceOver instance is created via [`new VoiceOver()`](./class-voiceover).
+A VoiceOver instance can be used to launch and control VoiceOver.
 
 Here's a typical example using a [VoiceOver] instance:
 
 ```ts
-const { VoiceOver } = require("@guidepup/guidepup");
+const { voiceOver } = require("@guidepup/guidepup");
 
 (async () => {
-  const vo = new VoiceOver();
-  await vo.start();
-  await vo.next();
-  await vo.stop();
+  await voiceOver.start();
+  await voiceOver.next();
+  await voiceOver.stop();
 })();
 ```
 

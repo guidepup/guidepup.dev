@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@docusaurus/types": "^2.0.0-beta.15",
-    "@guidepup/guidepup": "^0.12.0",
+    "@guidepup/guidepup": "^0.13.0",
     "@types/node": "^17.0.15"
   }
 }

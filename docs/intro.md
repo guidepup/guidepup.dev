@@ -52,13 +52,12 @@ Create `example.js` (or `example.ts` for TypeScript) to define your screen-reade
 <TabItem value="ts">
 
 ```ts
-import { VoiceOver } from "@guidepup/guidepup";
+import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
-  const vo = new VoiceOver();
-  await vo.start();
-  await vo.next();
-  await vo.stop();
+  await voiceOver.start();
+  await voiceOver.next();
+  await voiceOver.stop();
 })();
 ```
 
@@ -66,13 +65,12 @@ import { VoiceOver } from "@guidepup/guidepup";
 <TabItem value="js">
 
 ```js
-const { VoiceOver } = require("@guidepup/guidepup");
+const { voiceOver } = require("@guidepup/guidepup");
 
 (async () => {
-  const vo = new VoiceOver();
-  await vo.start();
-  await vo.next();
-  await vo.stop();
+  await voiceOver.start();
+  await voiceOver.next();
+  await voiceOver.stop();
 })();
 ```
 
