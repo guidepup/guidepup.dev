@@ -1,9 +1,9 @@
-import { MacOSKeyCodes } from "@guidepup/guidepup";
+import { WindowsModifiers } from "@guidepup/guidepup";
 import { writeFileSync } from "fs";
 
 // TODO: generate header of file
 
-const codes = Object.keys(MacOSKeyCodes)
+const codes = Object.keys(WindowsModifiers)
   .filter((k) => `${parseInt(k)}` !== k)
   .sort()
   .map((k) => `- \`${k}\`\n`)

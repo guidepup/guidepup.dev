@@ -4,8 +4,12 @@ title: "voiceOverKeyCodeCommands"
 
 **Extends:** [object]
 
+**Implements:** &#60;[Record]<[string], [MacOSKeyCodeCommand]>&#62;
+
 [Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
+- [voiceOverKeyCodeCommands.start](./class-voiceover-key-code-commands#key-code-commands-start)
+- [voiceOverKeyCodeCommands.quit](./class-voiceover-key-code-commands#key-code-commands-quit)
 - [voiceOverKeyCodeCommands.toggleLock](./class-voiceover-key-code-commands#key-code-commands-togglelock)
 - [voiceOverKeyCodeCommands.openVoiceOverUtility](./class-voiceover-key-code-commands#key-code-commands-openvoiceoverutility)
 - [voiceOverKeyCodeCommands.openVoiceOverHelpMenu](./class-voiceover-key-code-commands#key-code-commands-openvoiceoverhelpmenu)
@@ -232,6 +236,22 @@ title: "voiceOverKeyCodeCommands"
 - [voiceOverKeyCodeCommands.setWebSpot](./class-voiceover-key-code-commands#key-code-commands-setwebspot)
 - [voiceOverKeyCodeCommands.setSweetSpot](./class-voiceover-key-code-commands#key-code-commands-setsweetspot)
 - [voiceOverKeyCodeCommands.toggleGroupingItemsWithinTable](./class-voiceover-key-code-commands#key-code-commands-togglegroupingitemswithintable)
+
+## voiceOverKeyCodeCommands.start {#key-code-commands-start}
+
+Start VoiceOver.
+
+Equivalent of executing `Command-F5`.
+
+**Type:** &#60;[MacOSKeyCodeCommand]&#62;
+
+## voiceOverKeyCodeCommands.quit {#key-code-commands-quit}
+
+Quit VoiceOver.
+
+Equivalent of executing `Command-F5`.
+
+**Type:** &#60;[MacOSKeyCodeCommand]&#62;
 
 ## voiceOverKeyCodeCommands.toggleLock {#key-code-commands-togglelock}
 
@@ -2043,3 +2063,5 @@ Equivalent of executing `VO-=`.
 
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

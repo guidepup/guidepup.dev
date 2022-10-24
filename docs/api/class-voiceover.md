@@ -274,6 +274,8 @@ VoiceOver mouse APIs.
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
+[macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
+[macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [screenreader]: ./class-screenreader "ScreenReader"
 [voiceover]: ./class-voiceover "VoiceOver"
 [voiceovercaption]: ./class-voiceover-caption "VoiceOverCaption"

@@ -78,7 +78,7 @@ await voiceOverKeyboard.press("Enter");
 
 VoiceOver keyboard commands.
 
-**Returns:** &#60;[Record]<[string], [MacOSKeyCodeCommand]>&#62;
+**Returns:** &#60;[voiceOverKeyCodeCommands]&#62;
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
@@ -87,6 +87,7 @@ VoiceOver keyboard commands.
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [screenreaderkeyboard]: ./class-screenreader-keyboard "ScreenReaderKeyboard"
+[voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "voiceOverKeyCodeCommands"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"
