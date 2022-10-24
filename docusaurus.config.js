@@ -110,7 +110,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Guidepup.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Craig Morten.`,
       },
       prism: {
         theme: lightCodeTheme,
