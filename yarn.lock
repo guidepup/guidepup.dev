@@ -1544,10 +1544,10 @@
     tslib "^2.3.1"
     url-loader "^4.1.1"
 
-"@guidepup/guidepup@^0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@guidepup/guidepup/-/guidepup-0.13.0.tgz#7995ec599283d02a9532c9f79aca2ca3aa2e3c47"
-  integrity sha512-U56KXtxkyZa9m7q9l4et3AtkU+0Z+cYEnF4vA5ZgUbJCfQr66F2Rn04HPhIDDEZ/2PMYP5NsdDONSWu23ESQ4w==
+"@guidepup/guidepup@^0.14.5":
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/@guidepup/guidepup/-/guidepup-0.14.5.tgz#27b3e43edc52b917b0e6a97efbdd236076040654"
+  integrity sha512-Fc8umXbNHwshRY9zvi9Y63KUX4PJNATyRPBjjwMH7GnAR3RaW0knOSt4CBRW+Qs6mLPP7iweCpB14962Un2Eug==
 
 "@hapi/hoek@^9.0.0":
   version "9.2.1"

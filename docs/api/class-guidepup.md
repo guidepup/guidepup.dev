@@ -31,9 +31,13 @@ const { voiceOver } = require("@guidepup/guidepup");
 - [guidepup.MacOSKeyCodes](./class-guidepup#guidepup-macos-key-codes)
 - [guidepup.MacOSModifiers](./class-guidepup#guidepup-macos-modifiers)
 - [guidepup.macOSQuit](./class-guidepup#guidepup-macos-quit)
+- [guidepup.macOSRecord](./class-guidepup#guidepup-macos-record)
+- [guidepup.nvda](./class-guidepup#guidepup-nvda)
+- [guidepup.voiceOver](./class-guidepup#guidepup-voiceover)
 - [guidepup.VoiceOverCommanderCommands](./class-guidepup#guidepup-voiceover-commander-commands)
 - [guidepup.voiceOverKeyCodeCommands](./class-guidepup#guidepup-voiceover-key-code-commands)
-- [guidepup.voiceOver](./class-guidepup#guidepup-voiceover)
+- [guidepup.WindowsKeyCodes](./class-guidepup#guidepup-windows-key-codes)
+- [guidepup.WindowsModifiers](./class-guidepup#guidepup-windows-modifiers)
 
 ## guidepup.macOSActivate {#guidepup-macos-activate}
 
@@ -65,6 +69,24 @@ Modifier keys for MacOS.
 
 Quits a MacOS application if running.
 
+## guidepup.macOSRecord {#guidepup-macos-record}
+
+**Type:** &#60;[macOSRecord]&#62;
+
+Start a screen recording.
+
+## guidepup.nvda {#guidepup-nvda}
+
+**Type:** &#60;[NVDA]&#62;
+
+This object can be used to launch and control NVDA.
+
+## guidepup.voiceOver {#guidepup-voiceover}
+
+**Type:** &#60;[VoiceOver]&#62;
+
+This object can be used to launch and control VoiceOver.
+
 ## guidepup.VoiceOverCommanderCommands {#guidepup-voiceover-commander-commands}
 
 **Type:** &#60;[VoiceOverCommanderCommands]&#62;
@@ -77,17 +99,27 @@ Quits a MacOS application if running.
 
 [Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
-## guidepup.voiceOver {#guidepup-voiceover}
+## guidepup.WindowsKeyCodes {#guidepup-windows-key-codes}
 
-**Type:** &#60;[VoiceOver]&#62;
+**Type:** &#60;[WindowsKeyCodes]&#62;
 
-This object can be used to launch and control VoiceOver.
+Key codes for Windows.
+
+## guidepup.WindowsModifiers {#guidepup-windows-modifiers}
+
+**Type:** &#60;[WindowsModifiers]&#62;
+
+Modifier keys for Windows.
 
 [macosactivate]: ./class-macos-activate "macOSActivate"
 [macosapplications]: ./class-macos-applications "MacOSApplications"
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [macosquit]: ./class-macos-quit "macOSQuit"
+[macosrecord]: ./class-macos-record "macOSRecord"
+[nvda]: ./class-nvda "NVDA"
+[voiceover]: ./class-voiceover "VoiceOver"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "VoiceOverKeyCodeCommands"
-[voiceover]: ./class-voiceover "VoiceOver"
+[windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
+[windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"

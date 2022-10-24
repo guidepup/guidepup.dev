@@ -15,7 +15,7 @@ title: "ClickOptions"
 
 ## clickOptions.clickCount {#click-options-click-count}
 
-**Optional:** Number of times to click the mouse. Defaults to `1`.
+**Optional:** Number of times to click the mouse. One of: `1`, `2`, `3`. Defaults to `1`.
 
 **Type:** &#60;[number]&#62;
 
