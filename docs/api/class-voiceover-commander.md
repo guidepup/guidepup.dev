@@ -2,6 +2,8 @@
 title: "VoiceOverCommander"
 ---
 
+**Contents:**
+
 - [voiceOverCommander.perform(command[, options])](./class-voiceover-commander#voiceover-commander-perform)
 - [voiceOverCommander.commands](./class-voiceover-commander#voiceover-commander-commands)
 

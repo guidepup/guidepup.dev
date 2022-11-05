@@ -17,20 +17,42 @@ const { nvda } = require("@guidepup/guidepup");
 
 This module is currently WIP so the full [ScreenReader] interface has not yet been implemented.
 
-- [NVDA.default()](./class-nvda#nvda-default)
-- [NVDA.detect()](./class-nvda#nvda-detect)
+**Contents:**
+
+- [nvda.default()](./class-nvda#nvda-default)
+- [nvda.detect()](./class-nvda#nvda-detect)
 - [nvda.start()](./class-nvda#nvda-start)
 - [nvda.stop()](./class-nvda#nvda-stop)
 
-## NVDA.default() {#nvda-default}
+## nvda.default() {#nvda-default}
 
 Detect whether NVDA is the default screen reader for the current OS.
 
+```ts
+const { nvda } = require("@guidepup/guidepup");
+
+(async () => {
+  const isNvdaDefaultScreenReader = await nvda.default();
+
+  console.log(isNvdaDefaultScreenReader);
+})();
+```
+
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
-## NVDA.detect() {#nvda-detect}
+## nvda.detect() {#nvda-detect}
 
 Detect whether NVDA is supported for the current OS.
+
+```ts
+const { nvda } = require("@guidepup/guidepup");
+
+(async () => {
+  const isNvdaSupportedScreenReader = await nvda.detect();
+
+  console.log(isNvdaSupportedScreenReader);
+})();
+```
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
@@ -38,11 +60,34 @@ Detect whether NVDA is supported for the current OS.
 
 Turn NVDA on.
 
+```ts
+const { nvda } = require("@guidepup/guidepup");
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+})();
+```
+
 **Returns:** &#60;[Promise]<[void]>&#62;
 
 ## nvda.stop() {#nvda-stop}
 
 Turn NVDA off.
+
+```ts
+const { nvda } = require("@guidepup/guidepup");
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // ... perform some commands.
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 

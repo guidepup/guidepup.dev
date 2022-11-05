@@ -4,6 +4,8 @@ title: "ScreenReaderCaption"
 
 Base interface for screen-reader caption classes such as [VoiceOverCaption].
 
+**Contents:**
+
 - [screenReaderCaption.itemText([options])](./class-screenreader-caption#screenreader-caption-item-text)
 - [screenReaderCaption.itemTextLog()](./class-screenreader-caption#screenreader-caption-item-text-log)
 - [screenReaderCaption.lastSpokenPhrase([options])](./class-screenreader-caption#screenreader-caption-last-spoken-phrase)

@@ -4,5 +4,14 @@ title: "KeyboardCommand"
 
 **Type:** &#60;[KeyCodeCommand] | [KeystrokeCommand]&#62;
 
-[KeyCodeCommand]: ./class-key-code-command "KeyCodeCommand"
-[KeystrokeCommand]: ./class-keystroke-command "KeystrokeCommand"
+Abstract type representing one of: [KeyCodeCommand], [KeystrokeCommand].
+
+For use with keyboard operations which accept either key codes or keystrokes.
+
+See also:
+
+- [MacOSKeyboardCommand]
+
+[keycodecommand]: ./class-key-code-command "KeyCodeCommand"
+[keystrokecommand]: ./class-keystroke-command "KeystrokeCommand"
+[macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"

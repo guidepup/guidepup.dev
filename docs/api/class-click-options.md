@@ -4,18 +4,38 @@ title: "ClickOptions"
 
 **Extends:** [CommandOptions]
 
+Options for click operations.
+
+For example, use with the VoiceOver mouse cursor:
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  await voiceOver.start();
+
+  // Left-click the mouse.
+  await voiceOver.click({ button: "left", clickCount: 1 });
+
+  // Double-right-click the mouse.
+  await voiceOver.click({ button: "right", clickCount: 2 });
+})();
+```
+
+**Contents:**
+
 - [clickOptions.button](./class-click-options#click-options-button)
 - [clickOptions.clickCount](./class-click-options#click-options-lick-count)
 
 ## clickOptions.button {#click-options-button}
 
-**Optional:** Mouse button to click. Defaults to `"left"`.
+**Optional:** Mouse button to click. One of: `"left"`, `"right"`. Defaults to `"left"` if not provided.
 
 **Type:** &#60;[string]&#62;
 
 ## clickOptions.clickCount {#click-options-click-count}
 
-**Optional:** Number of times to click the mouse. One of: `1`, `2`, `3`. Defaults to `1`.
+**Optional:** Number of times to click the mouse. One of: `1`, `2`, `3`. Defaults to `1` if not provided.
 
 **Type:** &#60;[number]&#62;
 

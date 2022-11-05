@@ -8,6 +8,8 @@ title: "voiceOverKeyCodeCommands"
 
 [Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
+**Contents:**
+
 - [voiceOverKeyCodeCommands.start](./class-voiceover-key-code-commands#key-code-commands-start)
 - [voiceOverKeyCodeCommands.quit](./class-voiceover-key-code-commands#key-code-commands-quit)
 - [voiceOverKeyCodeCommands.toggleLock](./class-voiceover-key-code-commands#key-code-commands-togglelock)

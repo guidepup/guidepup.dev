@@ -2,11 +2,27 @@
 title: "macOSRecord"
 ---
 
+**Contents:**
+
 - [`macOSRecord(filePath)`](./class-macos-record#macos-record)
 
 ## macOSRecord(filePath) {#macos-record}
 
-Start a screen recording.
+Start a screen recording on MacOS.
+
+```ts
+import { macOSRecord } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen recording.
+  const stopRecording = macOSRecord("./recordings/screenRecording.mov");
+
+  // ... perform some commands.
+
+  // Stop the screen recording.
+  stopRecording();
+})();
+```
 
 **Parameters:**
 

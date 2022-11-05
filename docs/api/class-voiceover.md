@@ -18,6 +18,8 @@ const { voiceOver } = require("@guidepup/guidepup");
 })();
 ```
 
+**Contents:**
+
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
 - [voiceOver.click([options])](./class-voiceover#voiceover-click)
 - [VoiceOver.default()](./class-voiceover#voiceover-default)

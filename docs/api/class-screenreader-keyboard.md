@@ -4,6 +4,8 @@ title: "ScreenReaderKeyboard"
 
 Base interface for screen-reader classes such as [VoiceOverKeyboard].
 
+**Contents:**
+
 - [screenReaderKeyboard.perform(command, [options])](./class-screenreader-keyboard#screenreader-keyboard-perform)
 - [screenReaderKeyboard.press(key, [options])](./class-screenreader-keyboard#screenreader-keyboard-press)
 - [screenReaderKeyboard.type(text[, options])](./class-screenreader-keyboard#screenreader-keyboard-type)

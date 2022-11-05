@@ -4,6 +4,8 @@ title: "VoiceOverCursor"
 
 **Implements:** [ScreenReaderCursor]
 
+**Contents:**
+
 - [voiceOverCursor.act([options])](./class-voiceover-cursor#voiceover-cursor-act)
 - [voiceOverCursor.interact([options])](./class-voiceover-cursor#voiceover-cursor-interact)
 - [voiceOverCursor.next([options])](./class-voiceover-cursor#voiceover-cursor-next)

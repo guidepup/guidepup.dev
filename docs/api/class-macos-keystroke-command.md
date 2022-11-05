@@ -4,6 +4,36 @@ title: "MacOSKeystrokeCommand"
 
 **Extends:** [KeystrokeCommand]
 
+Object representing a MacOS keystroke command.
+
+For example, use when performing a VoiceOver command:
+
+```ts
+import { voiceOver, MacOSModifiers } from "@guidepup/guidepup";
+
+const poundSymbolKeystrokeCommand = {
+  characters: "3",
+  modifiers: [MacOSModifiers.Alt],
+  description: "A pound symbol",
+  representation: "#",
+};
+
+(async () => {
+  await voiceOver.start();
+
+  // Send a '#' keystroke.
+  await voiceOver.perform(poundSymbolKeystrokeCommand);
+})();
+```
+
+> **Note:** the above is slightly contrived as we could just type a `#` character using:
+>
+> ```ts
+> await voiceOver.type("#")
+> ```
+
+**Contents:**
+
 - [macOSKeystrokeCommand.characters](./class-macos-keystroke-command#keystroke-command-characters)
 - [macOSKeystrokeCommand.description](./class-macos-keystroke-command#keystroke-command-description)
 - [macOSKeystrokeCommand.modifiers](./class-macos-keystroke-command#keystroke-command-modifiers)
@@ -13,7 +43,7 @@ title: "MacOSKeystrokeCommand"
 
 The character(s) to send.
 
-**Type:** &#60;[number] | [Array]<[number]>&#62;
+**Type:** &#60;[string]&#62;
 
 ## macOSKeystrokeCommand.description {#keystroke-command-description}
 
@@ -36,5 +66,4 @@ The character(s) to send.
 [keystrokecommand]: ./class-keystroke-command "KeystrokeCommand"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
-[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type "number"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"

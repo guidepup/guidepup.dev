@@ -4,6 +4,8 @@ title: "VoiceOverKeyboard"
 
 **Implements:** [ScreenReaderKeyboard]
 
+**Contents:**
+
 - [voiceOverKeyboard.perform(command, [options])](./class-voiceover-keyboard#voiceover-keyboard-perform)
 - [voiceOverKeyboard.press(key, [options])](./class-voiceover-keyboard#voiceover-keyboard-press)
 - [voiceOverKeyboard.type(text[, options])](./class-voiceover-keyboard#voiceover-keyboard-type)

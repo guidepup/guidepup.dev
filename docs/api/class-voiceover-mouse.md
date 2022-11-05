@@ -4,6 +4,8 @@ title: "VoiceOverMouse"
 
 **Implements:** [ScreenReaderMouse]
 
+**Contents:**
+
 - [voiceOverMouse.click([options])](./class-voiceover-mouse#voiceover-mouse-click)
 
 ## voiceOverMouse.click([options]) {#voiceover-mouse-click}

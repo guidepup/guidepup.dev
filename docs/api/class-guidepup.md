@@ -21,10 +21,12 @@ const { voiceOver } = require("@guidepup/guidepup");
 (async () => {
   await voiceOver.start();
   await voiceOver.next();
-  // other actions...
+  // ... perform some commands.
   await voiceOver.stop();
 })();
 ```
+
+**Contents:**
 
 - [guidepup.macOSActivate](./class-guidepup#guidepup-macos-activate)
 - [guidepup.MacOSApplications](./class-guidepup#guidepup-macos-applications)

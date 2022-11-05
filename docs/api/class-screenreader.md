@@ -4,6 +4,8 @@ title: "ScreenReader"
 
 Base interface for screen-reader classes such as [VoiceOver].
 
+**Contents:**
+
 - [screenReader.act([options])](./class-screenreader#screenreader-act)
 - [screenReader.click([options])](./class-screenreader#screenreader-click)
 - [ScreenReader.default()](./class-screenreader#screenreader-default)

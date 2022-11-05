@@ -4,6 +4,8 @@ title: "VoiceOverCaption"
 
 **Implements:** [ScreenReaderCaption]
 
+**Contents:**
+
 - [voiceOverCaption.copyLastSpokenPhrase([options])](./class-voiceover-caption#voiceover-caption-copy-last-spoken-phrase)
 - [voiceOverCaption.itemText([options])](./class-voiceover-caption#voiceover-caption-item-text)
 - [voiceOverCaption.itemTextLog()](./class-voiceover-caption#voiceover-caption-item-text-log)

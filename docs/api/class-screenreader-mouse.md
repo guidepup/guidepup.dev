@@ -4,6 +4,8 @@ title: "ScreenReaderMouse"
 
 Base interface for screen-reader classes such as [VoiceOverMouse].
 
+**Contents:**
+
 - [screenReaderMouse.click([options])](./class-screenreader-mouse#screenreader-mouse-click)
 
 ## screenReaderMouse.click([options]) {#screenreader-mouse-click}
