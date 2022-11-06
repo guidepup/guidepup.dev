@@ -12,13 +12,20 @@ For example, use with the VoiceOver mouse cursor:
 import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
 
   // Left-click the mouse.
+  await voiceOver.click();
+
+  // Left-click the mouse using specific options.
   await voiceOver.click({ button: "left", clickCount: 1 });
 
   // Double-right-click the mouse.
   await voiceOver.click({ button: "right", clickCount: 2 });
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
 })();
 ```
 

@@ -17,6 +17,7 @@ const startCommandOptions = {
 };
 
 (async () => {
+  // Start VoiceOver with custom timeout and retries.
   await voiceOver.start(commandOptions);
 })();
 ```

@@ -16,11 +16,15 @@ const safariKeyboardOptions = {
 };
 
 (async () => {
+  // Start VoiceOver
   await voiceOver.start();
 
   // Enter a username on Safari.
   await voiceOver.type("my-username", safariKeyboardOptions);
   await voiceOver.press("Enter", safariKeyboardOptions);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
 })();
 ```
 

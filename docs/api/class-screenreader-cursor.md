@@ -2,7 +2,11 @@
 title: "ScreenReaderCursor"
 ---
 
-Base interface for screen-reader classes such as [VoiceOverCursor].
+Base interface for screen-reader cursor classes.
+
+See also:
+
+- [VoiceOverCursor]
 
 **Contents:**
 

@@ -7,15 +7,20 @@ A NVDA instance can be used to launch and control NVDA.
 Here's a typical example using a [NVDA] instance:
 
 ```ts
-const { nvda } = require("@guidepup/guidepup");
+import { nvda } from "@guidepup/guidepup";
 
 (async () => {
+  // Start NVDA.
   await nvda.start();
+
+  // ... perform some commands.
+
+  // Stop NVDA.
   await nvda.stop();
 })();
 ```
 
-This module is currently WIP so the full [ScreenReader] interface has not yet been implemented.
+This module is currently [WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support) so the full [ScreenReader] interface has not yet been implemented.
 
 **Contents:**
 
@@ -26,10 +31,12 @@ This module is currently WIP so the full [ScreenReader] interface has not yet be
 
 ## nvda.default() {#nvda-default}
 
-Detect whether NVDA is the default screen reader for the current OS.
+Detect whether NVDA is the default screen-reader for the current OS.
+
+Always `false`.
 
 ```ts
-const { nvda } = require("@guidepup/guidepup");
+import { nvda } from "@guidepup/guidepup";
 
 (async () => {
   const isNvdaDefaultScreenReader = await nvda.default();
@@ -42,10 +49,14 @@ const { nvda } = require("@guidepup/guidepup");
 
 ## nvda.detect() {#nvda-detect}
 
-Detect whether NVDA is supported for the current OS.
+Detect whether NVDA is supported for the current OS:
+
+- `true` for Windows
+- `false` for MacOS
+- `false` for Linux
 
 ```ts
-const { nvda } = require("@guidepup/guidepup");
+import { nvda } from "@guidepup/guidepup";
 
 (async () => {
   const isNvdaSupportedScreenReader = await nvda.detect();
@@ -61,11 +72,16 @@ const { nvda } = require("@guidepup/guidepup");
 Turn NVDA on.
 
 ```ts
-const { nvda } = require("@guidepup/guidepup");
+import { nvda } from "@guidepup/guidepup";
 
 (async () => {
   // Start NVDA.
   await nvda.start();
+
+  // ... perform some commands.
+
+  // Stop NVDA.
+  await nvda.stop();
 })();
 ```
 
@@ -76,7 +92,7 @@ const { nvda } = require("@guidepup/guidepup");
 Turn NVDA off.
 
 ```ts
-const { nvda } = require("@guidepup/guidepup");
+import { nvda } from "@guidepup/guidepup";
 
 (async () => {
   // Start NVDA.

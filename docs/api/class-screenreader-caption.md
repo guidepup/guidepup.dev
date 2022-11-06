@@ -2,7 +2,11 @@
 title: "ScreenReaderCaption"
 ---
 
-Base interface for screen-reader caption classes such as [VoiceOverCaption].
+Base interface for screen-reader caption classes.
+
+See also:
+
+- [VoiceOverCaption]
 
 **Contents:**
 

@@ -17,10 +17,14 @@ const moveToNextKeyCodeCommand = {
 };
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
 
   // Move to the next item.
   await voiceOver.perform(moveToNextKeyCodeCommand);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
 })();
 ```
 

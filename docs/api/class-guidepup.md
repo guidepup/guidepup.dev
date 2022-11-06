@@ -9,19 +9,25 @@ Guidepup provides a reliable set of APIs to automate screen-readers through Java
 Current screen-reader support:
 
 - [x] VoiceOver for MacOS
-- [ ] NVDA for Windows (WIP)
+- [ ] NVDA for Windows ([WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support))
 - [ ] VoiceOver on iOS
 - [ ] Talkback on Android
 
 Here's a typical example:
 
 ```ts
-const { voiceOver } = require("@guidepup/guidepup");
+import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
+
+  // Move to the next item.
   await voiceOver.next();
+
   // ... perform some commands.
+
+  // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```

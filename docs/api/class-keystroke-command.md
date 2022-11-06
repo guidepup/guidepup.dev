@@ -17,10 +17,14 @@ const poundSymbolKeystrokeCommand = {
 };
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
 
   // Send a '#' keystroke.
   await voiceOver.perform(poundSymbolKeystrokeCommand);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
 })();
 
 ```

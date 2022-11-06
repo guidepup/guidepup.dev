@@ -8,6 +8,30 @@ title: "voiceOverKeyCodeCommands"
 
 [Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
+Use with the VoiceOver `perform` to invoke the key code command:
+
+```ts
+import { voiceOver, voiceOverKeyCodeCommands } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.perform(voiceOverKeyCodeCommands.moveToNext);
+
+  // Commands also available on the VoiceOver keyboard object.
+  await voiceOver.perform(voiceOver.keyboard.commands.moveToNext);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+See also:
+
+- [VoiceOverKeyboard]
+
 **Contents:**
 
 - [voiceOverKeyCodeCommands.start](./class-voiceover-key-code-commands#key-code-commands-start)
@@ -2064,6 +2088,7 @@ Equivalent of executing `VO-=`.
 **Type:** &#60;[MacOSKeyCodeCommand]&#62;
 
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
+[voiceoverkeyboard]: ./class-voiceover-keyboard "VoiceOverKeyboard"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
 [record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

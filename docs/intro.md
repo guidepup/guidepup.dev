@@ -57,8 +57,13 @@ Create `example.js` (or `example.ts` for TypeScript) to define your screen-reade
 import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
+
+  // Move to the next item.
   await voiceOver.next();
+
+  // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```
@@ -70,8 +75,13 @@ import { voiceOver } from "@guidepup/guidepup";
 const { voiceOver } = require("@guidepup/guidepup");
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
+
+  // Move to the next item.
   await voiceOver.next();
+
+  // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```

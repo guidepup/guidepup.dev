@@ -2,7 +2,11 @@
 title: "ScreenReaderKeyboard"
 ---
 
-Base interface for screen-reader classes such as [VoiceOverKeyboard].
+Base interface for screen-reader keyboard classes.
+
+See also:
+
+- [VoiceOverKeyboard]
 
 **Contents:**
 
