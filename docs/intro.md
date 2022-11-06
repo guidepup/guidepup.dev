@@ -11,6 +11,8 @@ Guidepup is a screen-reader driver for automation.
 
 It aims to provide a reliable set of APIs to automate your screen-reader a11y workflows through JavaScript. Specifically to accommodate the needs of a11y testing and alleviate the overhead of manual testing with screen-readers.
 
+## Contents
+
 - [Environment Setup](./intro#environment)
 - [Installation](./intro#installation)
 - [First Screen-Reader Code](./intro#first)
@@ -55,8 +57,13 @@ Create `example.js` (or `example.ts` for TypeScript) to define your screen-reade
 import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
+
+  // Move to the next item.
   await voiceOver.next();
+
+  // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```
@@ -68,8 +75,13 @@ import { voiceOver } from "@guidepup/guidepup";
 const { voiceOver } = require("@guidepup/guidepup");
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
+
+  // Move to the next item.
   await voiceOver.next();
+
+  // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```
@@ -77,7 +89,7 @@ const { voiceOver } = require("@guidepup/guidepup");
 </TabItem>
 </Tabs>
 
-> Note: this example assumes you are using MacOS!
+> **Note:** this example assumes you are using MacOS!
 
 Now run your code to see an automated screen-reader! 🚀
 

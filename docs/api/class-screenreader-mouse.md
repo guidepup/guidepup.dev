@@ -2,7 +2,13 @@
 title: "ScreenReaderMouse"
 ---
 
-Base interface for screen-reader classes such as [VoiceOverMouse].
+Base interface for screen-reader mouse classes.
+
+See also:
+
+- [VoiceOverMouse]
+
+**Contents:**
 
 - [screenReaderMouse.click([options])](./class-screenreader-mouse#screenreader-mouse-click)
 

@@ -10,7 +10,7 @@ const config = {
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "/img/logo.jpg",
   organizationName: "guidepup",
   projectName: "guidepup.dev",
 
@@ -41,7 +41,7 @@ const config = {
         title: "Guidepup",
         // logo: {
         //   alt: "Guidepup Logo",
-        //   src: "img/logo.svg",
+        //   src: "/img/logo.jpg",
         // },
         items: [
           {
@@ -86,6 +86,10 @@ const config = {
                 label: "Twitter",
                 href: "https://twitter.com/craigmorten",
               },
+              {
+                label: "GitHub Issues",
+                href: "https://github.com/guidepup/guidepup/issues",
+              },
             ],
           },
           {
@@ -106,6 +110,10 @@ const config = {
               {
                 label: "guidepup/setup-action",
                 href: "https://github.com/guidepup/setup-action",
+              },
+              {
+                label: "guidepup/aria-at-tests",
+                href: "https://github.com/guidepup/aria-at-tests",
               },
             ],
           },

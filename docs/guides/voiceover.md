@@ -77,7 +77,7 @@ sudo bash -c 'echo -n "a" > /private/var/db/Accessibility/.VoiceOverAppleScriptE
 defaults write com.apple.VoiceOver4/default SCREnableAppleScript -bool true
 ```
 
-> Note: for the `.VoiceOverAppleScriptEnabled` file to be created you must first disable SIP. This can only be performed whilst in Recovery Mode. Please refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details.
+> **Note:** for the `.VoiceOverAppleScriptEnabled` file to be created you must first disable SIP. This can only be performed whilst in Recovery Mode. Please refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details.
 
 ### Allow App Automation
 
@@ -88,4 +88,4 @@ Please refer to the following examples of how to update the TCC.db for your desi
 - [actions/virtual-environments](https://github.com/actions/virtual-environments/blob/main/images/macos/provision/configuration/configure-tccdb-macos11.sh) - GitHub Actions TCC.db setup
 - [CircleCI-Public/macos-orb](https://github.com/CircleCI-Public/macos-orb/blob/main/src/commands/add-uitest-permissions.yml) - CircleCI MacOS Orb TCC.db setup
 
-> Note: for system TCC.db updates you must first disable SIP. This can only be performed whilst in Recovery Mode. Please refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details.
+> **Note:** for system TCC.db updates you must first disable SIP. This can only be performed whilst in Recovery Mode. Please refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details.
