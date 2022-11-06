@@ -44,7 +44,7 @@ npm i @guidepup/playwright @playwright/test
 npx playwright install webkit
 ```
 
-## Create Playwright Config File (#playwright)
+## Create Playwright Config File {#playwright}
 
 To tell Playwright how we want to run our tests we create a `playwright.config.js` (or `playwright.config.ts` for TypeScript) file for our configuration.
 
@@ -266,7 +266,7 @@ npx playwright test
 
 You should observe something similar to below:
 
-![Gif of Playwright controlled Safari browser being driven with VoiceOver. Announcements read: "heading level 2, Latest commit", "heading level 2, Git stats", "You are currently on a heading level 2.", "heading level 2, Files", "You are currently on a heading level 2.", "heading level 2, link, README.md", "heading level 1, Guidepup"](/img/playwright-voiceover.gif)
+![Gif of Playwright controlled Safari browser being driven with VoiceOver. Announcements read: heading level 2, Latest commit, heading level 2, Git stats, You are currently on a heading level 2., heading level 2, Files, You are currently on a heading level 2., heading level 2, link, README.md, heading level 1, Guidepup](/img/playwright-voiceover.gif)
 
 With a terminal output of:
 
