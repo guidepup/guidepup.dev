@@ -4,6 +4,30 @@ title: "MacOSKeyCodes"
 
 Key codes for MacOS.
 
+For example, use when performing a VoiceOver command:
+
+```ts
+import { voiceOver, MacOSKeyCodes, MacOSModifiers } from "@guidepup/guidepup";
+
+const moveToNextKeyCodeCommand = {
+  keyCode: MacOSKeyCodes.ArrowRight,
+  modifiers: [MacOSModifiers.Control, MacOSModifiers.Option],
+};
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.perform(moveToNextKeyCodeCommand);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+List of all key code accessors:
+
 - `Add`
 - `Alt`
 - `AltLeft`
@@ -125,7 +149,7 @@ Key codes for MacOS.
 - `Up`
 - `VolumeDown`
 - `VolumeUp`
-- `" "`
+- `" "` (don't include the quotes)
 - `'`
 - `,`
 - `-`

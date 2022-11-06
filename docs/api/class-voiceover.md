@@ -9,14 +9,21 @@ A VoiceOver instance can be used to launch and control VoiceOver.
 Here's a typical example using a [VoiceOver] instance:
 
 ```ts
-const { voiceOver } = require("@guidepup/guidepup");
+import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
+  // Start VoiceOver.
   await voiceOver.start();
+
+  // Move to the next item.
   await voiceOver.next();
+
+  // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```
+
+**Contents:**
 
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
 - [voiceOver.click([options])](./class-voiceover#voiceover-click)
@@ -47,6 +54,24 @@ Perform the default action for the item in the VoiceOver cursor.
 
 Equivalent of executing `VO-Space bar`.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Perform the default action for the item.
+  await voiceOver.act();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Parameters:**
 
 - **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
@@ -57,6 +82,27 @@ Equivalent of executing `VO-Space bar`.
 
 Click the mouse.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Left-click the mouse.
+  await voiceOver.click();
+
+  // Left-click the mouse using specific options.
+  await voiceOver.click({ button: "left", clickCount: 1 });
+
+  // Double-right-click the mouse.
+  await voiceOver.click({ button: "right", clickCount: 2 });
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Parameters:**
 
 - **Optional:** `options` &#60;[ClickOptions]&#62; Click options.
@@ -65,13 +111,41 @@ Click the mouse.
 
 ## VoiceOver.default() {#voiceover-default}
 
-Detect whether VoiceOver is the default screen reader for the current OS.
+Detect whether VoiceOver is the default screen-reader for the current OS:
+
+- `false` for Windows
+- `true` for MacOS
+- `false` for Linux
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  const isVoiceOverDefaultScreenReader = await voiceOver.default();
+
+  console.log(isVoiceOverDefaultScreenReader);
+})();
+```
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## VoiceOver.detect() {#voiceover-detect}
 
 Detect whether VoiceOver is supported for the current OS.
+
+- `false` for Windows
+- `true` for MacOS
+- `false` for Linux
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  const isVoiceOverSupportedScreenReader = await voiceOver.detect();
+
+  console.log(isVoiceOverSupportedScreenReader);
+})();
+```
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
@@ -80,6 +154,24 @@ Detect whether VoiceOver is supported for the current OS.
 Interact with the item under the VoiceOver cursor.
 
 Equivalent of executing `VO-Shift-Down Arrow`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Interact with the item.
+  await voiceOver.interact();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
 
 **Parameters:**
 
@@ -91,6 +183,26 @@ Equivalent of executing `VO-Shift-Down Arrow`.
 
 Get the text of the item in the VoiceOver cursor.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Get the text (if any) for the item currently in focus by the VoiceOver
+  // cursor.
+  const itemText = await voiceOver.itemText();
+  console.log(itemText);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Parameters:**
 
 - **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
@@ -101,11 +213,51 @@ Get the text of the item in the VoiceOver cursor.
 
 Get the log of all visited item text for this VoiceOver instance.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move through several items.
+  for (let i = 0; i < 10; i++) {
+    await voiceOver.next();
+  }
+
+  // Get the text (if any) for all the items visited by the VoiceOver cursor.
+  const itemTextLog = voiceOver.itemTextLog();
+  console.log(itemTextLog);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Returns:** &#60;[Array]<[string]>&#62; The item text log.
 
 ## voiceOver.lastSpokenPhrase([options]) {#voiceover-last-spoken-phrase}
 
 Get the last spoken phrase.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Get the phrase spoken by VoiceOver from moving to the next item above.
+  const lastSpokenPhrase = await voiceOver.lastSpokenPhrase();
+  console.log(lastSpokenPhrase);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
 
 **Parameters:**
 
@@ -119,6 +271,21 @@ Move the VoiceOver cursor to the next location.
 
 Equivalent of executing `VO-Right Arrow`.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Parameters:**
 
 - **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
@@ -128,6 +295,41 @@ Equivalent of executing `VO-Right Arrow`.
 ## voiceOver.perform(command[, options]) {#voiceover-perform}
 
 Perform a VoiceOver command.
+
+The command can be a [MacOSKeyCodeCommand], [MacOSKeystrokeCommand], or [VoiceOverCommanderCommands].
+
+```ts
+import {
+  voiceOver,
+  voiceOverKeyCodeCommands,
+  VoiceOverCommanderCommands,
+} from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.perform(voiceOverKeyCodeCommands.moveToNext);
+
+  // Type using a custom keystroke command.
+  await voiceOver.perform({ characters: "my-username" });
+
+  // Keyboard commands also available on the VoiceOver keyboard object.
+  await voiceOver.perform(
+    voiceOver.keyboard.commands.performDefaultActionForItem
+  );
+
+  // Move down using the VoiceOver Commander.
+  await voiceOver.perform(VoiceOverCommanderCommands.MOVE_DOWN);
+
+  // Commands also available on the VoiceOver Commander object.
+  await voiceOver.perform(voiceOver.commander.commands.MOVE_DOWN);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
 
 **Parameters:**
 
@@ -158,11 +360,23 @@ Holding down `Shift` will type the text that corresponds to the `key` in the upp
 If `key` is a single character, it is case-sensitive, so the values `a` and `A` will generate different respective
 texts.
 
-Shortcuts such as `key: "Control+f"` or `key: "Control+Shift+f"` are supported as well. When specified with the
+Shortcuts such as `key: "Command+f"` or `key: "Command+Shift+f"` are supported as well. When specified with the
 modifier, modifier is pressed and being held while the subsequent key is being pressed.
 
+
 ```ts
-await voiceOver.press("Control+f");
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Open a find text modal.
+  await voiceOver.press("Command+f");
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
 ```
 
 **Parameters:**
@@ -178,6 +392,21 @@ Move the VoiceOver cursor to the previous location.
 
 Equivalent of executing `VO-Left Arrow`.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous item.
+  await voiceOver.previous();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Parameters:**
 
 - **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
@@ -188,11 +417,46 @@ Equivalent of executing `VO-Left Arrow`.
 
 Get the log of all spoken phrases for this VoiceOver instance.
 
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move through several items.
+  for (let i = 0; i < 10; i++) {
+    await voiceOver.next();
+  }
+
+  // Get the phrase spoken by VoiceOver from moving through the items above.
+  const spokenPhraseLog = voiceOver.spokenPhraseLog();
+  console.log(spokenPhraseLog);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 **Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
 
 ## voiceOver.start([options]) {#voiceover-start}
 
 Turn VoiceOver on.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // ... perform some commands.
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
 
 **Parameters:**
 
@@ -203,6 +467,20 @@ Turn VoiceOver on.
 ## voiceOver.stop([options]) {#voiceover-stop}
 
 Turn VoiceOver off.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // ... perform some commands.
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
 
 **Parameters:**
 
@@ -215,6 +493,26 @@ Turn VoiceOver off.
 Stop interacting with the current item.
 
 Equivalent of executing `VO-Shift-Up Arrow`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Interact with the item.
+  await voiceOver.interact();
+
+  // ... perform some commands.
+
+  // Stop interacting with the item.
+  await voiceOver.stopInteracting();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
 
 **Parameters:**
 
@@ -229,8 +527,19 @@ Type text into the focused item.
 To press a special key, like `Control` or `ArrowDown`, use [`voiceOver.press(key[, options])`](./class-voiceover#voiceover-press).
 
 ```ts
-await voiceOver.type("my-username");
-await voiceOver.press("Enter");
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Type a username and key Enter.
+  await voiceOver.type("my-username");
+  await voiceOver.press("Enter");
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
 ```
 
 **Parameters:**
@@ -274,7 +583,9 @@ VoiceOver mouse APIs.
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
+[macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
+[macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [screenreader]: ./class-screenreader "ScreenReader"
 [voiceover]: ./class-voiceover "VoiceOver"

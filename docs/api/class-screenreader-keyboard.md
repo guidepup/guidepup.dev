@@ -2,7 +2,13 @@
 title: "ScreenReaderKeyboard"
 ---
 
-Base interface for screen-reader classes such as [VoiceOverKeyboard].
+Base interface for screen-reader keyboard classes.
+
+See also:
+
+- [VoiceOverKeyboard]
+
+**Contents:**
 
 - [screenReaderKeyboard.perform(command, [options])](./class-screenreader-keyboard#screenreader-keyboard-perform)
 - [screenReaderKeyboard.press(key, [options])](./class-screenreader-keyboard#screenreader-keyboard-press)

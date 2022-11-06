@@ -6,6 +6,7 @@ const sidebars = {
       label: "Introduction",
       items: [
         { type: "doc", id: "intro" },
+        { type: "doc", id: "example" },
         { type: "doc", id: "support" },
         { type: "doc", id: "release" },
       ],

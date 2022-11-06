@@ -2,7 +2,13 @@
 title: "ScreenReader"
 ---
 
-Base interface for screen-reader classes such as [VoiceOver].
+Base interface for screen-reader classes.
+
+See also:
+
+- [VoiceOver]
+
+**Contents:**
 
 - [screenReader.act([options])](./class-screenreader#screenreader-act)
 - [screenReader.click([options])](./class-screenreader#screenreader-click)
@@ -49,7 +55,7 @@ Click the mouse.
 
 ## ScreenReader.default() {#screenreader-default}
 
-Detect whether the screen-reader is the default screen reader for the current OS.
+Detect whether the screen-reader is the default screen-reader for the current OS.
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
