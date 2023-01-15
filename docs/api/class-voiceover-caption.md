@@ -27,7 +27,7 @@ const voiceOverCaption = voiceOver.caption;
 
 Copy the last spoken phrase to the Clipboard (also called the "Pasteboard").
 
-This command is specific to the VoiceOver screen-reader.
+This command is specific to the VoiceOver screen reader.
 
 ```ts
 import { voiceOver } from "@guidepup/guidepup";
@@ -168,7 +168,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 Save the last spoken phrase and the crash log to a file on the desktop for troubleshooting.
 
-This command is specific to the VoiceOver screen-reader.
+This command is specific to the VoiceOver screen reader.
 
 ```ts
 import { voiceOver } from "@guidepup/guidepup";

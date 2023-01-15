@@ -2,7 +2,7 @@
 title: "ScreenReaderCaption"
 ---
 
-Base interface for screen-reader caption classes.
+Base interface for screen reader caption classes.
 
 See also:
 
@@ -17,7 +17,7 @@ See also:
 
 ## screenReaderCaption.itemText([options]) {#screenreader-caption-item-text}
 
-Get the text of the item in the screen-reader cursor.
+Get the text of the item in the screen reader cursor.
 
 **Parameters:**
 
@@ -27,7 +27,7 @@ Get the text of the item in the screen-reader cursor.
 
 ## screenReaderCaption.itemTextLog() {#screenreader-caption-item-text-log}
 
-Get the log of all visited item text for this screen-reader instance.
+Get the log of all visited item text for this screen reader instance.
 
 **Returns:** &#60;[Array]<[string]>&#62; The item text log.
 
@@ -43,7 +43,7 @@ Get the last spoken phrase.
 
 ## screenReaderCaption.spokenPhraseLog() {#screenreader-caption-spoken-phrase-log}
 
-Get the log of all spoken phrases for this screen-reader instance.
+Get the log of all spoken phrases for this screen reader instance.
 
 **Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
 

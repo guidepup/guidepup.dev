@@ -6,12 +6,10 @@ title: "Guidepup Library"
 
 Guidepup provides a reliable set of APIs to automate screen-readers through JavaScript.
 
-Current screen-reader support:
+Current screen reader support:
 
-- [x] VoiceOver for MacOS
-- [ ] NVDA for Windows ([WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support))
-- [ ] VoiceOver on iOS
-- [ ] Talkback on Android
+- VoiceOver for MacOS
+- NVDA for Windows ([WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support))
 
 Here's a typical example:
 
@@ -105,7 +103,7 @@ This object can be used to launch and control VoiceOver.
 
 **Type:** &#60;[voiceOverKeyCodeCommands]&#62;
 
-[Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
+[Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
 ## guidepup.WindowsKeyCodes {#guidepup-windows-key-codes}
 

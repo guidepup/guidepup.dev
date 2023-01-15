@@ -21,7 +21,7 @@ const voiceOverCommander = voiceOver.commander;
 
 Perform a VoiceOver commander command.
 
-This command is specific to the VoiceOver screen-reader.
+This command is specific to the VoiceOver screen reader.
 
 ```ts
 import { voiceOver, VoiceOverCommanderCommands } from "@guidepup/guidepup";

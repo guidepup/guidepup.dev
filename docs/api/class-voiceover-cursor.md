@@ -213,7 +213,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 Takes a screenshot of the item focussed in the VoiceOver cursor and returns the path to screenshot file.
 
-This command is specific to the VoiceOver screen-reader.
+This command is specific to the VoiceOver screen reader.
 
 ```ts
 import { voiceOver } from "@guidepup/guidepup";

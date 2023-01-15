@@ -2,7 +2,7 @@
 title: "ScreenReaderKeyboard"
 ---
 
-Base interface for screen-reader keyboard classes.
+Base interface for screen reader keyboard classes.
 
 See also:
 
@@ -17,11 +17,11 @@ See also:
 
 ## screenReaderKeyboard.perform(command[, options]) {#screenreader-keyboard-perform}
 
-Perform a screen-reader keyboard command.
+Perform a screen reader keyboard command.
 
 **Parameters:**
 
-- `command` &#60;[KeyboardCommand]&#62; Screen-reader command to execute.
+- `command` &#60;[KeyboardCommand]&#62; Screen reader command to execute.
 - **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[void]>&#62;
@@ -78,7 +78,7 @@ await screenReaderKeyboard.press("Enter");
 
 ## screenReaderKeyboard.commands {#screenreader-keyboard-commands}
 
-Screen-reader keyboard commands.
+Screen reader keyboard commands.
 
 **Returns:** &#60;[Record]<[string], [KeyboardCommand]>&#62;
 

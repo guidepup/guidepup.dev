@@ -1,10 +1,75 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+// const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+// Original: https://github.com/dracula/visual-studio-code
+const accessibleDarkTheme = {
+  plain: {
+    color: "#F8F8F2",
+    backgroundColor: "#282A36",
+  },
+  styles: [
+    {
+      types: ["prolog", "constant", "builtin"],
+      style: {
+        color: "rgb(189, 147, 249)",
+      },
+    },
+    {
+      types: ["inserted", "function"],
+      style: {
+        color: "rgb(80, 250, 123)",
+      },
+    },
+    {
+      types: ["deleted"],
+      style: {
+        color: "rgb(255, 85, 85)",
+      },
+    },
+    {
+      types: ["changed"],
+      style: {
+        color: "rgb(255, 184, 108)",
+      },
+    },
+    {
+      types: ["punctuation", "symbol"],
+      style: {
+        color: "rgb(248, 248, 242)",
+      },
+    },
+    {
+      types: ["string", "char", "tag", "selector"],
+      style: {
+        color: "rgb(255, 121, 198)",
+      },
+    },
+    {
+      types: ["keyword", "variable"],
+      style: {
+        color: "rgb(189, 147, 249)",
+        fontStyle: "italic",
+      },
+    },
+    {
+      types: ["comment"],
+      style: {
+        color: "#a8b6ed",
+      },
+    },
+    {
+      types: ["attr-name"],
+      style: {
+        color: "rgb(241, 250, 140)",
+      },
+    },
+  ],
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Guidepup",
-  tagline: "Screen-reader driver for automation",
+  tagline: "Screen reader driver for test automation",
   url: "https://www.guidepup.dev",
   baseUrl: "/",
   trailingSlash: false,
@@ -122,7 +187,7 @@ const config = {
       },
       prism: {
         theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        darkTheme: accessibleDarkTheme,
       },
     }),
 };

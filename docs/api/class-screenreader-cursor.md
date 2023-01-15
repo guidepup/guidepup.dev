@@ -2,7 +2,7 @@
 title: "ScreenReaderCursor"
 ---
 
-Base interface for screen-reader cursor classes.
+Base interface for screen reader cursor classes.
 
 See also:
 
@@ -18,7 +18,7 @@ See also:
 
 ## screenReaderCursor.act([options]) {#screenreader-cursor-act}
 
-Perform the default action for the item in the screen-reader cursor.
+Perform the default action for the item in the screen reader cursor.
 
 **Parameters:**
 
@@ -28,7 +28,7 @@ Perform the default action for the item in the screen-reader cursor.
 
 ## screenReaderCursor.interact([options]) {#screenreader-cursor-interact}
 
-Interact with the item under the screen-reader cursor.
+Interact with the item under the screen reader cursor.
 
 **Parameters:**
 
@@ -38,7 +38,7 @@ Interact with the item under the screen-reader cursor.
 
 ## screenReaderCursor.next([options]) {#screenreader-cursor-next}
 
-Move the screen-reader cursor to the next location.
+Move the screen reader cursor to the next location.
 
 **Parameters:**
 
@@ -48,7 +48,7 @@ Move the screen-reader cursor to the next location.
 
 ## screenReaderCursor.previous([options]) {#screenreader-cursor-previous}
 
-Move the screen-reader cursor to the previous location.
+Move the screen reader cursor to the previous location.
 
 **Parameters:**
 
