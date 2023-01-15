@@ -6,7 +6,7 @@ title: "voiceOverKeyCodeCommands"
 
 **Implements:** &#60;[Record]<[string], [MacOSKeyCodeCommand]>&#62;
 
-[Key code commands for the VoiceOver screen-reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
+[Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
 Use with the VoiceOver `perform` to invoke the key code command:
 

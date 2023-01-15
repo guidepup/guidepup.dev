@@ -31,7 +31,7 @@ This module is currently [WIP](https://github.com/guidepup/guidepup/compare/feat
 
 ## nvda.default() {#nvda-default}
 
-Detect whether NVDA is the default screen-reader for the current OS.
+Detect whether NVDA is the default screen reader for the current OS.
 
 Always `false`.
 

@@ -26,7 +26,7 @@ The test will check that you can navigate to the first heading on the [GitHub RE
 
 ## Environment Setup {#environment}
 
-Setup your environment for screen-reader automation with [`@guidepup/setup`](https://github.com/guidepup/setup).
+Setup your environment for screen reader automation with [`@guidepup/setup`](https://github.com/guidepup/setup).
 
 ```bash
 npx @guidepup/setup
@@ -112,7 +112,7 @@ We also setup some retry configuration, and let Playwright know that we want to 
 
 ## Create Test File {#test}
 
-Create a `voiceOver.spec.js` (or `voiceOver.spec.ts` for TypeScript) to define your screen-reader code.
+Create a `voiceOver.spec.js` (or `voiceOver.spec.ts` for TypeScript) to define your screen reader code.
 
 <Tabs
 groupId="js-flavor"
@@ -152,17 +152,17 @@ test.describe("Playwright VoiceOver", () => {
     page,
     voiceOver,
   }) => {
-    // Navigate to Guidepup GitHub page 🎉
+    // Navigate to Guidepup GitHub page
     await page.goto("https://github.com/guidepup/guidepup", {
       waitUntil: "domcontentloaded",
     });
 
-    // Wait for page to be ready and interact 🙌
+    // Wait for page to be ready and interact
     await expect(page.locator('header[role="banner"]')).toBeVisible();
     await waitForWebContentAnnouncement(voiceOver);
     await voiceOver.interact();
 
-    // Move across the page menu to the Guidepup heading using VoiceOver 🔎
+    // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
       await voiceOver.perform(voiceOver.keyboard.commands.findNextHeading);
     }
@@ -209,17 +209,17 @@ test.describe("Playwright VoiceOver", () => {
     page,
     voiceOver,
   }) => {
-    // Navigate to Guidepup GitHub page 🎉
+    // Navigate to Guidepup GitHub page
     await page.goto("https://github.com/guidepup/guidepup", {
       waitUntil: "domcontentloaded",
     });
 
-    // Wait for page to be ready and interact 🙌
+    // Wait for page to be ready and interact
     await expect(page.locator('header[role="banner"]')).toBeVisible();
     await waitForWebContentAnnouncement(voiceOver);
     await voiceOver.interact();
 
-    // Move across the page menu to the Guidepup heading using VoiceOver 🔎
+    // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
       await voiceOver.perform(voiceOver.keyboard.commands.findNextHeading);
     }
@@ -258,7 +258,7 @@ Create this `itemTextSnapshot.json` file with the following contents:
 
 ## Run Test {#run}
 
-Now run your code to see an automated screen-reader test 🚀
+Now run your code to see an automated screen reader test.
 
 ```bash
 npx playwright test

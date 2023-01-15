@@ -31,8 +31,8 @@ function HomepageMain() {
 export default function Home() {
   return (
     <Layout
-      title="Screen-reader driver for automation"
-      description="Screen-reader driver for automation"
+      title="Screen reader driver for test automation"
+      description="Screen reader driver for test automation"
     >
       <HomepageMain />
     </Layout>

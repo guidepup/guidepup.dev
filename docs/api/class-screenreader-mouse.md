@@ -2,7 +2,7 @@
 title: "ScreenReaderMouse"
 ---
 
-Base interface for screen-reader mouse classes.
+Base interface for screen reader mouse classes.
 
 See also:
 

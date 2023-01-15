@@ -111,7 +111,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 ## VoiceOver.default() {#voiceover-default}
 
-Detect whether VoiceOver is the default screen-reader for the current OS:
+Detect whether VoiceOver is the default screen reader for the current OS:
 
 - `false` for Windows
 - `true` for MacOS

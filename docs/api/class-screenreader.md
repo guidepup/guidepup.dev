@@ -2,7 +2,7 @@
 title: "ScreenReader"
 ---
 
-Base interface for screen-reader classes.
+Base interface for screen reader classes.
 
 See also:
 
@@ -35,7 +35,7 @@ See also:
 
 ## screenReader.act([options]) {#screenreader-act}
 
-Perform the default action for the item in the screen-reader cursor.
+Perform the default action for the item in the screen reader cursor.
 
 **Parameters:**
 
@@ -55,19 +55,19 @@ Click the mouse.
 
 ## ScreenReader.default() {#screenreader-default}
 
-Detect whether the screen-reader is the default screen-reader for the current OS.
+Detect whether the screen reader is the default screen reader for the current OS.
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## ScreenReader.detect() {#screenreader-detect}
 
-Detect whether the screen-reader is supported for the current OS.
+Detect whether the screen reader is supported for the current OS.
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
 ## screenReader.interact([options]) {#screenreader-interact}
 
-Interact with the item under the screen-reader cursor.
+Interact with the item under the screen reader cursor.
 
 **Parameters:**
 
@@ -77,7 +77,7 @@ Interact with the item under the screen-reader cursor.
 
 ## screenReader.itemText([options]) {#screenreader-item-text}
 
-Get the text of the item in the screen-reader cursor.
+Get the text of the item in the screen reader cursor.
 
 **Parameters:**
 
@@ -87,7 +87,7 @@ Get the text of the item in the screen-reader cursor.
 
 ## screenReader.itemTextLog() {#screenreader-item-text-log}
 
-Get the log of all visited item text for this screen-reader instance.
+Get the log of all visited item text for this screen reader instance.
 
 **Returns:** &#60;[Array]<[string]>&#62; The item text log.
 
@@ -103,7 +103,7 @@ Get the last spoken phrase.
 
 ## screenReader.next([options]) {#screenreader-next}
 
-Move the screen-reader cursor to the next location.
+Move the screen reader cursor to the next location.
 
 **Parameters:**
 
@@ -113,11 +113,11 @@ Move the screen-reader cursor to the next location.
 
 ## screenReader.perform(command[, options]) {#screenreader-perform}
 
-Perform a screen-reader command.
+Perform a screen reader command.
 
 **Parameters:**
 
-- `command` &#60;[any]&#62; Screen-reader command to execute.
+- `command` &#60;[any]&#62; Screen reader command to execute.
 - **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[void]>&#62;
@@ -156,7 +156,7 @@ await screenReader.press("Control+f");
 
 ## screenReader.previous([options]) {#screenreader-previous}
 
-Move the screen-reader cursor to the previous location.
+Move the screen reader cursor to the previous location.
 
 **Parameters:**
 
@@ -166,13 +166,13 @@ Move the screen-reader cursor to the previous location.
 
 ## screenReader.spokenPhraseLog() {#screenreader-spoken-phrase-log}
 
-Get the log of all spoken phrases for this screen-reader instance.
+Get the log of all spoken phrases for this screen reader instance.
 
 **Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
 
 ## screenReader.start([options]) {#screenreader-start}
 
-Turn the screen-reader on.
+Turn the screen reader on.
 
 **Parameters:**
 
@@ -182,7 +182,7 @@ Turn the screen-reader on.
 
 ## screenReader.stop([options]) {#screenreader-stop}
 
-Turn the screen-reader off.
+Turn the screen reader off.
 
 **Parameters:**
 
@@ -220,25 +220,25 @@ await screenReader.press("Enter");
 
 ## screenReader.caption {#screenreader-caption}
 
-Screen-reader caption APIs.
+Screen reader caption APIs.
 
 **Type:** &#60;[ScreenReaderCaption]&#62;
 
 ## screenReader.cursor {#screenreader-cursor}
 
-Screen-reader cursor APIs.
+Screen reader cursor APIs.
 
 **Type:** &#60;[ScreenReaderCursor]&#62;
 
 ## screenReader.keyboard {#screenreader-keyboard}
 
-Screen-reader keyboard APIs.
+Screen reader keyboard APIs.
 
 **Type:** &#60;[ScreenReaderKeyboard]&#62;
 
 ## screenReader.mouse {#screenreader-mouse}
 
-Screen-reader mouse APIs.
+Screen reader mouse APIs.
 
 **Type:** &#60;[ScreenReaderMouse]&#62;
 

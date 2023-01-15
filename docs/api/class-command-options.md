@@ -4,7 +4,7 @@ title: "CommandOptions"
 
 **Extends:** [object]
 
-Generic options for the majority of screen-reader operations.
+Generic options for the majority of screen reader operations.
 
 For example, use when starting VoiceOver:
 
