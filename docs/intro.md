@@ -9,35 +9,55 @@ import TabItem from '@theme/TabItem';
 
 Guidepup is a screen reader driver for test automation.
 
-It aims to provide a reliable set of APIs to automate your screen reader a11y workflows through JavaScript. Specifically to accommodate the needs of a11y testing and alleviate the overhead of manual testing with screen-readers.
+It aims to provide a reliable set of APIs to automate your screen reader a11y workflows through JavaScript. Specifically to accommodate the needs of a11y testing and alleviate the overhead of manual testing with screen readers.
 
 ## Contents
 
 - [Environment Setup](./intro#environment)
 - [Installation](./intro#installation)
-- [First Screen-Reader Code](./intro#first)
+- [First Screen Reader Code](./intro#first)
 
 ## Environment Setup {#environment}
 
-Setup your environment for screen reader automation with [`@guidepup/setup`](https://github.com/guidepup/setup).
+Setup your environment for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
 
 ```bash
 npx @guidepup/setup
 ```
 
-For some operating systems, enabling automation of screen-readers is tightly controlled. This CLI handles the setup for your OS.
+For some operating systems, enabling automation of screen readers is tightly controlled. This CLI handles the setup for your OS.
 
-In some cases manual configuration may be required - checkout these [guides to setup your environment](./guides/environment).
+For further information checkout this [guide to setup your environment](./guides/environment).
 
 ## Installation {#installation}
 
-Install Guidepup to your project.
+Install Guidepup to your project:
+
+<Tabs
+  groupId="pm-flavor"
+  defaultValue="yarn"
+  values={[
+    {label: 'Yarn', value: 'yarn'},
+    {label: 'NPM', value: 'npm'}
+  ]
+}>
+<TabItem value="yarn">
 
 ```bash
-npm i @guidepup/guidepup
+yarn add @guidepup/guidepup
 ```
 
-## First Screen-Reader Code {#first}
+</TabItem>
+<TabItem value="npm">
+
+```bash
+npm install @guidepup/guidepup
+```
+
+</TabItem>
+</Tabs>
+
+## First Screen Reader Code {#first}
 
 Let's automate VoiceOver for MacOS.
 

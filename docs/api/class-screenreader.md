@@ -15,9 +15,9 @@ See also:
 - [ScreenReader.default()](./class-screenreader#screenreader-default)
 - [ScreenReader.detect()](./class-screenreader#screenreader-detect)
 - [screenReader.interact([options])](./class-screenreader#screenreader-interact)
-- [screenReader.itemText([options])](./class-screenreader#screenreader-item-text)
+- [screenReader.itemText()](./class-screenreader#screenreader-item-text)
 - [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
-- [screenReader.lastSpokenPhrase([options])](./class-screenreader#screenreader-last-spoken-phrase)
+- [screenReader.lastSpokenPhrase()](./class-screenreader#screenreader-last-spoken-phrase)
 - [screenReader.next([options])](./class-screenreader#screenreader-next)
 - [screenReader.perform(command, [options])](./class-screenreader#screenreader-perform)
 - [screenReader.press(key, [options])](./class-screenreader#screenreader-press)
@@ -75,13 +75,9 @@ Interact with the item under the screen reader cursor.
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## screenReader.itemText([options]) {#screenreader-item-text}
+## screenReader.itemText() {#screenreader-item-text}
 
 Get the text of the item in the screen reader cursor.
-
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[string]>&#62; The item's text.
 
@@ -89,15 +85,11 @@ Get the text of the item in the screen reader cursor.
 
 Get the log of all visited item text for this screen reader instance.
 
-**Returns:** &#60;[Array]<[string]>&#62; The item text log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The item text log.
 
-## screenReader.lastSpokenPhrase([options]) {#screenreader-last-spoken-phrase}
+## screenReader.lastSpokenPhrase() {#screenreader-last-spoken-phrase}
 
 Get the last spoken phrase.
-
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[string]>&#62; The last spoken phrase.
 
@@ -168,7 +160,7 @@ Move the screen reader cursor to the previous location.
 
 Get the log of all spoken phrases for this screen reader instance.
 
-**Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The spoken phrase log.
 
 ## screenReader.start([options]) {#screenreader-start}
 

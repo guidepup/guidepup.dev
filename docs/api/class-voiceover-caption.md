@@ -17,9 +17,9 @@ const voiceOverCaption = voiceOver.caption;
 **Contents:**
 
 - [voiceOverCaption.copyLastSpokenPhrase([options])](./class-voiceover-caption#voiceover-caption-copy-last-spoken-phrase)
-- [voiceOverCaption.itemText([options])](./class-voiceover-caption#voiceover-caption-item-text)
+- [voiceOverCaption.itemText()](./class-voiceover-caption#voiceover-caption-item-text)
 - [voiceOverCaption.itemTextLog()](./class-voiceover-caption#voiceover-caption-item-text-log)
-- [voiceOverCaption.lastSpokenPhrase([options])](./class-voiceover-caption#voiceover-caption-last-spoken-phrase)
+- [voiceOverCaption.lastSpokenPhrase()](./class-voiceover-caption#voiceover-caption-last-spoken-phrase)
 - [voiceOverCaption.saveLastSpokenPhrase([options])](./class-voiceover-caption#voiceover-caption-save-last-spoken-phrase)
 - [voiceOverCaption.spokenPhraseLog()](./class-voiceover-caption#voiceover-caption-spoken-phrase-log)
 
@@ -54,7 +54,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## voiceOverCaption.itemText([options]) {#voiceover-caption-item-text}
+## voiceOverCaption.itemText() {#voiceover-caption-item-text}
 
 Get the text of the item in the VoiceOver cursor.
 
@@ -86,10 +86,6 @@ import { voiceOver } from "@guidepup/guidepup";
 >
 > See [VoiceOver] for further details.
 
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
-
 **Returns:** &#60;[Promise]<[string]>&#62; The item's text.
 
 ## voiceOverCaption.itemTextLog() {#voiceover-caption-item-text-log}
@@ -109,7 +105,7 @@ import { voiceOver } from "@guidepup/guidepup";
   }
 
   // Get the text (if any) for all the items visited by the VoiceOver cursor.
-  const itemTextLog = voiceOver.caption.itemTextLog();
+  const itemTextLog = await voiceOver.caption.itemTextLog();
   console.log(itemTextLog);
 
   // Stop VoiceOver.
@@ -120,14 +116,14 @@ import { voiceOver } from "@guidepup/guidepup";
 > **Note:** we recommend using the equivalent method on the base VoiceOver class instead of using this method on the VoiceOver caption class:
 >
 > ```ts
-> const itemTextLog = voiceOver.itemTextLog();
+> const itemTextLog = await voiceOver.itemTextLog();
 > ```
 >
 > See [VoiceOver] for further details.
 
-**Returns:** &#60;[Array]<[string]>&#62; The item text log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The item text log.
 
-## voiceOverCaption.lastSpokenPhrase([options]) {#voiceover-caption-last-spoken-phrase}
+## voiceOverCaption.lastSpokenPhrase() {#voiceover-caption-last-spoken-phrase}
 
 Get the last spoken phrase.
 
@@ -157,10 +153,6 @@ import { voiceOver } from "@guidepup/guidepup";
 > ```
 >
 > See [VoiceOver] for further details.
-
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[string]>&#62; The last spoken phrase.
 
@@ -212,7 +204,7 @@ import { voiceOver } from "@guidepup/guidepup";
   }
 
   // Get the phrase spoken by VoiceOver from moving through the items above.
-  const spokenPhraseLog = voiceOver.caption.spokenPhraseLog();
+  const spokenPhraseLog = await voiceOver.caption.spokenPhraseLog();
   console.log(spokenPhraseLog);
 
   // Stop VoiceOver.
@@ -223,12 +215,12 @@ import { voiceOver } from "@guidepup/guidepup";
 > **Note:** we recommend using the equivalent method on the base VoiceOver class instead of using this method on the VoiceOver caption class:
 >
 > ```ts
-> const spokenPhraseLog = voiceOver.spokenPhraseLog();
+> const spokenPhraseLog = await voiceOver.spokenPhraseLog();
 > ```
 >
 > See [VoiceOver] for further details.
 
-**Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The spoken phrase log.
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [screenreadercaption]: ./class-screenreader-caption "ScreenReaderCaption"
