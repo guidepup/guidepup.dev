@@ -17,8 +17,6 @@ const sidebars = {
       label: "Guides",
       items: [
         { type: "doc", id: "guides/environment" },
-        { type: "doc", id: "guides/nvda" },
-        { type: "doc", id: "guides/voiceover" },
       ],
       collapsed: false,
     },

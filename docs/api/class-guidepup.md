@@ -4,12 +4,12 @@ title: "Guidepup Library"
 
 # Guidepup Library
 
-Guidepup provides a reliable set of APIs to automate screen-readers through JavaScript.
+Guidepup provides a reliable set of APIs to automate screen readers through JavaScript.
 
-Current screen reader support:
+Guidepup current supports the following screen readers:
 
-- VoiceOver for MacOS
-- NVDA for Windows ([WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support))
+- VoiceOver for MacOS - Full Support
+- NVDA for Windows - [WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support)
 
 Here's a typical example:
 

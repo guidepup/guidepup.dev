@@ -26,7 +26,7 @@ The test will check that you can navigate to the first heading on the [GitHub RE
 
 ## Environment Setup {#environment}
 
-Setup your environment for screen reader automation with [`@guidepup/setup`](https://github.com/guidepup/setup).
+Setup your environment for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
 
 ```bash
 npx @guidepup/setup
@@ -34,19 +34,43 @@ npx @guidepup/setup
 
 ## Installation {#installation}
 
-Install the Guidepup Playwright module to your project as well as the necessary Playwright dependencies.
+Install the Guidepup Playwright module to your project as well as the necessary Playwright dependencies:
+
+<Tabs
+  groupId="pm-flavor"
+  defaultValue="yarn"
+  values={[
+    {label: 'Yarn', value: 'yarn'},
+    {label: 'NPM', value: 'npm'}
+  ]
+}>
+<TabItem value="yarn">
 
 ```bash
 # Install dependencies.
-npm i @guidepup/playwright @playwright/test
+yarn add @guidepup/playwright @playwright/test
 
 # Install WebKit browser for Playwright.
 npx playwright install webkit
 ```
 
+</TabItem>
+<TabItem value="npm">
+
+```bash
+# Install dependencies.
+npm install @guidepup/playwright @playwright/test
+
+# Install WebKit browser for Playwright.
+npx playwright install webkit
+```
+
+</TabItem>
+</Tabs>
+
 ## Create Playwright Config File {#playwright}
 
-To tell Playwright how we want to run our tests we create a `playwright.config.js` (or `playwright.config.ts` for TypeScript) file for our configuration.
+To tell Playwright how we want to run our tests we create a `playwright.config.js` (or `playwright.config.ts` for TypeScript) file for our configuration:
 
 <Tabs
 groupId="js-flavor"
@@ -65,8 +89,8 @@ import { devices, PlaywrightTestConfig } from "@playwright/test";
 const config: PlaywrightTestConfig = {
   ...voConfig,
   reportSlowTests: null,
-  timeout: 2 * 60 * 1000,
-  retries: 3,
+  timeout: 3 * 60 * 1000,
+  retries: 2,
   projects: [
     {
       name: "webkit",
@@ -88,8 +112,8 @@ const { devices } = require("@playwright/test");
 const config = {
   ...voConfig,
   reportSlowTests: null,
-  timeout: 2 * 60 * 1000,
-  retries: 3,
+  timeout: 3 * 60 * 1000,
+  retries: 2,
   projects: [
     {
       name: "webkit",
@@ -112,7 +136,7 @@ We also setup some retry configuration, and let Playwright know that we want to 
 
 ## Create Test File {#test}
 
-Create a `voiceOver.spec.js` (or `voiceOver.spec.ts` for TypeScript) to define your screen reader code.
+Create a `voiceOver.spec.js` (or `voiceOver.spec.ts` for TypeScript) to define your screen reader code:
 
 <Tabs
 groupId="js-flavor"
@@ -129,24 +153,6 @@ import { voTest as test } from "@guidepup/playwright";
 import { expect } from "@playwright/test";
 import itemTextSnapshot from "./itemTextSnapshot.json";
 
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function waitForWebContentAnnouncement(voiceOver) {
-  for (let i = 0; i < 10; i++) {
-    const itemText = await voiceOver.itemText();
-
-    if (itemText?.includes("web content")) {
-      return;
-    }
-
-    await delay(50);
-  }
-
-  throw new Error("web content could not be found");
-}
-
 test.describe("Playwright VoiceOver", () => {
   test("I can navigate the Guidepup Github page", async ({
     page,
@@ -159,7 +165,6 @@ test.describe("Playwright VoiceOver", () => {
 
     // Wait for page to be ready and interact
     await expect(page.locator('header[role="banner"]')).toBeVisible();
-    await waitForWebContentAnnouncement(voiceOver);
     await voiceOver.interact();
 
     // Move across the page menu to the Guidepup heading using VoiceOver
@@ -172,7 +177,7 @@ test.describe("Playwright VoiceOver", () => {
     const itemTextLog = await voiceOver.itemTextLog();
 
     for (const expectedItem of itemTextSnapshot) {
-      expect(itemTextLog).toContain(expectedItem);
+      expect(!!itemTextLog.find(log => log.includes(expectedItem))).toBe(true);
     }
   });
 });
@@ -186,24 +191,6 @@ const { voTest as test } = require("@guidepup/playwright");
 const { expect } = require("@playwright/test");
 const itemTextSnapshot = require("./itemTextSnapshot.json");
 
-function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function waitForWebContentAnnouncement(voiceOver) {
-  for (let i = 0; i < 10; i++) {
-    const itemText = await voiceOver.itemText();
-
-    if (itemText?.includes("web content")) {
-      return;
-    }
-
-    await delay(50);
-  }
-
-  throw new Error("web content could not be found");
-}
-
 test.describe("Playwright VoiceOver", () => {
   test("I can navigate the Guidepup Github page", async ({
     page,
@@ -216,7 +203,6 @@ test.describe("Playwright VoiceOver", () => {
 
     // Wait for page to be ready and interact
     await expect(page.locator('header[role="banner"]')).toBeVisible();
-    await waitForWebContentAnnouncement(voiceOver);
     await voiceOver.interact();
 
     // Move across the page menu to the Guidepup heading using VoiceOver
@@ -229,7 +215,7 @@ test.describe("Playwright VoiceOver", () => {
     const itemTextLog = await voiceOver.itemTextLog();
 
     for (const expectedItem of itemTextSnapshot) {
-      expect(itemTextLog).toContain(expectedItem);
+      expect(!!itemTextLog.find(log => log.includes(expectedItem))).toBe(true);
     }
   });
 });

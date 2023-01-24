@@ -10,18 +10,14 @@ See also:
 
 **Contents:**
 
-- [screenReaderCaption.itemText([options])](./class-screenreader-caption#screenreader-caption-item-text)
+- [screenReaderCaption.itemText()](./class-screenreader-caption#screenreader-caption-item-text)
 - [screenReaderCaption.itemTextLog()](./class-screenreader-caption#screenreader-caption-item-text-log)
-- [screenReaderCaption.lastSpokenPhrase([options])](./class-screenreader-caption#screenreader-caption-last-spoken-phrase)
+- [screenReaderCaption.lastSpokenPhrase()](./class-screenreader-caption#screenreader-caption-last-spoken-phrase)
 - [screenReaderCaption.spokenPhraseLog()](./class-screenreader-caption#screenreader-caption-spoken-phrase-log)
 
-## screenReaderCaption.itemText([options]) {#screenreader-caption-item-text}
+## screenReaderCaption.itemText() {#screenreader-caption-item-text}
 
 Get the text of the item in the screen reader cursor.
-
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[string]>&#62; The item's text.
 
@@ -29,15 +25,11 @@ Get the text of the item in the screen reader cursor.
 
 Get the log of all visited item text for this screen reader instance.
 
-**Returns:** &#60;[Array]<[string]>&#62; The item text log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The item text log.
 
-## screenReaderCaption.lastSpokenPhrase([options]) {#screenreader-caption-last-spoken-phrase}
+## screenReaderCaption.lastSpokenPhrase() {#screenreader-caption-last-spoken-phrase}
 
 Get the last spoken phrase.
-
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[string]>&#62; The last spoken phrase.
 
@@ -45,7 +37,7 @@ Get the last spoken phrase.
 
 Get the log of all spoken phrases for this screen reader instance.
 
-**Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The spoken phrase log.
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [voiceovercaption]: ./class-voiceover-caption "VoiceOverCaption"

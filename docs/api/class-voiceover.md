@@ -30,9 +30,9 @@ import { voiceOver } from "@guidepup/guidepup";
 - [VoiceOver.default()](./class-voiceover#voiceover-default)
 - [VoiceOver.detect()](./class-voiceover#voiceover-detect)
 - [voiceOver.interact([options])](./class-voiceover#voiceover-interact)
-- [voiceOver.itemText([options])](./class-voiceover#voiceover-item-text)
+- [voiceOver.itemText()](./class-voiceover#voiceover-item-text)
 - [voiceOver.itemTextLog()](./class-voiceover#voiceover-item-text-log)
-- [voiceOver.lastSpokenPhrase([options])](./class-voiceover#voiceover-last-spoken-phrase)
+- [voiceOver.lastSpokenPhrase()](./class-voiceover#voiceover-last-spoken-phrase)
 - [voiceOver.next([options])](./class-voiceover#voiceover-next)
 - [voiceOver.perform(command, [options])](./class-voiceover#voiceover-perform)
 - [voiceOver.press(key, [options])](./class-voiceover#voiceover-press)
@@ -179,7 +179,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## voiceOver.itemText([options]) {#voiceover-item-text}
+## voiceOver.itemText() {#voiceover-item-text}
 
 Get the text of the item in the VoiceOver cursor.
 
@@ -203,10 +203,6 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
-
 **Returns:** &#60;[Promise]<[string]>&#62; The item's text.
 
 ## voiceOver.itemTextLog() {#voiceover-item-text-log}
@@ -226,7 +222,7 @@ import { voiceOver } from "@guidepup/guidepup";
   }
 
   // Get the text (if any) for all the items visited by the VoiceOver cursor.
-  const itemTextLog = voiceOver.itemTextLog();
+  const itemTextLog = await voiceOver.itemTextLog();
   console.log(itemTextLog);
 
   // Stop VoiceOver.
@@ -234,9 +230,9 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Array]<[string]>&#62; The item text log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The item text log.
 
-## voiceOver.lastSpokenPhrase([options]) {#voiceover-last-spoken-phrase}
+## voiceOver.lastSpokenPhrase() {#voiceover-last-spoken-phrase}
 
 Get the last spoken phrase.
 
@@ -258,10 +254,6 @@ import { voiceOver } from "@guidepup/guidepup";
   await voiceOver.stop();
 })();
 ```
-
-**Parameters:**
-
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
 
 **Returns:** &#60;[Promise]<[string]>&#62; The last spoken phrase.
 
@@ -430,7 +422,7 @@ import { voiceOver } from "@guidepup/guidepup";
   }
 
   // Get the phrase spoken by VoiceOver from moving through the items above.
-  const spokenPhraseLog = voiceOver.spokenPhraseLog();
+  const spokenPhraseLog = await voiceOver.spokenPhraseLog();
   console.log(spokenPhraseLog);
 
   // Stop VoiceOver.
@@ -438,7 +430,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Array]<[string]>&#62; The spoken phrase log.
+**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The spoken phrase log.
 
 ## voiceOver.start([options]) {#voiceover-start}
 

@@ -27,6 +27,6 @@
   display: flex;
 }
 
-nav, footer {
+nav, footer, a.button {
   --ifm-link-decoration: none;
 }
