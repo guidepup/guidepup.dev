@@ -25,10 +25,13 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Contents:**
 
+- [voiceOver.commanderCommands](./class-voiceover#voiceover-commander-commands)
+- [voiceOver.keyboardCommands](./class-voiceover#voiceover-keyboard-commands)
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
 - [voiceOver.click([options])](./class-voiceover#voiceover-click)
-- [VoiceOver.default()](./class-voiceover#voiceover-default)
-- [VoiceOver.detect()](./class-voiceover#voiceover-detect)
+- [voiceOver.copyLastSpokenPhrase([options])](./class-voiceover#voiceover-copy-last-spoken-phrase)
+- [voiceOver.default()](./class-voiceover#voiceover-default)
+- [voiceOver.detect()](./class-voiceover#voiceover-detect)
 - [voiceOver.interact([options])](./class-voiceover#voiceover-interact)
 - [voiceOver.itemText()](./class-voiceover#voiceover-item-text)
 - [voiceOver.itemTextLog()](./class-voiceover#voiceover-item-text-log)
@@ -37,16 +40,59 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.perform(command, [options])](./class-voiceover#voiceover-perform)
 - [voiceOver.press(key, [options])](./class-voiceover#voiceover-press)
 - [voiceOver.previous([options])](./class-voiceover#voiceover-previous)
+- [voiceOver.saveLastSpokenPhrase([options])](./class-voiceover#voiceover-save-last-spoken-phrase)
 - [voiceOver.spokenPhraseLog()](./class-voiceover#voiceover-spoken-phrase-log)
 - [voiceOver.start([options])](./class-voiceover#voiceover-start)
 - [voiceOver.stop([options])](./class-voiceover#voiceover-stop)
 - [voiceOver.stopInteracting([options])](./class-voiceover#voiceover-stop-interacting)
+- [voiceOver.takeScreenshot([options])](./class-voiceover#voiceover-take-screenshot)
 - [voiceOver.type(text[, options])](./class-voiceover#voiceover-type)
-- [voiceOver.caption](./class-voiceover#voiceover-caption)
-- [voiceOver.commander](./class-voiceover#voiceover-commander)
-- [voiceOver.cursor](./class-voiceover#voiceover-cursor)
-- [voiceOver.keyboard](./class-voiceover#voiceover-keyboard)
-- [voiceOver.mouse](./class-voiceover#voiceover-mouse)
+
+## voiceOver.commanderCommands {#voiceover-commands}
+
+Getter for all VoiceOver commander commands.
+
+Use with the VoiceOver `perform` command to invoke a Commander action:
+
+```ts
+import { voiceOve } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move down.
+  await voiceOver.perform(voiceOver.commanderCommands.MOVE_DOWN);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Returns:** &#60;[VoiceOverCommanderCommands]&#62;
+
+## voiceOver.keyboardCommands {#voiceover-keyboard-commands}
+
+Getter for all VoiceOver keyboard commands.
+
+Use with the VoiceOver `perform` command to invoke a keyboard action:
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.perform(voiceOver.keyboardCommands.moveToNext);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Returns:** &#60;[voiceOverKeyCodeCommands]&#62;
 
 ## voiceOver.act([options]) {#voiceover-act}
 
@@ -109,7 +155,38 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## VoiceOver.default() {#voiceover-default}
+## voiceOver.copyLastSpokenPhrase([options]) {#voiceover-copy-last-spoken-phrase}
+
+Copy the last spoken phrase to the Clipboard (also called the "Pasteboard").
+
+This command is specific to the VoiceOver screen reader.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Copy the phrase spoken by VoiceOver from moving to the next item above to
+  // the Clipboard.
+  await voiceOver.copyLastSpokenPhrase();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
+
+**Returns:** &#60;[Promise]<[void]>&#62;
+
+## voiceOver.default() {#voiceover-default}
 
 Detect whether VoiceOver is the default screen reader for the current OS:
 
@@ -129,7 +206,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[boolean]>&#62;
 
-## VoiceOver.detect() {#voiceover-detect}
+## voiceOver.detect() {#voiceover-detect}
 
 Detect whether VoiceOver is supported for the current OS.
 
@@ -301,22 +378,16 @@ import {
   // Start VoiceOver.
   await voiceOver.start();
 
-  // Move to the next item.
-  await voiceOver.perform(voiceOverKeyCodeCommands.moveToNext);
-
   // Type using a custom keystroke command.
   await voiceOver.perform({ characters: "my-username" });
 
-  // Keyboard commands also available on the VoiceOver keyboard object.
+  // Keyboard commands available on the VoiceOver instance.
   await voiceOver.perform(
-    voiceOver.keyboard.commands.performDefaultActionForItem
+    voiceOver.keyboardCommands.performDefaultActionForItem
   );
 
-  // Move down using the VoiceOver Commander.
-  await voiceOver.perform(VoiceOverCommanderCommands.MOVE_DOWN);
-
-  // Commands also available on the VoiceOver Commander object.
-  await voiceOver.perform(voiceOver.commander.commands.MOVE_DOWN);
+  // Commander commands available on the VoiceOver instance.
+  await voiceOver.perform(voiceOver.commanderCommands.MOVE_DOWN);
 
   // Stop VoiceOver.
   await voiceOver.stop();
@@ -393,6 +464,37 @@ import { voiceOver } from "@guidepup/guidepup";
 
   // Move to the previous item.
   await voiceOver.previous();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
+
+**Returns:** &#60;[Promise]<[void]>&#62;
+
+## voiceOver.saveLastSpokenPhrase([options]) {#voiceover-save-last-spoken-phrase}
+
+Save the last spoken phrase and the crash log to a file on the desktop for troubleshooting.
+
+This command is specific to the VoiceOver screen reader.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Save the phrase spoken by VoiceOver from moving to the next item above to
+  // a file on the desktop.
+  await voiceOver.saveLastSpokenPhrase();
 
   // Stop VoiceOver.
   await voiceOver.stop();
@@ -512,6 +614,37 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
+## voiceOver.takeScreenshot([options]) {#voiceover-take-screenshot}
+
+Takes a screenshot of the item focussed in the VoiceOver cursor and returns the path to screenshot file.
+
+This command is specific to the VoiceOver screen reader.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // Take a screenshot of the item focussed in the VoiceOver cursor.
+  const screenshotFile = await voiceOver.takeScreenshot();
+  console.log(screenshotFile);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
+
+**Returns:** &#60;[Promise]<[string]>&#62; The path to the screenshot file.
+
 ## voiceOver.type(text[, options]) {#voiceover-type}
 
 Type text into the focused item.
@@ -541,36 +674,6 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## voiceOver.caption {#voiceover-caption}
-
-VoiceOver caption APIs.
-
-**Type:** &#60;[VoiceOverCaption]&#62;
-
-## voiceOver.commander {#voiceover-commander}
-
-VoiceOver commander APIs.
-
-**Type:** &#60;[VoiceOverCommander]&#62;
-
-## voiceOver.cursor {#voiceover-cursor}
-
-VoiceOver cursor APIs.
-
-**Type:** &#60;[VoiceOverCursor]&#62;
-
-## voiceOver.keyboard {#voiceover-keyboard}
-
-VoiceOver keyboard APIs.
-
-**Type:** &#60;[VoiceOverKeyboard]&#62;
-
-## voiceOver.mouse {#voiceover-mouse}
-
-VoiceOver mouse APIs.
-
-**Type:** &#60;[VoiceOverMouse]&#62;
-
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
@@ -581,12 +684,8 @@ VoiceOver mouse APIs.
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [screenreader]: ./class-screenreader "ScreenReader"
 [voiceover]: ./class-voiceover "VoiceOver"
-[voiceovercaption]: ./class-voiceover-caption "VoiceOverCaption"
-[voiceovercommander]: ./class-voiceover-commander "VoiceOverCommander"
-[voiceovercursor]: ./class-voiceover-cursor "VoiceOverCursor"
-[voiceoverkeyboard]: ./class-voiceover-keyboard "VoiceOverKeyboard"
-[voiceovermouse]: ./class-voiceover-mouse "VoiceOverMouse"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"
+[voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "voiceOverKeyCodeCommands"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"

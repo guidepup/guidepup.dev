@@ -2,6 +2,8 @@
 title: "NVDA"
 ---
 
+**Implements:** [ScreenReader]
+
 A NVDA instance can be used to launch and control NVDA.
 
 Here's a typical example using a [NVDA] instance:
@@ -13,21 +15,44 @@ import { nvda } from "@guidepup/guidepup";
   // Start NVDA.
   await nvda.start();
 
-  // ... perform some commands.
+  // Move to the next item.
+  await nvda.next();
 
   // Stop NVDA.
   await nvda.stop();
 })();
 ```
 
-This module is currently [WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support) so the full [ScreenReader] interface has not yet been implemented.
-
 **Contents:**
 
+- [nvda.keyboardCommands](./class-nvda#nvda-keyboard-commands)
 - [nvda.default()](./class-nvda#nvda-default)
 - [nvda.detect()](./class-nvda#nvda-detect)
 - [nvda.start()](./class-nvda#nvda-start)
 - [nvda.stop()](./class-nvda#nvda-stop)
+
+## nvda.keyboardCommands {#nvda-keyboard-commands}
+
+Getter for all NVDA keyboard commands.
+
+Use with the NVDA `perform` command to invoke a keyboard action:
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next item.
+  await nvda.perform(nvda.keyboardCommands.moveToNext);
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Returns:** &#60;[NVDAKeyCodeCommands]&#62;
 
 ## nvda.default() {#nvda-default}
 
@@ -107,8 +132,9 @@ import { nvda } from "@guidepup/guidepup";
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-[screenreader]: ./class-screenreader "ScreenReader"
 [nvda]: ./class-nvda "NVDA"
+[nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
+[screenreader]: ./class-screenreader "ScreenReader"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"

@@ -169,7 +169,7 @@ test.describe("Playwright VoiceOver", () => {
 
     // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
-      await voiceOver.perform(voiceOver.keyboard.commands.findNextHeading);
+      await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
     }
 
     // Assert that we've ended up where we expected and what we were told on
@@ -207,7 +207,7 @@ test.describe("Playwright VoiceOver", () => {
 
     // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
-      await voiceOver.perform(voiceOver.keyboard.commands.findNextHeading);
+      await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
     }
 
     // Assert that we've ended up where we expected and what we were told on
