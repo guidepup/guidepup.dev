@@ -7,26 +7,19 @@ Collection of [VoiceOver Commander](https://support.apple.com/en-gb/guide/voiceo
 Use with the VoiceOver `perform` command to invoke a Commander action:
 
 ```ts
-import { voiceOver, VoiceOverCommanderCommands } from "@guidepup/guidepup";
+import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
   // Start VoiceOver.
   await voiceOver.start();
 
   // Move down.
-  await voiceOver.perform(VoiceOverCommanderCommands.MOVE_DOWN);
-
-  // Commands also available on the VoiceOver Commander object.
-  await voiceOver.perform(voiceOver.commander.commands.MOVE_DOWN);
+  await voiceOver.perform(voiceOver.commanderCommands.MOVE_DOWN);
 
   // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```
-
-See also:
-
-- [VoiceOverCommander]
 
 Available Commander commands are listed below:
 
@@ -229,5 +222,3 @@ enum VoiceOverCommanderCommands {
   TOGGLE_WEB_NAVIGATION_DOM_OR_GROUP = "toggle web navigation dom or group",
 }
 ```
-
-[voiceovercommander]: ./class-voiceover-commander "VoiceOverCommander"

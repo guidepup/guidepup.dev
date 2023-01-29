@@ -18,19 +18,12 @@ import { voiceOver, voiceOverKeyCodeCommands } from "@guidepup/guidepup";
   await voiceOver.start();
 
   // Move to the next item.
-  await voiceOver.perform(voiceOverKeyCodeCommands.moveToNext);
-
-  // Commands also available on the VoiceOver keyboard object.
-  await voiceOver.perform(voiceOver.keyboard.commands.moveToNext);
+  await voiceOver.perform(voiceOver.keyboardCommands.moveToNext);
 
   // Stop VoiceOver.
   await voiceOver.stop();
 })();
 ```
-
-See also:
-
-- [VoiceOverKeyboard]
 
 **Contents:**
 
@@ -2088,7 +2081,6 @@ Equivalent of executing `VO-=`.
 **Type:** &#60;[MacOSKeyCodeCommand]&#62;
 
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
-[voiceoverkeyboard]: ./class-voiceover-keyboard "VoiceOverKeyboard"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
 [record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

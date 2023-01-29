@@ -98,6 +98,17 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        {
+          name: "description",
+          content: "Reliable automation for your screen reader accessibility test workflows with Guidepup. Drive VoiceOver and NVDA a11y tests with ease.",
+        },
+        {
+          name: "keywords",
+          content:
+            "Guidepup, screen reader, accessibility, a11y, VoiceOver, NVDA, testing, automation",
+        },
+      ],
       colorMode: {
         defaultMode: "dark",
         disableSwitch: true,

@@ -1,11 +1,12 @@
 ---
-title: "Support Matrix"
+title: Support Matrix
+description: Guidepup's support matrix for VoiceOver on MacOS and NVDA on Windows
 ---
 
 Guidepup current supports the following screen readers:
 
-- VoiceOver for MacOS - Full Support
-- NVDA for Windows - [WIP](https://github.com/guidepup/guidepup/compare/feat/nvda-support)
+- VoiceOver for MacOS
+- NVDA for Windows
 
 ## VoiceOver
 
