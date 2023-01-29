@@ -1,5 +1,6 @@
 ---
-title: "Getting Started"
+title: Getting Started
+description: Getting started with Guidepup for screen reader automation in accessibility testing
 ---
 
 import Tabs from '@theme/Tabs';
@@ -59,7 +60,7 @@ npm install @guidepup/guidepup
 
 ## First Screen Reader Code {#first}
 
-Let's automate VoiceOver for MacOS.
+Let's automate a screen reader!
 
 Create `example.js` (or `example.ts` for TypeScript) to define your screen reader code.
 
@@ -67,11 +68,13 @@ Create `example.js` (or `example.ts` for TypeScript) to define your screen reade
   groupId="js-flavor"
   defaultValue="ts"
   values={[
-    {label: 'TypeScript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'}
+    {label: 'Typescript', value: 'ts'},
+    {label: 'JavaScript', value: 'js'},
   ]
 }>
 <TabItem value="ts">
+
+If you're using MacOS:
 
 ```ts
 import { voiceOver } from "@guidepup/guidepup";
@@ -88,8 +91,27 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
+Or if you're using Windows:
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next item.
+  await nvda.next();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
 </TabItem>
 <TabItem value="js">
+
+If you're using MacOS:
 
 ```js
 const { voiceOver } = require("@guidepup/guidepup");
@@ -106,10 +128,25 @@ const { voiceOver } = require("@guidepup/guidepup");
 })();
 ```
 
+Or if you're using Windows:
+
+```js
+const { nvda } = require("@guidepup/guidepup");
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next item.
+  await nvda.next();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
 </TabItem>
 </Tabs>
-
-> **Note:** this example assumes you are using MacOS!
 
 Now run your code to see an automated screen reader!
 

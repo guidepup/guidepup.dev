@@ -11,7 +11,13 @@ For example, use when performing a NVDA command:
 ```ts
 import { nvda, WindowsKeyCodes, WindowsModifiers } from "@guidepup/guidepup";
 
-const moveToNextKeyCodeCommand = {};
+const reportBatteryStatusKeyCodeCommand = {
+  keyCode: [WindowsKeyCodes.Insert, WindowsKeyCodes.B],
+  modifiers: [WindowsModifiers.Shift],
+  description:
+    "Reports the battery status i.e. whether AC power is in use or the current charge percentage.",
+  representation: "NVDA-Shift-B",
+};
 
 (async () => {
   // Start NVDA.
@@ -27,10 +33,10 @@ const moveToNextKeyCodeCommand = {};
 
 > **Note:** Guidepup provides a number of utility key codes meaning you shouldn't need to construct your own too often! For example, see [NVDAKeyCodeCommands] for all NVDA key codes.
 >
-> The above example is also slightly contrived as we could just use the convenience method for moving to the next item!
+> The above example is also slightly contrived as we could just use the convenience command getter!
 >
 > ```ts
-> await nvda.next();
+> await nvda.perform(nvda.keyboardCommands.reportBatteryStatus);
 > ```
 
 See also:
@@ -69,7 +75,7 @@ The key code or key codes to send. See [WindowsKeyCodes] for available key codes
 **Type:** &#60;[string]&#62;
 
 [keycodecommand]: ./class-key-code-command "KeyCodeCommand"
-[WindowsKeyCodes]: ./class-windows-key-codes "WindowsKeyCodes"
+[windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"

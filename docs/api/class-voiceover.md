@@ -370,7 +370,6 @@ The command can be a [MacOSKeyCodeCommand], [MacOSKeystrokeCommand], or [VoiceOv
 ```ts
 import {
   voiceOver,
-  voiceOverKeyCodeCommands,
   VoiceOverCommanderCommands,
 } from "@guidepup/guidepup";
 
@@ -406,8 +405,7 @@ import {
 Press a key on the focused item.
 
 `key` can specify the intended [`keyboardEvent.key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)
-value or a single character to generate the text for. A superset of the `key` values can be found
-[on the MDN key values page](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values). Examples of the keys are:
+value or a single character to generate the text for. A superset of the `key` values can be found [on the MDN key values page](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values). Examples of the keys are:
 
 `F1` - `F20`, `Digit0` - `Digit9`, `KeyA` - `KeyZ`, `Backquote`, `Minus`, `Equal`, `Backslash`, `Backspace`, `Tab`,
 `Delete`, `Escape`, `ArrowDown`, `End`, `Enter`, `Home`, `Insert`, `PageDown`, `PageUp`, `ArrowRight`, `ArrowUp`, etc.
@@ -420,12 +418,9 @@ See [MacOSModifiers] for the full range of available modifiers.
 
 Holding down `Shift` will type the text that corresponds to the `key` in the upper case.
 
-If `key` is a single character, it is case-sensitive, so the values `a` and `A` will generate different respective
-texts.
+If `key` is a single character, it is case-sensitive, so the values `a` and `A` will generate different respective texts.
 
-Shortcuts such as `key: "Command+f"` or `key: "Command+Shift+f"` are supported as well. When specified with the
-modifier, modifier is pressed and being held while the subsequent key is being pressed.
-
+Shortcuts such as `key: "Command+f"` or `key: "Command+Shift+f"` are supported as well. When specified with the modifier, modifier is pressed and being held while the subsequent key is being pressed.
 
 ```ts
 import { voiceOver } from "@guidepup/guidepup";
