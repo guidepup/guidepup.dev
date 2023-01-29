@@ -1,3 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -9,9 +16,9 @@
   max-width: 100%;
 }
 
-@media screen and (max-width: 966px) {
+@media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 4rem 2rem;
   }
 }
 
@@ -19,4 +26,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.tagline h2 {
+  font-size: 2rem;
+}
+
+.tagline h2 b {
+  color: var(--ifm-color-primary);
+}
+
+.tagline p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 996px) {
+  .taglineContainer {
+    margin: 2rem 4rem;
+    --ifm-col-width: calc(100% - 8rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .taglineContainer {
+    margin: 2rem 1rem;
+    --ifm-col-width: calc(100% - 2rem);
+  }
 }

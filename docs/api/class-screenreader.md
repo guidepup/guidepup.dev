@@ -2,10 +2,11 @@
 title: "ScreenReader"
 ---
 
-Base interface for screen reader classes.
+Abstract base interface for screen reader classes.
 
 See also:
 
+- [NVDA]
 - [VoiceOver]
 
 **Contents:**
@@ -27,11 +28,6 @@ See also:
 - [screenReader.stop([options])](./class-screenreader#screenreader-stop)
 - [screenReader.stopInteracting([options])](./class-screenreader#screenreader-stop-interacting)
 - [screenReader.type(text[, options])](./class-screenreader#screenreader-type)
-- [screenReader.caption](./class-screenreader#screenreader-caption)
-- [screenReader.commander](./class-screenreader#screenreader-commander)
-- [screenReader.cursor](./class-screenreader#screenreader-cursor)
-- [screenReader.keyboard](./class-screenreader#screenreader-keyboard)
-- [screenReader.mouse](./class-screenreader#screenreader-mouse)
 
 ## screenReader.act([options]) {#screenreader-act}
 
@@ -210,39 +206,12 @@ await screenReader.press("Enter");
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## screenReader.caption {#screenreader-caption}
-
-Screen reader caption APIs.
-
-**Type:** &#60;[ScreenReaderCaption]&#62;
-
-## screenReader.cursor {#screenreader-cursor}
-
-Screen reader cursor APIs.
-
-**Type:** &#60;[ScreenReaderCursor]&#62;
-
-## screenReader.keyboard {#screenreader-keyboard}
-
-Screen reader keyboard APIs.
-
-**Type:** &#60;[ScreenReaderKeyboard]&#62;
-
-## screenReader.mouse {#screenreader-mouse}
-
-Screen reader mouse APIs.
-
-**Type:** &#60;[ScreenReaderMouse]&#62;
-
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
+[nvda]: ./class-nvda "NVDA"
 [screenreader]: ./class-screenreader "ScreenReader"
-[screenreadercaption]: ./class-screenreader-caption "ScreenReaderCaption"
-[screenreadercursor]: ./class-screenreader-cursor "ScreenReaderCursor"
-[screenreaderkeyboard]: ./class-screenreader-keyboard "ScreenReaderKeyboard"
-[screenreadermouse]: ./class-screenreader-mouse "ScreenReaderMouse"
 [voiceover]: ./class-voiceover "VoiceOver"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"

@@ -1,5 +1,6 @@
 ---
-title: "Environment Setup"
+title: Environment Setup
+description: Environment setup guidance for automating screen readers for accessibility testing with Guidepup
 ---
 
 import Tabs from "@theme/Tabs";

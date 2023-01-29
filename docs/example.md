@@ -1,5 +1,6 @@
 ---
-title: "Real World Example"
+title: Real World Example
+description: A tutorial for using Guidepup and Playwright to automate VoiceOver for accessibility testing
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 Let's take a look at a more complete example of how you might use Guidepup.
 
-> **Note:** this example assumes you are using MacOS!
+> **Note:** this example assumes you are using MacOS, but everything covered in this example can also be applied to NVDA on Windows via the `nvda` object and swapping Safari WebKit for a browser supported by Windows such as Chromium or Firefox.
 
 Here we're making use of the [@guidepup/playwright](https://www.npmjs.com/package/@guidepup/playwright) module to integrate Guidepup into an automated [Playwright](https://playwright.dev/) test to assert the VoiceOver flow behaves as we expect. This modules handles the starting and stopping VoiceOver for you between tests so you can focus on writing your tests straight away. It also provides a `voTest` export - a convenience wrapper for the Playwright `test` method which provides a `voiceOver` instance for you alongside the `page` object.
 
@@ -169,7 +170,7 @@ test.describe("Playwright VoiceOver", () => {
 
     // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
-      await voiceOver.perform(voiceOver.keyboard.commands.findNextHeading);
+      await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
     }
 
     // Assert that we've ended up where we expected and what we were told on
@@ -207,7 +208,7 @@ test.describe("Playwright VoiceOver", () => {
 
     // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
-      await voiceOver.perform(voiceOver.keyboard.commands.findNextHeading);
+      await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
     }
 
     // Assert that we've ended up where we expected and what we were told on

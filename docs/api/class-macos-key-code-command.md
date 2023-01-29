@@ -57,7 +57,7 @@ See also:
 
 ## macOSKeyCodeCommand.keyCode {#key-code-command-key-code}
 
-The key code or key codes to send.
+The key code or key codes to send. See [MacOSKeyCodes] for available key codes.
 
 **Type:** &#60;[number] | [Array]<[number]>&#62;
 
@@ -74,6 +74,7 @@ The key code or key codes to send.
 **Type:** &#60;[string]&#62;
 
 [keycodecommand]: ./class-key-code-command "KeyCodeCommand"
+[macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "VoiceOverKeyCodeCommands"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
