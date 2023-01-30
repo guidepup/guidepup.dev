@@ -72,7 +72,7 @@ export default function Home() {
   return (
     <Layout
       title="Screen reader driver for test automation"
-      description="Screen reader driver for test automation"
+      description="Reliable automation for your screen reader accessibility test workflows with Guidepup. Drive VoiceOver and NVDA a11y tests with ease"
     >
       <HomepageMain />
     </Layout>
