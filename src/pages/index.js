@@ -56,6 +56,29 @@ function HomepageTagline() {
   );
 }
 
+function HomepageBottom() {
+  return (
+    <section className={clsx("hero")}>
+      <div className="container">
+        <div className={styles.buttons}>
+          <Link
+            className="button button--primary button--lg margin-horiz--md"
+            to="/docs/intro"
+          >
+            Get Started
+          </Link>
+          <Link
+            className="button button--secondary button--lg margin-horiz--md"
+            to="https://github.com/guidepup/guidepup"
+          >
+            GitHub
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HomepageMain() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -64,6 +87,7 @@ function HomepageMain() {
       <HomepageHero {...siteConfig} />
       <HomepageTagline />
       <HomepageFeatures />
+      <HomepageBottom />
     </main>
   );
 }
