@@ -351,7 +351,7 @@ import { nvda } from "@guidepup/guidepup";
   await nvda.start();
 
   // Open a find text modal.
-  await nvda.press("Command+f");
+  await nvda.press("Control+f");
 
   // Stop NVDA.
   await nvda.stop();
