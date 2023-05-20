@@ -28,7 +28,7 @@ npx @guidepup/setup
 
 For some operating systems, enabling automation of screen readers is tightly controlled. This CLI handles the setup for your OS.
 
-For further information checkout this [guide to setup your environment](./guides/environment).
+For further information checkout this [guide to setup your environment](./guides/automated-environment-setup).
 
 ## Installation {#installation}
 
