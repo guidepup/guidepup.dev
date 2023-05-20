@@ -15,7 +15,10 @@ const sidebars = {
     {
       type: "category",
       label: "Guides",
-      items: [{ type: "doc", id: "guides/environment" }],
+      items: [
+        { type: "doc", id: "guides/automated-environment-setup" },
+        { type: "doc", id: "guides/manual-voiceover-setup" },
+      ],
       collapsed: false,
     },
   ],
