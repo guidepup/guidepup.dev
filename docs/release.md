@@ -3,4 +3,7 @@ title: Release Notes
 description: Release notes for the Guidepup screen reader driver for accessibility automation testing.
 ---
 
-Release notes are available on the [GitHub Releases page](https://github.com/guidepup/guidepup/releases).
+- `@guidepup/guidepup` - <https://github.com/guidepup/guidepup/releases>.
+- `@guidepup/playwright` - <https://github.com/guidepup/guidepup-playwright/releases>.
+- `@guidepup/virtual-screen-reader` - <https://github.com/guidepup/virtual-screen-reader/releases>.
+- `@guidepup/setup` - <https://github.com/guidepup/setup/releases>.

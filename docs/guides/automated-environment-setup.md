@@ -6,6 +6,8 @@ description: Environment setup guidance for automating screen readers for access
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
+This guide applies to users of the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) or [`@guidepup/playwright`](https://github.com/guidepup/guidepup-playwright) packages. OS environment setup is not required for users of the [`@guidepup/virtual-screen-reader`](https://github.com/guidepup/virtual-screen-reader) package.
+
 ## Automated Setup
 
 For some operating systems, enabling control of screen readers is tightly controlled.
