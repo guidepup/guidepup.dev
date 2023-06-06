@@ -4,7 +4,7 @@ title: "Guidepup Library"
 
 # Guidepup Library
 
-Guidepup provides a reliable set of APIs to automate screen readers through JavaScript.
+Guidepup provides a reliable set of APIs to automate real screen readers through JavaScript.
 
 Guidepup current supports the following screen readers:
 

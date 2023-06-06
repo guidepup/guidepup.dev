@@ -166,7 +166,7 @@ import { nvda } from "@guidepup/guidepup";
 
 ## nvda.interact() {#nvda-interact}
 
-No-op to provide same API across screen-readers.
+No-op to provide same API across screen readers.
 
 NVDA does not require users to perform an additional command to interact with the item in the NVDA cursor.
 
@@ -456,7 +456,7 @@ import { nvda } from "@guidepup/guidepup";
 
 ## nvda.stopInteracting() {#nvda-stop-interacting}
 
-No-op to provide same API across screen-readers.
+No-op to provide same API across screen readers.
 
 NVDA does not require users to perform an additional command to interact with the item in the NVDA cursor.
 
@@ -467,7 +467,7 @@ import { nvda } from "@guidepup/guidepup";
   // Start NVDA.
   await nvda.start();
 
-  // Interact with the item.
+  // Interact with the item - does nothing on NVDA.
   await nvda.interact();
 
   // ... perform some commands.

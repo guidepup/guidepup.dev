@@ -7,6 +7,7 @@ Guidepup current supports the following screen readers:
 
 - VoiceOver for MacOS
 - NVDA for Windows
+- Virtual Screen Reader for DOM environments (when using the `@guidepup/virtual-screen-reader` package)
 
 ## VoiceOver
 
@@ -28,3 +29,12 @@ To learn NVDA commands please refer to the following popular guides:
 - [NVDA 2021.2 Commands Quick Reference](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html)
 - [WebAIM Keyboard Shortcuts for NVDA](https://webaim.org/resources/shortcuts/nvda)
 - [Deque University NVDA Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
+
+## Virtual Screen Reader
+
+The Guidepup [Virtual Screen Reader](https://github.com/guidepup/virtual-screen-reader) is a headless screen reader for unit test automation.
+
+- **Mirrors Real User Experience** - assert on what users really do and hear when using screen readers.
+- **Test Framework Agnostic** - run with Jest, with Playwright, as an independent script, no vendor lock-in.
+- **UI Framework Agnostic** - want to use React, Vue, Solid, Svelte, etc.? All good here! Works with any UI framework, and plays nicely with the [Testing Library](https://testing-library.com/) suite.
+- **Fast Feedback** - avoid the cumbersome overhead of running an e2e test with a running screen reader by running virtually over the provided DOM.
