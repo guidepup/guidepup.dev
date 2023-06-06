@@ -176,6 +176,10 @@ const config = {
                 href: "https://github.com/guidepup/guidepup-playwright",
               },
               {
+                label: "@guidepup/virtual-screen-reader",
+                href: "https://github.com/guidepup/virtual-screen-reader",
+              },
+              {
                 label: "@guidepup/setup",
                 href: "https://github.com/guidepup/setup",
               },

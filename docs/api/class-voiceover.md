@@ -208,7 +208,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 ## voiceOver.detect() {#voiceover-detect}
 
-Detect whether VoiceOver is supported for the current OS.
+Detect whether VoiceOver is supported for the current OS:
 
 - `false` for Windows
 - `true` for MacOS

@@ -7,6 +7,7 @@ const sidebars = {
       items: [
         { type: "doc", id: "intro" },
         { type: "doc", id: "example" },
+        { type: "doc", id: "virtual" },
         { type: "doc", id: "support" },
         { type: "doc", id: "release" },
       ],
@@ -25,7 +26,7 @@ const sidebars = {
   api: [
     {
       type: "category",
-      label: "API Reference",
+      label: "Guidepup API Reference",
       items: [
         { type: "doc", id: "api/class-guidepup" },
         {
@@ -59,6 +60,24 @@ const sidebars = {
             { type: "doc", id: "api/class-windows-keystroke-command" },
             { type: "doc", id: "api/class-windows-modifiers" },
             { type: "doc", id: "api/class-windows-quit" },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Virtual Screen Reader API Reference",
+      items: [
+        {
+          type: "doc",
+          id: "api/class-guidepup-virtual-screen-reader",
+        },
+        {
+          type: "category",
+          label: "Classes",
+          items: [
+            { type: "doc", id: "api/class-virtual" },
+            { type: "doc", id: "api/class-start-options" },
           ],
         },
       ],
