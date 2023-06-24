@@ -105,6 +105,7 @@ const config = {
             "Guidepup, screen reader, accessibility, a11y, VoiceOver, NVDA, testing, automation",
         },
       ],
+      image: "/img/logo.jpg",
       colorMode: {
         defaultMode: "dark",
         disableSwitch: true,
