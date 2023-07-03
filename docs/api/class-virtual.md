@@ -73,6 +73,7 @@ describe("Screen Reader Tests", () => {
 
 **Contents:**
 
+- [virtual.commands](./class-virtual#virtual-commands)
 - [virtual.act()](./class-virtual#virtual-act)
 - [virtual.click()](./class-virtual#virtual-click)
 - [virtual.default()](./class-virtual#virtual-default)
@@ -82,7 +83,7 @@ describe("Screen Reader Tests", () => {
 - [virtual.itemTextLog()](./class-virtual#virtual-item-text-log)
 - [virtual.lastSpokenPhrase()](./class-virtual#virtual-last-spoken-phrase)
 - [virtual.next()](./class-virtual#virtual-next)
-- [virtual.perform()](./class-virtual#virtual-perform)
+- [virtual.perform(command[, options])](./class-virtual#virtual-perform)
 - [virtual.press(key)](./class-virtual#virtual-press)
 - [virtual.previous()](./class-virtual#virtual-previous)
 - [virtual.spokenPhraseLog()](./class-virtual#virtual-spoken-phrase-log)
@@ -90,6 +91,33 @@ describe("Screen Reader Tests", () => {
 - [virtual.stop()](./class-virtual#virtual-stop)
 - [virtual.stopInteracting()](./class-virtual#virtual-stop-interacting)
 - [virtual.type(text)](./class-virtual#virtual-type)
+
+## virtual.commands {#virtual-commands}
+
+Getter for all Virtual Screen Reader commands.
+
+Use with the `perform` command to invoke an action:
+
+```ts
+import { virtual } from "@guidepup/virtual-screen-reader";
+
+test("example test", async () => {
+  // Start Virtual.
+  await virtual.start({ container: document.body });
+
+  // Perform action to move to the next landmark.
+  await virtual.perform(virtual.commands.moveToNextLandmark);
+
+  // Stop Virtual.
+  await virtual.stop();
+});
+```
+
+See also:
+
+- [virtual.perform(command[, options])](./class-virtual#virtual-perform)
+
+**Returns:** &#60;[VirtualCommands]&#62;
 
 ## virtual.act() {#virtual-act}
 
@@ -313,11 +341,36 @@ test("example test", async () => {
 
 **Returns:** &#60;[Promise]<[void]>&#62;
 
-## virtual.perform() {#virtual-perform}
+## virtual.perform(command[, options]) {#virtual-perform}
 
-Not implemented.
+Perform a Virtual Screen Reader command.
 
-Will throw an error if called.
+```ts
+import { virtual } from "@guidepup/virtual-screen-reader";
+
+test("example test", async () => {
+  // Start Virtual.
+  await virtual.start({ container: document.body });
+
+  // Perform action to move to the next landmark.
+  await virtual.perform(virtual.commands.moveToNextLandmark);
+
+  // Stop Virtual.
+  await virtual.stop();
+});
+```
+
+See also:
+
+- [virtual.commands](./class-virtual#virtual-commands)
+- [VirtualCommands]
+
+**Parameters:**
+
+- `command` &#60;[string]&#62; Virtual Screen Reader command to execute. See [VirtualCommands] for valid commands.
+- **Optional:** `options` &#60;[object]&#62; Additional options.
+
+**Returns:** &#60;[Promise]<[void]>&#62;
 
 ## virtual.press(key) {#virtual-press}
 
@@ -514,9 +567,11 @@ test("example test", async () => {
 [commandoptions]: ./class-command-options "CommandOptions"
 [screenreader]: ./class-screenreader "ScreenReader"
 [startoptions]: ./class-start-options "StartOptions"
+[virtualcommands]: ./class-virtual-commands "VirtualCommands"
 [virtual]: ./class-virtual "virtual"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
+[object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"

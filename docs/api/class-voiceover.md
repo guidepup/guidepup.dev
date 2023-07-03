@@ -48,14 +48,14 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.takeScreenshot([options])](./class-voiceover#voiceover-take-screenshot)
 - [voiceOver.type(text[, options])](./class-voiceover#voiceover-type)
 
-## voiceOver.commanderCommands {#voiceover-commands}
+## voiceOver.commanderCommands {#voiceover-commander-commands}
 
 Getter for all VoiceOver commander commands.
 
 Use with the VoiceOver `perform` command to invoke a Commander action:
 
 ```ts
-import { voiceOve } from "@guidepup/guidepup";
+import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
   // Start VoiceOver.

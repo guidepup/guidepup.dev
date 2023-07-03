@@ -76,6 +76,7 @@ const sidebars = {
           type: "category",
           label: "Classes",
           items: [
+            { type: "doc", id: "api/class-virtual-commands" },
             { type: "doc", id: "api/class-virtual" },
             { type: "doc", id: "api/class-start-options" },
           ],
