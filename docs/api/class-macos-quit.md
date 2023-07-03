@@ -11,7 +11,11 @@ title: "macOSQuit"
 Quits a MacOS application if running.
 
 ```ts
-import { macOSActivate, macOSQuit, MacOSApplications } from "@guidepup/guidepup";
+import {
+  macOSActivate,
+  macOSQuit,
+  MacOSApplications,
+} from "@guidepup/guidepup";
 
 (async () => {
   // Open Safari.
@@ -34,5 +38,5 @@ import { macOSActivate, macOSQuit, MacOSApplications } from "@guidepup/guidepup"
 [commandoptions]: ./class-command-options "CommandOptions"
 [macosapplications]: ./class-macos-applications "MacOSApplications"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"

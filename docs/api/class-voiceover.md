@@ -368,10 +368,7 @@ Perform a VoiceOver command.
 The command can be a [MacOSKeyCodeCommand], [MacOSKeystrokeCommand], or [VoiceOverCommanderCommands].
 
 ```ts
-import {
-  voiceOver,
-  VoiceOverCommanderCommands,
-} from "@guidepup/guidepup";
+import { voiceOver, VoiceOverCommanderCommands } from "@guidepup/guidepup";
 
 (async () => {
   // Start VoiceOver.
@@ -684,5 +681,5 @@ import { voiceOver } from "@guidepup/guidepup";
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"

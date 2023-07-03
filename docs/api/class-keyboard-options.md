@@ -43,5 +43,5 @@ See also:
 - [MacOSApplications]
 
 [commandoptions]: ./class-command-options "CommandOptions"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [macosapplications]: ./class-macos-applications "MacOSApplications"
