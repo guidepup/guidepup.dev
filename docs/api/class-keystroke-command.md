@@ -26,12 +26,12 @@ const poundSymbolKeystrokeCommand = {
   // Stop VoiceOver.
   await voiceOver.stop();
 })();
-
 ```
+
 > **Note:** the above is slightly contrived as we could just type a `#` character using:
 >
 > ```ts
-> await voiceOver.type("#")
+> await voiceOver.type("#");
 > ```
 
 See also:
@@ -58,5 +58,5 @@ The character(s) to send.
 [macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
-[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type "number"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number "number"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"

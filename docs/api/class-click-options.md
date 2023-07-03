@@ -47,5 +47,5 @@ import { voiceOver } from "@guidepup/guidepup";
 **Type:** &#60;[number]&#62;
 
 [commandoptions]: ./class-command-options "CommandOptions"
-[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type "number"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number "number"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"

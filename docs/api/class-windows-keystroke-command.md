@@ -70,4 +70,4 @@ The character(s) to send.
 [keystrokecommand]: ./class-keystroke-command "KeystrokeCommand"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"

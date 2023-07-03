@@ -188,7 +188,6 @@ import { nvda } from "@guidepup/guidepup";
 - [NVDAKeyCodeCommands.performDefaultActionForItem](./class-nvda-key-code-commands#key-code-commands-performdefaultactionforitem)
 - [NVDAKeyCodeCommands.activate](./class-nvda-key-code-commands#key-code-commands-activate)
 
-
 ## NVDAKeyCodeCommands.start {#key-code-commands-start}
 
 Turn NVDA on.
@@ -1471,5 +1470,5 @@ Equivalent of executing `Enter`.
 
 [windowskeycodecommand]: ./class-windows-key-code-command "WindowsKeyCodeCommand"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

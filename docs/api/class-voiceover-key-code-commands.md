@@ -2082,5 +2082,5 @@ Equivalent of executing `VO-=`.
 
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

@@ -1,6 +1,6 @@
 {
   "name": "@guidepup/guidepup.dev",
-  "version": "0.17.1",
+  "version": "0.18.0",
   "description": "Documentation website for Guidepup.",
   "author": "Craig Morten <craig.morten@hotmail.co.uk>",
   "license": "MIT",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@docusaurus/types": "2.2.0",
-    "@guidepup/guidepup": "^0.17.0",
+    "@guidepup/guidepup": "^0.18.0",
     "@types/node": "^18.11.18"
   }
 }

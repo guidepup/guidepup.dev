@@ -20,7 +20,7 @@ import { windowsActivate, windowsQuit } from "@guidepup/guidepup";
   // ... perform some commands.
 
   // Quits Microsoft Edge.
-  await windowsQuit("msedge.exe")
+  await windowsQuit("msedge.exe");
 })();
 ```
 
@@ -32,5 +32,5 @@ import { windowsActivate, windowsQuit } from "@guidepup/guidepup";
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
-[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type "string"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"

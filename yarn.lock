@@ -1888,10 +1888,10 @@
     url-loader "^4.1.1"
     webpack "^5.73.0"
 
-"@guidepup/guidepup@^0.17.0":
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/@guidepup/guidepup/-/guidepup-0.17.0.tgz#828b790816c6b8508d4fe1b478735510ed825eb9"
-  integrity sha512-0aPBUWZgv2sZxFVtzZKrvXLA7MaHsIPggs5LUIbOYiF4+hfpNJRV6uyOxhdy0v8lt9KLQ8x2RvZrHZeYhj8V5Q==
+"@guidepup/guidepup@^0.18.0":
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/@guidepup/guidepup/-/guidepup-0.18.0.tgz#da5b10c602084ceb54694a4947053f3c0f566bc9"
+  integrity sha512-/FmSBIYf2uFBGu6QJ1WxnKxbfSYlms0j+1Oi02mzleEEAqFqDjF9SPj8EeUnWjx5jAidb1h6/0IWUsxIenU3aw==
   dependencies:
     regedit "5.0.1"
     semver "^7.3.8"
@@ -2342,9 +2342,9 @@
   integrity sha512-SbjLmERksKOGzWzPNuW7fJM7fk3YXVTFiZWB/Hs99gwhk+/dnrQRPBQjPW9aO+fi1tAffi9PrwFvsmOKmDTyng==
 
 "@types/node@^18.11.18":
-  version "18.11.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
-  integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
+  version "18.16.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.19.tgz#cb03fca8910fdeb7595b755126a8a78144714eea"
+  integrity sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
