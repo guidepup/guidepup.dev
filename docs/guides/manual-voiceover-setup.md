@@ -26,12 +26,12 @@ This setup is required to allow VoiceOver to be controlled by Guidepup.
 This setup is required to allow applications, e.g. your terminal or IDE, to control other applications, i.e. VoiceOver:
 
 <Tabs
-  groupId="env-flavor"
-  defaultValue="12"
-  values={[
-    {label: 'MacOS 12 - Monterey', value: '12'},
-    {label: 'MacOS 13 - Ventura', value: '13'}
-  ]
+groupId="env-flavor"
+defaultValue="12"
+values={[
+{label: 'MacOS 12 - Monterey', value: '12'},
+{label: 'MacOS 13 - Ventura', value: '13'}
+]
 }>
 <TabItem value="12">
 
@@ -83,17 +83,37 @@ While using Guidepup if a system permission is required a dialog box will pop up
 
 ### Allow VoiceOver To Be Controlled
 
-For VoiceOver to be controlled by AppleScript the following needs to be run:
+For VoiceOver to be controlled by AppleScript there is a database file and system preference default that need to be configured.
+
+#### VoiceOver Database File
+
+To allow VoiceOver to be controlled by AppleScript the `/private/var/db/Accessibility/.VoiceOverAppleScriptEnabled` file needs to exist and contain the character `a`.
+
+This file can be created manually by following the steps in the guide above, by automating the manual steps from the guide above, or by creating the database file using scripts, e.g.:
 
 ```bash
 # Create VoiceOver database file specifying automation is enabled
 sudo bash -c 'echo -n "a" > /private/var/db/Accessibility/.VoiceOverAppleScriptEnabled'
+```
 
+> **⚠️ Warning**
+>
+> For the `.VoiceOverAppleScriptEnabled` file to be created in this way you must first disable [System Integrity Protection (SIP)](https://support.apple.com/en-gb/HT204899). This comes with **serious security implications**, so please first refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details before taking any action. Consider whether you are able to use alternative manual setup steps for configuration before exploring this option further.
+>
+> SIP does not need to remain disabled once this file has been created, and so should be re-enabled once the file has been created.
+>
+> It is strongly advised that you use [`@guidepup/setup`](https://github.com/guidepup/setup) or the manual setup guide above for local development in preference to applying this step.
+
+#### System Preferences
+
+In addition to the database file you will also need to set a system preference entry:
+
+```bash
 # Update system preference defaults specifying automation is enabled
 defaults write com.apple.VoiceOver4/default SCREnableAppleScript -bool true
 ```
 
-> **Note:** for the `.VoiceOverAppleScriptEnabled` file to be created you must first disable "SIP". This can only be performed whilst in Recovery Mode. Please refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details.
+This value does not require any additional steps unlike the database file.
 
 ### Allow App Automation
 
@@ -105,4 +125,10 @@ Please refer to the following examples of how to update the `TCC.db` for your de
 - [actions/virtual-environments](https://github.com/actions/virtual-environments/blob/main/images/macos/provision/configuration/configure-tccdb-macos11.sh) - GitHub Actions `TCC.db` setup
 - [CircleCI-Public/macos-orb](https://github.com/CircleCI-Public/macos-orb/blob/main/src/commands/add-uitest-permissions.yml) - CircleCI MacOS Orb `TCC.db` setup
 
-> **Note:** for system TCC.db updates you must first disable SIP. This can only be performed whilst in Recovery Mode. Please refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details.
+> **⚠️ Warning**
+>
+> For the system `TCC.db`` updates you must first disable [System Integrity Protection (SIP)](https://support.apple.com/en-gb/HT204899). This comes with **serious security implications**, so please first refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details before taking any action. Consider whether you are able to use alternative manual setup steps for configuration before exploring this option further.
+>
+> SIP does not need to remain disabled once these updates have been made, and so should be re-enabled once the changes are completed.
+>
+> It is strongly advised that you use [`@guidepup/setup`](https://github.com/guidepup/setup) or the manual setup guide above for local development in preference to applying this step.
