@@ -127,7 +127,7 @@ Please refer to the following examples of how to update the `TCC.db` for your de
 
 > **⚠️ Warning**
 >
-> For the system `TCC.db`` updates you must first disable [System Integrity Protection (SIP)](https://support.apple.com/en-gb/HT204899). This comes with **serious security implications**, so please first refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details before taking any action. Consider whether you are able to use alternative manual setup steps for configuration before exploring this option further.
+> For the system `TCC.db` updates you must first disable [System Integrity Protection (SIP)](https://support.apple.com/en-gb/HT204899). This comes with **serious security implications**, so please first refer to the [Apple documentation](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection) for more details before taking any action. Consider whether you are able to use alternative manual setup steps for configuration before exploring this option further.
 >
 > SIP does not need to remain disabled once these updates have been made, and so should be re-enabled once the changes are completed.
 >
