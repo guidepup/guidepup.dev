@@ -11,7 +11,7 @@ const list = Object.keys(NVDAKeyCodeCommands)
 
 const main = Object.entries(NVDAKeyCodeCommands)
   .map(([key, { description, representation }]) => {
-    return `## NVDAKeyCodeCommands.${key} {#key-code-commands-${key.toLowerCase()}}\n\n${description}.\n\nEquivalent of executing \`${representation}\`.\n\n**Type:** &#60;[WindowsKeyCodeCommand]&#62;\n\n`;
+    return `## NVDAKeyCodeCommands.${key} {#key-code-commands-${key.toLowerCase()}}\n\n${description}.\n\nEquivalent of executing \`${representation}\`.\n\n**Type:** [WindowsKeyCodeCommand]\n\n`;
   })
   .join("");
 

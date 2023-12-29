@@ -4,7 +4,7 @@ title: "NVDAKeyCodeCommands"
 
 **Extends:** [object]
 
-**Implements:** &#60;[Record]<[string], [WindowsKeyCodeCommand]>&#62;
+**Implements:** [Record]<[string], [WindowsKeyCodeCommand]>
 
 [Key code commands for the NVDA screen reader](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html) on Windows.
 
@@ -194,7 +194,7 @@ Turn NVDA on.
 
 Equivalent of executing `Control-Alt-N`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.stopSpeech {#key-code-commands-stopspeech}
 
@@ -202,7 +202,7 @@ Instantly stops speaking.
 
 Equivalent of executing `Control`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.pauseSpeech {#key-code-commands-pausespeech}
 
@@ -210,7 +210,7 @@ Instantly pauses speech. Pressing it again will continue speaking where it left 
 
 Equivalent of executing `Shift`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openUtilityMenu {#key-code-commands-openutilitymenu}
 
@@ -218,7 +218,7 @@ Pops up the NVDA menu to allow you to access preferences, tools, help, etc..
 
 Equivalent of executing `NVDA-N`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.toggleSpeechMode {#key-code-commands-togglespeechmode}
 
@@ -226,7 +226,7 @@ Toggles speech mode between speech, beeps and off..
 
 Equivalent of executing `NVDA-S`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.startKeyboardHelp {#key-code-commands-startkeyboardhelp}
 
@@ -234,7 +234,7 @@ Pressing any key in this mode will report the key, and the description of any NV
 
 Equivalent of executing `NVDA-1`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.stop {#key-code-commands-stop}
 
@@ -242,7 +242,7 @@ Turn NVDA off.
 
 Equivalent of executing `NVDA-Q`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.ignoreNextKeyCombination {#key-code-commands-ignorenextkeycombination}
 
@@ -250,7 +250,7 @@ Tells NVDA to pass the next key press straight through to the active application
 
 Equivalent of executing `NVDA-F2`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.toggleSleepMode {#key-code-commands-togglesleepmode}
 
@@ -258,7 +258,7 @@ sleep mode disables all NVDA commands and speech/braille output for the current 
 
 Equivalent of executing `NVDA-Shift-S`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportDateTime {#key-code-commands-reportdatetime}
 
@@ -266,7 +266,7 @@ Pressing once reports the current time, pressing twice reports the date.
 
 Equivalent of executing `NVDA-F12`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportBatteryStatus {#key-code-commands-reportbatterystatus}
 
@@ -274,7 +274,7 @@ Reports the battery status i.e. whether AC power is in use or the current charge
 
 Equivalent of executing `NVDA-Shift-B`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportClipboardText {#key-code-commands-reportclipboardtext}
 
@@ -282,7 +282,7 @@ Reports the Text on the clipboard if there is any..
 
 Equivalent of executing `NVDA-C`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportCurrentFocus {#key-code-commands-reportcurrentfocus}
 
@@ -290,7 +290,7 @@ Announces the current object or control that has the System focus. Pressing twic
 
 Equivalent of executing `NVDA-Tab`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportTitle {#key-code-commands-reporttitle}
 
@@ -298,7 +298,7 @@ Reports the title of the currently active window. Pressing twice will spell the 
 
 Equivalent of executing `NVDA-T`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.readActiveWindow {#key-code-commands-readactivewindow}
 
@@ -306,7 +306,7 @@ Reads all the controls in the currently active window (useful for dialogs).
 
 Equivalent of executing `NVDA-B`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportStatusBar {#key-code-commands-reportstatusbar}
 
@@ -314,7 +314,7 @@ Reports the Status Bar if NVDA finds one. It also moves the navigator object to 
 
 Equivalent of executing `NVDA-End`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.sayAll {#key-code-commands-sayall}
 
@@ -322,7 +322,7 @@ Starts reading from the current position of the system caret, moving it along as
 
 Equivalent of executing `NVDA-Down Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.readLine {#key-code-commands-readline}
 
@@ -330,7 +330,7 @@ Reads the line where the system caret is currently situated. Pressing twice spel
 
 Equivalent of executing `NVDA-Up Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.readCurrentSelection {#key-code-commands-readcurrentselection}
 
@@ -338,7 +338,7 @@ Reads any currently selected text.
 
 Equivalent of executing `NVDA-Shift-Up Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportTextFormatting {#key-code-commands-reporttextformatting}
 
@@ -346,7 +346,7 @@ Reports the formatting of the text where the caret is currently situated. Pressi
 
 Equivalent of executing `NVDA-F`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.readNextSentence {#key-code-commands-readnextsentence}
 
@@ -354,7 +354,7 @@ Moves the caret to the next sentence and announces it. (only supported in Micros
 
 Equivalent of executing `Alt-Down Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.readPreviousSentence {#key-code-commands-readprevioussentence}
 
@@ -362,7 +362,7 @@ Moves the caret to the previous sentence and announces it. (only supported in Mi
 
 Equivalent of executing `Alt-Up Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousColumn {#key-code-commands-movetopreviouscolumn}
 
@@ -370,7 +370,7 @@ When within a table, moves the system caret to the previous column (staying in t
 
 Equivalent of executing `Control-Alt-Left Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextColumn {#key-code-commands-movetonextcolumn}
 
@@ -378,7 +378,7 @@ When within a table, moves the system caret to the next column (staying in the s
 
 Equivalent of executing `Control-Alt-Right Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousRow {#key-code-commands-movetopreviousrow}
 
@@ -386,7 +386,7 @@ When within a table, moves the system caret to the previous row (staying in the 
 
 Equivalent of executing `Control-Alt-Up Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextRow {#key-code-commands-movetonextrow}
 
@@ -394,7 +394,7 @@ When within a table, moves the system caret to the next row (staying in the same
 
 Equivalent of executing `Control-Alt-Down Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportCurrentObject {#key-code-commands-reportcurrentobject}
 
@@ -402,7 +402,7 @@ Reports the current navigator object. Pressing twice spells the information, and
 
 Equivalent of executing `NVDA-NumPad5`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToContainingObject {#key-code-commands-movetocontainingobject}
 
@@ -410,7 +410,7 @@ Moves to the object containing the current navigator object.
 
 Equivalent of executing `NVDA-NumPad8`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousObject {#key-code-commands-movetopreviousobject}
 
@@ -418,7 +418,7 @@ Moves to the object before the current navigator object.
 
 Equivalent of executing `NVDA-NumPad4`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextObject {#key-code-commands-movetonextobject}
 
@@ -426,7 +426,7 @@ Moves to the object after the current navigator object.
 
 Equivalent of executing `NVDA-NumPad6`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToFirstContainedObject {#key-code-commands-movetofirstcontainedobject}
 
@@ -434,7 +434,7 @@ Moves to the first object contained by the current navigator object.
 
 Equivalent of executing `NVDA-NumPad2`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToFocusObject {#key-code-commands-movetofocusobject}
 
@@ -442,7 +442,7 @@ Moves to the object that currently has the system focus, and also places the rev
 
 Equivalent of executing `NVDA-NumPadMinus`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.activateCurrentNavigatorObject {#key-code-commands-activatecurrentnavigatorobject}
 
@@ -450,7 +450,7 @@ Activates the current navigator object (similar to clicking with the mouse or pr
 
 Equivalent of executing `NVDA-NumPadEnter`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToReviewPosition {#key-code-commands-movetoreviewposition}
 
@@ -458,7 +458,7 @@ pressed once Moves the System focus to the current navigator object, pressed twi
 
 Equivalent of executing `NVDA-Shift-NumPadMinus`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportReviewPosition {#key-code-commands-reportreviewposition}
 
@@ -466,7 +466,7 @@ Reports information about the location of the text or object at the review curso
 
 Equivalent of executing `NVDA-NumPadDelete`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToTopLineInReview {#key-code-commands-movetotoplineinreview}
 
@@ -474,7 +474,7 @@ Moves the review cursor to the top line of the text.
 
 Equivalent of executing `Shift-NumPad7`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousLineInReview {#key-code-commands-movetopreviouslineinreview}
 
@@ -482,7 +482,7 @@ Moves the review cursor to the previous line of text.
 
 Equivalent of executing `NumPad7`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportCurrentLineInReview {#key-code-commands-reportcurrentlineinreview}
 
@@ -490,7 +490,7 @@ Announces the current line of text where the review cursor is positioned. Pressi
 
 Equivalent of executing `NumPad8`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextLineInReview {#key-code-commands-movetonextlineinreview}
 
@@ -498,7 +498,7 @@ Move the review cursor to the next line of text.
 
 Equivalent of executing `NumPad9`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToBottomLineInReview {#key-code-commands-movetobottomlineinreview}
 
@@ -506,7 +506,7 @@ Moves the review cursor to the bottom line of text.
 
 Equivalent of executing `Shift-NumPad9`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousWordInReview {#key-code-commands-movetopreviouswordinreview}
 
@@ -514,7 +514,7 @@ Moves the review cursor to the previous word in the text.
 
 Equivalent of executing `NumPad4`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportCurrentWordInReview {#key-code-commands-reportcurrentwordinreview}
 
@@ -522,7 +522,7 @@ Announces the current word in the text where the review cursor is positioned. Pr
 
 Equivalent of executing `NumPad5`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextWordInReview {#key-code-commands-movetonextwordinreview}
 
@@ -530,7 +530,7 @@ Move the review cursor to the next word in the text.
 
 Equivalent of executing `NumPad6`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToStartOfLineInReview {#key-code-commands-movetostartoflineinreview}
 
@@ -538,7 +538,7 @@ Moves the review cursor to the start of the current line in the text.
 
 Equivalent of executing `Shift-NumPad1`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousCharacterInReview {#key-code-commands-movetopreviouscharacterinreview}
 
@@ -546,7 +546,7 @@ Moves the review cursor to the previous character on the current line in the tex
 
 Equivalent of executing `NumPad1`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportCurrentCharacterInReview {#key-code-commands-reportcurrentcharacterinreview}
 
@@ -554,7 +554,7 @@ Announces the current character on the line of text where the review cursor is p
 
 Equivalent of executing `NumPad2`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextCharacterInReview {#key-code-commands-movetonextcharacterinreview}
 
@@ -562,7 +562,7 @@ Move the review cursor to the next character on the current line of text.
 
 Equivalent of executing `NumPad3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToEndOfLineInReview {#key-code-commands-movetoendoflineinreview}
 
@@ -570,7 +570,7 @@ Moves the review cursor to the end of the current line of text.
 
 Equivalent of executing `Shift-NumPad3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.sayAllWithReview {#key-code-commands-sayallwithreview}
 
@@ -578,7 +578,7 @@ Reads from the current position of the review cursor, moving it as it goes.
 
 Equivalent of executing `NumPadPlus`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.selectThenCopyFromReviewCursor {#key-code-commands-selectthencopyfromreviewcursor}
 
@@ -586,7 +586,7 @@ Starts the select then copy process from the current position of the review curs
 
 Equivalent of executing `NVDA-F9`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.selectThenCopyToReviewCursor {#key-code-commands-selectthencopytoreviewcursor}
 
@@ -594,7 +594,7 @@ On the first press, text is selected from the position previously set as start m
 
 Equivalent of executing `NVDA-F10`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToMarkedStartForCopyInReview {#key-code-commands-movetomarkedstartforcopyinreview}
 
@@ -602,7 +602,7 @@ Moves the review cursor to the position previously set start marker for copy.
 
 Equivalent of executing `NVDA-Shift-F9`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportTextFormattingInReview {#key-code-commands-reporttextformattinginreview}
 
@@ -610,7 +610,7 @@ Reports the formatting of the text where the review cursor is currently situated
 
 Equivalent of executing `NVDA-Shift-F`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.switchToNextReviewMode {#key-code-commands-switchtonextreviewmode}
 
@@ -618,7 +618,7 @@ switches to the next available review mode.
 
 Equivalent of executing `NVDA-NumPad7`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.switchToPreviousReviewMode {#key-code-commands-switchtopreviousreviewmode}
 
@@ -626,7 +626,7 @@ switches to the previous available review mode.
 
 Equivalent of executing `NVDA-NumPad1`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.leftMouseClick {#key-code-commands-leftmouseclick}
 
@@ -634,7 +634,7 @@ Clicks the left mouse button once. The common double click can be performed by p
 
 Equivalent of executing `NumPadDivide`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.leftMouseButtonLock {#key-code-commands-leftmousebuttonlock}
 
@@ -642,7 +642,7 @@ Locks the left mouse button down. Press again to release it. To drag the mouse, 
 
 Equivalent of executing `Shift-NumPadDivide`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.rightMouseClick {#key-code-commands-rightmouseclick}
 
@@ -650,7 +650,7 @@ Clicks the right mouse button once, mostly used to open context menu at the loca
 
 Equivalent of executing `NumPadMultiply`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.rightMouseButtonLock {#key-code-commands-rightmousebuttonlock}
 
@@ -658,7 +658,7 @@ Locks the right mouse button down. Press again to release it. To drag the mouse,
 
 Equivalent of executing `Shift-NumPadMultiply`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveMouseToCurrentNavigatorObject {#key-code-commands-movemousetocurrentnavigatorobject}
 
@@ -666,7 +666,7 @@ Moves the mouse to the location of the current navigator object and review curso
 
 Equivalent of executing `NVDA-NumPadDivide`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.navigateToObjectUnderMouse {#key-code-commands-navigatetoobjectundermouse}
 
@@ -674,7 +674,7 @@ Set the navigator object to the object located at the position of the mouse.
 
 Equivalent of executing `NVDA-NumPadMultiply`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.toggleBetweenBrowseAndFocusMode {#key-code-commands-togglebetweenbrowseandfocusmode}
 
@@ -682,7 +682,7 @@ Toggles between focus mode and browse mode.
 
 Equivalent of executing `NVDA-Space bar`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.exitFocusMode {#key-code-commands-exitfocusmode}
 
@@ -690,7 +690,7 @@ Switches back to browse mode if focus mode was previously switched to automatica
 
 Equivalent of executing `Escape`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.refreshBrowseDocument {#key-code-commands-refreshbrowsedocument}
 
@@ -698,7 +698,7 @@ Reloads the current document content (useful if certain content seems to be miss
 
 Equivalent of executing `NVDA-F5`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.find {#key-code-commands-find}
 
@@ -706,7 +706,7 @@ Pops up a dialog in which you can type some text to find in the current document
 
 Equivalent of executing `NVDA-Control-F`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.findNext {#key-code-commands-findnext}
 
@@ -714,7 +714,7 @@ Finds the next occurrence of the text in the document that you previously search
 
 Equivalent of executing `NVDA-F3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.findPrevious {#key-code-commands-findprevious}
 
@@ -722,7 +722,7 @@ Finds the previous occurrence of the text in the document you previously searche
 
 Equivalent of executing `NVDA-Shift-F3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openLongDescription {#key-code-commands-openlongdescription}
 
@@ -730,7 +730,7 @@ Opens a new window containing a long description for the element you are on if i
 
 Equivalent of executing `NVDA-D`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeading {#key-code-commands-movetonextheading}
 
@@ -738,7 +738,7 @@ Move to next heading.
 
 Equivalent of executing `H`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeading {#key-code-commands-movetopreviousheading}
 
@@ -746,7 +746,7 @@ Move to previous heading.
 
 Equivalent of executing `Shift-H`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextList {#key-code-commands-movetonextlist}
 
@@ -754,7 +754,7 @@ Move to next list.
 
 Equivalent of executing `L`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousList {#key-code-commands-movetopreviouslist}
 
@@ -762,7 +762,7 @@ Move to previous list.
 
 Equivalent of executing `Shift-L`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextListItem {#key-code-commands-movetonextlistitem}
 
@@ -770,7 +770,7 @@ Move to next list item.
 
 Equivalent of executing `I`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousListItem {#key-code-commands-movetopreviouslistitem}
 
@@ -778,7 +778,7 @@ Move to previous list item.
 
 Equivalent of executing `Shift-I`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextTable {#key-code-commands-movetonexttable}
 
@@ -786,7 +786,7 @@ Move to next table.
 
 Equivalent of executing `T`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousTable {#key-code-commands-movetoprevioustable}
 
@@ -794,7 +794,7 @@ Move to previous table.
 
 Equivalent of executing `Shift-T`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextLink {#key-code-commands-movetonextlink}
 
@@ -802,7 +802,7 @@ Move to next link.
 
 Equivalent of executing `K`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousLink {#key-code-commands-movetopreviouslink}
 
@@ -810,7 +810,7 @@ Move to previous link.
 
 Equivalent of executing `Shift-K`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextNonLinkedText {#key-code-commands-movetonextnonlinkedtext}
 
@@ -818,7 +818,7 @@ Move to next non linked text.
 
 Equivalent of executing `N`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousNonLinkedText {#key-code-commands-movetopreviousnonlinkedtext}
 
@@ -826,7 +826,7 @@ Move to previous non linked text.
 
 Equivalent of executing `Shift-N`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextFormField {#key-code-commands-movetonextformfield}
 
@@ -834,7 +834,7 @@ Move to next form field.
 
 Equivalent of executing `F`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousFormField {#key-code-commands-movetopreviousformfield}
 
@@ -842,7 +842,7 @@ Move to previous form field.
 
 Equivalent of executing `Shift-F`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextUnvisitedLink {#key-code-commands-movetonextunvisitedlink}
 
@@ -850,7 +850,7 @@ Move to next unvisited link.
 
 Equivalent of executing `U`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousUnvisitedLink {#key-code-commands-movetopreviousunvisitedlink}
 
@@ -858,7 +858,7 @@ Move to previous unvisited link.
 
 Equivalent of executing `Shift-U`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextVisitedLink {#key-code-commands-movetonextvisitedlink}
 
@@ -866,7 +866,7 @@ Move to next visited link.
 
 Equivalent of executing `V`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousVisitedLink {#key-code-commands-movetopreviousvisitedlink}
 
@@ -874,7 +874,7 @@ Move to previous visited link.
 
 Equivalent of executing `Shift-V`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextEditField {#key-code-commands-movetonexteditfield}
 
@@ -882,7 +882,7 @@ Move to next edit field.
 
 Equivalent of executing `E`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousEditField {#key-code-commands-movetopreviouseditfield}
 
@@ -890,7 +890,7 @@ Move to previous edit field.
 
 Equivalent of executing `Shift-E`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextButton {#key-code-commands-movetonextbutton}
 
@@ -898,7 +898,7 @@ Move to next button.
 
 Equivalent of executing `B`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousButton {#key-code-commands-movetopreviousbutton}
 
@@ -906,7 +906,7 @@ Move to previous button.
 
 Equivalent of executing `Shift-B`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextCheckbox {#key-code-commands-movetonextcheckbox}
 
@@ -914,7 +914,7 @@ Move to next checkbox.
 
 Equivalent of executing `X`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousCheckbox {#key-code-commands-movetopreviouscheckbox}
 
@@ -922,7 +922,7 @@ Move to previous checkbox.
 
 Equivalent of executing `Shift-X`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextComboBox {#key-code-commands-movetonextcombobox}
 
@@ -930,7 +930,7 @@ Move to next combo box.
 
 Equivalent of executing `C`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousComboBox {#key-code-commands-movetopreviouscombobox}
 
@@ -938,7 +938,7 @@ Move to previous combo box.
 
 Equivalent of executing `Shift-C`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextRadioButton {#key-code-commands-movetonextradiobutton}
 
@@ -946,7 +946,7 @@ Move to next radio button.
 
 Equivalent of executing `R`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousRadioButton {#key-code-commands-movetopreviousradiobutton}
 
@@ -954,7 +954,7 @@ Move to previous radio button.
 
 Equivalent of executing `Shift-R`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextBlockQuote {#key-code-commands-movetonextblockquote}
 
@@ -962,7 +962,7 @@ Move to next block quote.
 
 Equivalent of executing `Q`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousBlockQuote {#key-code-commands-movetopreviousblockquote}
 
@@ -970,7 +970,7 @@ Move to previous block quote.
 
 Equivalent of executing `Shift-Q`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextSeparator {#key-code-commands-movetonextseparator}
 
@@ -978,7 +978,7 @@ Move to next separator.
 
 Equivalent of executing `S`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousSeparator {#key-code-commands-movetopreviousseparator}
 
@@ -986,7 +986,7 @@ Move to previous separator.
 
 Equivalent of executing `Shift-S`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextFrame {#key-code-commands-movetonextframe}
 
@@ -994,7 +994,7 @@ Move to next frame.
 
 Equivalent of executing `M`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousFrame {#key-code-commands-movetopreviousframe}
 
@@ -1002,7 +1002,7 @@ Move to previous frame.
 
 Equivalent of executing `Shift-M`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextGraphic {#key-code-commands-movetonextgraphic}
 
@@ -1010,7 +1010,7 @@ Move to next graphic.
 
 Equivalent of executing `G`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousGraphic {#key-code-commands-movetopreviousgraphic}
 
@@ -1018,7 +1018,7 @@ Move to previous graphic.
 
 Equivalent of executing `Shift-G`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextLandmark {#key-code-commands-movetonextlandmark}
 
@@ -1026,7 +1026,7 @@ Move to next landmark.
 
 Equivalent of executing `D`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousLandmark {#key-code-commands-movetopreviouslandmark}
 
@@ -1034,7 +1034,7 @@ Move to previous landmark.
 
 Equivalent of executing `Shift-D`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextEmbeddedObject {#key-code-commands-movetonextembeddedobject}
 
@@ -1042,7 +1042,7 @@ Move to next embedded object.
 
 Equivalent of executing `O`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousEmbeddedObject {#key-code-commands-movetopreviousembeddedobject}
 
@@ -1050,7 +1050,7 @@ Move to previous embedded object.
 
 Equivalent of executing `Shift-O`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeadingLevel1 {#key-code-commands-movetonextheadinglevel1}
 
@@ -1058,7 +1058,7 @@ Move to next heading level 1.
 
 Equivalent of executing `1`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeadingLevel1 {#key-code-commands-movetopreviousheadinglevel1}
 
@@ -1066,7 +1066,7 @@ Move to previous heading level 1.
 
 Equivalent of executing `Shift-1`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeadingLevel2 {#key-code-commands-movetonextheadinglevel2}
 
@@ -1074,7 +1074,7 @@ Move to next heading level 2.
 
 Equivalent of executing `2`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeadingLevel2 {#key-code-commands-movetopreviousheadinglevel2}
 
@@ -1082,7 +1082,7 @@ Move to previous heading level 2.
 
 Equivalent of executing `Shift-2`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeadingLevel3 {#key-code-commands-movetonextheadinglevel3}
 
@@ -1090,7 +1090,7 @@ Move to next heading level 3.
 
 Equivalent of executing `3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeadingLevel3 {#key-code-commands-movetopreviousheadinglevel3}
 
@@ -1098,7 +1098,7 @@ Move to previous heading level 3.
 
 Equivalent of executing `Shift-3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeadingLevel4 {#key-code-commands-movetonextheadinglevel4}
 
@@ -1106,7 +1106,7 @@ Move to next heading level 4.
 
 Equivalent of executing `4`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeadingLevel4 {#key-code-commands-movetopreviousheadinglevel4}
 
@@ -1114,7 +1114,7 @@ Move to previous heading level 4.
 
 Equivalent of executing `Shift-4`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeadingLevel5 {#key-code-commands-movetonextheadinglevel5}
 
@@ -1122,7 +1122,7 @@ Move to next heading level 5.
 
 Equivalent of executing `5`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeadingLevel5 {#key-code-commands-movetopreviousheadinglevel5}
 
@@ -1130,7 +1130,7 @@ Move to previous heading level 5.
 
 Equivalent of executing `Shift-5`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextHeadingLevel6 {#key-code-commands-movetonextheadinglevel6}
 
@@ -1138,7 +1138,7 @@ Move to next heading level 6.
 
 Equivalent of executing `6`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousHeadingLevel6 {#key-code-commands-movetopreviousheadinglevel6}
 
@@ -1146,7 +1146,7 @@ Move to previous heading level 6.
 
 Equivalent of executing `Shift-6`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextAnnotation {#key-code-commands-movetonextannotation}
 
@@ -1154,7 +1154,7 @@ Move to next annotation.
 
 Equivalent of executing `A`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousAnnotation {#key-code-commands-movetopreviousannotation}
 
@@ -1162,7 +1162,7 @@ Move to previous annotation.
 
 Equivalent of executing `Shift-A`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextSpellingError {#key-code-commands-movetonextspellingerror}
 
@@ -1170,7 +1170,7 @@ Move to next spelling error.
 
 Equivalent of executing `W`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousSpellingError {#key-code-commands-movetopreviousspellingerror}
 
@@ -1178,7 +1178,7 @@ Move to previous spelling error.
 
 Equivalent of executing `Shift-W`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToStartOfContainer {#key-code-commands-movetostartofcontainer}
 
@@ -1186,7 +1186,7 @@ Moves to the start of the container (list, table, etc.) where the caret is posit
 
 Equivalent of executing `Shift-,`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.movePastEndOfContainer {#key-code-commands-movepastendofcontainer}
 
@@ -1194,7 +1194,7 @@ Moves past the end of the container (list, table, etc.) where the caret is posit
 
 Equivalent of executing `,`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.toggleSingleLetterNavigation {#key-code-commands-togglesingleletternavigation}
 
@@ -1202,7 +1202,7 @@ Toggles single letter navigation on and off for the current document..
 
 Equivalent of executing `NVDA-Shift-Space bar`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.browseModeElementsList {#key-code-commands-browsemodeelementslist}
 
@@ -1210,7 +1210,7 @@ Lists various types of elements in the current document.
 
 Equivalent of executing `NVDA-F7`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToContainingBrowseModeDocument {#key-code-commands-movetocontainingbrowsemodedocument}
 
@@ -1218,7 +1218,7 @@ Moves the focus out of the current embedded object and into the document that co
 
 Equivalent of executing `NVDA-Control-Space bar`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.interactWithMathContent {#key-code-commands-interactwithmathcontent}
 
@@ -1226,7 +1226,7 @@ Begins interaction with math content..
 
 Equivalent of executing `NVDA-Alt-M`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openSpeechSettings {#key-code-commands-openspeechsettings}
 
@@ -1234,7 +1234,7 @@ Open speech settings..
 
 Equivalent of executing `NVDA-Control-V`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.punctuationLevel {#key-code-commands-punctuationlevel}
 
@@ -1242,7 +1242,7 @@ This allows you to choose the amount of punctuation and other symbols that shoul
 
 Equivalent of executing `NVDA-P`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.selectSynthesizer {#key-code-commands-selectsynthesizer}
 
@@ -1250,7 +1250,7 @@ Select Synthesizer..
 
 Equivalent of executing `NVDA-Control-S`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.audioDuckingMode {#key-code-commands-audioduckingmode}
 
@@ -1258,7 +1258,7 @@ On Windows 8 and above, this option allows you to choose if NVDA should lower th
 
 Equivalent of executing `NVDA-Shift-D`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNextSynthSetting {#key-code-commands-movetonextsynthsetting}
 
@@ -1266,7 +1266,7 @@ Moves to the next available speech setting after the current, wrapping around to
 
 Equivalent of executing `NVDA-Control-Right Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPreviousSynthSetting {#key-code-commands-movetoprevioussynthsetting}
 
@@ -1274,7 +1274,7 @@ Moves to the next available speech setting before the current, wrapping around t
 
 Equivalent of executing `NVDA-Control-Left Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.incrementCurrentSynthSetting {#key-code-commands-incrementcurrentsynthsetting}
 
@@ -1282,7 +1282,7 @@ increases the current speech setting you are on. E.g. increases the rate, choose
 
 Equivalent of executing `NVDA-Control-Up Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.decrementCurrentSynthSetting {#key-code-commands-decrementcurrentsynthsetting}
 
@@ -1290,7 +1290,7 @@ decreases the current speech setting you are on. E.g. decreases the rate, choose
 
 Equivalent of executing `NVDA-Control-Down Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.tetherBraille {#key-code-commands-tetherbraille}
 
@@ -1298,7 +1298,7 @@ This option allows you to choose whether the braille display will follow the sys
 
 Equivalent of executing `NVDA-Control-T`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openKeyboardSettings {#key-code-commands-openkeyboardsettings}
 
@@ -1306,7 +1306,7 @@ Open keyboard settings..
 
 Equivalent of executing `NVDA-Control-K`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.speakTypedCharacters {#key-code-commands-speaktypedcharacters}
 
@@ -1314,7 +1314,7 @@ When enabled, NVDA will announce all characters you type on the keyboard..
 
 Equivalent of executing `NVDA-2`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.speakTypedWords {#key-code-commands-speaktypedwords}
 
@@ -1322,7 +1322,7 @@ When enabled, NVDA will announce all words you type on the keyboard..
 
 Equivalent of executing `NVDA-3`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.speakCommandKeys {#key-code-commands-speakcommandkeys}
 
@@ -1330,7 +1330,7 @@ When enabled, NVDA will announce all non-character keys you type on the keyboard
 
 Equivalent of executing `NVDA-4`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openMouseSettings {#key-code-commands-openmousesettings}
 
@@ -1338,7 +1338,7 @@ Open mouse settings..
 
 Equivalent of executing `NVDA-Control-M`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.enableMouseTracking {#key-code-commands-enablemousetracking}
 
@@ -1346,7 +1346,7 @@ When enabled, NVDA will announce the text currently under the mouse pointer, as 
 
 Equivalent of executing `NVDA-M`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reviewCursorFollowSystemFocus {#key-code-commands-reviewcursorfollowsystemfocus}
 
@@ -1354,7 +1354,7 @@ When enabled, The review cursor will always be placed in the same object as the 
 
 Equivalent of executing `NVDA-7`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reviewCursorFollowSystemCaret {#key-code-commands-reviewcursorfollowsystemcaret}
 
@@ -1362,7 +1362,7 @@ When enabled, the review cursor will automatically be moved to the position of t
 
 Equivalent of executing `NVDA-6`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openObjectPresentationSettings {#key-code-commands-openobjectpresentationsettings}
 
@@ -1370,7 +1370,7 @@ Open Object Presentation Settings..
 
 Equivalent of executing `NVDA-Control-O`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.progressBarOutput {#key-code-commands-progressbaroutput}
 
@@ -1378,7 +1378,7 @@ This option controls how NVDA reports progress bar updates to you..
 
 Equivalent of executing `NVDA-U`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.reportDynamicContentChanges {#key-code-commands-reportdynamiccontentchanges}
 
@@ -1386,7 +1386,7 @@ Toggles the announcement of new content in particular objects such as terminals 
 
 Equivalent of executing `NVDA-5`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openBrowseModeSettings {#key-code-commands-openbrowsemodesettings}
 
@@ -1394,7 +1394,7 @@ Open Browse Mode Settings..
 
 Equivalent of executing `NVDA-Control-B`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.useScreenLayout {#key-code-commands-usescreenlayout}
 
@@ -1402,7 +1402,7 @@ This option allows you to specify whether content in browse mode should place co
 
 Equivalent of executing `NVDA-V`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.saveConfiguration {#key-code-commands-saveconfiguration}
 
@@ -1410,7 +1410,7 @@ Saves your current configuration so that it is not lost when you exit NVDA.
 
 Equivalent of executing `NVDA-Control-C`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.revertConfiguration {#key-code-commands-revertconfiguration}
 
@@ -1418,7 +1418,7 @@ Pressing once resets your configuration to when you last saved it. Pressing thre
 
 Equivalent of executing `NVDA-Control-R`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.openConfigurationProfilesDialog {#key-code-commands-openconfigurationprofilesdialog}
 
@@ -1426,7 +1426,7 @@ Show the Configuration Profiles dialog..
 
 Equivalent of executing `NVDA-Control-P`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToPrevious {#key-code-commands-movetoprevious}
 
@@ -1434,7 +1434,7 @@ Move to previous.
 
 Equivalent of executing `Up Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.moveToNext {#key-code-commands-movetonext}
 
@@ -1442,7 +1442,7 @@ Move to next.
 
 Equivalent of executing `Down Arrow`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.readNextFocusableItem {#key-code-commands-readnextfocusableitem}
 
@@ -1450,7 +1450,7 @@ Read next focusable item (e.g. link, button).
 
 Equivalent of executing `Tab`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.performDefaultActionForItem {#key-code-commands-performdefaultactionforitem}
 
@@ -1458,7 +1458,7 @@ Activate.
 
 Equivalent of executing `Enter`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 ## NVDAKeyCodeCommands.activate {#key-code-commands-activate}
 
@@ -1466,7 +1466,7 @@ Activate.
 
 Equivalent of executing `Enter`.
 
-**Type:** &#60;[WindowsKeyCodeCommand]&#62;
+**Type:** [WindowsKeyCodeCommand]
 
 [windowskeycodecommand]: ./class-windows-key-code-command "WindowsKeyCodeCommand"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"

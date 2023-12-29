@@ -45,6 +45,6 @@ The bounding HTML element to use the Virtual Screen Reader in.
 
 To use the entire page pass `document.body`.
 
-**Type:** &#60;[HTMLElement]&#62;
+**Type:** [HTMLElement]
 
 [htmlelement]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement "HTMLElement"

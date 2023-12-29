@@ -47,13 +47,13 @@ See also:
 
 The character(s) to send.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## keystrokeCommand.modifiers {#keystroke-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the character(s).
 
-**Type:** &#60;[Array]<[string]>&#62;
+**Type:** [Array]<[string]>
 
 [macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"

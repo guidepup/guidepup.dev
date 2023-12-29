@@ -77,7 +77,7 @@ describe("Screen Reader Tests", () => {
 
 ## guidepupVirtualScreenReader.virtual {#guidepupVirtualScreenReader-virtual}
 
-**Type:** &#60;[Virtual]&#62;
+**Type:** [Virtual]
 
 This object can be used to launch and control the Virtual Screen Reader.
 

@@ -4,7 +4,7 @@ title: "VirtualCommands"
 
 **Extends:** [object]
 
-**Implements:** &#60;[Record]<[string], [string]>&#62;
+**Implements:** [Record]<[string], [string]>
 
 Collection of Virtual Screen Reader commands.
 
@@ -73,7 +73,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.jumpToDetailsElement {#virtual-commands-jumpToDetailsElement}
 
@@ -94,7 +94,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextAlternateReadingOrderElement {#virtual-commands-moveToNextAlternateReadingOrderElement}
 
@@ -120,7 +120,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousAlternateReadingOrderElement {#virtual-commands-moveToPreviousAlternateReadingOrderElement}
 
@@ -146,7 +146,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextBanner {#virtual-commands-moveToNextBanner}
 
@@ -167,7 +167,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousBanner {#virtual-commands-moveToPreviousBanner}
 
@@ -188,7 +188,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextComplementary {#virtual-commands-moveToNextComplementary}
 
@@ -209,7 +209,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousComplementary {#virtual-commands-moveToPreviousComplementary}
 
@@ -230,7 +230,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextContentinfo {#virtual-commands-moveToNextContentinfo}
 
@@ -251,7 +251,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousContentinfo {#virtual-commands-moveToPreviousContentinfo}
 
@@ -272,7 +272,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextFigure {#virtual-commands-moveToNextFigure}
 
@@ -293,7 +293,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousFigure {#virtual-commands-moveToPreviousFigure}
 
@@ -314,7 +314,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextForm {#virtual-commands-moveToNextForm}
 
@@ -335,7 +335,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousForm {#virtual-commands-moveToPreviousForm}
 
@@ -356,7 +356,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextMain {#virtual-commands-moveToNextMain}
 
@@ -377,7 +377,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousMain {#virtual-commands-moveToPreviousMain}
 
@@ -398,7 +398,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextNavigation {#virtual-commands-moveToNextNavigation}
 
@@ -419,7 +419,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousNavigation {#virtual-commands-moveToPreviousNavigation}
 
@@ -440,7 +440,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextRegion {#virtual-commands-moveToNextRegion}
 
@@ -461,7 +461,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousRegion {#virtual-commands-moveToPreviousRegion}
 
@@ -482,7 +482,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextSearch {#virtual-commands-moveToNextSearch}
 
@@ -503,7 +503,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousSearch {#virtual-commands-moveToPreviousSearch}
 
@@ -524,7 +524,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToNextLandmark {#virtual-commands-moveToNextLandmark}
 
@@ -556,7 +556,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## virtualCommands.moveToPreviousLandmark {#virtual-commands-moveToPreviousLandmark}
 
@@ -588,7 +588,7 @@ test("example test", async () => {
 });
 ```
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 [`aria-controls`]: https://www.w3.org/TR/wai-aria-1.2/#aria-controls "aria-controls"
 [`aria-details`]: https://www.w3.org/TR/wai-aria-1.2/#aria-details "aria-details"

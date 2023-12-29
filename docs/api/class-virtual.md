@@ -117,7 +117,7 @@ See also:
 
 - [virtual.perform(command[, options])](./class-virtual#virtual-perform)
 
-**Returns:** &#60;[VirtualCommands]&#62;
+**Returns:** [VirtualCommands]
 
 ## virtual.act() {#virtual-act}
 
@@ -141,7 +141,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.click([options]) {#virtual-click}
 
@@ -170,9 +170,9 @@ test("example test", async () => {
 
 **Parameters:**
 
-- **Optional:** `options` &#60;[ClickOptions]&#62; Click options.
+- **Optional:** `options` [ClickOptions] Click options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.default() {#virtual-default}
 
@@ -190,7 +190,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[boolean]>&#62;
+**Returns:** [Promise]<[boolean]>
 
 ## virtual.detect() {#virtual-detect}
 
@@ -208,7 +208,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[boolean]>&#62;
+**Returns:** [Promise]<[boolean]>
 
 ## virtual.interact() {#virtual-interact}
 
@@ -234,7 +234,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.itemText() {#virtual-item-text}
 
@@ -260,7 +260,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[string]>&#62; The item's text.
+**Returns:** [Promise]<[string]> The item's text.
 
 ## virtual.itemTextLog() {#virtual-item-text-log}
 
@@ -287,7 +287,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The item text log.
+**Returns:** [Promise]<[Array]<[string]>> The item text log.
 
 ## virtual.lastSpokenPhrase() {#virtual-last-spoken-phrase}
 
@@ -312,7 +312,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[string]>&#62; The last spoken phrase.
+**Returns:** [Promise]<[string]> The last spoken phrase.
 
 ## virtual.next() {#virtual-next}
 
@@ -337,9 +337,9 @@ test("example test", async () => {
 
 **Parameters:**
 
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
+- **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.perform(command[, options]) {#virtual-perform}
 
@@ -367,10 +367,10 @@ See also:
 
 **Parameters:**
 
-- `command` &#60;[string]&#62; Virtual Screen Reader command to execute. See [VirtualCommands] for valid commands.
-- **Optional:** `options` &#60;[object]&#62; Additional options.
+- `command` [string] Virtual Screen Reader command to execute. See [VirtualCommands] for valid commands.
+- **Optional:** `options` [object] Additional options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.press(key) {#virtual-press}
 
@@ -407,9 +407,9 @@ test("example test", async () => {
 
 **Parameters:**
 
-- `key` &#60;[string]&#62; Name of the key to press or a character to generate, such as `ArrowLeft` or `a`.
+- `key` [string] Name of the key to press or a character to generate, such as `ArrowLeft` or `a`.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.previous() {#virtual-previous}
 
@@ -430,7 +430,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.spokenPhraseLog() {#virtual-spoken-phrase-log}
 
@@ -457,7 +457,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The spoken phrase log.
+**Returns:** [Promise]<[Array]<[string]>> The spoken phrase log.
 
 ## virtual.start([options]) {#virtual-start}
 
@@ -481,9 +481,9 @@ test("example test", async () => {
 
 **Parameters:**
 
-- **Optional:** `options` &#60;[StartOptions]&#62; Start options.
+- **Optional:** `options` [StartOptions] Start options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.stop() {#virtual-stop}
 
@@ -505,7 +505,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.stopInteracting() {#virtual-stop-interacting}
 
@@ -533,7 +533,7 @@ test("example test", async () => {
 });
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## virtual.type(text) {#virtual-type}
 
@@ -559,9 +559,9 @@ test("example test", async () => {
 
 **Parameters:**
 
-- `text` &#60;[string]&#62; Text to type into the focused item.
+- `text` [string] Text to type into the focused item.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"

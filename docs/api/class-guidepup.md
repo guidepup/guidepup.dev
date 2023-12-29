@@ -46,95 +46,140 @@ import { voiceOver } from "@guidepup/guidepup";
 - [guidepup.windowsOSActivate](./class-guidepup#guidepup-windows-activate)
 - [guidepup.WindowsKeyCodes](./class-guidepup#guidepup-windows-key-codes)
 - [guidepup.WindowsModifiers](./class-guidepup#guidepup-windows-modifiers)
+- [guidepup.windowsRecord](./class-guidepup#guidepup-windows-record)
 - [guidepup.windowsQuit](./class-guidepup#guidepup-windows-quit)
 
 ## guidepup.macOSActivate {#guidepup-macos-activate}
 
-**Type:** &#60;[macOSActivate]&#62;
+**See:** [macOSActivate]
 
 Opens a MacOS application if not already open, and focuses the application.
 
 ## guidepup.MacOSApplications {#guidepup-macos-applications}
 
-**Type:** &#60;[MacOSApplications]&#62;
+**Type:** [MacOSApplications]
 
 Identifiers for standard applications available on MacOS.
 
 ## guidepup.MacOSKeyCodes {#guidepup-macos-key-codes}
 
-**Type:** &#60;[MacOSKeyCodes]&#62;
+**Type:** [MacOSKeyCodes]
 
 Key codes for MacOS.
 
 ## guidepup.MacOSModifiers {#guidepup-macos-modifiers}
 
-**Type:** &#60;[MacOSModifiers]&#62;
+**Type:** [MacOSModifiers]
 
 Modifier keys for MacOS.
 
 ## guidepup.macOSQuit {#guidepup-macos-quit}
 
-**Type:** &#60;[macOSQuit]&#62;
+**See:** [macOSQuit]
 
 Quits a MacOS application if running.
 
 ## guidepup.macOSRecord {#guidepup-macos-record}
 
-**Type:** &#60;[macOSRecord]&#62;
+**See:** [macOSRecord]
 
 Start a screen recording.
 
 ## guidepup.nvda {#guidepup-nvda}
 
-**Type:** &#60;[NVDA]&#62;
+**Type:** [NVDA]
 
 This object can be used to launch and control NVDA.
 
+Here's a typical example:
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next item.
+  await nvda.next();
+
+  // ... perform some commands.
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
 ## guidepup.NVDAKeyCodeCommands {#guidepup-nvda-key-code-commands}
 
-**Type:** &#60;[NVDAKeyCodeCommands]&#62;
+**Type:** [NVDAKeyCodeCommands]
 
 [Key code commands for the NVDA screen reader](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html) on Windows.
 
 ## guidepup.voiceOver {#guidepup-voiceover}
 
-**Type:** &#60;[VoiceOver]&#62;
+**Type:** [VoiceOver]
 
 This object can be used to launch and control VoiceOver.
 
+Here's a typical example:
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item.
+  await voiceOver.next();
+
+  // ... perform some commands.
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
 ## guidepup.VoiceOverCommanderCommands {#guidepup-voiceover-commander-commands}
 
-**Type:** &#60;[VoiceOverCommanderCommands]&#62;
+**Type:** [VoiceOverCommanderCommands]
 
 [VoiceOver Commander](https://support.apple.com/en-gb/guide/voiceover/cpvoukbcmdr/mac) commands.
 
 ## guidepup.voiceOverKeyCodeCommands {#guidepup-voiceover-key-code-commands}
 
-**Type:** &#60;[voiceOverKeyCodeCommands]&#62;
+**See:** [voiceOverKeyCodeCommands]
 
 [Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
 ## guidepup.windowsActivate {#guidepup-windows-activate}
 
-**Type:** &#60;[windowsActivate]&#62;
+**See:** [windowsActivate]
 
 Opens a Windows application if not already open, and focuses the application.
 
 ## guidepup.WindowsKeyCodes {#guidepup-windows-key-codes}
 
-**Type:** &#60;[WindowsKeyCodes]&#62;
+**Type:** [WindowsKeyCodes]
 
 Key codes for Windows.
 
 ## guidepup.WindowsModifiers {#guidepup-windows-modifiers}
 
-**Type:** &#60;[WindowsModifiers]&#62;
+**Type:** [WindowsModifiers]
 
 Modifier keys for Windows.
 
+## guidepup.windowsRecord {#guidepup-windows-record}
+
+**See:** [windowsRecord]
+
+Start a screen recording.
+
 ## guidepup.windowsQuit {#guidepup-windows-quit}
 
-**Type:** &#60;[windowsQuit]&#62;
+**See:** [windowsQuit]
 
 Quits a Windows application if running.
 
@@ -152,4 +197,5 @@ Quits a Windows application if running.
 [windowsactivate]: ./class-windows-activate "windowsActivate"
 [windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"
+[windowsrecord]: ./class-windows-record "windowsRecord"
 [windowsquit]: ./class-windows-quit "windowsQuit"

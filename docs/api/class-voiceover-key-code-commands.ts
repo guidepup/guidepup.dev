@@ -11,7 +11,7 @@ const list = Object.keys(voiceOverKeyCodeCommands)
 
 const main = Object.entries(voiceOverKeyCodeCommands)
   .map(([key, { description, representation }]) => {
-    return `## voiceOverKeyCodeCommands.${key} {#key-code-commands-${key.toLowerCase()}}\n\n${description}.\n\nEquivalent of executing \`${representation}\`.\n\n**Type:** &#60;[MacOSKeyCodeCommand]&#62;\n\n`;
+    return `## voiceOverKeyCodeCommands.${key} {#key-code-commands-${key.toLowerCase()}}\n\n${description}.\n\nEquivalent of executing \`${representation}\`.\n\n**Type:** [MacOSKeyCodeCommand]\n\n`;
   })
   .join("");
 

@@ -59,6 +59,7 @@ const sidebars = {
             { type: "doc", id: "api/class-windows-key-codes" },
             { type: "doc", id: "api/class-windows-keystroke-command" },
             { type: "doc", id: "api/class-windows-modifiers" },
+            { type: "doc", id: "api/class-windows-record" },
             { type: "doc", id: "api/class-windows-quit" },
           ],
         },

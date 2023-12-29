@@ -26,9 +26,9 @@ import { windowsActivate, windowsQuit } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- `applicationPath` &#60;[string]&#62; Application executable path identifier.
+- `applicationPath` [string] Application executable path identifier.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
