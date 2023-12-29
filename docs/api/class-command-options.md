@@ -46,7 +46,7 @@ See also:
 
 Default is `true`.
 
-**Type:** &#60;[boolean] | "initial"&#62;
+**Type:** [boolean] | "initial"
 
 ## commandOptions.retries {#command-options-retries}
 
@@ -54,7 +54,7 @@ Default is `true`.
 
 Default is `3`.
 
-**Type:** &#60;[number]&#62;
+**Type:** [number]
 
 ## commandOptions.timeout {#command-options-timeout}
 
@@ -62,7 +62,7 @@ Default is `3`.
 
 Default is `10000`.
 
-**Type:** &#60;[number]&#62;
+**Type:** [number]
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"

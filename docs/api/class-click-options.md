@@ -38,13 +38,13 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Optional:** Mouse button to click. One of: `"left"`, `"right"`. Defaults to `"left"` if not provided.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## clickOptions.clickCount {#click-options-click-count}
 
 **Optional:** Number of times to click the mouse. One of: `1`, `2`, `3`. Defaults to `1` if not provided.
 
-**Type:** &#60;[number]&#62;
+**Type:** [number]
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number "number"

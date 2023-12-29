@@ -26,7 +26,9 @@ import { nvda } from "@guidepup/guidepup";
 **Contents:**
 
 - [nvda.keyboardCommands](./class-nvda#nvda-keyboard-commands)
-- [nvda.act()](./class-nvda#nvda-act)
+- [nvda.act([options])](./class-nvda#nvda-act)
+- [nvda.clearItemTextLog()](./class-nvda#nvda-clear-item-text-log)
+- [nvda.clearSpokenPhraseLog()](./class-nvda#nvda-clear-spoken-phrase-log)
 - [nvda.click([options])](./class-nvda#nvda-click)
 - [nvda.default()](./class-nvda#nvda-default)
 - [nvda.detect()](./class-nvda#nvda-detect)
@@ -34,15 +36,15 @@ import { nvda } from "@guidepup/guidepup";
 - [nvda.itemText()](./class-nvda#nvda-item-text)
 - [nvda.itemTextLog()](./class-nvda#nvda-item-text-log)
 - [nvda.lastSpokenPhrase()](./class-nvda#nvda-last-spoken-phrase)
-- [nvda.next()](./class-nvda#nvda-next)
-- [nvda.perform(command)](./class-nvda#nvda-perform)
-- [nvda.press(key)](./class-nvda#nvda-press)
-- [nvda.previous()](./class-nvda#nvda-previous)
+- [nvda.next([options])](./class-nvda#nvda-next)
+- [nvda.perform(command[, options])](./class-nvda#nvda-perform)
+- [nvda.press(key[, options])](./class-nvda#nvda-press)
+- [nvda.previous([options])](./class-nvda#nvda-previous)
 - [nvda.spokenPhraseLog()](./class-nvda#nvda-spoken-phrase-log)
-- [nvda.start()](./class-nvda#nvda-start)
+- [nvda.start([options])](./class-nvda#nvda-start)
 - [nvda.stop()](./class-nvda#nvda-stop)
 - [nvda.stopInteracting()](./class-nvda#nvda-stop-interacting)
-- [nvda.type(text)](./class-nvda#nvda-type)
+- [nvda.type(text[, options])](./class-nvda#nvda-type)
 
 ## nvda.keyboardCommands {#nvda-keyboard-commands}
 
@@ -65,13 +67,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[NVDAKeyCodeCommands]&#62;
+**Returns:** [NVDAKeyCodeCommands]
 
-## nvda.act() {#nvda-act}
+## nvda.act([options]) {#nvda-act}
 
 Perform the default action for the item in the NVDA cursor.
 
-Equivalent of executing `Enter` or `Spacebar` (depending on the item).
+Equivalent of executing <kbd>Enter</kbd>.
 
 ```ts
 import { nvda } from "@guidepup/guidepup";
@@ -91,7 +93,55 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
+
+## nvda.clearItemTextLog() {#nvda-clear-item-text-log}
+
+Clear the log of all spoken phrases for this NVDA instance.
+
+For NVDA this is the same as `clearSpokenPhraseLog`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // ... perform some commands.
+
+  // Clear the spoken phrase log.
+  await nvda.clearItemTextLog();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Returns:** [Promise]<[void]>
+
+## nvda.clearSpokenPhraseLog() {#nvda-clear-spoken-phrase-log}
+
+Clear the log of all spoken phrases for this NVDA instance.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // ... perform some commands.
+
+  // Clear the spoken phrase log.
+  await nvda.clearSpokenPhraseLog();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Returns:** [Promise]<[void]>
 
 ## nvda.click([options]) {#nvda-click}
 
@@ -120,9 +170,9 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` &#60;[ClickOptions]&#62; Click options.
+- **Optional:** `options` [ClickOptions] Click options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## nvda.default() {#nvda-default}
 
@@ -142,7 +192,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[boolean]>&#62;
+**Returns:** [Promise]<[boolean]>
 
 ## nvda.detect() {#nvda-detect}
 
@@ -162,7 +212,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[boolean]>&#62;
+**Returns:** [Promise]<[boolean]>
 
 ## nvda.interact() {#nvda-interact}
 
@@ -188,11 +238,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## nvda.itemText() {#nvda-item-text}
 
 Get the text of the item in the NVDA cursor.
+
+For NVDA this is the same as `lastSpokenPhrase`.
 
 ```ts
 import { nvda } from "@guidepup/guidepup";
@@ -214,11 +266,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[string]>&#62; The item's text.
+**Returns:** [Promise]<[string]> The item's text.
 
 ## nvda.itemTextLog() {#nvda-item-text-log}
 
 Get the log of all visited item text for this NVDA instance.
+
+For NVDA this is the same as `spokenPhraseLog`.
 
 ```ts
 import { nvda } from "@guidepup/guidepup";
@@ -241,7 +295,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The item text log.
+**Returns:** [Promise]<[Array]<[string]>> The item text log.
 
 ## nvda.lastSpokenPhrase() {#nvda-last-spoken-phrase}
 
@@ -266,13 +320,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[string]>&#62; The last spoken phrase.
+**Returns:** [Promise]<[string]> The last spoken phrase.
 
-## nvda.next() {#nvda-next}
+## nvda.next([options]) {#nvda-next}
 
 Move the NVDA cursor to the next location.
 
-Equivalent of executing `VO-Right Arrow`.
+Equivalent of executing `Down Arrow`.
 
 ```ts
 import { nvda } from "@guidepup/guidepup";
@@ -289,9 +343,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Parameters:**
 
-## nvda.perform(command) {#nvda-perform}
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]<[void]>
+
+## nvda.perform(command[, options]) {#nvda-perform}
 
 Perform a NVDA command.
 
@@ -317,29 +375,30 @@ import { nvda, NVDAKeyCodeCommands } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- `command` &#60;[WindowsKeyCodeCommand] | [WindowsKeystrokeCommand]&#62; NVDA keyboard command.
+- `command` [WindowsKeyCodeCommand] | [WindowsKeystrokeCommand] NVDA keyboard command.
+- **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
-## nvda.press(key) {#nvda-press}
+## nvda.press(key[, options]) {#nvda-press}
 
 Press a key on the focused item.
 
 `key` can specify the intended [keyboardEvent.key](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)
 value or a single character to generate the text for. A superset of the `key` values can be found [on the MDN key values page](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values). Examples of the keys are:
 
-`F1` - `F20`, `Digit0` - `Digit9`, `KeyA` - `KeyZ`, `Backquote`, `Minus`, `Equal`, `Backslash`, `Backspace`, `Tab`,
-`Delete`, `Escape`, `ArrowDown`, `End`, `Enter`, `Home`, `Insert`, `PageDown`, `PageUp`, `ArrowRight`, `ArrowUp`, etc.
+<p><kbd>F1</kbd> - <kbd>F20</kbd>, <kbd>Digit0</kbd> - <kbd>Digit9</kbd>, <kbd>KeyA</kbd> - <kbd>KeyZ</kbd>, <kbd>Backquote</kbd>, <kbd>Minus</kbd>, <kbd>Equal</kbd>, <kbd>Backslash</kbd>, <kbd>Backspace</kbd>, <kbd>Tab</kbd>,
+<kbd>Delete</kbd>, <kbd>Escape</kbd>, <kbd>ArrowDown</kbd>, <kbd>End</kbd>, <kbd>Enter</kbd>, <kbd>Home</kbd>, <kbd>Insert</kbd>, <kbd>PageDown</kbd>, <kbd>PageUp</kbd>, <kbd>ArrowRight</kbd>, <kbd>ArrowUp</kbd>, etc.</p>
 
 See [WindowsKeyCodes] for the full range of available keys.
 
-Following modification shortcuts are also supported: `Shift`, `Control`, `Alt`.
+Following modification shortcuts are also supported: <kbd>Shift</kbd>, <kbd>Control</kbd>, <kbd>Alt</kbd>.
 
 See [WindowsModifiers] for the full range of available modifiers.
 
-Holding down `Shift` will type the text that corresponds to the `key` in the upper case.
+Holding down <kbd>Shift</kbd> will type the text that corresponds to the `key` in the upper case.
 
-If `key` is a single character, it is case-sensitive, so the values `a` and `A` will generate different respective texts.
+If `key` is a single character, it is case-sensitive, so the values <kbd>a</kbd> and <kbd>A</kbd> will generate different respective texts.
 
 Shortcuts such as `key: "Control+f"` or `key: "Control+Shift+f"` are supported as well. When specified with the modifier, modifier is pressed and being held while the subsequent key is being pressed.
 
@@ -360,11 +419,12 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- `key` &#60;[string]&#62; Name of the key to press or a character to generate, such as `ArrowLeft` or `a`.
+- `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
+- **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
-## nvda.previous() {#nvda-previous}
+## nvda.previous([options]) {#nvda-previous}
 
 Move the NVDA cursor to the previous location.
 
@@ -385,7 +445,11 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]<[void]>
 
 ## nvda.spokenPhraseLog() {#nvda-spoken-phrase-log}
 
@@ -412,9 +476,9 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[Array]<[string]>>&#62; The spoken phrase log.
+**Returns:** [Promise]<[Array]<[string]>> The spoken phrase log.
 
-## nvda.start() {#nvda-start}
+## nvda.start([options]) {#nvda-start}
 
 Turn NVDA on.
 
@@ -432,7 +496,11 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]<[void]>
 
 ## nvda.stop() {#nvda-stop}
 
@@ -452,7 +520,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 ## nvda.stopInteracting() {#nvda-stop-interacting}
 
@@ -480,13 +548,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
-## nvda.type(text) {#nvda-type}
+## nvda.type(text[, options]) {#nvda-type}
 
 Type text into the focused item.
 
-To press a special key, like `Control` or `ArrowDown`, use [`nvda.press(key)`](./class-nvda#nvda-press).
+To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`nvda.press(key[, options])`](./class-nvda#nvda-press).
 
 ```ts
 import { nvda } from "@guidepup/guidepup";
@@ -506,11 +574,13 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- `text` &#60;[string]&#62; Text to type into the focused item.
+- `text` [string] Text to type into the focused item.
+- **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 [clickoptions]: ./class-click-options "ClickOptions"
+[commandoptions]: ./class-command-options "CommandOptions"
 [nvda]: ./class-nvda "NVDA"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"

@@ -21,10 +21,10 @@ import { windowsActivate } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- `applicationPath` &#60;[string]&#62; Application executable path identifier.
-- `applicationWindowTitle` &#60;[string]&#62; Application window title identifier.
+- `applicationPath` [string] Application executable path identifier.
+- `applicationWindowTitle` [string] Application window title identifier.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"

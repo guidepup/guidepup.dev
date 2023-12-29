@@ -30,10 +30,10 @@ import {
 
 **Parameters:**
 
-- `applicationName` &#60;[string]&#62; Application identifier. See [MacOSApplications].
-- **Optional:** `options` &#60;[CommandOptions]&#62; Additional options.
+- `applicationName` [string] Application identifier. See [MacOSApplications].
+- **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** &#60;[Promise]<[void]>&#62;
+**Returns:** [Promise]<[void]>
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [macosapplications]: ./class-macos-applications "MacOSApplications"

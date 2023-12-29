@@ -1,21 +1,21 @@
 ---
-title: "macOSRecord"
+title: "windowsRecord"
 ---
 
 **Contents:**
 
-- [`macOSRecord(filePath)`](./class-macos-record#macos-record)
+- [`windowsRecord(filePath)`](./class-windows-record#windows-record)
 
-## macOSRecord(filePath) {#macos-record}
+## windowsRecord(filePath) {#windows-record}
 
-Start a screen recording on MacOS.
+Start a screen recording on Windows.
 
 ```ts
-import { macOSRecord } from "@guidepup/guidepup";
+import { windowsRecord } from "@guidepup/guidepup";
 
 (async () => {
   // Start the screen recording.
-  const stopRecording = macOSRecord("./recordings/screenRecording.mov");
+  const stopRecording = windowsRecord("./recordings/screenRecording.mp4");
 
   // ... perform some commands.
 

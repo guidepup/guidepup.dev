@@ -4,7 +4,7 @@ title: "MacOSKeyboardCommand"
 
 **Extends:** [KeyboardCommand]
 
-**Type:** &#60;[MacOSKeyCodeCommand] | [MacOSKeystrokeCommand]&#62;
+**Type:** [MacOSKeyCodeCommand] | [MacOSKeystrokeCommand]
 
 Abstract type representing one of: [MacOSKeyCodeCommand], [MacOSKeystrokeCommand].
 

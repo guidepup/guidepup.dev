@@ -28,6 +28,6 @@ const reportBatteryStatusKeyCodeCommand: {
 
 List of all modifier accessors:
 
-- `Alt`
-- `Control`
-- `Shift`
+- <kbd>Alt</kbd>
+- <kbd>Control</kbd>
+- <kbd>Shift</kbd>

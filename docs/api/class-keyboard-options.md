@@ -36,7 +36,7 @@ const safariKeyboardOptions = {
 
 **Optional:** Identifier for target application. If not provided, the current focused application will be targeted.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 See also:
 

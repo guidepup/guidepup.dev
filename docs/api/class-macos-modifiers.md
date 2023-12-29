@@ -28,19 +28,19 @@ const moveToNextKeyCodeCommand = {
 
 List of all modifier accessors:
 
-- `Alt`
-- `AltLeft`
-- `AltRight`
-- `Command`
-- `CommandLeft`
-- `CommandRight`
-- `Control`
-- `ControlLeft`
-- `ControlRight`
-- `Meta`
-- `Option`
-- `OptionLeft`
-- `OptionRight`
-- `Shift`
-- `ShiftLeft`
-- `ShiftRight`
+- <kbd>Alt</kbd>
+- <kbd>AltLeft</kbd>
+- <kbd>AltRight</kbd>
+- <kbd>Command</kbd>
+- <kbd>CommandLeft</kbd>
+- <kbd>CommandRight</kbd>
+- <kbd>Control</kbd>
+- <kbd>ControlLeft</kbd>
+- <kbd>ControlRight</kbd>
+- <kbd>Meta</kbd>
+- <kbd>Option</kbd>
+- <kbd>OptionLeft</kbd>
+- <kbd>OptionRight</kbd>
+- <kbd>Shift</kbd>
+- <kbd>ShiftLeft</kbd>
+- <kbd>ShiftRight</kbd>

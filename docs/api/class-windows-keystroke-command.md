@@ -47,25 +47,25 @@ const exclamationMarkSymbolKeystrokeCommand = {
 
 The character(s) to send.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## windowsKeystrokeCommand.description {#keystroke-command-description}
 
 **Optional:** Description of the action the keystroke performs.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## windowsKeystrokeCommand.modifiers {#keystroke-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the character(s).
 
-**Type:** &#60;[Array]<[WindowsModifiers]>&#62;
+**Type:** [Array]<[WindowsModifiers]>
 
 ## windowsKeystrokeCommand.representation {#keystroke-command-representation}
 
 **Optional:** Symbolic representation of the character(s) and modifier keys this command uses.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 [keystrokecommand]: ./class-keystroke-command "KeystrokeCommand"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"

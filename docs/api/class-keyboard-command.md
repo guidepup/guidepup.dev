@@ -2,7 +2,7 @@
 title: "KeyboardCommand"
 ---
 
-**Type:** &#60;[KeyCodeCommand] | [KeystrokeCommand]&#62;
+**Type:** [KeyCodeCommand] | [KeystrokeCommand]
 
 Abstract type representing one of: [KeyCodeCommand], [KeystrokeCommand].
 

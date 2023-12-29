@@ -53,25 +53,25 @@ See also:
 
 **Optional:** Description of the action the key code performs.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## macOSKeyCodeCommand.keyCode {#key-code-command-key-code}
 
 The key code or key codes to send. See [MacOSKeyCodes] for available key codes.
 
-**Type:** &#60;[number] | [Array]<[number]>&#62;
+**Type:** [number] | [Array]<[number]>
 
 ## macOSKeyCodeCommand.modifiers {#key-code-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the key code(s).
 
-**Type:** &#60;[Array]<[MacOSModifiers]>&#62;
+**Type:** [Array]<[MacOSModifiers]>
 
 ## macOSKeyCodeCommand.representation {#key-code-command-representation}
 
 **Optional:** Symbolic representation of the key code(s) and modifier keys this command uses.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 [keycodecommand]: ./class-key-code-command "KeyCodeCommand"
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"

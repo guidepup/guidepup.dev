@@ -54,25 +54,25 @@ See also:
 
 **Optional:** Description of the action the key code performs.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 ## windowsKeyCodeCommand.keyCode {#key-code-command-key-code}
 
 The key code or key codes to send. See [WindowsKeyCodes] for available key codes.
 
-**Type:** &#60;[object] | [Array]<[object]>&#62;
+**Type:** [object] | [Array]<[object]>
 
 ## windowsKeyCodeCommand.modifiers {#key-code-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the key code(s).
 
-**Type:** &#60;[Array]<[WindowsModifiers]>&#62;
+**Type:** [Array]<[WindowsModifiers]>
 
 ## windowsKeyCodeCommand.representation {#key-code-command-representation}
 
 **Optional:** Symbolic representation of the key code(s) and modifier keys this command uses.
 
-**Type:** &#60;[string]&#62;
+**Type:** [string]
 
 [keycodecommand]: ./class-key-code-command "KeyCodeCommand"
 [windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
