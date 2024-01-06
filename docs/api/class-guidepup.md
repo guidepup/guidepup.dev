@@ -32,60 +32,60 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Contents:**
 
-- [guidepup.macOSActivate](./class-guidepup#guidepup-macos-activate)
-- [guidepup.MacOSApplications](./class-guidepup#guidepup-macos-applications)
-- [guidepup.MacOSKeyCodes](./class-guidepup#guidepup-macos-key-codes)
-- [guidepup.MacOSModifiers](./class-guidepup#guidepup-macos-modifiers)
-- [guidepup.macOSQuit](./class-guidepup#guidepup-macos-quit)
-- [guidepup.macOSRecord](./class-guidepup#guidepup-macos-record)
-- [guidepup.nvda](./class-guidepup#guidepup-nvda)
-- [guidepup.nvdaKeyCodeCommands](./class-guidepup#guidepup-nvda-key-code-commands)
-- [guidepup.voiceOver](./class-guidepup#guidepup-voiceover)
-- [guidepup.VoiceOverCommanderCommands](./class-guidepup#guidepup-voiceover-commander-commands)
-- [guidepup.voiceOverKeyCodeCommands](./class-guidepup#guidepup-voiceover-key-code-commands)
-- [guidepup.windowsOSActivate](./class-guidepup#guidepup-windows-activate)
-- [guidepup.WindowsKeyCodes](./class-guidepup#guidepup-windows-key-codes)
-- [guidepup.WindowsModifiers](./class-guidepup#guidepup-windows-modifiers)
-- [guidepup.windowsRecord](./class-guidepup#guidepup-windows-record)
-- [guidepup.windowsQuit](./class-guidepup#guidepup-windows-quit)
+- [macOSActivate](./class-guidepup#guidepup-macos-activate)
+- [MacOSApplications](./class-guidepup#guidepup-macos-applications)
+- [MacOSKeyCodes](./class-guidepup#guidepup-macos-key-codes)
+- [MacOSModifiers](./class-guidepup#guidepup-macos-modifiers)
+- [macOSQuit](./class-guidepup#guidepup-macos-quit)
+- [macOSRecord](./class-guidepup#guidepup-macos-record)
+- [nvda](./class-guidepup#guidepup-nvda)
+- [nvdaKeyCodeCommands](./class-guidepup#guidepup-nvda-key-code-commands)
+- [voiceOver](./class-guidepup#guidepup-voiceover)
+- [VoiceOverCommanderCommands](./class-guidepup#guidepup-voiceover-commander-commands)
+- [voiceOverKeyCodeCommands](./class-guidepup#guidepup-voiceover-key-code-commands)
+- [windowsOSActivate](./class-guidepup#guidepup-windows-activate)
+- [WindowsKeyCodes](./class-guidepup#guidepup-windows-key-codes)
+- [WindowsModifiers](./class-guidepup#guidepup-windows-modifiers)
+- [windowsRecord](./class-guidepup#guidepup-windows-record)
+- [windowsQuit](./class-guidepup#guidepup-windows-quit)
 
-## guidepup.macOSActivate {#guidepup-macos-activate}
+## macOSActivate {#guidepup-macos-activate}
 
 **See:** [macOSActivate]
 
 Opens a MacOS application if not already open, and focuses the application.
 
-## guidepup.MacOSApplications {#guidepup-macos-applications}
+## MacOSApplications {#guidepup-macos-applications}
 
 **Type:** [MacOSApplications]
 
 Identifiers for standard applications available on MacOS.
 
-## guidepup.MacOSKeyCodes {#guidepup-macos-key-codes}
+## MacOSKeyCodes {#guidepup-macos-key-codes}
 
 **Type:** [MacOSKeyCodes]
 
 Key codes for MacOS.
 
-## guidepup.MacOSModifiers {#guidepup-macos-modifiers}
+## MacOSModifiers {#guidepup-macos-modifiers}
 
 **Type:** [MacOSModifiers]
 
 Modifier keys for MacOS.
 
-## guidepup.macOSQuit {#guidepup-macos-quit}
+## macOSQuit {#guidepup-macos-quit}
 
 **See:** [macOSQuit]
 
 Quits a MacOS application if running.
 
-## guidepup.macOSRecord {#guidepup-macos-record}
+## macOSRecord {#guidepup-macos-record}
 
 **See:** [macOSRecord]
 
 Start a screen recording.
 
-## guidepup.nvda {#guidepup-nvda}
+## nvda {#guidepup-nvda}
 
 **Type:** [NVDA]
 
@@ -110,13 +110,13 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-## guidepup.NVDAKeyCodeCommands {#guidepup-nvda-key-code-commands}
+## NVDAKeyCodeCommands {#guidepup-nvda-key-code-commands}
 
 **Type:** [NVDAKeyCodeCommands]
 
 [Key code commands for the NVDA screen reader](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html) on Windows.
 
-## guidepup.voiceOver {#guidepup-voiceover}
+## voiceOver {#guidepup-voiceover}
 
 **Type:** [VoiceOver]
 
@@ -141,43 +141,43 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-## guidepup.VoiceOverCommanderCommands {#guidepup-voiceover-commander-commands}
+## VoiceOverCommanderCommands {#guidepup-voiceover-commander-commands}
 
 **Type:** [VoiceOverCommanderCommands]
 
 [VoiceOver Commander](https://support.apple.com/en-gb/guide/voiceover/cpvoukbcmdr/mac) commands.
 
-## guidepup.voiceOverKeyCodeCommands {#guidepup-voiceover-key-code-commands}
+## voiceOverKeyCodeCommands {#guidepup-voiceover-key-code-commands}
 
 **See:** [voiceOverKeyCodeCommands]
 
 [Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 
-## guidepup.windowsActivate {#guidepup-windows-activate}
+## windowsActivate {#guidepup-windows-activate}
 
 **See:** [windowsActivate]
 
 Opens a Windows application if not already open, and focuses the application.
 
-## guidepup.WindowsKeyCodes {#guidepup-windows-key-codes}
+## WindowsKeyCodes {#guidepup-windows-key-codes}
 
 **Type:** [WindowsKeyCodes]
 
 Key codes for Windows.
 
-## guidepup.WindowsModifiers {#guidepup-windows-modifiers}
+## WindowsModifiers {#guidepup-windows-modifiers}
 
 **Type:** [WindowsModifiers]
 
 Modifier keys for Windows.
 
-## guidepup.windowsRecord {#guidepup-windows-record}
+## windowsRecord {#guidepup-windows-record}
 
 **See:** [windowsRecord]
 
 Start a screen recording.
 
-## guidepup.windowsQuit {#guidepup-windows-quit}
+## windowsQuit {#guidepup-windows-quit}
 
 **See:** [windowsQuit]
 
