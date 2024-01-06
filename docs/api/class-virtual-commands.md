@@ -14,13 +14,13 @@ Use with the `perform` command to invoke an action:
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next landmark.
   await virtual.perform(virtual.commands.moveToNextLandmark);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -29,6 +29,7 @@ test("example test", async () => {
 
 - [virtualCommands.jumpToControlledElement](./class-virtual-commands#virtual-commands-jumpToControlledElement)
 - [virtualCommands.jumpToDetailsElement](./class-virtual-commands#virtual-commands-jumpToDetailsElement)
+- [virtualCommands.jumpToErrorMessageElement](./class-virtual-commands#virtual-commands-jumpToErrorMessageElement)
 - [virtualCommands.moveToNextAlternateReadingOrderElement](./class-virtual-commands#virtual-commands-moveToNextAlternateReadingOrderElement)
 - [virtualCommands.moveToPreviousAlternateReadingOrderElement](./class-virtual-commands#virtual-commands-moveToPreviousAlternateReadingOrderElement)
 - [virtualCommands.moveToNextBanner](./class-virtual-commands#virtual-commands-moveToNextBanner)
@@ -62,13 +63,13 @@ When using with `virtual.perform()`, pass an `index` option to select which cont
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to jump to the second controlled element.
   await virtual.perform(virtual.commands.jumpToControlledElement, { index: 1 });
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -83,13 +84,38 @@ Jump to an element that describes the current element in the Virtual Screen Read
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to jump to the details element.
   await virtual.perform(virtual.commands.jumpToDetailsElement);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
+  await virtual.stop();
+});
+```
+
+**Type:** [string]
+
+## virtualCommands.jumpToErrorMessageElement {#virtual-commands-jumpToErrorMessageElement}
+
+Jump to an element that provides an error message for the current element in the Virtual Screen Reader focus. See [`aria-errormessage`].
+
+When using with `virtual.perform()`, pass an `index` option to select which error message element is jumped to when there are more than one:
+
+```ts
+import { virtual } from "@guidepup/virtual-screen-reader";
+
+test("example test", async () => {
+  // Start the Virtual Screen Reader.
+  await virtual.start({ container: document.body });
+
+  // Perform action to jump to the second error message element.
+  await virtual.perform(virtual.commands.jumpToErrorMessageElement, {
+    index: 1,
+  });
+
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -106,7 +132,7 @@ When using with `virtual.perform()`, pass an `index` option to select which alte
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the second choice element of next alternate reading order.
@@ -115,7 +141,7 @@ test("example test", async () => {
     { index: 1 }
   );
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -132,7 +158,7 @@ When using with `virtual.perform()`, pass an `index` option to select which alte
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the second choice element of previous alternate reading order.
@@ -141,7 +167,7 @@ test("example test", async () => {
     { index: 1 }
   );
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -156,13 +182,13 @@ Move to the next element with a [`banner`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next banner element.
   await virtual.perform(virtual.commands.moveToNextBanner);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -177,13 +203,13 @@ Move to the previous element with a [`banner`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous banner element.
   await virtual.perform(virtual.commands.moveToPreviousBanner);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -198,13 +224,13 @@ Move to the next element with a [`complementary`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next complementary element.
   await virtual.perform(virtual.commands.moveToNextComplementary);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -219,13 +245,13 @@ Move to the previous element with a [`complementary`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous complementary element.
   await virtual.perform(virtual.commands.moveToPreviousComplementary);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -240,13 +266,13 @@ Move to the next element with a [`contentinfo`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next contentinfo element.
   await virtual.perform(virtual.commands.moveToNextContentinfo);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -261,13 +287,13 @@ Move to the previous element with a [`contentinfo`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous contentinfo element.
   await virtual.perform(virtual.commands.moveToPreviousContentinfo);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -282,13 +308,13 @@ Move to the next element with a [`figure`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next figure element.
   await virtual.perform(virtual.commands.moveToNextFigure);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -303,13 +329,13 @@ Move to the previous element with a [`figure`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous figure element.
   await virtual.perform(virtual.commands.moveToPreviousFigure);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -324,13 +350,13 @@ Move to the next element with a [`form`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next form element.
   await virtual.perform(virtual.commands.moveToNextForm);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -345,13 +371,13 @@ Move to the previous element with a [`form`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous form element.
   await virtual.perform(virtual.commands.moveToPreviousForm);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -366,13 +392,13 @@ Move to the next element with a [`main`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next main element.
   await virtual.perform(virtual.commands.moveToNextMain);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -387,13 +413,13 @@ Move to the previous element with a [`main`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous main element.
   await virtual.perform(virtual.commands.moveToPreviousMain);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -408,13 +434,13 @@ Move to the next element with a [`navigation`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next navigation element.
   await virtual.perform(virtual.commands.moveToNextNavigation);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -429,13 +455,13 @@ Move to the previous element with a [`navigation`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous navigation element.
   await virtual.perform(virtual.commands.moveToPreviousNavigation);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -450,13 +476,13 @@ Move to the next element with a [`region`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next region element.
   await virtual.perform(virtual.commands.moveToNextRegion);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -471,13 +497,13 @@ Move to the previous element with a [`region`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous region element.
   await virtual.perform(virtual.commands.moveToPreviousRegion);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -492,13 +518,13 @@ Move to the next element with a [`search`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next search element.
   await virtual.perform(virtual.commands.moveToNextSearch);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -513,13 +539,13 @@ Move to the previous element with a [`search`] role.
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous search element.
   await virtual.perform(virtual.commands.moveToPreviousSearch);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -545,13 +571,13 @@ Move to the next element with any [`landmark`] role:
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the next landmark element.
   await virtual.perform(virtual.commands.moveToNextLandmark);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -577,13 +603,13 @@ Move to the previous element with any [`landmark`] role:
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("example test", async () => {
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Perform action to move to the previous landmark element.
   await virtual.perform(virtual.commands.moveToPreviousLandmark);
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -592,6 +618,7 @@ test("example test", async () => {
 
 [`aria-controls`]: https://www.w3.org/TR/wai-aria-1.2/#aria-controls "aria-controls"
 [`aria-details`]: https://www.w3.org/TR/wai-aria-1.2/#aria-details "aria-details"
+[`aria-errormessage`]: https://www.w3.org/TR/wai-aria-1.2/#aria-errormessage "aria-errormessage"
 [`aria-flowto`]: https://www.w3.org/TR/wai-aria-1.2/#aria-flowto "aria-flowto"
 [`banner`]: https://www.w3.org/TR/wai-aria-1.2/#banner "banner"
 [`complementary`]: https://www.w3.org/TR/wai-aria-1.2/#complementary "complementary"

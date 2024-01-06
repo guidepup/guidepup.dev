@@ -73,9 +73,9 @@ describe("Screen Reader Tests", () => {
 
 **Contents:**
 
-- [guidepupVirtualScreenReader.virtual](./class-guidepup-virtual-screen-reader#guidepupVirtualScreenReader-virtual)
+- [virtual](./class-guidepup-virtual-screen-reader#guidepupVirtualScreenReader-virtual)
 
-## guidepupVirtualScreenReader.virtual {#guidepupVirtualScreenReader-virtual}
+## virtual {#guidepupVirtualScreenReader-virtual}
 
 **Type:** [Virtual]
 

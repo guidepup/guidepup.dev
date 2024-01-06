@@ -13,7 +13,7 @@ test("example test", async () => {
   // Start Virtual on the entire page.
   await virtual.start({ container: document.body });
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -30,7 +30,7 @@ test("example test", async () => {
   // Start Virtual within a <nav> element in the page.
   await virtual.start({ container });
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```

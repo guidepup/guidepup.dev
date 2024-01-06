@@ -27,12 +27,12 @@ It aims to provide a reliable set of APIs to automate your screen reader unit te
 Install Guidepup to your project:
 
 <Tabs
-  groupId="pm-flavor"
-  defaultValue="yarn"
-  values={[
-    {label: 'Yarn', value: 'yarn'},
-    {label: 'NPM', value: 'npm'}
-  ]
+groupId="pm-flavor"
+defaultValue="yarn"
+values={[
+{label: 'Yarn', value: 'yarn'},
+{label: 'NPM', value: 'npm'}
+]
 }>
 <TabItem value="yarn">
 
@@ -57,12 +57,12 @@ Let's automate our Virtual Screen Reader!
 Using [Jest](https://jestjs.io/) as our test runner, create `example.test.js` (or `example.test.ts` for TypeScript) to define your screen reader unit test code.
 
 <Tabs
-  groupId="js-flavor"
-  defaultValue="ts"
-  values={[
-    {label: 'Typescript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'},
-  ]
+groupId="js-flavor"
+defaultValue="ts"
+values={[
+{label: 'Typescript', value: 'ts'},
+{label: 'JavaScript', value: 'js'},
+]
 }>
 <TabItem value="ts">
 
@@ -75,7 +75,7 @@ test("should navigate to the input and announce the placeholder", async () => {
   <input type="text" aria-labelledby="label1" value="" placeholder="Search..."/>
   `;
 
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Move to the label element.
@@ -89,7 +89,7 @@ test("should navigate to the input and announce the placeholder", async () => {
     "textbox, Search for topics, placeholder Search..."
   );
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
@@ -106,7 +106,7 @@ test("should navigate to the input and announce the placeholder", async () => {
   <input type="text" aria-labelledby="label1" value="" placeholder="Search..."/>
   `;
 
-  // Start Virtual.
+  // Start the Virtual Screen Reader.
   await virtual.start({ container: document.body });
 
   // Move to the label element.
@@ -120,7 +120,7 @@ test("should navigate to the input and announce the placeholder", async () => {
     "textbox, Search for topics, placeholder Search..."
   );
 
-  // Stop Virtual.
+  // Stop the Virtual Screen Reader.
   await virtual.stop();
 });
 ```
