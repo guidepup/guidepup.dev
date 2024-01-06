@@ -8,14 +8,20 @@ import TabItem from '@theme/TabItem';
 
 # Virtual Screen Reader
 
-Guidepup Virtual Screen Reader is a headless screen reader driver for unit test automation.
+Guidepup Virtual Screen Reader is a screen reader simulator for unit tests.
 
-It aims to provide a reliable set of APIs to automate your screen reader unit test workflows in JavaScript the same you as would for mouse or keyboard based scenarios.
+This package aims to supplement your testing by enabling you to automate a Virtual Screen Reader for unit test workflows the same you as would for mouse or keyboard based scenarios.
 
-- **Mirrors Real User Experience** - assert on what users really do and hear when using screen readers.
+- **Mirrors Screen Reader Functionality** - simulate and assert on what users can do when using screen readers.
 - **Test Framework Agnostic** - run with Jest, with Playwright, as an independent script, no vendor lock-in.
 - **UI Framework Agnostic** - want to use React, Vue, Solid, Svelte, etc.? All good here! Works with any UI framework, and plays nicely with the [Testing Library](https://testing-library.com/) suite.
 - **Fast Feedback** - avoid the cumbersome overhead of running an e2e test with a running screen reader by running virtually over the provided DOM.
+
+> Note: This package should not replace your manual screen reader testing, there is no substitute for testing with real screen readers and with real users.
+
+If you are looking to automate real screen readers, check out the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) package.
+
+If you are looking to for quick and easy Jest snapshot testing, check out the [`@guidepup/jest`](https://github.com/guidepup/jest) package.
 
 ## Contents
 
@@ -24,7 +30,7 @@ It aims to provide a reliable set of APIs to automate your screen reader unit te
 
 ## Installation {#installation}
 
-Install Guidepup to your project:
+Install Guidepup Virtual Screen Reader to your project:
 
 <Tabs
 groupId="pm-flavor"
