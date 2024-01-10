@@ -95,7 +95,7 @@ describe("Screen Reader Tests", () => {
 - [virtual.stopInteracting()](./class-virtual#virtual-stop-interacting)
 - [virtual.type(text)](./class-virtual#virtual-type)
 
-## virtual.activeNode {#virtual-activeNode}
+## virtual.activeNode {#virtual-active-node}
 
 Getter for the active node under the Virtual Screen Reader cursor.
 

@@ -32,7 +32,7 @@ import { voiceOver } from "@guidepup/guidepup";
 **Contents:**
 
 - [clickOptions.button](./class-click-options#click-options-button)
-- [clickOptions.clickCount](./class-click-options#click-options-lick-count)
+- [clickOptions.clickCount](./class-click-options#click-options-click-count)
 
 ## clickOptions.button {#click-options-button}
 
