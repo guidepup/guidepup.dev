@@ -93,7 +93,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.clearItemTextLog() {#nvda-clear-item-text-log}
 
@@ -118,7 +118,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.clearSpokenPhraseLog() {#nvda-clear-spoken-phrase-log}
 
@@ -141,7 +141,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.click([options]) {#nvda-click}
 
@@ -172,7 +172,7 @@ import { nvda } from "@guidepup/guidepup";
 
 - **Optional:** `options` [ClickOptions] Click options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.default() {#nvda-default}
 
@@ -192,7 +192,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[boolean]>
+**Returns:** [Promise]&#60;[boolean]&#62;
 
 ## nvda.detect() {#nvda-detect}
 
@@ -212,7 +212,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[boolean]>
+**Returns:** [Promise]&#60;[boolean]&#62;
 
 ## nvda.interact() {#nvda-interact}
 
@@ -238,7 +238,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.itemText() {#nvda-item-text}
 
@@ -266,7 +266,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[string]> The item's text.
+**Returns:** [Promise]&#60;[string]&#62; The item's text.
 
 ## nvda.itemTextLog() {#nvda-item-text-log}
 
@@ -295,7 +295,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[Array]<[string]>> The item text log.
+**Returns:** [Promise]&#60;[Array]&#60;[string]&#62;> The item text log.
 
 ## nvda.lastSpokenPhrase() {#nvda-last-spoken-phrase}
 
@@ -320,7 +320,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[string]> The last spoken phrase.
+**Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
 
 ## nvda.next([options]) {#nvda-next}
 
@@ -347,7 +347,7 @@ import { nvda } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.perform(command[, options]) {#nvda-perform}
 
@@ -378,7 +378,7 @@ import { nvda, NVDAKeyCodeCommands } from "@guidepup/guidepup";
 - `command` [WindowsKeyCodeCommand] | [WindowsKeystrokeCommand] NVDA keyboard command.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.press(key[, options]) {#nvda-press}
 
@@ -422,7 +422,7 @@ import { nvda } from "@guidepup/guidepup";
 - `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.previous([options]) {#nvda-previous}
 
@@ -449,7 +449,7 @@ import { nvda } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.spokenPhraseLog() {#nvda-spoken-phrase-log}
 
@@ -476,7 +476,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[Array]<[string]>> The spoken phrase log.
+**Returns:** [Promise]&#60;[Array]&#60;[string]&#62;> The spoken phrase log.
 
 ## nvda.start([options]) {#nvda-start}
 
@@ -500,7 +500,7 @@ import { nvda } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.stop() {#nvda-stop}
 
@@ -520,7 +520,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.stopInteracting() {#nvda-stop-interacting}
 
@@ -548,7 +548,7 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.type(text[, options]) {#nvda-type}
 
@@ -577,7 +577,7 @@ import { nvda } from "@guidepup/guidepup";
 - `text` [string] Text to type into the focused item.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"

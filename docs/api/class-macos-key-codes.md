@@ -158,7 +158,7 @@ List of all key code accessors:
 - <kbd>;</kbd>
 - <kbd>=</kbd>
 - <kbd>[</kbd>
-- <kbd>\</kbd>
+- <kbd>&#92;</kbd>
 - <kbd>]</kbd>
 - <kbd>`</kbd>
 - <kbd>A</kbd>

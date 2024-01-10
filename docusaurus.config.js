@@ -1,4 +1,5 @@
-const lightCodeTheme = require("prism-react-renderer/themes/github");
+const { themes } = require("prism-react-renderer");
+const lightCodeTheme = themes.github;
 // const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 // Original: https://github.com/dracula/visual-studio-code

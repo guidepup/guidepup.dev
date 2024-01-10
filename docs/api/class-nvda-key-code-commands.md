@@ -4,7 +4,7 @@ title: "NVDAKeyCodeCommands"
 
 **Extends:** [object]
 
-**Implements:** [Record]<[string], [WindowsKeyCodeCommand]>
+**Implements:** [Record]&#60;[string], [WindowsKeyCodeCommand]&#62;
 
 [Key code commands for the NVDA screen reader](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html) on Windows.
 

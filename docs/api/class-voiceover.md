@@ -124,7 +124,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.clearItemTextLog() {#voiceover-clear-item-text-log}
 
@@ -149,7 +149,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.clearSpokenPhraseLog() {#voiceover-clear-spoken-phrase-log}
 
@@ -172,7 +172,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.click([options]) {#voiceover-click}
 
@@ -203,7 +203,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [ClickOptions] Click options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.copyLastSpokenPhrase([options]) {#voiceover-copy-last-spoken-phrase}
 
@@ -234,7 +234,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.default() {#voiceover-default}
 
@@ -254,7 +254,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[boolean]>
+**Returns:** [Promise]&#60;[boolean]&#62;
 
 ## voiceOver.detect() {#voiceover-detect}
 
@@ -274,7 +274,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[boolean]>
+**Returns:** [Promise]&#60;[boolean]&#62;
 
 ## voiceOver.interact([options]) {#voiceover-interact}
 
@@ -304,7 +304,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.itemText() {#voiceover-item-text}
 
@@ -330,7 +330,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[string]> The item's text.
+**Returns:** [Promise]&#60;[string]&#62; The item's text.
 
 ## voiceOver.itemTextLog() {#voiceover-item-text-log}
 
@@ -357,7 +357,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[Array]<[string]>> The item text log.
+**Returns:** [Promise]&#60;[Array]&#60;[string]&#62;> The item text log.
 
 ## voiceOver.lastSpokenPhrase() {#voiceover-last-spoken-phrase}
 
@@ -382,7 +382,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[string]> The last spoken phrase.
+**Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
 
 ## voiceOver.next([options]) {#voiceover-next}
 
@@ -409,7 +409,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.perform(command[, options]) {#voiceover-perform}
 
@@ -445,7 +445,7 @@ import { voiceOver, VoiceOverCommanderCommands } from "@guidepup/guidepup";
 - `command` [MacOSKeyboardCommand] | [VoiceOverCommanderCommands] VoiceOver keyboard command or commander command to execute.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.press(key[, options]) {#voiceover-press}
 
@@ -489,7 +489,7 @@ import { voiceOver } from "@guidepup/guidepup";
 - `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
 - **Optional:** `options` [KeyboardOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.previous([options]) {#voiceover-previous}
 
@@ -516,7 +516,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.saveLastSpokenPhrase([options]) {#voiceover-save-last-spoken-phrase}
 
@@ -547,7 +547,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.spokenPhraseLog() {#voiceover-spoken-phrase-log}
 
@@ -574,7 +574,7 @@ import { voiceOver } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]<[Array]<[string]>> The spoken phrase log.
+**Returns:** [Promise]&#60;[Array]&#60;[string]&#62;> The spoken phrase log.
 
 ## voiceOver.start([options]) {#voiceover-start}
 
@@ -598,7 +598,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.stop([options]) {#voiceover-stop}
 
@@ -622,7 +622,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.stopInteracting([options]) {#voiceover-stop-interacting}
 
@@ -654,7 +654,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.takeCursorScreenshot([options]) {#voiceover-take-cursor-screenshot}
 
@@ -685,7 +685,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[string]> The path to the screenshot file.
+**Returns:** [Promise]&#60;[string]&#62; The path to the screenshot file.
 
 ## voiceOver.type(text[, options]) {#voiceover-type}
 
@@ -714,7 +714,7 @@ import { voiceOver } from "@guidepup/guidepup";
 - `text` [string] Text to type into the focused item.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"
