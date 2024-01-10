@@ -39,19 +39,19 @@ Perform the default action for the item in the screen reader cursor.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.clearItemTextLog() {#screenreader-clear-item-text-log}
 
 Clear the log of all visited item text for this screen reader instance.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.clearSpokenPhraseLog() {#screenreader-clear-spoken-phrase-log}
 
 Clear the log of all spoken phrases for this screen reader instance.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.click([options]) {#screenreader-click}
 
@@ -61,19 +61,19 @@ Click the mouse.
 
 - **Optional:** `options` [ClickOptions] Click options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## ScreenReader.default() {#screenreader-default}
 
 Detect whether the screen reader is the default screen reader for the current OS.
 
-**Returns:** [Promise]<[boolean]>
+**Returns:** [Promise]&#60;[boolean]&#62;
 
 ## ScreenReader.detect() {#screenreader-detect}
 
 Detect whether the screen reader is supported for the current OS.
 
-**Returns:** [Promise]<[boolean]>
+**Returns:** [Promise]&#60;[boolean]&#62;
 
 ## screenReader.interact([options]) {#screenreader-interact}
 
@@ -83,25 +83,25 @@ Interact with the item under the screen reader cursor.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.itemText() {#screenreader-item-text}
 
 Get the text of the item in the screen reader cursor.
 
-**Returns:** [Promise]<[string]> The item's text.
+**Returns:** [Promise]&#60;[string]&#62; The item's text.
 
 ## screenReader.itemTextLog() {#screenreader-item-text-log}
 
 Get the log of all visited item text for this screen reader instance.
 
-**Returns:** [Promise]<[Array]<[string]>> The item text log.
+**Returns:** [Promise]&#60;[Array]&#60;[string]&#62;> The item text log.
 
 ## screenReader.lastSpokenPhrase() {#screenreader-last-spoken-phrase}
 
 Get the last spoken phrase.
 
-**Returns:** [Promise]<[string]> The last spoken phrase.
+**Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
 
 ## screenReader.next([options]) {#screenreader-next}
 
@@ -111,7 +111,7 @@ Move the screen reader cursor to the next location.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.perform(command[, options]) {#screenreader-perform}
 
@@ -122,7 +122,7 @@ Perform a screen reader command.
 - `command` [any] Screen reader command to execute.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.press(key[, options]) {#screenreader-press}
 
@@ -150,7 +150,7 @@ modifier, modifier is pressed and being held while the subsequent key is being p
 - `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
 - **Optional:** `options` [KeyboardOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.previous([options]) {#screenreader-previous}
 
@@ -160,13 +160,13 @@ Move the screen reader cursor to the previous location.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.spokenPhraseLog() {#screenreader-spoken-phrase-log}
 
 Get the log of all spoken phrases for this screen reader instance.
 
-**Returns:** [Promise]<[Array]<[string]>> The spoken phrase log.
+**Returns:** [Promise]&#60;[Array]&#60;[string]&#62;> The spoken phrase log.
 
 ## screenReader.start([options]) {#screenreader-start}
 
@@ -176,7 +176,7 @@ Turn the screen reader on.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.stop([options]) {#screenreader-stop}
 
@@ -186,7 +186,7 @@ Turn the screen reader off.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.stopInteracting([options]) {#screenreader-stop-interacting}
 
@@ -196,7 +196,7 @@ Stop interacting with the current item.
 
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.type(text[, options]) {#screenreader-type}
 
@@ -209,7 +209,7 @@ To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`s
 - `text` [string] Text to type into the focused item.
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"

@@ -4,7 +4,7 @@ title: "VirtualCommands"
 
 **Extends:** [object]
 
-**Implements:** [Record]<[string], [string]>
+**Implements:** [Record]&#60;[string], [string]&#62;
 
 Collection of Virtual Screen Reader commands.
 

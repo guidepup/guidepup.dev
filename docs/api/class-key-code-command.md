@@ -50,13 +50,13 @@ See also:
 
 The key code or key codes to send.
 
-**Type:** [any] | [Array]<[any]>
+**Type:** [any] | [Array]&#60;[any]&#62
 
 ## keyCodeCommand.modifiers {#key-code-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the key code(s).
 
-**Type:** [Array]<[string]>
+**Type:** [Array]&#60;[string]&#62
 
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "VoiceOverKeyCodeCommands"

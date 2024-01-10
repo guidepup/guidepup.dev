@@ -4,7 +4,7 @@ title: "voiceOverKeyCodeCommands"
 
 **Extends:** [object]
 
-**Implements:** [Record]<[string], [MacOSKeyCodeCommand]>
+**Implements:** [Record]&#60;[string], [MacOSKeyCodeCommand]&#62;
 
 [Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
 

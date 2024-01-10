@@ -59,7 +59,7 @@ The character(s) to send.
 
 **Optional:** List of modifier keys to press while sending the character(s).
 
-**Type:** [Array]<[WindowsModifiers]>
+**Type:** [Array]&#60;[WindowsModifiers]&#62;
 
 ## windowsKeystrokeCommand.representation {#keystroke-command-representation}
 

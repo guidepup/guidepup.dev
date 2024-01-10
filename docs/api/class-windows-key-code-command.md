@@ -60,13 +60,13 @@ See also:
 
 The key code or key codes to send. See [WindowsKeyCodes] for available key codes.
 
-**Type:** [object] | [Array]<[object]>
+**Type:** [object] | [Array]&#60;[object]&#62;
 
 ## windowsKeyCodeCommand.modifiers {#key-code-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the key code(s).
 
-**Type:** [Array]<[WindowsModifiers]>
+**Type:** [Array]&#60;[WindowsModifiers]&#62;
 
 ## windowsKeyCodeCommand.representation {#key-code-command-representation}
 

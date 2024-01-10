@@ -33,7 +33,7 @@ import {
 - `applicationName` [string] Application identifier. See [MacOSApplications].
 - **Optional:** `options` [CommandOptions] Additional options.
 
-**Returns:** [Promise]<[void]>
+**Returns:** [Promise]&#60;[void]&#62;
 
 [commandoptions]: ./class-command-options "CommandOptions"
 [macosapplications]: ./class-macos-applications "MacOSApplications"

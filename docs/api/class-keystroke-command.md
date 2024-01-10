@@ -53,7 +53,7 @@ The character(s) to send.
 
 **Optional:** List of modifier keys to press while sending the character(s).
 
-**Type:** [Array]<[string]>
+**Type:** [Array]&#60;[string]&#62;
 
 [macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"

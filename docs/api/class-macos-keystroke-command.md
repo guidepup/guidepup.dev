@@ -59,7 +59,7 @@ The character(s) to send.
 
 **Optional:** List of modifier keys to press while sending the character(s).
 
-**Type:** [Array]<[MacOSModifiers]>
+**Type:** [Array]&#60;[MacOSModifiers]&#62;
 
 ## macOSKeystrokeCommand.representation {#keystroke-command-representation}
 

@@ -59,13 +59,13 @@ See also:
 
 The key code or key codes to send. See [MacOSKeyCodes] for available key codes.
 
-**Type:** [number] | [Array]<[number]>
+**Type:** [number] | [Array]&#60;[number]&#62;
 
 ## macOSKeyCodeCommand.modifiers {#key-code-command-modifiers}
 
 **Optional:** List of modifier keys to press while sending the key code(s).
 
-**Type:** [Array]<[MacOSModifiers]>
+**Type:** [Array]&#60;[MacOSModifiers]&#62;
 
 ## macOSKeyCodeCommand.representation {#key-code-command-representation}
 
