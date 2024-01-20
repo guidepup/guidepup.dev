@@ -22,7 +22,6 @@ The test will check that you can navigate to the first heading on the [GitHub RE
 - [Installation](./example#installation)
 - [Create Playwright Config File](./example#playwright)
 - [Create Test File](./example#test)
-- [Create Expected Log File](./example#expected)
 - [Run Test](./example#run)
 
 ## Environment Setup {#environment}
@@ -152,7 +151,6 @@ values={[
 ```ts
 import { voiceOverTest as test } from "@guidepup/playwright";
 import { expect } from "@playwright/test";
-import itemTextSnapshot from "./itemTextSnapshot.json";
 
 test.describe("Playwright VoiceOver", () => {
   test("I can navigate the Guidepup Github page", async ({
@@ -188,7 +186,6 @@ test.describe("Playwright VoiceOver", () => {
 ```js
 const { voiceOverTest as test } = require("@guidepup/playwright");
 const { expect } = require("@playwright/test");
-const itemTextSnapshot = require("./itemTextSnapshot.json");
 
 test.describe("Playwright VoiceOver", () => {
   test("I can navigate the Guidepup Github page", async ({
@@ -215,30 +212,11 @@ test.describe("Playwright VoiceOver", () => {
     // Assert that the spoken phrases are as expected
     expect(JSON.stringify(await voiceOver.spokenPhraseLog())).toMatchSnapshot();
   });
-  });
 });
 ```
 
 </TabItem>
 </Tabs>
-
-## Create Expected Log File {#expected}
-
-In our test file above we reference a `itemTextSnapshot.json` file which contains our expectations on the `itemTextLog` that we retrieve from VoiceOver after navigating to the README.md heading to check the journey was as expected.
-
-Create this `itemTextSnapshot.json` file with the following contents:
-
-```json
-[
-  "Skip to content link",
-  "guidepup/guidepup heading level 1",
-  "Latest commit heading level 2",
-  "Git stats heading level 2",
-  "Files heading level 2",
-  "README.md heading level 2",
-  "Guidepup heading level 1"
-]
-```
 
 ## Run Test {#run}
 
