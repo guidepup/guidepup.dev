@@ -182,6 +182,10 @@ const config = {
                 href: "https://github.com/guidepup/virtual-screen-reader",
               },
               {
+                label: "@guidepup/jest",
+                href: "https://github.com/guidepup/jest",
+              },
+              {
                 label: "@guidepup/setup",
                 href: "https://github.com/guidepup/setup",
               },

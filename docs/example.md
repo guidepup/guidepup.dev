@@ -12,7 +12,7 @@ Let's take a look at a more complete example of how you might use Guidepup.
 
 > **Note:** this example assumes you are using MacOS, but everything covered in this example can also be applied to NVDA on Windows via the `nvda` object and swapping Safari WebKit for a browser supported by Windows such as Chromium or Firefox.
 
-Here we're making use of the [@guidepup/playwright](https://www.npmjs.com/package/@guidepup/playwright) module to integrate Guidepup into an automated [Playwright](https://playwright.dev/) test to assert the VoiceOver flow behaves as we expect. This modules handles the starting and stopping VoiceOver for you between tests so you can focus on writing your tests straight away. It also provides a `voTest` export - a convenience wrapper for the Playwright `test` method which provides a `voiceOver` instance for you alongside the `page` object.
+Here we're making use of the [@guidepup/playwright](https://www.npmjs.com/package/@guidepup/playwright) module to integrate Guidepup into an automated [Playwright](https://playwright.dev/) test to assert the VoiceOver flow behaves as we expect. This modules handles the starting and stopping VoiceOver for you between tests so you can focus on writing your tests straight away. It also provides a `voiceOverTest` export - a convenience wrapper for the Playwright `test` method which provides a `voiceOver` instance for you alongside the `page` object.
 
 The test will check that you can navigate to the first heading on the [GitHub README.md for Guidepup](https://github.com/guidepup/guidepup#guidepup) with the following steps:
 
@@ -38,12 +38,12 @@ npx @guidepup/setup
 Install the Guidepup Playwright module to your project as well as the necessary Playwright dependencies:
 
 <Tabs
-  groupId="pm-flavor"
-  defaultValue="yarn"
-  values={[
-    {label: 'Yarn', value: 'yarn'},
-    {label: 'NPM', value: 'npm'}
-  ]
+groupId="pm-flavor"
+defaultValue="yarn"
+values={[
+{label: 'Yarn', value: 'yarn'},
+{label: 'NPM', value: 'npm'}
+]
 }>
 <TabItem value="yarn">
 
@@ -84,18 +84,18 @@ values={[
 <TabItem value="ts">
 
 ```ts
-import { voConfig } from "@guidepup/playwright";
+import { screenReaderConfig } from "@guidepup/playwright";
 import { devices, PlaywrightTestConfig } from "@playwright/test";
 
 const config: PlaywrightTestConfig = {
-  ...voConfig,
+  ...screenReaderConfig,
   reportSlowTests: null,
   timeout: 3 * 60 * 1000,
   retries: 2,
   projects: [
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"], headless: false, video: "on" },
+      use: { ...devices["Desktop Safari"], headless: false },
     },
   ],
 };
@@ -107,18 +107,18 @@ export default config;
 <TabItem value="js">
 
 ```js
-const { voConfig } = require("@guidepup/playwright");
+const { screenReaderConfig } = require("@guidepup/playwright");
 const { devices } = require("@playwright/test");
 
 const config = {
-  ...voConfig,
+  ...screenReaderConfig,
   reportSlowTests: null,
   timeout: 3 * 60 * 1000,
   retries: 2,
   projects: [
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"], headless: false, video: "on" },
+      use: { ...devices["Desktop Safari"], headless: false },
     },
   ],
 };
@@ -150,7 +150,7 @@ values={[
 <TabItem value="ts">
 
 ```ts
-import { voTest as test } from "@guidepup/playwright";
+import { voiceOverTest as test } from "@guidepup/playwright";
 import { expect } from "@playwright/test";
 import itemTextSnapshot from "./itemTextSnapshot.json";
 
@@ -161,25 +161,23 @@ test.describe("Playwright VoiceOver", () => {
   }) => {
     // Navigate to Guidepup GitHub page
     await page.goto("https://github.com/guidepup/guidepup", {
-      waitUntil: "domcontentloaded",
+      waitUntil: "load",
     });
 
-    // Wait for page to be ready and interact
+    // Wait for page to be ready
     await expect(page.locator('header[role="banner"]')).toBeVisible();
     await voiceOver.interact();
+
+    // Interact with the page
+    await voiceOver.navigateToWebContent();
 
     // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
       await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
     }
 
-    // Assert that we've ended up where we expected and what we were told on
-    // the way there is as expected.
-    const itemTextLog = await voiceOver.itemTextLog();
-
-    for (const expectedItem of itemTextSnapshot) {
-      expect(!!itemTextLog.find(log => log.includes(expectedItem))).toBe(true);
-    }
+    // Assert that the spoken phrases are as expected
+    expect(JSON.stringify(await voiceOver.spokenPhraseLog())).toMatchSnapshot();
   });
 });
 ```
@@ -188,7 +186,7 @@ test.describe("Playwright VoiceOver", () => {
 <TabItem value="js">
 
 ```js
-const { voTest as test } = require("@guidepup/playwright");
+const { voiceOverTest as test } = require("@guidepup/playwright");
 const { expect } = require("@playwright/test");
 const itemTextSnapshot = require("./itemTextSnapshot.json");
 
@@ -199,25 +197,24 @@ test.describe("Playwright VoiceOver", () => {
   }) => {
     // Navigate to Guidepup GitHub page
     await page.goto("https://github.com/guidepup/guidepup", {
-      waitUntil: "domcontentloaded",
+      waitUntil: "load",
     });
 
-    // Wait for page to be ready and interact
+    // Wait for page to be ready
     await expect(page.locator('header[role="banner"]')).toBeVisible();
     await voiceOver.interact();
+
+    // Interact with the page
+    await voiceOver.navigateToWebContent();
 
     // Move across the page menu to the Guidepup heading using VoiceOver
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
       await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
     }
 
-    // Assert that we've ended up where we expected and what we were told on
-    // the way there is as expected.
-    const itemTextLog = await voiceOver.itemTextLog();
-
-    for (const expectedItem of itemTextSnapshot) {
-      expect(!!itemTextLog.find(log => log.includes(expectedItem))).toBe(true);
-    }
+    // Assert that the spoken phrases are as expected
+    expect(JSON.stringify(await voiceOver.spokenPhraseLog())).toMatchSnapshot();
+  });
   });
 });
 ```
