@@ -28,19 +28,19 @@ npx @guidepup/setup
 
 For some operating systems, enabling automation of screen readers is tightly controlled. This CLI handles the setup for your OS.
 
-For further information checkout this [guide to setup your environment](./guides/automated-environment-setup).
+For further information checkout this [guide to set up your environment](./guides/automated-environment-setup).
 
 ## Installation {#installation}
 
 Install Guidepup to your project:
 
 <Tabs
-  groupId="pm-flavor"
-  defaultValue="yarn"
-  values={[
-    {label: 'Yarn', value: 'yarn'},
-    {label: 'NPM', value: 'npm'}
-  ]
+groupId="pm-flavor"
+defaultValue="yarn"
+values={[
+{label: 'Yarn', value: 'yarn'},
+{label: 'NPM', value: 'npm'}
+]
 }>
 <TabItem value="yarn">
 
@@ -65,12 +65,12 @@ Let's automate a screen reader!
 Create `example.js` (or `example.ts` for TypeScript) to define your screen reader code.
 
 <Tabs
-  groupId="js-flavor"
-  defaultValue="ts"
-  values={[
-    {label: 'Typescript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'},
-  ]
+groupId="js-flavor"
+defaultValue="ts"
+values={[
+{label: 'Typescript', value: 'ts'},
+{label: 'JavaScript', value: 'js'},
+]
 }>
 <TabItem value="ts">
 
@@ -151,12 +151,12 @@ const { nvda } = require("@guidepup/guidepup");
 Now run your code to see an automated screen reader!
 
 <Tabs
-  groupId="js-flavor"
-  defaultValue="ts"
-  values={[
-    {label: 'TypeScript', value: 'ts'},
-    {label: 'JavaScript', value: 'js'}
-  ]
+groupId="js-flavor"
+defaultValue="ts"
+values={[
+{label: 'TypeScript', value: 'ts'},
+{label: 'JavaScript', value: 'js'}
+]
 }>
 <TabItem value="ts">
 

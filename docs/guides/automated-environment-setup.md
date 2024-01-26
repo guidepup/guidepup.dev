@@ -6,7 +6,9 @@ description: Environment setup guidance for automating screen readers for access
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-This guide applies to users of the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) or [`@guidepup/playwright`](https://github.com/guidepup/guidepup-playwright) packages. OS environment setup is not required for users of the [`@guidepup/virtual-screen-reader`](https://github.com/guidepup/virtual-screen-reader) package.
+This guide applies to users of the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) or [`@guidepup/playwright`](https://github.com/guidepup/guidepup-playwright) packages.
+
+OS environment set up <em>is not required</em> for users of the [`@guidepup/virtual-screen-reader`](https://github.com/guidepup/virtual-screen-reader) package.
 
 ## Automated Setup
 
@@ -38,7 +40,7 @@ npx @guidepup/setup --ci
 </TabItem>
 </Tabs>
 
-The CLI will first attempt to configure your environment itself, but on systems with tighter security controls such as MacOS with [System Integrity Protection (SIP)](https://support.apple.com/en-gb/HT204899), it may prompt you for additional inputs such as username and password so that it can complete setup through UI automation.
+The CLI will first attempt to configure your environment itself, but on systems with tighter security controls such as MacOS with [System Integrity Protection (SIP)](https://support.apple.com/en-gb/HT204899), it may prompt you for additional inputs such as username and password so that it can complete the setup through UI automation.
 
 If you are uncomfortable with providing credentials to this CLI you can manually achieve these steps by following the [Manual VoiceOver Setup](/docs/guides/manual-voiceover-setup) guide.
 
