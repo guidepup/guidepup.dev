@@ -43,9 +43,10 @@
 
 .tagline h2 {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
-.tagline h2 b {
+.tagline h2 span {
   color: var(--ifm-color-primary);
 }
 

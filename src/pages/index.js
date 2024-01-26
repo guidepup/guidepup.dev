@@ -37,16 +37,9 @@ function HomepageTagline() {
         )}
       >
         <h2 className="text--center">
-          <b>Reliable</b> Automation For Your{" "}
-          <b>Screen Reader A11y Workflows</b> Through JavaScript
+          <span>Reliable</span> automation for your{" "}
+          <span>screen reader a11y workflows</span> through JavaScript
         </h2>
-        <p className="text--center">
-          A11y static analysis tools only cover around 25% of WCAG and don't assure on
-          the quality of the user experience for screen reader users. This means
-          teams need to perform lots of manual tests with multiple screen
-          readers to ensure great UX which can take a lot of time...{" "}
-          <b>not anymore!</b>
-        </p>
         <p className="text--center">
           With Guidepup you can automate your screen reader test workflows the
           same you as would for mouse or keyboard based scenarios, no sweat!

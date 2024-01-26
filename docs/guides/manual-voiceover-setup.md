@@ -5,7 +5,7 @@ title: "Manual VoiceOver Setup"
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-If [`@guidepup/setup`](https://github.com/guidepup/setup) cannot be used for your MacOS workflow, these guides instruct how to setup your MacOS environment manually for VoiceOver automation.
+If [`@guidepup/setup`](https://github.com/guidepup/setup) cannot be used for your MacOS workflow, these guides instruct how to set up your MacOS environment manually for VoiceOver automation.
 
 ## Local Setup
 

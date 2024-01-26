@@ -132,7 +132,7 @@ For this example we are using the recommended configuration from the Guidepup Pl
 
 In addition to recommended configuration, we also set a long timeout and disable slow test warnings as automating VoiceOver is slightly slower than Playwright expects if simply automating the browser.
 
-We also setup some retry configuration, and let Playwright know that we want to test against WebKit in headed mode with video recording switched on.
+We also set up some retry configuration, and let Playwright know that we want to test against WebKit in headed mode with video recording switched on.
 
 ## Create Test File {#test}
 
@@ -164,7 +164,6 @@ test.describe("Playwright VoiceOver", () => {
 
     // Wait for page to be ready
     await expect(page.locator('header[role="banner"]')).toBeVisible();
-    await voiceOver.interact();
 
     // Interact with the page
     await voiceOver.navigateToWebContent();

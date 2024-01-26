@@ -3,19 +3,21 @@ import styles from "./index.module.css";
 
 const FeatureList = [
   {
-    title: "Full Control",
+    title: "Full control",
     description: (
-      <>If the VoiceOver or NVDA screen readers have a keyboard command, then Guidepup supports it.</>
+      <>
+        If VoiceOver or NVDA have a keyboard command, then Guidepup supports it.
+      </>
     ),
   },
   {
-    title: "Mirrors Real User Experience",
+    title: "Mirrors real user experience",
     description: (
       <>Assert on what users really do and hear when using screen readers.</>
     ),
   },
   {
-    title: "Framework Agnostic",
+    title: "Framework agnostic",
     description: (
       <>
         Run with Jest, with Playwright, as an independent script, no vendor
