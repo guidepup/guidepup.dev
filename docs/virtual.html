@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">Virtual Screen Reader | Guidepup</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://www.guidepup.dev/img/logo.jpg"><meta data-rh="true" name="twitter:image" content="https://www.guidepup.dev/img/logo.jpg"><meta data-rh="true" property="og:url" content="https://www.guidepup.dev/docs/virtual"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="keywords" content="Guidepup, screen reader, accessibility, a11y, VoiceOver, NVDA, testing, automation"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Virtual Screen Reader | Guidepup"><meta data-rh="true" name="description" content="Getting started with Guidepup Virtual Screen Reader for screen reader automation in accessibility unit testing"><meta data-rh="true" property="og:description" content="Getting started with Guidepup Virtual Screen Reader for screen reader automation in accessibility unit testing"><link data-rh="true" rel="icon" href="/img/logo.jpg"><link data-rh="true" rel="canonical" href="https://www.guidepup.dev/docs/virtual"><link data-rh="true" rel="alternate" href="https://www.guidepup.dev/docs/virtual" hreflang="en"><link data-rh="true" rel="alternate" href="https://www.guidepup.dev/docs/virtual" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.c226ebe0.css">
-<script src="/assets/js/runtime~main.00638093.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.1652995e.js" defer="defer"></script>
 <script src="/assets/js/main.df1896fb.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,12 +13,13 @@
 <p>This package aims to supplement your testing by enabling you to automate a Virtual Screen Reader for unit test workflows the same you as would for mouse or keyboard based scenarios.</p>
 <ul>
 <li><strong>Mirrors Screen Reader Functionality</strong> - simulate and assert on what users can do when using screen readers.</li>
-<li><strong>Test Framework Agnostic</strong> - run with Jest, with Playwright, as an independent script, no vendor lock-in.</li>
+<li><strong>Test Framework Agnostic</strong> - run with Jest, Vitest, Web Test Runner, in Storybook, as an independent script, no vendor lock-in.</li>
 <li><strong>UI Framework Agnostic</strong> - want to use React, Vue, Solid, Svelte, etc.? All good here! Works with any UI framework, and plays nicely with the <a href="https://testing-library.com/" target="_blank" rel="noopener noreferrer">Testing Library</a> suite.</li>
-<li><strong>Fast Feedback</strong> - avoid the cumbersome overhead of running an e2e test with a running screen reader by running virtually over the provided DOM.</li>
+<li><strong>Fast Feedback</strong> - avoid the cumbersome overhead of running an e2e test with a real screen reader by running virtually over the provided DOM.</li>
 </ul>
 <blockquote>
-<p>Note: This package should not replace your manual screen reader testing, there is no substitute for testing with real screen readers and with real users.</p>
+<p><svg style="display:inline-block;fill:#fff;vertical-align:text-bottom;margin-right:0.5rem" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> <strong>Important</strong></p>
+<p>This package should not replace but augment your screen reader testing, there is no substitute for testing with real screen readers and with real users.</p>
 </blockquote>
 <p>If you are looking to automate real screen readers, check out the <a href="https://github.com/guidepup/guidepup" target="_blank" rel="noopener noreferrer"><code>@guidepup/guidepup</code></a> package.</p>
 <p>If you are looking to for quick and easy Jest snapshot testing, check out the <a href="https://github.com/guidepup/jest" target="_blank" rel="noopener noreferrer"><code>@guidepup/jest</code></a> package.</p>
