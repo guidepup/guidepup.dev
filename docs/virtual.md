@@ -74,7 +74,7 @@ values={[
 }>
 <TabItem value="ts">
 
-```ts
+```ts title="./example.test.ts"
 import { virtual } from "@guidepup/virtual-screen-reader";
 
 test("should navigate to the input and announce the placeholder", async () => {
@@ -105,7 +105,7 @@ test("should navigate to the input and announce the placeholder", async () => {
 </TabItem>
 <TabItem value="js">
 
-```js
+```js title="./example.test.js"
 const { virtual } = require("@guidepup/virtual-screen-reader");
 
 test("should navigate to the input and announce the placeholder", async () => {

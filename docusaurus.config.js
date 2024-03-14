@@ -1,6 +1,5 @@
 const { themes } = require("prism-react-renderer");
 const lightCodeTheme = themes.github;
-// const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 // Original: https://github.com/dracula/visual-studio-code
 const accessibleDarkTheme = {
@@ -203,6 +202,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Craig Morten.`,
       },
       prism: {
+        additionalLanguages: ["bash"],
         theme: lightCodeTheme,
         darkTheme: accessibleDarkTheme,
       },

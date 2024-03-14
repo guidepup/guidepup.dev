@@ -82,7 +82,7 @@ values={[
 }>
 <TabItem value="ts">
 
-```ts
+```ts title="./playwright.config.ts"
 import { screenReaderConfig } from "@guidepup/playwright";
 import { devices, PlaywrightTestConfig } from "@playwright/test";
 
@@ -105,7 +105,7 @@ export default config;
 </TabItem>
 <TabItem value="js">
 
-```js
+```js title="./playwright.config.js"
 const { screenReaderConfig } = require("@guidepup/playwright");
 const { devices } = require("@playwright/test");
 
@@ -148,7 +148,7 @@ values={[
 }>
 <TabItem value="ts">
 
-```ts
+```ts title="./voiceOver.spec.ts"
 import { voiceOverTest as test } from "@guidepup/playwright";
 import { expect } from "@playwright/test";
 
@@ -182,7 +182,7 @@ test.describe("Playwright VoiceOver", () => {
 </TabItem>
 <TabItem value="js">
 
-```js
+```js title="./voiceOver.spec.js"
 const { voiceOverTest as test } = require("@guidepup/playwright");
 const { expect } = require("@playwright/test");
 
