@@ -34,6 +34,10 @@ For further information checkout this [guide to set up your environment](./guide
 
 Install Guidepup to your project:
 
+```bash
+yarn add @guidepup/guidepup
+```
+
 <Tabs
 groupId="pm-flavor"
 defaultValue="yarn"
@@ -76,7 +80,7 @@ values={[
 
 If you're using MacOS:
 
-```ts
+```ts title="./example.ts"
 import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
@@ -93,7 +97,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 Or if you're using Windows:
 
-```ts
+```ts title="./example.ts"
 import { nvda } from "@guidepup/guidepup";
 
 (async () => {
@@ -113,7 +117,7 @@ import { nvda } from "@guidepup/guidepup";
 
 If you're using MacOS:
 
-```js
+```js title="./example.js"
 const { voiceOver } = require("@guidepup/guidepup");
 
 (async () => {
@@ -130,7 +134,7 @@ const { voiceOver } = require("@guidepup/guidepup");
 
 Or if you're using Windows:
 
-```js
+```js title="./example.js"
 const { nvda } = require("@guidepup/guidepup");
 
 (async () => {
