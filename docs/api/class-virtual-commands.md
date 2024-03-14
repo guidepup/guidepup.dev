@@ -56,6 +56,8 @@ test("example test", async () => {
 - [virtualCommands.moveToPreviousHeadingLevel5](./class-virtual-commands#virtual-commands-moveToPreviousHeadingLevel5)
 - [virtualCommands.moveToNextHeadingLevel6](./class-virtual-commands#virtual-commands-moveToNextHeadingLevel6)
 - [virtualCommands.moveToPreviousHeadingLevel6](./class-virtual-commands#virtual-commands-moveToPreviousHeadingLevel6)
+- [virtualCommands.moveToNextLink](./class-virtual-commands#virtual-commands-moveToNextLink)
+- [virtualCommands.moveToPreviousLink](./class-virtual-commands#virtual-commands-moveToPreviousLink)
 - [virtualCommands.moveToNextMain](./class-virtual-commands#virtual-commands-moveToNextMain)
 - [virtualCommands.moveToPreviousMain](./class-virtual-commands#virtual-commands-moveToPreviousMain)
 - [virtualCommands.moveToNextNavigation](./class-virtual-commands#virtual-commands-moveToNextNavigation)
@@ -684,6 +686,48 @@ test("example test", async () => {
 
   // Perform action to move to the previous level 6 heading element.
   await virtual.perform(virtual.commands.moveToPreviousHeadingLevel6);
+
+  // Stop the Virtual Screen Reader.
+  await virtual.stop();
+});
+```
+
+**Type:** [string]
+
+## virtualCommands.moveToNextLink {#virtual-commands-moveToNextLink}
+
+Move to the next element with a [`link`] role.
+
+```ts
+import { virtual } from "@guidepup/virtual-screen-reader";
+
+test("example test", async () => {
+  // Start the Virtual Screen Reader.
+  await virtual.start({ container: document.body });
+
+  // Perform action to move to the next link element.
+  await virtual.perform(virtual.commands.moveToNextLink);
+
+  // Stop the Virtual Screen Reader.
+  await virtual.stop();
+});
+```
+
+**Type:** [string]
+
+## virtualCommands.moveToPreviousLink {#virtual-commands-moveToPreviousLink}
+
+Move to the previous element with a [`link`] role.
+
+```ts
+import { virtual } from "@guidepup/virtual-screen-reader";
+
+test("example test", async () => {
+  // Start the Virtual Screen Reader.
+  await virtual.start({ container: document.body });
+
+  // Perform action to move to the previous link element.
+  await virtual.perform(virtual.commands.moveToPreviousLink);
 
   // Stop the Virtual Screen Reader.
   await virtual.stop();
