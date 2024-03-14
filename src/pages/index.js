@@ -31,10 +31,7 @@ function HomepageTagline() {
   return (
     <section className={clsx("hero", styles.tagline)}>
       <div
-        className={clsx(
-          "container col col--8 col--offset-2 margin-vert--md",
-          styles.taglineContainer
-        )}
+        className={clsx("container margin-vert--md", styles.taglineContainer)}
       >
         <h2 className="text--center">
           <span>Reliable</span> automation for your{" "}
