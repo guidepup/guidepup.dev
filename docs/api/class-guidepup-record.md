@@ -24,8 +24,8 @@ import { macOSRecord } from "@guidepup/record";
 
 **Contents:**
 
-- [macOSRecord](./class-guidepup#guidepup-macos-record)
-- [windowsRecord](./class-guidepup#guidepup-windows-record)
+- [macOSRecord](./class-guidepup-record#guidepup-macos-record)
+- [windowsRecord](./class-guidepup-record#guidepup-windows-record)
 
 ## macOSRecord {#guidepup-macos-record}
 
