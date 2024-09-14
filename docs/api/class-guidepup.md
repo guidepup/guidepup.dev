@@ -37,7 +37,6 @@ import { voiceOver } from "@guidepup/guidepup";
 - [MacOSKeyCodes](./class-guidepup#guidepup-macos-key-codes)
 - [MacOSModifiers](./class-guidepup#guidepup-macos-modifiers)
 - [macOSQuit](./class-guidepup#guidepup-macos-quit)
-- [macOSRecord](./class-guidepup#guidepup-macos-record)
 - [nvda](./class-guidepup#guidepup-nvda)
 - [nvdaKeyCodeCommands](./class-guidepup#guidepup-nvda-key-code-commands)
 - [voiceOver](./class-guidepup#guidepup-voiceover)
@@ -46,7 +45,6 @@ import { voiceOver } from "@guidepup/guidepup";
 - [windowsOSActivate](./class-guidepup#guidepup-windows-activate)
 - [WindowsKeyCodes](./class-guidepup#guidepup-windows-key-codes)
 - [WindowsModifiers](./class-guidepup#guidepup-windows-modifiers)
-- [windowsRecord](./class-guidepup#guidepup-windows-record)
 - [windowsQuit](./class-guidepup#guidepup-windows-quit)
 
 ## macOSActivate {#guidepup-macos-activate}
@@ -78,12 +76,6 @@ Modifier keys for MacOS.
 **See:** [macOSQuit]
 
 Quits a MacOS application if running.
-
-## macOSRecord {#guidepup-macos-record}
-
-**See:** [macOSRecord]
-
-Start a screen recording.
 
 ## nvda {#guidepup-nvda}
 
@@ -171,12 +163,6 @@ Key codes for Windows.
 
 Modifier keys for Windows.
 
-## windowsRecord {#guidepup-windows-record}
-
-**See:** [windowsRecord]
-
-Start a screen recording.
-
 ## windowsQuit {#guidepup-windows-quit}
 
 **See:** [windowsQuit]
@@ -188,7 +174,6 @@ Quits a Windows application if running.
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [macosquit]: ./class-macos-quit "macOSQuit"
-[macosrecord]: ./class-macos-record "macOSRecord"
 [nvda]: ./class-nvda "NVDA"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
 [voiceover]: ./class-voiceover "VoiceOver"
@@ -197,5 +182,4 @@ Quits a Windows application if running.
 [windowsactivate]: ./class-windows-activate "windowsActivate"
 [windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"
-[windowsrecord]: ./class-windows-record "windowsRecord"
 [windowsquit]: ./class-windows-quit "windowsQuit"

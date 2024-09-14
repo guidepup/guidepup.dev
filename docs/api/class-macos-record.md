@@ -11,7 +11,7 @@ title: "macOSRecord"
 Start a screen recording on MacOS.
 
 ```ts
-import { macOSRecord } from "@guidepup/guidepup";
+import { macOSRecord } from "@guidepup/record";
 
 (async () => {
   // Start the screen recording.
