@@ -47,7 +47,6 @@ const sidebars = {
             { type: "doc", id: "api/class-macos-keystroke-command" },
             { type: "doc", id: "api/class-macos-modifiers" },
             { type: "doc", id: "api/class-macos-quit" },
-            { type: "doc", id: "api/class-macos-record" },
             { type: "doc", id: "api/class-nvda-key-code-commands" },
             { type: "doc", id: "api/class-nvda" },
             { type: "doc", id: "api/class-screenreader" },
@@ -59,8 +58,25 @@ const sidebars = {
             { type: "doc", id: "api/class-windows-key-codes" },
             { type: "doc", id: "api/class-windows-keystroke-command" },
             { type: "doc", id: "api/class-windows-modifiers" },
-            { type: "doc", id: "api/class-windows-record" },
             { type: "doc", id: "api/class-windows-quit" },
+          ],
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Guidepup Record API Reference",
+      items: [
+        {
+          type: "doc",
+          id: "api/class-guidepup-record",
+        },
+        {
+          type: "category",
+          label: "Classes",
+          items: [
+            { type: "doc", id: "api/class-macos-record" },
+            { type: "doc", id: "api/class-windows-record" },
           ],
         },
       ],

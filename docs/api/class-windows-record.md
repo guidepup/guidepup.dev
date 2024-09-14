@@ -11,7 +11,7 @@ title: "windowsRecord"
 Start a screen recording on Windows.
 
 ```ts
-import { windowsRecord } from "@guidepup/guidepup";
+import { windowsRecord } from "@guidepup/record";
 
 (async () => {
   // Start the screen recording.
