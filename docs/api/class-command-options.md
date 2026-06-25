@@ -40,13 +40,13 @@ See also:
 
 **Optional:** Whether to capture the screen reader output:
 
-- `true` will enabled full capture.
 - `"initial"` will capture the first "page" of output, but not any subsequent content.
+- `true` will enabled full capture.
 - `false` will disable capture.
 
-Default is `true`.
+Default is `"initial"`.
 
-**Type:** [boolean] | "initial"
+**Type:** "initial" | [boolean]
 
 ## commandOptions.retries {#command-options-retries}
 

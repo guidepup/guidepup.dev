@@ -1,6 +1,6 @@
 ---
 title: Release Notes
-description: Release notes for the Guidepup screen reader driver for accessibility automation testing.
+description: Release notes for the Guidepup screen reader automation library for testing.
 ---
 
 - `@guidepup/guidepup` - [https://github.com/guidepup/guidepup/releases](https://github.com/guidepup/guidepup/releases).

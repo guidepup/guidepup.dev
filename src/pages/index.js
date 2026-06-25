@@ -10,6 +10,7 @@ function HomepageHero({ title, tagline }) {
   return (
     <section className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
+        <img alt="" src="/img/logo.png" height="100px" weight="100px" />
         <h1 className="hero__title">{title}</h1>
         <p className="hero__subtitle">
           {tagline} <span aria-hidden="true">🦮</span>
@@ -85,7 +86,7 @@ function HomepageMain() {
 export default function Home() {
   return (
     <Layout
-      title="Screen reader driver for test automation"
+      title="Screen reader automation library for testing"
       description="Reliable automation for your screen reader accessibility test workflows with Guidepup. Drive VoiceOver and NVDA a11y tests with ease"
     >
       <HomepageMain />

@@ -248,13 +248,13 @@ Detect whether VoiceOver is the default screen reader for the current OS:
 import { voiceOver } from "@guidepup/guidepup";
 
 (async () => {
-  const isVoiceOverDefaultScreenReader = await voiceOver.default();
+  const isVoiceOverDefaultScreenReader = voiceOver.default();
 
   console.log(isVoiceOverDefaultScreenReader);
 })();
 ```
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## voiceOver.detect() {#voiceover-detect}
 
@@ -429,7 +429,7 @@ import { voiceOver, VoiceOverCommanderCommands } from "@guidepup/guidepup";
 
   // Keyboard commands available on the VoiceOver instance.
   await voiceOver.perform(
-    voiceOver.keyboardCommands.performDefaultActionForItem
+    voiceOver.keyboardCommands.performDefaultActionForItem,
   );
 
   // Commander commands available on the VoiceOver instance.

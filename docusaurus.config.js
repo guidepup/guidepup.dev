@@ -69,13 +69,13 @@ const accessibleDarkTheme = {
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Guidepup",
-  tagline: "Screen reader driver for test automation",
+  tagline: "Screen reader automation library for testing",
   url: "https://www.guidepup.dev",
   baseUrl: "/",
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "/img/logo.jpg",
+  favicon: "/img/logo.png",
   organizationName: "guidepup",
   projectName: "guidepup.dev",
 
@@ -105,17 +105,17 @@ const config = {
             "Guidepup, screen reader, accessibility, a11y, VoiceOver, NVDA, testing, automation",
         },
       ],
-      image: "/img/logo.jpg",
+      image: "/img/logo.png",
       colorMode: {
         defaultMode: "dark",
         disableSwitch: true,
       },
       navbar: {
         title: "Guidepup",
-        // logo: {
-        //   alt: "Guidepup Logo",
-        //   src: "/img/logo.jpg",
-        // },
+        logo: {
+          alt: "Guidepup Logo",
+          src: "/img/logo.png",
+        },
         items: [
           {
             type: "doc",

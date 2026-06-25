@@ -12,11 +12,11 @@ See also:
 **Contents:**
 
 - [screenReader.act([options])](./class-screenreader#screenreader-act)
-- [nvda.clearItemTextLog()](./class-screenreader#screenreader-clear-item-text-log)
-- [nvda.clearSpokenPhraseLog()](./class-screenreader#screenreader-clear-spoken-phrase-log)
+- [screenReader.clearItemTextLog()](./class-screenreader#screenreader-clear-item-text-log)
+- [screenReader.clearSpokenPhraseLog()](./class-screenreader#screenreader-clear-spoken-phrase-log)
 - [screenReader.click([options])](./class-screenreader#screenreader-click)
-- [ScreenReader.default()](./class-screenreader#screenreader-default)
-- [ScreenReader.detect()](./class-screenreader#screenreader-detect)
+- [screenReader.default()](./class-screenreader#screenreader-default)
+- [screenReader.detect()](./class-screenreader#screenreader-detect)
 - [screenReader.interact([options])](./class-screenreader#screenreader-interact)
 - [screenReader.itemText()](./class-screenreader#screenreader-item-text)
 - [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
@@ -63,13 +63,13 @@ Click the mouse.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
-## ScreenReader.default() {#screenreader-default}
+## screenReader.default() {#screenreader-default}
 
 Detect whether the screen reader is the default screen reader for the current OS.
 
 **Returns:** [Promise]&#60;[boolean]&#62;
 
-## ScreenReader.detect() {#screenreader-detect}
+## screenReader.detect() {#screenreader-detect}
 
 Detect whether the screen reader is supported for the current OS.
 
