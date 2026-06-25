@@ -185,14 +185,14 @@ Detect whether NVDA is the default screen reader for the current OS:
 ```ts
 import { nvda } from "@guidepup/guidepup";
 
-(async () => {
-  const isNVDADefaultScreenReader = await nvda.default();
+(() => {
+  const isNVDADefaultScreenReader = nvda.default();
 
   console.log(isNVDADefaultScreenReader);
 })();
 ```
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## nvda.detect() {#nvda-detect}
 

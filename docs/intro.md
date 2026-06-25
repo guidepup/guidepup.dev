@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 # Getting Started
 
-Guidepup is a screen reader driver for test automation.
+Guidepup is a screen reader automation library for testing.
 
 It aims to provide a reliable set of APIs to automate your screen reader a11y workflows through JavaScript. Specifically to accommodate the needs of a11y testing and alleviate the overhead of manual testing with real screen readers.
 
