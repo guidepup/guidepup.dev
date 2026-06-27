@@ -35,6 +35,7 @@ const sidebars = {
           items: [
             { type: "doc", id: "api/class-click-options" },
             { type: "doc", id: "api/class-command-options" },
+            { type: "doc", id: "api/class-iscreenreader" },
             { type: "doc", id: "api/class-key-code-command" },
             { type: "doc", id: "api/class-keyboard-command" },
             { type: "doc", id: "api/class-keyboard-options" },

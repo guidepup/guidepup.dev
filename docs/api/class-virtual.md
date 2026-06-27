@@ -2,7 +2,7 @@
 title: "Virtual"
 ---
 
-**Implements:** [ScreenReader]
+**Implements:** [IScreenReader]
 
 A Virtual Screen Reader instance can be used to launch and control a headless JavaScript screen reader which is compatible with any specification compliant [DOM](https://dom.spec.whatwg.org/) implementation, e.g. [jsdom](https://github.com/jsdom/jsdom), [Jest](https://jestjs.io/), or any modern browser.
 
@@ -640,7 +640,7 @@ test("example test", async () => {
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"
-[screenreader]: ./class-screenreader "ScreenReader"
+[iscreenreader]: ./class-iscreenreader "IScreenReader"
 [startoptions]: ./class-start-options "StartOptions"
 [virtualcommands]: ./class-virtual-commands "VirtualCommands"
 [virtual]: ./class-virtual "virtual"
