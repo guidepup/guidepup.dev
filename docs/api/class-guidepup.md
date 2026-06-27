@@ -14,19 +14,19 @@ Guidepup current supports the following screen readers:
 Here's a typical example:
 
 ```ts
-import { voiceOver } from "@guidepup/guidepup";
+import { screenReader } from "@guidepup/guidepup";
 
 (async () => {
-  // Start VoiceOver.
-  await voiceOver.start();
+  // Start the default screen reader for your OS.
+  await screenReader.start();
 
   // Move to the next item.
-  await voiceOver.next();
+  await screenReader.next();
 
   // ... perform some commands.
 
-  // Stop VoiceOver.
-  await voiceOver.stop();
+  // Stop the default screen reader for your OS.
+  await screenReader.stop();
 })();
 ```
 
@@ -39,6 +39,7 @@ import { voiceOver } from "@guidepup/guidepup";
 - [macOSQuit](./class-guidepup#guidepup-macos-quit)
 - [nvda](./class-guidepup#guidepup-nvda)
 - [nvdaKeyCodeCommands](./class-guidepup#guidepup-nvda-key-code-commands)
+- [screenReader](./class-guidepup#guidepup-screenreader)
 - [voiceOver](./class-guidepup#guidepup-voiceover)
 - [VoiceOverCommanderCommands](./class-guidepup#guidepup-voiceover-commander-commands)
 - [voiceOverKeyCodeCommands](./class-guidepup#guidepup-voiceover-key-code-commands)
@@ -108,6 +109,31 @@ import { nvda } from "@guidepup/guidepup";
 
 [Key code commands for the NVDA screen reader](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html) on Windows.
 
+## screenReader {#guidepup-screenreader}
+
+**Type:** [ScreenReader]
+
+This object can be used to launch and control the default screen reader for your environment.
+
+Here's a typical example:
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next item.
+  await screenReader.next();
+
+  // ... perform some commands.
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
 ## voiceOver {#guidepup-voiceover}
 
 **Type:** [VoiceOver]
@@ -176,6 +202,7 @@ Quits a Windows application if running.
 [macosquit]: ./class-macos-quit "macOSQuit"
 [nvda]: ./class-nvda "NVDA"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
+[screenreader]: ./class-screenreader "ScreenReader"
 [voiceover]: ./class-voiceover "VoiceOver"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "VoiceOverKeyCodeCommands"
