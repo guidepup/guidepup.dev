@@ -2,7 +2,7 @@
 title: "NVDA"
 ---
 
-**Implements:** [ScreenReader]
+**Implements:** [IScreenReader]
 
 A NVDA instance can be used to launch and control NVDA.
 
@@ -26,6 +26,7 @@ import { nvda } from "@guidepup/guidepup";
 **Contents:**
 
 - [nvda.keyboardCommands](./class-nvda#nvda-keyboard-commands)
+- [nvda.name](./class-nvda#nvda-name)
 - [nvda.act([options])](./class-nvda#nvda-act)
 - [nvda.clearItemTextLog()](./class-nvda#nvda-clear-item-text-log)
 - [nvda.clearSpokenPhraseLog()](./class-nvda#nvda-clear-spoken-phrase-log)
@@ -68,6 +69,18 @@ import { nvda } from "@guidepup/guidepup";
 ```
 
 **Returns:** [NVDAKeyCodeCommands]
+
+## nvda.name {#nvda-name}
+
+Getter for the screen reader name "NVDA".
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+console.log(nvda.name); // "NVDA"
+```
+
+**Returns:** [string]
 
 ## nvda.act([options]) {#nvda-act}
 
@@ -206,9 +219,9 @@ Detect whether NVDA is supported for the current OS:
 import { nvda } from "@guidepup/guidepup";
 
 (async () => {
-  const isNVDADefaultScreenReader = await nvda.detect();
+  const isNVDASupportedScreenReader = await nvda.detect();
 
-  console.log(isNVDADefaultScreenReader);
+  console.log(isNVDASupportedScreenReader);
 })();
 ```
 
@@ -356,7 +369,7 @@ Perform a NVDA command.
 The command can be a [WindowsKeyCodeCommand] or [WindowsKeystrokeCommand].
 
 ```ts
-import { nvda, NVDAKeyCodeCommands } from "@guidepup/guidepup";
+import { nvda } from "@guidepup/guidepup";
 
 (async () => {
   // Start NVDA.
@@ -584,6 +597,7 @@ import { nvda } from "@guidepup/guidepup";
 [nvda]: ./class-nvda "NVDA"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
+[iscreenreader]: ./class-iscreenreader "IScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
 [windowskeycodecommand]: ./class-windows-key-code-command "WindowsKeyCodeCommand"
 [windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"

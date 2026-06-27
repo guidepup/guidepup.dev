@@ -2,7 +2,7 @@
 title: "VoiceOver"
 ---
 
-**Implements:** [ScreenReader]
+**Implements:** [IScreenReader]
 
 A VoiceOver instance can be used to launch and control VoiceOver.
 
@@ -27,6 +27,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 - [voiceOver.commanderCommands](./class-voiceover#voiceover-commander-commands)
 - [voiceOver.keyboardCommands](./class-voiceover#voiceover-keyboard-commands)
+- [voiceOver.name](./class-voiceover#voiceover-name)
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
 - [voiceOver.clearItemTextLog()](./class-voiceover#voiceover-clear-item-text-log)
 - [voiceOver.clearSpokenPhraseLog()](./class-voiceover#voiceover-clear-spoken-phrase-log)
@@ -95,6 +96,18 @@ import { voiceOver } from "@guidepup/guidepup";
 ```
 
 **Returns:** [voiceOverKeyCodeCommands]
+
+## voiceOver.name {#voiceover-name}
+
+Getter for the screen reader name "VoiceOver".
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+console.log(voiceOver.name); // "VoiceOver"
+```
+
+**Returns:** [string]
 
 ## voiceOver.act([options]) {#voiceover-act}
 
@@ -724,6 +737,7 @@ import { voiceOver } from "@guidepup/guidepup";
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
+[iscreenreader]: ./class-iscreenreader "ScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
 [voiceover]: ./class-voiceover "VoiceOver"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"
