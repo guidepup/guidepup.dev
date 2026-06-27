@@ -15,7 +15,7 @@ Guidepup current supports the following screen readers:
 
 To learn VoiceOver commands please refer to the following popular guides:
 
-- [Apple VoiceOver Appendix A. Commands and Gestures](https://www.apple.com/voiceover/info/guide/_1131.html)
+- [VoiceOver commands and gestures on Mac](https://support.apple.com/en-gb/guide/voiceover/vo14111/mac)
 - [Deque University VoiceOver Keyboard Shortcuts on a Mac](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
 
 ## NVDA

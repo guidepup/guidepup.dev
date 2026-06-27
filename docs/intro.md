@@ -78,74 +78,36 @@ values={[
 }>
 <TabItem value="ts">
 
-If you're using MacOS:
-
 ```ts title="./example.ts"
-import { voiceOver } from "@guidepup/guidepup";
+import { screenReader } from "@guidepup/guidepup";
 
 (async () => {
-  // Start VoiceOver.
-  await voiceOver.start();
+  // Start the default screen reader for your OS.
+  await screenReader.start();
 
   // Move to the next item.
-  await voiceOver.next();
+  await screenReader.next();
 
-  // Stop VoiceOver.
-  await voiceOver.stop();
-})();
-```
-
-Or if you're using Windows:
-
-```ts title="./example.ts"
-import { nvda } from "@guidepup/guidepup";
-
-(async () => {
-  // Start NVDA.
-  await nvda.start();
-
-  // Move to the next item.
-  await nvda.next();
-
-  // Stop NVDA.
-  await nvda.stop();
+  // Stop the default screen reader for your OS.
+  await screenReader.stop();
 })();
 ```
 
 </TabItem>
 <TabItem value="js">
 
-If you're using MacOS:
-
 ```js title="./example.js"
-const { voiceOver } = require("@guidepup/guidepup");
+const { screenReader } = require("@guidepup/guidepup");
 
 (async () => {
-  // Start VoiceOver.
-  await voiceOver.start();
+  // Start the default screen reader for your OS.
+  await screenReader.start();
 
   // Move to the next item.
-  await voiceOver.next();
+  await screenReader.next();
 
-  // Stop VoiceOver.
-  await voiceOver.stop();
-})();
-```
-
-Or if you're using Windows:
-
-```js title="./example.js"
-const { nvda } = require("@guidepup/guidepup");
-
-(async () => {
-  // Start NVDA.
-  await nvda.start();
-
-  // Move to the next item.
-  await nvda.next();
-
-  // Stop NVDA.
-  await nvda.stop();
+  // Stop the default screen reader for your OS.
+  await screenReader.stop();
 })();
 ```
 
