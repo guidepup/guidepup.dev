@@ -75,7 +75,7 @@ const config = {
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "/img/logo.png",
+  favicon: "/img/favicon.ico",
   organizationName: "guidepup",
   projectName: "guidepup.dev",
 
