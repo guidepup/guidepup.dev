@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Release notes
 description: Release notes for the Guidepup screen reader automation library for testing.
 ---
 

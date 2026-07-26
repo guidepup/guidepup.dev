@@ -1,12 +1,12 @@
 ---
-title: Getting Started
+title: Getting started
 description: Getting started with Guidepup for screen reader automation in accessibility testing
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Getting Started
+# Getting started
 
 Guidepup is a screen reader automation library for testing.
 
@@ -14,11 +14,11 @@ It aims to provide a reliable set of APIs to automate your screen reader a11y wo
 
 ## Contents
 
-- [Machine Setup](./intro#environment)
+- [Machine setup](./intro#environment)
 - [Installation](./intro#installation)
-- [First Screen Reader Code](./intro#first)
+- [First screen reader code](./intro#first)
 
-## Machine Setup {#environment}
+## Machine setup {#environment}
 
 Set up your machine for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
 
@@ -70,7 +70,7 @@ npx @guidepup/setup install
 
 Run this command again after upgrading `@guidepup/guidepup` so that the matching assets are available.
 
-## First Screen Reader Code {#first}
+## First screen reader code {#first}
 
 Let's automate a screen reader!
 
@@ -93,11 +93,17 @@ import { screenReader } from "@guidepup/guidepup";
   // Start the default screen reader for your OS.
   await screenReader.start();
 
-  // Move to the next item.
-  await screenReader.next();
+  try {
+    // Move to the next item.
+    await screenReader.next();
 
-  // Stop the default screen reader for your OS.
-  await screenReader.stop();
+    // Inspect what the screen reader announced.
+    const spokenPhrase = await screenReader.lastSpokenPhrase();
+    console.log(`Screen reader announced: ${spokenPhrase}`);
+  } finally {
+    // Always stop the screen reader once the checks are complete.
+    await screenReader.stop();
+  }
 })();
 ```
 
@@ -111,11 +117,17 @@ const { screenReader } = require("@guidepup/guidepup");
   // Start the default screen reader for your OS.
   await screenReader.start();
 
-  // Move to the next item.
-  await screenReader.next();
+  try {
+    // Move to the next item.
+    await screenReader.next();
 
-  // Stop the default screen reader for your OS.
-  await screenReader.stop();
+    // Inspect what the screen reader announced.
+    const spokenPhrase = await screenReader.lastSpokenPhrase();
+    console.log(`Screen reader announced: ${spokenPhrase}`);
+  } finally {
+    // Always stop the screen reader once the checks are complete.
+    await screenReader.stop();
+  }
 })();
 ```
 

@@ -1,13 +1,26 @@
 ---
-title: Support Matrix
+title: Support matrix
 description: Guidepup's support matrix for VoiceOver on macOS and NVDA on Windows
 ---
 
-Guidepup current supports the following screen readers:
+Guidepup currently supports the following screen readers:
 
 - **VoiceOver** for macOS
 - **NVDA** for Windows
 - **Virtual Screen Reader** for DOM environments (when using the `@guidepup/virtual-screen-reader` package)
+
+## Runtime compatibility
+
+Each release of `@guidepup/guidepup` includes a `manifest.json` that specifies the screen reader assets it supports. The `npx @guidepup/setup install` command reads the manifest from your installed package and selects the correct asset for the runner it is executing on.
+
+The current manifest supports:
+
+| Screen reader | Platform | Supported versions                                                            |
+| ------------- | -------- | ----------------------------------------------------------------------------- |
+| NVDA          | Windows  | The manifest provides the default NVDA asset for Windows.                     |
+| VoiceOver     | macOS    | macOS 12 (Monterey), 13 (Ventura), 14 (Sonoma), 15 (Sequoia), and 26 (Tahoe). |
+
+The manifest changes with Guidepup releases. After upgrading `@guidepup/guidepup`, rerun `npx @guidepup/setup install` to download the assets supported by that release.
 
 ## VoiceOver
 

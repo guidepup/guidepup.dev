@@ -1,5 +1,5 @@
 ---
-title: "Manual VoiceOver Setup"
+title: "Manual VoiceOver setup"
 ---
 
 import Tabs from "@theme/Tabs";
@@ -7,9 +7,9 @@ import TabItem from "@theme/TabItem";
 
 If [`@guidepup/setup`](https://github.com/guidepup/setup) cannot be used for your macOS workflow, these guides explain how to set up your machine manually for VoiceOver automation.
 
-## Local Setup
+## Local setup
 
-### Allow VoiceOver To Be Controlled
+### Allow VoiceOver to be controlled
 
 This setup is required to allow VoiceOver to be controlled by Guidepup.
 
@@ -21,7 +21,7 @@ This setup is required to allow VoiceOver to be controlled by Guidepup.
 
    ![VoiceOver Utility General Tab highlighting the last form option: a ticked checkbox for "Allow VoiceOver to be controlled with AppleScript".](./voiceover_utility_checkbox.png)
 
-### Allow App Automation
+### Allow app automation
 
 This setup is required to allow applications, e.g. your terminal or IDE, to control other applications, i.e. VoiceOver:
 
@@ -67,7 +67,7 @@ values={[
 </TabItem>
 </Tabs>
 
-### Additional System Permissions
+### Additional system permissions
 
 Depending on how you use Guidepup you may require additional "Security & Privacy" updates with "System Preferences":
 
@@ -79,13 +79,13 @@ Depending on how you use Guidepup you may require additional "Security & Privacy
 
 While using Guidepup if a system permission is required a dialog box will pop up automatically asking for the permission. Alternatively you can proactively set these permissions in the same way as the "Accessibility" settings were updated in the previous step.
 
-## CI Setup
+## CI setup
 
-### Allow VoiceOver To Be Controlled
+### Allow VoiceOver to be controlled
 
 For VoiceOver to be controlled by AppleScript there is a database file and system preference default that need to be configured.
 
-#### VoiceOver Database File
+#### VoiceOver database file
 
 To allow VoiceOver to be controlled by AppleScript the `/private/var/db/Accessibility/.VoiceOverAppleScriptEnabled` file needs to exist and contain the character `a`.
 
@@ -104,7 +104,7 @@ sudo bash -c 'echo -n "a" > /private/var/db/Accessibility/.VoiceOverAppleScriptE
 >
 > It is strongly advised that you use [`@guidepup/setup`](https://github.com/guidepup/setup) or the manual setup guide above for local development in preference to applying this step.
 
-#### System Preferences
+#### System preferences
 
 In addition to the database file you will also need to set a system preference entry:
 
@@ -115,7 +115,7 @@ defaults write com.apple.VoiceOver4/default SCREnableAppleScript -bool true
 
 This value does not require any additional steps unlike the database file.
 
-### Allow App Automation
+### Allow app automation
 
 In order for applications (e.g. a CI terminal) to control other applications (e.g. VoiceOver) using AppleScript, updates need to be made to the `TCC.db`.
 
