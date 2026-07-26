@@ -199,16 +199,12 @@ Detect whether NVDA is the default screen reader for the current OS:
 - `false` for macOS
 - `false` for Linux
 
-This check is available on both the `nvda` instance and the `NVDA` class.
-
 ```ts
-import { NVDA, nvda } from "@guidepup/guidepup";
+import { nvda } from "@guidepup/guidepup";
 
 const isNVDADefaultScreenReader = nvda.default();
-const isNVDADefaultScreenReaderForClass = NVDA.default();
 
 console.log(isNVDADefaultScreenReader);
-console.log(isNVDADefaultScreenReaderForClass);
 ```
 
 **Returns:** [boolean]
@@ -221,16 +217,12 @@ Detect whether NVDA is supported on the current machine. NVDA must be installed 
 - `false` for macOS
 - `false` for Linux
 
-This check is available on both the `nvda` instance and the `NVDA` class.
-
 ```ts
-import { NVDA, nvda } from "@guidepup/guidepup";
+import { nvda } from "@guidepup/guidepup";
 
 const isNVDASupportedScreenReader = nvda.detect();
-const isNVDASupportedScreenReaderForClass = NVDA.detect();
 
 console.log(isNVDASupportedScreenReader);
-console.log(isNVDASupportedScreenReaderForClass);
 ```
 
 **Returns:** [boolean]
