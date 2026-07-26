@@ -54,7 +54,7 @@ If you are uncomfortable with providing credentials to this CLI you can manually
 >
 > It is strongly advised that you use [`@guidepup/setup`](https://github.com/guidepup/setup) or the [Manual VoiceOver Setup](/docs/guides/manual-voiceover-setup) guide for local development in preference to changing SIP status.
 
-## Recording setup (macOS Only)
+### Recording setup (macOS Only)
 
 If you are encountering errors in CI for macOS, you can pass a `--macos-record` flag to the `setup` command. It outputs a screen recording to a `./recordings/` folder within the current working directory.
 
