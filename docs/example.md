@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 Let's take a look at a more complete example of how you might use Guidepup.
 
-> **Note:** this example assumes you are using macOS, but everything covered in this example can also be applied to NVDA on Windows via the `nvda` object and swapping Safari WebKit for a browser supported by Windows such as Chromium or Firefox.
+> **Note:** this example assumes you are using macOS, but everything covered in this example can also be applied to NVDA on Windows via the `nvda` instance, and swapping Safari WebKit for a browser supported by Windows such as Chromium or Firefox. Equally you can use the `screenReader` instance to automatically use VoiceOver for macOS and NVDA for Windows with the same test code.
 
 Here we're making use of the [@guidepup/playwright](https://www.npmjs.com/package/@guidepup/playwright) module to integrate Guidepup into an automated [Playwright](https://playwright.dev/) test to assert the VoiceOver flow behaves as we expect. This modules handles the starting and stopping VoiceOver for you between tests so you can focus on writing your tests straight away. It also provides a `voiceOverTest` export - a convenience wrapper for the Playwright `test` method which provides a `voiceOver` instance for you alongside the `page` object.
 
