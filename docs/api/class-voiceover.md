@@ -257,16 +257,12 @@ Detect whether VoiceOver is the default screen reader for the current OS:
 - `true` for macOS
 - `false` for Linux
 
-This check is available on both the `voiceOver` instance and the `VoiceOver` class.
-
 ```ts
-import { VoiceOver, voiceOver } from "@guidepup/guidepup";
+import { voiceOver } from "@guidepup/guidepup";
 
 const isVoiceOverDefaultScreenReader = voiceOver.default();
-const isVoiceOverDefaultScreenReaderForClass = VoiceOver.default();
 
 console.log(isVoiceOverDefaultScreenReader);
-console.log(isVoiceOverDefaultScreenReaderForClass);
 ```
 
 **Returns:** [boolean]
@@ -279,16 +275,12 @@ Detect whether VoiceOver is supported for the current OS:
 - `true` for macOS
 - `false` for Linux
 
-This check is available on both the `voiceOver` instance and the `VoiceOver` class.
-
 ```ts
-import { VoiceOver, voiceOver } from "@guidepup/guidepup";
+import { voiceOver } from "@guidepup/guidepup";
 
 const isVoiceOverSupportedScreenReader = voiceOver.detect();
-const isVoiceOverSupportedScreenReaderForClass = VoiceOver.detect();
 
 console.log(isVoiceOverSupportedScreenReader);
-console.log(isVoiceOverSupportedScreenReaderForClass);
 ```
 
 **Returns:** [boolean]
