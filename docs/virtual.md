@@ -28,7 +28,7 @@ If you are looking to for quick and easy Jest snapshot testing, check out the [`
 ## Contents
 
 - [Installation](./virtual#installation)
-- [First Virtual Screen Reader Code](./virtual#first)
+- [First Virtual Screen Reader code](./virtual#first)
 
 ## Installation {#installation}
 
@@ -58,7 +58,7 @@ npm install --save-dev @guidepup/virtual-screen-reader
 </TabItem>
 </Tabs>
 
-## First Virtual Screen Reader Code {#first}
+## First Virtual Screen Reader code {#first}
 
 Let's automate our Virtual Screen Reader!
 
@@ -94,7 +94,7 @@ test("should navigate to the input and announce the placeholder", async () => {
 
   // Expect on the spoken phrase for the input element.
   expect(await virtual.lastSpokenPhrase()).toEqual(
-    "textbox, Search for topics, placeholder Search..."
+    "textbox, Search for topics, placeholder Search...",
   );
 
   // Stop the Virtual Screen Reader.
@@ -125,7 +125,7 @@ test("should navigate to the input and announce the placeholder", async () => {
 
   // Expect on the spoken phrase for the input element.
   expect(await virtual.lastSpokenPhrase()).toEqual(
-    "textbox, Search for topics, placeholder Search..."
+    "textbox, Search for topics, placeholder Search...",
   );
 
   // Stop the Virtual Screen Reader.

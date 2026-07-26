@@ -1,5 +1,5 @@
 ---
-title: Machine Setup
+title: Machine setup
 description: Machine setup guidance for automating screen readers for accessibility testing with Guidepup
 ---
 
@@ -10,7 +10,7 @@ This guide applies to users of the [`@guidepup/guidepup`](https://github.com/gui
 
 Machine setup <em>is not required</em> for users of the [`@guidepup/virtual-screen-reader`](https://github.com/guidepup/virtual-screen-reader) package.
 
-## Automated Setup
+## Automated setup
 
 For some operating systems, enabling control of screen readers is tightly controlled.
 
@@ -54,7 +54,7 @@ If you are uncomfortable with providing credentials to this CLI you can manually
 >
 > It is strongly advised that you use [`@guidepup/setup`](https://github.com/guidepup/setup) or the [Manual VoiceOver Setup](/docs/guides/manual-voiceover-setup) guide for local development in preference to changing SIP status.
 
-## Recording Setup (macOS Only)
+## Recording setup (macOS Only)
 
 If you are encountering errors in CI for macOS, you can pass a `--macos-record` flag to the `setup` command. It outputs a screen recording to a `./recordings/` folder within the current working directory.
 
@@ -99,6 +99,8 @@ npx @guidepup/setup install voiceover
 npx @guidepup/setup install nvda
 ```
 
+### Cache location
+
 By default, installed assets are stored in your operating system's cache directory:
 
 - `~/.cache/guidepup/` on Linux
@@ -110,6 +112,16 @@ To use a different location, set `GUIDEPUP_SCREEN_READERS_PATH`:
 ```bash
 GUIDEPUP_SCREEN_READERS_PATH=$HOME/guidepup npx @guidepup/setup install
 ```
+
+### Proxy configuration
+
+Screen reader assets are downloaded from GitHub release URLs. If your network uses an HTTPS proxy, set `HTTPS_PROXY` when running `install`:
+
+```bash
+HTTPS_PROXY=https://192.0.2.1 npx @guidepup/setup install
+```
+
+### Cleanup
 
 Unused assets are cleaned up automatically when `install` next runs.
 

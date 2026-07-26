@@ -12,9 +12,7 @@ function HomepageHero({ title, tagline }) {
       <div className="container">
         <img alt="" src="/img/logo.png" height="100px" weight="100px" />
         <h1 className="hero__title">{title}</h1>
-        <p className="hero__subtitle">
-          {tagline} <span aria-hidden="true">🦮</span>
-        </p>
+        <p className="hero__subtitle">{tagline}</p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"

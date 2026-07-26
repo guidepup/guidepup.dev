@@ -1,12 +1,12 @@
 ---
-title: Real World Example
+title: Real world example
 description: A tutorial for using Guidepup and Playwright to automate VoiceOver for accessibility testing
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Real World Example
+# Real world example
 
 Let's take a look at a more complete example of how you might use Guidepup.
 
@@ -18,13 +18,13 @@ The test will check that you can navigate to the first heading on the [GitHub RE
 
 ## Contents
 
-- [Machine Setup](./example#environment)
+- [Machine setup](./example#environment)
 - [Installation](./example#installation)
-- [Create Playwright Config File](./example#playwright)
-- [Create Test File](./example#test)
-- [Run Test](./example#run)
+- [Create Playwright config file](./example#playwright)
+- [Create test file](./example#test)
+- [Run test](./example#run)
 
-## Machine Setup {#environment}
+## Machine setup {#environment}
 
 Set up your machine for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
 
@@ -74,7 +74,7 @@ Install the screen reader assets required by Guidepup:
 npx @guidepup/setup install
 ```
 
-## Create Playwright Config File {#playwright}
+## Create Playwright config file {#playwright}
 
 To tell Playwright how we want to run our tests we create a `playwright.config.js` (or `playwright.config.ts` for TypeScript) file for our configuration:
 
@@ -140,7 +140,7 @@ In addition to recommended configuration, we also set a long timeout and disable
 
 We also set up some retry configuration, and let Playwright know that we want to test against WebKit in headed mode with video recording switched on.
 
-## Create Test File {#test}
+## Create test file {#test}
 
 Create a `voiceOver.spec.js` (or `voiceOver.spec.ts` for TypeScript) to define your screen reader code:
 
@@ -223,7 +223,7 @@ test.describe("Playwright VoiceOver", () => {
 </TabItem>
 </Tabs>
 
-## Run Test {#run}
+## Run test {#run}
 
 Now run your code to see an automated screen reader test.
 
