@@ -14,21 +14,21 @@ It aims to provide a reliable set of APIs to automate your screen reader a11y wo
 
 ## Contents
 
-- [Environment Setup](./intro#environment)
+- [Machine Setup](./intro#environment)
 - [Installation](./intro#installation)
 - [First Screen Reader Code](./intro#first)
 
-## Environment Setup {#environment}
+## Machine Setup {#environment}
 
-Setup your environment for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
+Set up your machine for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
 
 ```bash
-npx @guidepup/setup
+npx @guidepup/setup setup
 ```
 
-For some operating systems, enabling automation of screen readers is tightly controlled. This CLI handles the setup for your OS.
+On some machines, screen reader automation is tightly controlled. This command configures your machine for screen reader automation and only needs to be run once per machine.
 
-For further information checkout this [guide to set up your environment](./guides/automated-environment-setup).
+For further information, see this [guide to set up your machine](./guides/automated-environment-setup).
 
 ## Installation {#installation}
 
@@ -61,6 +61,14 @@ npm install @guidepup/guidepup
 
 </TabItem>
 </Tabs>
+
+Install the screen reader assets required by your installed version of Guidepup:
+
+```bash
+npx @guidepup/setup install
+```
+
+Run this command again after upgrading `@guidepup/guidepup` so that the matching assets are available.
 
 ## First Screen Reader Code {#first}
 

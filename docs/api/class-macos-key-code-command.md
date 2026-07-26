@@ -4,7 +4,7 @@ title: "MacOSKeyCodeCommand"
 
 **Extends:** [KeyCodeCommand]
 
-Object representing a MacOS key code command.
+Object representing a macOS key code command.
 
 For example, use when performing a VoiceOver command:
 

@@ -69,13 +69,13 @@ Click the mouse.
 
 Detect whether the screen reader is the default screen reader for the current OS.
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## screenReader.detect() {#screenreader-detect}
 
 Detect whether the screen reader is supported for the current OS.
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## screenReader.interact([options]) {#screenreader-interact}
 

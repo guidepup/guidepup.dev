@@ -5,7 +5,7 @@ title: "Manual VoiceOver Setup"
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-If [`@guidepup/setup`](https://github.com/guidepup/setup) cannot be used for your MacOS workflow, these guides instruct how to set up your MacOS environment manually for VoiceOver automation.
+If [`@guidepup/setup`](https://github.com/guidepup/setup) cannot be used for your macOS workflow, these guides explain how to set up your machine manually for VoiceOver automation.
 
 ## Local Setup
 
@@ -15,7 +15,7 @@ This setup is required to allow VoiceOver to be controlled by Guidepup.
 
 1. Open the "VoiceOver Utility" application.
 
-   ![MacOS Spotlight search for "VoiceOver Utility.app".](./voiceover_utility_spotlight.png)
+![macOS Spotlight search for "VoiceOver Utility.app".](./voiceover_utility_spotlight.png)
 
 2. On the "General" tab, tick the checkbox "Allow VoiceOver to be controlled with AppleScript".
 
@@ -29,8 +29,8 @@ This setup is required to allow applications, e.g. your terminal or IDE, to cont
 groupId="env-flavor"
 defaultValue="12"
 values={[
-{label: 'MacOS 12 - Monterey', value: '12'},
-{label: 'MacOS 13 - Ventura', value: '13'}
+{label: 'macOS 12 - Monterey', value: '12'},
+{label: 'macOS 13 - Ventura', value: '13'}
 ]
 }>
 <TabItem value="12">
@@ -123,7 +123,7 @@ Please refer to the following examples of how to update the `TCC.db` for your de
 
 - [@guidepup/setup](https://github.com/guidepup/setup/blob/main/src/macOS/updateTccDb.ts) - Guidepup `TCC.db` setup
 - [actions/virtual-environments](https://github.com/actions/virtual-environments/blob/main/images/macos/provision/configuration/configure-tccdb-macos11.sh) - GitHub Actions `TCC.db` setup
-- [CircleCI-Public/macos-orb](https://github.com/CircleCI-Public/macos-orb/blob/main/src/commands/add-uitest-permissions.yml) - CircleCI MacOS Orb `TCC.db` setup
+- [CircleCI-Public/macos-orb](https://github.com/CircleCI-Public/macos-orb/blob/main/src/commands/add-uitest-permissions.yml) - CircleCI macOS Orb `TCC.db` setup
 
 > **⚠️ Warning**
 >

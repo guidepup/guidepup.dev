@@ -254,17 +254,19 @@ import { voiceOver } from "@guidepup/guidepup";
 Detect whether VoiceOver is the default screen reader for the current OS:
 
 - `false` for Windows
-- `true` for MacOS
+- `true` for macOS
 - `false` for Linux
 
+This check is available on both the `voiceOver` instance and the `VoiceOver` class.
+
 ```ts
-import { voiceOver } from "@guidepup/guidepup";
+import { VoiceOver, voiceOver } from "@guidepup/guidepup";
 
-(async () => {
-  const isVoiceOverDefaultScreenReader = voiceOver.default();
+const isVoiceOverDefaultScreenReader = voiceOver.default();
+const isVoiceOverDefaultScreenReaderForClass = VoiceOver.default();
 
-  console.log(isVoiceOverDefaultScreenReader);
-})();
+console.log(isVoiceOverDefaultScreenReader);
+console.log(isVoiceOverDefaultScreenReaderForClass);
 ```
 
 **Returns:** [boolean]
@@ -274,20 +276,22 @@ import { voiceOver } from "@guidepup/guidepup";
 Detect whether VoiceOver is supported for the current OS:
 
 - `false` for Windows
-- `true` for MacOS
+- `true` for macOS
 - `false` for Linux
 
+This check is available on both the `voiceOver` instance and the `VoiceOver` class.
+
 ```ts
-import { voiceOver } from "@guidepup/guidepup";
+import { VoiceOver, voiceOver } from "@guidepup/guidepup";
 
-(async () => {
-  const isVoiceOverSupportedScreenReader = await voiceOver.detect();
+const isVoiceOverSupportedScreenReader = voiceOver.detect();
+const isVoiceOverSupportedScreenReaderForClass = VoiceOver.detect();
 
-  console.log(isVoiceOverSupportedScreenReader);
-})();
+console.log(isVoiceOverSupportedScreenReader);
+console.log(isVoiceOverSupportedScreenReaderForClass);
 ```
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## voiceOver.interact([options]) {#voiceover-interact}
 
@@ -593,6 +597,8 @@ import { voiceOver } from "@guidepup/guidepup";
 
 Turn VoiceOver on.
 
+By default, `capture` is set to `"initial"`: it captures the first page of output, but not subsequent content. Set `capture` to `true` for full capture or `false` to disable capture.
+
 ```ts
 import { voiceOver } from "@guidepup/guidepup";
 
@@ -633,7 +639,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Omit<CommandOptions, "capture">` Additional options. `capture` is not supported when stopping VoiceOver.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -725,7 +731,7 @@ import { voiceOver } from "@guidepup/guidepup";
 **Parameters:**
 
 - `text` [string] Text to type into the focused item.
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` [KeyboardOptions] Additional options, including an `application` to target.
 
 **Returns:** [Promise]&#60;[void]&#62;
 

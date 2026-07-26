@@ -2,7 +2,7 @@
 title: "MacOSApplications"
 ---
 
-Identifiers for standard applications available on MacOS.
+Identifiers for standard applications available on macOS.
 
 ```ts
 export enum MacOSApplications {

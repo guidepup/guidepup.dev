@@ -8,7 +8,7 @@ title: "macOSQuit"
 
 ## macOSQuit(applicationName[, options]) {#macos-quit}
 
-Quits a MacOS application if running.
+Quits a macOS application if running.
 
 ```ts
 import {

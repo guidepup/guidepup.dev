@@ -2,7 +2,7 @@
 title: "MacOSKeyCodes"
 ---
 
-Key codes for MacOS.
+Key codes for macOS.
 
 For example, use when performing a VoiceOver command:
 
