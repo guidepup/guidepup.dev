@@ -16,7 +16,7 @@ Each release of `@guidepup/guidepup` includes a `manifest.json` that specifies t
 The current manifest supports:
 
 | Screen reader | Platform | Supported versions                                                            |
-| ------------- | -------- | ----------------------------------------------------------------------------- |
+| :------------ | :------- | :---------------------------------------------------------------------------- |
 | NVDA          | Windows  | The manifest provides the default NVDA asset for Windows.                     |
 | VoiceOver     | macOS    | macOS 12 (Monterey), 13 (Ventura), 14 (Sonoma), 15 (Sequoia), and 26 (Tahoe). |
 
