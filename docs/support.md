@@ -39,7 +39,7 @@ Please refer to the [NVDA User Guide system requirements](https://www.nvaccess.o
 
 To learn NVDA commands please refer to the following popular guides:
 
-- [NVDA 2021.2 Commands Quick Reference](https://www.nvaccess.org/files/nvda/releases/2021.2/documentation/keyCommands.html)
+- [NVDA 2026.1 Commands Quick Reference](https://download.nvaccess.org/releases/2026.1/documentation/keyCommands.html)
 - [WebAIM Keyboard Shortcuts for NVDA](https://webaim.org/resources/shortcuts/nvda)
 - [Deque University NVDA Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
 
