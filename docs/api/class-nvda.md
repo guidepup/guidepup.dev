@@ -106,6 +106,10 @@ import { nvda } from "@guidepup/guidepup";
 })();
 ```
 
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
 **Returns:** [Promise]&#60;[void]&#62;
 
 ## nvda.clearItemTextLog() {#nvda-clear-item-text-log}
@@ -192,40 +196,44 @@ import { nvda } from "@guidepup/guidepup";
 Detect whether NVDA is the default screen reader for the current OS:
 
 - `true` for Windows
-- `false` for MacOS
+- `false` for macOS
 - `false` for Linux
 
+This check is available on both the `nvda` instance and the `NVDA` class.
+
 ```ts
-import { nvda } from "@guidepup/guidepup";
+import { NVDA, nvda } from "@guidepup/guidepup";
 
-(() => {
-  const isNVDADefaultScreenReader = nvda.default();
+const isNVDADefaultScreenReader = nvda.default();
+const isNVDADefaultScreenReaderForClass = NVDA.default();
 
-  console.log(isNVDADefaultScreenReader);
-})();
+console.log(isNVDADefaultScreenReader);
+console.log(isNVDADefaultScreenReaderForClass);
 ```
 
 **Returns:** [boolean]
 
 ## nvda.detect() {#nvda-detect}
 
-Detect whether NVDA is supported for the current OS:
+Detect whether NVDA is supported on the current machine. NVDA must be installed for this check to return `true`.
 
-- `true` for Windows
-- `false` for MacOS
+- `true` for Windows when NVDA is installed
+- `false` for macOS
 - `false` for Linux
 
+This check is available on both the `nvda` instance and the `NVDA` class.
+
 ```ts
-import { nvda } from "@guidepup/guidepup";
+import { NVDA, nvda } from "@guidepup/guidepup";
 
-(async () => {
-  const isNVDASupportedScreenReader = await nvda.detect();
+const isNVDASupportedScreenReader = nvda.detect();
+const isNVDASupportedScreenReaderForClass = NVDA.detect();
 
-  console.log(isNVDASupportedScreenReader);
-})();
+console.log(isNVDASupportedScreenReader);
+console.log(isNVDASupportedScreenReaderForClass);
 ```
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## nvda.interact() {#nvda-interact}
 
@@ -358,7 +366,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -389,7 +397,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `command` [WindowsKeyCodeCommand] | [WindowsKeystrokeCommand] NVDA keyboard command.
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -433,7 +441,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -460,7 +468,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -495,6 +503,8 @@ import { nvda } from "@guidepup/guidepup";
 
 Turn NVDA on.
 
+By default, `capture` is set to `"initial"`: it captures the first page of output, but not subsequent content. Set `capture` to `true` for full capture or `false` to disable capture.
+
 ```ts
 import { nvda } from "@guidepup/guidepup";
 
@@ -511,7 +521,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -569,6 +579,8 @@ Type text into the focused item.
 
 To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`nvda.press(key[, options])`](./class-nvda#nvda-press).
 
+Each character is typed separately. As a result, `lastSpokenPhrase()` returns the phrase for the final character; use `spokenPhraseLog()` to access output for the complete string.
+
 ```ts
 import { nvda } from "@guidepup/guidepup";
 
@@ -588,7 +600,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `text` [string] Text to type into the focused item.
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 

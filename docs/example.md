@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 Let's take a look at a more complete example of how you might use Guidepup.
 
-> **Note:** this example assumes you are using MacOS, but everything covered in this example can also be applied to NVDA on Windows via the `nvda` object and swapping Safari WebKit for a browser supported by Windows such as Chromium or Firefox.
+> **Note:** this example assumes you are using macOS, but everything covered in this example can also be applied to NVDA on Windows via the `nvda` object and swapping Safari WebKit for a browser supported by Windows such as Chromium or Firefox.
 
 Here we're making use of the [@guidepup/playwright](https://www.npmjs.com/package/@guidepup/playwright) module to integrate Guidepup into an automated [Playwright](https://playwright.dev/) test to assert the VoiceOver flow behaves as we expect. This modules handles the starting and stopping VoiceOver for you between tests so you can focus on writing your tests straight away. It also provides a `voiceOverTest` export - a convenience wrapper for the Playwright `test` method which provides a `voiceOver` instance for you alongside the `page` object.
 
@@ -18,18 +18,18 @@ The test will check that you can navigate to the first heading on the [GitHub RE
 
 ## Contents
 
-- [Environment Setup](./example#environment)
+- [Machine Setup](./example#environment)
 - [Installation](./example#installation)
 - [Create Playwright Config File](./example#playwright)
 - [Create Test File](./example#test)
 - [Run Test](./example#run)
 
-## Environment Setup {#environment}
+## Machine Setup {#environment}
 
-Setup your environment for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
+Set up your machine for screen reader automation with [`@guidepup/setup`](https://www.npmjs.com/package/@guidepup/setup):
 
 ```bash
-npx @guidepup/setup
+npx @guidepup/setup setup
 ```
 
 ## Installation {#installation}
@@ -67,6 +67,12 @@ npx playwright install webkit
 
 </TabItem>
 </Tabs>
+
+Install the screen reader assets required by Guidepup:
+
+```bash
+npx @guidepup/setup install
+```
 
 ## Create Playwright Config File {#playwright}
 

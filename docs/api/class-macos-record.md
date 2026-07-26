@@ -8,7 +8,7 @@ title: "macOSRecord"
 
 ## macOSRecord(filePath) {#macos-record}
 
-Start a screen recording on MacOS.
+Start a screen recording on macOS.
 
 ```ts
 import { macOSRecord } from "@guidepup/record";

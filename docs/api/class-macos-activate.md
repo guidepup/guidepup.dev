@@ -8,7 +8,7 @@ title: "macOSActivate"
 
 ## macOSActivate(applicationName[, options]) {#macos-activate}
 
-Opens a MacOS application if not already open, and focuses the application.
+Opens a macOS application if not already open, and focuses the application.
 
 ```ts
 import { macOSActivate, MacOSApplications } from "@guidepup/guidepup";

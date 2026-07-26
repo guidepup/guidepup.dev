@@ -31,7 +31,7 @@ function setupBasicPage() {
 
 describe("Screen Reader Tests", () => {
   test("should traverse the page announcing the expected roles and content", async () => {
-    // Setup a page using a framework and testing library of your choice
+    // Set up a page using a framework and testing library of your choice
     setupBasicPage();
 
     // Start your Virtual Screen Reader instance

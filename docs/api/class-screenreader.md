@@ -4,7 +4,7 @@ title: "ScreenReader"
 
 **Implements:** [IScreenReader]
 
-A ScreenReader instance can be used to launch and control the default screen reader for the environment: VoiceOver for MacOS and NVDA for Windows.
+A ScreenReader instance can be used to launch and control the default screen reader for the environment: VoiceOver for macOS and NVDA for Windows.
 
 Here's a typical example using a [ScreenReader] instance:
 
@@ -195,14 +195,12 @@ When using a ScreenReader instance this will always return `true`.
 ```ts
 import { screenReader } from "@guidepup/guidepup";
 
-(async () => {
-  const isSupportedScreenReader = await screenReader.detect();
+const isSupportedScreenReader = screenReader.detect();
 
-  console.log(isSupportedScreenReader);
-})();
+console.log(isSupportedScreenReader);
 ```
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## screenReader.interact([options]) {#screenreader-interact}
 

@@ -31,7 +31,7 @@ import { macOSRecord } from "@guidepup/record";
 
 **See:** [macOSRecord]
 
-Start a screen recording on MacOS.
+Start a screen recording on macOS.
 
 ## windowsRecord {#guidepup-windows-record}
 

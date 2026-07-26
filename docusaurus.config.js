@@ -189,10 +189,6 @@ const config = {
                 href: "https://github.com/guidepup/setup",
               },
               {
-                label: "guidepup/setup-action",
-                href: "https://github.com/guidepup/setup-action",
-              },
-              {
                 label: "guidepup/aria-at-tests",
                 href: "https://github.com/guidepup/aria-at-tests",
               },

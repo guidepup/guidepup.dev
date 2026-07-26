@@ -2,7 +2,7 @@
 title: "MacOSModifiers"
 ---
 
-Modifier keys for MacOS.
+Modifier keys for macOS.
 
 For example, use when performing a VoiceOver command:
 

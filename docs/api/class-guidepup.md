@@ -8,7 +8,7 @@ Guidepup provides a reliable set of APIs to automate real screen readers through
 
 Guidepup current supports the following screen readers:
 
-- VoiceOver for MacOS
+- VoiceOver for macOS
 - NVDA for Windows
 
 Here's a typical example:
@@ -52,31 +52,31 @@ import { screenReader } from "@guidepup/guidepup";
 
 **See:** [macOSActivate]
 
-Opens a MacOS application if not already open, and focuses the application.
+Opens a macOS application if not already open, and focuses the application.
 
 ## MacOSApplications {#guidepup-macos-applications}
 
 **Type:** [MacOSApplications]
 
-Identifiers for standard applications available on MacOS.
+Identifiers for standard applications available on macOS.
 
 ## MacOSKeyCodes {#guidepup-macos-key-codes}
 
 **Type:** [MacOSKeyCodes]
 
-Key codes for MacOS.
+Key codes for macOS.
 
 ## MacOSModifiers {#guidepup-macos-modifiers}
 
 **Type:** [MacOSModifiers]
 
-Modifier keys for MacOS.
+Modifier keys for macOS.
 
 ## macOSQuit {#guidepup-macos-quit}
 
 **See:** [macOSQuit]
 
-Quits a MacOS application if running.
+Quits a macOS application if running.
 
 ## nvda {#guidepup-nvda}
 
@@ -169,7 +169,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **See:** [voiceOverKeyCodeCommands]
 
-[Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on MacOS.
+[Key code commands for the VoiceOver screen reader](https://www.apple.com/voiceover/info/guide/_1131.html) on macOS.
 
 ## windowsActivate {#guidepup-windows-activate}
 

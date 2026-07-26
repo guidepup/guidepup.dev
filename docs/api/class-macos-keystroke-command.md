@@ -4,7 +4,7 @@ title: "MacOSKeystrokeCommand"
 
 **Extends:** [KeystrokeCommand]
 
-Object representing a MacOS keystroke command.
+Object representing a macOS keystroke command.
 
 For example, use when performing a VoiceOver command:
 
