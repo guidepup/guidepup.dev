@@ -27,12 +27,15 @@ import { nvda } from "@guidepup/guidepup";
 
 - [nvda.keyboardCommands](./class-nvda#nvda-keyboard-commands)
 - [nvda.name](./class-nvda#nvda-name)
+- [nvda.version](./class-nvda#nvda-version)
 - [nvda.act([options])](./class-nvda#nvda-act)
 - [nvda.clearItemTextLog()](./class-nvda#nvda-clear-item-text-log)
 - [nvda.clearSpokenPhraseLog()](./class-nvda#nvda-clear-spoken-phrase-log)
 - [nvda.click([options])](./class-nvda#nvda-click)
 - [nvda.default()](./class-nvda#nvda-default)
 - [nvda.detect()](./class-nvda#nvda-detect)
+- [nvda.getSetting(key)](./class-nvda#nvda-get-setting)
+- [nvda.getSettings()](./class-nvda#nvda-get-settings)
 - [nvda.interact()](./class-nvda#nvda-interact)
 - [nvda.itemText()](./class-nvda#nvda-item-text)
 - [nvda.itemTextLog()](./class-nvda#nvda-item-text-log)
@@ -78,6 +81,18 @@ Getter for the screen reader name "NVDA".
 import { nvda } from "@guidepup/guidepup";
 
 console.log(nvda.name); // "NVDA"
+```
+
+**Returns:** [string]
+
+## nvda.version {#nvda-version}
+
+Getter for the screen reader version.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+console.log(nvda.version);
 ```
 
 **Returns:** [string]
@@ -187,7 +202,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [ClickOptions] Click options.
+-\*Optional:\*\* `options` [ClickOptions] Click options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -226,6 +241,52 @@ console.log(isNVDASupportedScreenReader);
 ```
 
 **Returns:** [boolean]
+
+## nvda.getSetting(key) {#nvda-get-setting}
+
+Returns the value of a setting for this NVDA instance.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Log the value for the 'virtualBuffers.autoSayAllOnPageLoad' setting.
+  console.log(nvda.getSetting("virtualBuffers.autoSayAllOnPageLoad"));
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- `key` [string] The setting name.
+
+**Returns:** [unknown] The setting value.
+
+## nvda.getSettings() {#nvda-get-settings}
+
+Returns all the current settings for this NVDA instance.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Log current settings.
+  console.log(nvda.getSettings());
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Returns:** [Record]&#60;[string], [unknown]&#62; Current settings values.
 
 ## nvda.interact() {#nvda-interact}
 
@@ -358,7 +419,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+-\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -389,7 +450,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `command` [WindowsKeyCodeCommand] | [WindowsKeystrokeCommand] NVDA keyboard command.
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+  -\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -433,7 +494,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+  -\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -460,7 +521,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+-\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -513,7 +574,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+-\*Optional:\*\* `options` `Pick<StartOptions, "capture" | "settings">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -592,7 +653,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `text` [string] Text to type into the focused item.
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+  -\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -603,6 +664,7 @@ import { nvda } from "@guidepup/guidepup";
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
+[startoptions]: ./class-start-options "StartOptions"
 [windowskeycodecommand]: ./class-windows-key-code-command "WindowsKeyCodeCommand"
 [windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
 [windowskeystrokecommand]: ./class-windows-keystroke-command "WindowsKeystrokeCommand"
@@ -611,3 +673,5 @@ import { nvda } from "@guidepup/guidepup";
 [promise]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "Promise"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"
+[unknown]: https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown "unknown"
+[record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

@@ -28,6 +28,7 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.commanderCommands](./class-voiceover#voiceover-commander-commands)
 - [voiceOver.keyboardCommands](./class-voiceover#voiceover-keyboard-commands)
 - [voiceOver.name](./class-voiceover#voiceover-name)
+- [voiceOver.version](./class-voiceover#voiceover-version)
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
 - [voiceOver.clearItemTextLog()](./class-voiceover#voiceover-clear-item-text-log)
 - [voiceOver.clearSpokenPhraseLog()](./class-voiceover#voiceover-clear-spoken-phrase-log)
@@ -35,6 +36,8 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.copyLastSpokenPhrase([options])](./class-voiceover#voiceover-copy-last-spoken-phrase)
 - [voiceOver.default()](./class-voiceover#voiceover-default)
 - [voiceOver.detect()](./class-voiceover#voiceover-detect)
+- [voiceOver.getSetting(key)](./class-voiceover#voiceover-get-setting)
+- [voiceOver.getSettings()](./class-voiceover#voiceover-get-settings)
 - [voiceOver.interact([options])](./class-voiceover#voiceover-interact)
 - [voiceOver.itemText()](./class-voiceover#voiceover-item-text)
 - [voiceOver.itemTextLog()](./class-voiceover#voiceover-item-text-log)
@@ -105,6 +108,18 @@ Getter for the screen reader name "VoiceOver".
 import { voiceOver } from "@guidepup/guidepup";
 
 console.log(voiceOver.name); // "VoiceOver"
+```
+
+**Returns:** [string]
+
+## voiceOver.version {#voiceover-version}
+
+Getter for the screen reader version.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+console.log(voiceOver.version);
 ```
 
 **Returns:** [string]
@@ -284,6 +299,52 @@ console.log(isVoiceOverSupportedScreenReader);
 ```
 
 **Returns:** [boolean]
+
+## voiceover.getSetting(key) {#voiceover-get-setting}
+
+Returns the value of a setting for this VoiceOver instance.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Log the value for the 'SCRCUserDefaultsCursorTrackingEnabled' setting.
+  console.log(voiceOver.getSetting("SCRCUserDefaultsCursorTrackingEnabled"));
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- `key` [string] The setting name.
+
+**Returns:** [unknown] The setting value.
+
+## voiceover.getSettings() {#voiceover-get-settings}
+
+Returns all the current settings for this VoiceOver instance.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Log current settings.
+  console.log(voiceOver.getSettings());
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Returns:** [Record]&#60;[string], [unknown]&#62; Current settings values.
 
 ## voiceOver.interact([options]) {#voiceover-interact}
 
@@ -607,7 +668,7 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` [StartOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -737,6 +798,7 @@ import { voiceOver } from "@guidepup/guidepup";
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [iscreenreader]: ./class-iscreenreader "ScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
+[startoptions]: ./class-start-options "StartOptions"
 [voiceover]: ./class-voiceover "VoiceOver"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "voiceOverKeyCodeCommands"

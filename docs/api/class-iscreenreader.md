@@ -13,25 +13,41 @@ See also:
 
 **Contents:**
 
-- [screenReader.act([options])](./class-screenreader#screenreader-act)
-- [screenReader.clearItemTextLog()](./class-screenreader#screenreader-clear-item-text-log)
-- [screenReader.clearSpokenPhraseLog()](./class-screenreader#screenreader-clear-spoken-phrase-log)
-- [screenReader.click([options])](./class-screenreader#screenreader-click)
-- [screenReader.default()](./class-screenreader#screenreader-default)
-- [screenReader.detect()](./class-screenreader#screenreader-detect)
-- [screenReader.interact([options])](./class-screenreader#screenreader-interact)
-- [screenReader.itemText()](./class-screenreader#screenreader-item-text)
-- [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
-- [screenReader.lastSpokenPhrase()](./class-screenreader#screenreader-last-spoken-phrase)
-- [screenReader.next([options])](./class-screenreader#screenreader-next)
-- [screenReader.perform(command, [options])](./class-screenreader#screenreader-perform)
-- [screenReader.press(key, [options])](./class-screenreader#screenreader-press)
-- [screenReader.previous([options])](./class-screenreader#screenreader-previous)
-- [screenReader.spokenPhraseLog()](./class-screenreader#screenreader-spoken-phrase-log)
-- [screenReader.start([options])](./class-screenreader#screenreader-start)
-- [screenReader.stop([options])](./class-screenreader#screenreader-stop)
-- [screenReader.stopInteracting([options])](./class-screenreader#screenreader-stop-interacting)
-- [screenReader.type(text[, options])](./class-screenreader#screenreader-type)
+- [screenReader.name](./class-iscreenreader#screenreader-name)
+- [screenReader.version](./class-iscreenreader#screenreader-version)
+- [screenReader.act([options])](./class-iscreenreader#screenreader-act)
+- [screenReader.clearItemTextLog()](./class-iscreenreader#screenreader-clear-item-text-log)
+- [screenReader.clearSpokenPhraseLog()](./class-iscreenreader#screenreader-clear-spoken-phrase-log)
+- [screenReader.click([options])](./class-iscreenreader#screenreader-click)
+- [screenReader.default()](./class-iscreenreader#screenreader-default)
+- [screenReader.detect()](./class-iscreenreader#screenreader-detect)
+- [screenReader.getSetting(key)](./class-iscreenreader#screenreader-get-setting)
+- [screenReader.getSettings()](./class-iscreenreader#screenreader-get-settings)
+- [screenReader.interact([options])](./class-iscreenreader#screenreader-interact)
+- [screenReader.itemText()](./class-iscreenreader#screenreader-item-text)
+- [screenReader.itemTextLog()](./class-iscreenreader#screenreader-item-text-log)
+- [screenReader.lastSpokenPhrase()](./class-iscreenreader#screenreader-last-spoken-phrase)
+- [screenReader.next([options])](./class-iscreenreader#screenreader-next)
+- [screenReader.perform(command, [options])](./class-iscreenreader#screenreader-perform)
+- [screenReader.press(key, [options])](./class-iscreenreader#screenreader-press)
+- [screenReader.previous([options])](./class-iscreenreader#screenreader-previous)
+- [screenReader.spokenPhraseLog()](./class-iscreenreader#screenreader-spoken-phrase-log)
+- [screenReader.start([options])](./class-iscreenreader#screenreader-start)
+- [screenReader.stop([options])](./class-iscreenreader#screenreader-stop)
+- [screenReader.stopInteracting([options])](./class-iscreenreader#screenreader-stop-interacting)
+- [screenReader.type(text[, options])](./class-iscreenreader#screenreader-type)
+
+## screenReader.name {#screenreader-name}
+
+Getter for the screen reader name.
+
+**Returns:** [string]
+
+## screenReader.version {#screenreader-version}
+
+Getter for the screen reader version.
+
+**Returns:** [string]
 
 ## screenReader.act([options]) {#screenreader-act}
 
@@ -76,6 +92,22 @@ Detect whether the screen reader is the default screen reader for the current OS
 Detect whether the screen reader is supported for the current OS.
 
 **Returns:** [boolean]
+
+## screenReader.getSetting(key) {#screenreader-get-setting}
+
+Returns the value of a setting for this screen reader instance.
+
+**Parameters:**
+
+- `key` [string] The setting name.
+
+**Returns:** [unknown] The setting value.
+
+## screenReader.getSettings() {#screenreader-get-settings}
+
+Returns all the current settings for this screen reader instance.
+
+**Returns:** [Record]&#60;[string], [unknown]&#62; Current settings values.
 
 ## screenReader.interact([options]) {#screenreader-interact}
 
@@ -176,7 +208,7 @@ Turn the screen reader on.
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` [StartOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -204,7 +236,7 @@ Stop interacting with the current item.
 
 Type text into the focused item.
 
-To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`screenReader.press(key[, options])`](./class-screenreader#screenreader-press).
+To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`screenReader.press(key[, options])`](./class-iscreenreader#screenreader-press).
 
 **Parameters:**
 
@@ -218,7 +250,8 @@ To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`s
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
 [nvda]: ./class-nvda "NVDA"
-[screenreader]: ./class-screenreader "ScreenReader"
+[screenreader]: ./class-iscreenreader "ScreenReader"
+[startoptions]: ./class-start-options "StartOptions"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [virtual]: ./class-virtual "Virtual"
 [voiceover]: ./class-voiceover "VoiceOver"
@@ -228,3 +261,5 @@ To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`s
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"
 [any]: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any "any"
+[unknown]: https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown "unknown"
+[record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"
