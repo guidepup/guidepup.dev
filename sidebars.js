@@ -51,6 +51,7 @@ const sidebars = {
             { type: "doc", id: "api/class-nvda-key-code-commands" },
             { type: "doc", id: "api/class-nvda" },
             { type: "doc", id: "api/class-screenreader" },
+            { type: "doc", id: "api/class-start-options" },
             { type: "doc", id: "api/class-voiceover-commander-commands" },
             { type: "doc", id: "api/class-voiceover-key-code-commands" },
             { type: "doc", id: "api/class-voiceover" },
@@ -96,7 +97,7 @@ const sidebars = {
           items: [
             { type: "doc", id: "api/class-virtual-commands" },
             { type: "doc", id: "api/class-virtual" },
-            { type: "doc", id: "api/class-start-options" },
+            { type: "doc", id: "api/class-virtual-start-options" },
           ],
         },
       ],

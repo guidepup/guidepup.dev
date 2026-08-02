@@ -556,7 +556,7 @@ test("example test", async () => {
 
 **Parameters:**
 
-- **Optional:** `options` [StartOptions] Start options.
+- **Optional:** `options` [VirtualStartOptions] Start options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -641,7 +641,7 @@ test("example test", async () => {
 [clickoptions]: ./class-click-options "ClickOptions"
 [commandoptions]: ./class-command-options "CommandOptions"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
-[startoptions]: ./class-start-options "StartOptions"
+[startoptions]: ./class-virtual-start-options.md "VirtualStartOptions"
 [virtualcommands]: ./class-virtual-commands "VirtualCommands"
 [virtual]: ./class-virtual "virtual"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"

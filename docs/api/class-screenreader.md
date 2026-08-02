@@ -31,12 +31,15 @@ See also:
 **Contents:**
 
 - [screenReader.name](./class-screenreader#screenreader-name)
+- [screenReader.version](./class-screenreader#screenreader-version)
 - [screenReader.act([options])](./class-screenreader#screenreader-act)
 - [screenReader.clearItemTextLog()](./class-screenreader#screenreader-clear-item-text-log)
 - [screenReader.clearSpokenPhraseLog()](./class-screenreader#screenreader-clear-spoken-phrase-log)
 - [screenReader.click([options])](./class-screenreader#screenreader-click)
 - [screenReader.default()](./class-screenreader#screenreader-default)
 - [screenReader.detect()](./class-screenreader#screenreader-detect)
+- [screenReader.getSetting(key)](./class-screenreader#screenreader-get-setting)
+- [screenReader.getSettings()](./class-screenreader#screenreader-get-settings)
 - [screenReader.interact([options])](./class-screenreader#screenreader-interact)
 - [screenReader.itemText()](./class-screenreader#screenreader-item-text)
 - [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
@@ -59,6 +62,18 @@ Getter for the screen reader name, either "NVDA" or "VoiceOver".
 import { screenReader } from "@guidepup/guidepup";
 
 console.log(screenReader.name); // "NVDA" or "VoiceOver"
+```
+
+**Returns:** [string]
+
+## screenReader.version {#screenreader-version}
+
+Getter for the screen reader version.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+console.log(screenReader.version);
 ```
 
 **Returns:** [string]
@@ -201,6 +216,22 @@ console.log(isSupportedScreenReader);
 ```
 
 **Returns:** [boolean]
+
+## screenReader.getSetting(key) {#screenreader-get-setting}
+
+Returns the value of a setting for this screen reader instance.
+
+**Parameters:**
+
+- `key` [string] The setting name.
+
+**Returns:** [unknown] The setting value.
+
+## screenReader.getSettings() {#screenreader-get-settings}
+
+Returns all the current settings for this screen reader instance.
+
+**Returns:** [Record]&#60;[string], [unknown]&#62; Current settings values.
 
 ## screenReader.interact([options]) {#screenreader-interact}
 
@@ -487,7 +518,7 @@ import { screenReader } from "@guidepup/guidepup";
 
 **Parameters:**
 
-- **Optional:** `options` [CommandOptions] Additional options.
+- **Optional:** `options` [StartOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -588,6 +619,7 @@ import { screenReader } from "@guidepup/guidepup";
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
+[startoptions]: ./class-start-options "StartOptions"
 [voiceover]: ./class-voiceover "VoiceOver"
 [windowskeycodecommand]: ./class-windows-key-code-command "WindowsKeyCodeCommand"
 [windowskeycodes]: ./class-windows-key-codes "WindowsKeyCodes"
@@ -598,3 +630,5 @@ import { screenReader } from "@guidepup/guidepup";
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
 [void]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined "void"
 [any]: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any "any"
+[unknown]: https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown "unknown"
+[record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"

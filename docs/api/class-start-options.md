@@ -2,85 +2,45 @@
 title: "StartOptions"
 ---
 
-Options for starting the Virtual Screen Reader.
+**Extends:** [CommandOptions]
 
-For example, to use the Virtual Screen Reader against the entire page:
+Options for the screen reader start operation.
 
-```ts
-import { virtual } from "@guidepup/virtual-screen-reader";
-
-test("example test", async () => {
-  // Start Virtual on the entire page.
-  await virtual.start({ container: document.body });
-
-  // Stop the Virtual Screen Reader.
-  await virtual.stop();
-});
-```
-
-To instead use the Virtual Screen Reader within a particular element (with that element included):
+For example, use when starting VoiceOver:
 
 ```ts
-import { virtual } from "@guidepup/virtual-screen-reader";
-import { screen } from "@testing-library/dom";
+import { voiceOver } from "@guidepup/guidepup";
 
-test("example test", async () => {
-  const container = screen.getByRole("navigation");
+const startCommandOptions = {
+  capture: true,
+  retries: 3,
+  timeout: 10000,
+  settings: {
+    SCRCUserDefaultsCursorTrackingEnabled: false,
+  },
+};
 
-  // Start Virtual within a <nav> element in the page.
-  await virtual.start({ container });
-
-  // Stop the Virtual Screen Reader.
-  await virtual.stop();
-});
+(async () => {
+  // Start VoiceOver with custom output capture, timeout, and retries.
+  await voiceOver.start(startCommandOptions);
+})();
 ```
 
-If using in a headed browser environment such as [Storybook](https://storybook.js.org/), you can also opt-in to having the virtual cursor displayed visually:
+See also:
 
-```ts
-import { virtual } from "@guidepup/virtual-screen-reader";
-
-test("example test", async () => {
-  // Start Virtual on the entire page with the virtual cursor displayed visually.
-  await virtual.start({ container: document.body, displayCursor: true });
-
-  // Stop the Virtual Screen Reader.
-  await virtual.stop();
-});
-```
+- [CommandOptions]
 
 **Contents:**
 
-- [startOptions.container](./class-start-options#start-options-container)
-- [startOptions.window](./class-start-options#start-options-window)
-- [startOptions.displayCursor](./class-start-options#start-options-display-cursor)
+- [startOptions.settings](./class-start-options#start-options-settings)
 
-## startOptions.container {#start-options-container}
+## startOptions.settings {#start-options-settings}
 
-The bounding HTML element to use the Virtual Screen Reader in.
+**Optional:** Screen reader settings to apply on startup.
 
-To use the entire page pass `document.body`.
+**Type:** [Record]&#60;[string], [unknown]&#62;
 
-**Type:** [HTMLElement]
-
-## startOptions.window {#start-options-window}
-
-**Optional:** The window instance.
-
-Only required if the `window` instance is not already globally available. For example, when you are in a Node environment and using a custom DOM implementation that is not attached to the global scope.
-
-Defaults to using the global `window` instance.
-
-**Type:** [Window]
-
-## startOptions.displayCursor {#start-options-display-cursor}
-
-**Optional:** Display the Virtual Screen Reader cursor visually on the target element.
-
-> Note: There is a performance overhead to visually rendering the cursor.
-
-**Type:** [boolean]
-
-[boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
-[htmlelement]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement "HTMLElement"
-[window]: https://developer.mozilla.org/en-US/docs/Web/API/Window "Window"
+[commandoptions]: ./class-command-options "CommandOptions"
+[string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"
+[unknown]: https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown "unknown"
+[record]: https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type "Record"
