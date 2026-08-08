@@ -165,7 +165,7 @@ test.describe("Playwright VoiceOver", () => {
     while (
       (await voiceOver.lastSpokenPhrase()) !== "heading level 1, Guidepup"
     ) {
-      await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
+      await voiceOver.nextHeading();
     }
 
     expect(JSON.stringify(await voiceOver.spokenPhraseLog())).toMatchSnapshot();
@@ -194,7 +194,7 @@ test.describe("Playwright VoiceOver", () => {
     await voiceOver.navigateToWebContent();
 
     while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
-      await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
+      await voiceOver.nextHeading();
     }
 
     expect(JSON.stringify(await voiceOver.spokenPhraseLog())).toMatchSnapshot();

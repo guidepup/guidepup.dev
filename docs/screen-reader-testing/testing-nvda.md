@@ -62,7 +62,7 @@ When using [`@guidepup/playwright`](https://www.npmjs.com/package/@guidepup/play
 NVDA navigation is typically expressed with its [`keyboardCommands`](../api/class-nvda#nvda-keyboard-commands) collection and the [`perform()` API](../api/class-nvda#nvda-perform):
 
 ```ts
-await nvda.perform(nvda.keyboardCommands.moveToNextHeading);
+await nvda.perform(nvda.keyboardCommands.moveToNextGraphic);
 
 expect(await nvda.lastSpokenPhrase()).toContain("Products");
 ```
@@ -89,9 +89,9 @@ await nvda.navigateToWebContent();
 NVDA can be used to interact with the same controls a user would encounter during a workflow:
 
 ```ts
-await nvda.perform(nvda.keyboardCommands.moveToNextLink);
+await nvda.nextLink();
 
-expect(await nvda.lastSpokenPhrase()).toContain("Add to basket");
+expect(await nvda.lastSpokenPhrase()).toContain("View all");
 
 await nvda.act();
 ```

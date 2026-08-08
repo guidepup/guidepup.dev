@@ -29,9 +29,15 @@ See also:
 - [screenReader.itemTextLog()](./class-iscreenreader#screenreader-item-text-log)
 - [screenReader.lastSpokenPhrase()](./class-iscreenreader#screenreader-last-spoken-phrase)
 - [screenReader.next([options])](./class-iscreenreader#screenreader-next)
+- [screenReader.nextHeading([options])](./class-iscreenreader#screenreader-next-heading)
+- [screenReader.nextLandmark([options])](./class-iscreenreader#screenreader-next-landmark)
+- [screenReader.nextLink([options])](./class-iscreenreader#screenreader-next-link)
 - [screenReader.perform(command, [options])](./class-iscreenreader#screenreader-perform)
 - [screenReader.press(key, [options])](./class-iscreenreader#screenreader-press)
 - [screenReader.previous([options])](./class-iscreenreader#screenreader-previous)
+- [screenReader.previousHeading([options])](./class-iscreenreader#screenreader-previous-heading)
+- [screenReader.previousLandmark([options])](./class-iscreenreader#screenreader-previous-landmark)
+- [screenReader.previousLink([options])](./class-iscreenreader#screenreader-previous-link)
 - [screenReader.spokenPhraseLog()](./class-iscreenreader#screenreader-spoken-phrase-log)
 - [screenReader.start([options])](./class-iscreenreader#screenreader-start)
 - [screenReader.stop([options])](./class-iscreenreader#screenreader-stop)
@@ -148,6 +154,36 @@ Move the screen reader cursor to the next location.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
+## screenReader.nextHeading([options]) {#screenreader-next-heading}
+
+Move the screen reader cursor to the next heading.
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.nextLandmark([options]) {#screenreader-next-landmark}
+
+Move the screen reader cursor to the next landmark.
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.nextLink([options]) {#screenreader-next-link}
+
+Move the screen reader cursor to the next link.
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
 ## screenReader.perform(command[, options]) {#screenreader-perform}
 
 Perform a screen reader command.
@@ -190,6 +226,36 @@ modifier, modifier is pressed and being held while the subsequent key is being p
 ## screenReader.previous([options]) {#screenreader-previous}
 
 Move the screen reader cursor to the previous location.
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.previousHeading([options]) {#screenreader-previous-heading}
+
+Move the screen reader cursor to the previous heading.
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.previousLandmark([options]) {#screenreader-previous-landmark}
+
+Move the screen reader cursor to the previous landmark.
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.previousLink([options]) {#screenreader-previous-link}
+
+Move the screen reader cursor to the previous link.
 
 **Parameters:**
 

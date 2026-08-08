@@ -42,9 +42,15 @@ import { nvda } from "@guidepup/guidepup";
 - [nvda.itemTextLog()](./class-nvda#nvda-item-text-log)
 - [nvda.lastSpokenPhrase()](./class-nvda#nvda-last-spoken-phrase)
 - [nvda.next([options])](./class-nvda#nvda-next)
+- [nvda.nextHeading([options])](./class-nvda#nvda-next-heading)
+- [nvda.nextLandmark([options])](./class-nvda#nvda-next-landmark)
+- [nvda.nextLink([options])](./class-nvda#nvda-next-link)
 - [nvda.perform(command[, options])](./class-nvda#nvda-perform)
 - [nvda.press(key[, options])](./class-nvda#nvda-press)
 - [nvda.previous([options])](./class-nvda#nvda-previous)
+- [nvda.previousHeading([options])](./class-nvda#nvda-previous-heading)
+- [nvda.previousLandmark([options])](./class-nvda#nvda-previous-landmark)
+- [nvda.previousLink([options])](./class-nvda#nvda-previous-link)
 - [nvda.spokenPhraseLog()](./class-nvda#nvda-spoken-phrase-log)
 - [nvda.start([options])](./class-nvda#nvda-start)
 - [nvda.stop()](./class-nvda#nvda-stop)
@@ -203,7 +209,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
--\*Optional:\*\* `options` [ClickOptions] Click options.
+- **Optional:** `options` [ClickOptions] Click options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -420,7 +426,88 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
--\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.nextHeading([options]) {#nvda-next-heading}
+
+Move the NVDA cursor to the next heading.
+
+Equivalent of executing `H`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next heading.
+  await nvda.nextHeading();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.nextLandmark([options]) {#nvda-next-landmark}
+
+Move the NVDA cursor to the next landmark.
+
+Equivalent of executing `D`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next landmark.
+  await nvda.nextLandmark();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.nextLink([options]) {#nvda-next-link}
+
+Move the NVDA cursor to the next link.
+
+Equivalent of executing `K`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the next link.
+  await nvda.nextLink();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -451,7 +538,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `command` [WindowsKeyCodeCommand] | [WindowsKeystrokeCommand] NVDA keyboard command.
-  -\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -495,7 +582,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `key` [string] Name of the key to press or a character to generate, such as <kbd>ArrowLeft</kbd> or <kbd>a</kbd>.
-  -\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -522,7 +609,88 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
--\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.previousHeading([options]) {#nvda-previous-heading}
+
+Move the NVDA cursor to the previous heading.
+
+Equivalent of executing `Shift-H`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the previous heading.
+  await nvda.previousHeading();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.previousLandmark([options]) {#nvda-previous-landmark}
+
+Move the NVDA cursor to the previous landmark.
+
+Equivalent of executing `Shift-D`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the previous landmark.
+  await nvda.previousLandmark();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.previousLink([options]) {#nvda-previous-link}
+
+Move the NVDA cursor to the previous link.
+
+Equivalent of executing `Shift-K`.
+
+```ts
+import { nvda } from "@guidepup/guidepup";
+
+(async () => {
+  // Start NVDA.
+  await nvda.start();
+
+  // Move to the previous link.
+  await nvda.previousLink();
+
+  // Stop NVDA.
+  await nvda.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -575,7 +743,7 @@ import { nvda } from "@guidepup/guidepup";
 
 **Parameters:**
 
--\*Optional:\*\* `options` `Pick<StartOptions, "capture" | "settings">` Capture options.
+- **Optional:** `options` `Pick<StartOptions, "capture" | "settings">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 
@@ -654,7 +822,7 @@ import { nvda } from "@guidepup/guidepup";
 **Parameters:**
 
 - `text` [string] Text to type into the focused item.
-  -\*Optional:\*\* `options` `Pick<CommandOptions, "capture">` Capture options.
+- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
 

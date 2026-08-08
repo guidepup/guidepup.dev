@@ -10,7 +10,13 @@ Guidepup is designed around real cursor movement and spoken phrase verification.
 The common API surface is documented in the screen reader reference docs:
 
 - [`next([options])`](../api/class-screenreader#screenreader-next)
+- [`nextHeading([options])`](../api/class-screenreader#screenreader-next-heading)
+- [`nextLandmark([options])`](../api/class-screenreader#screenreader-next-landmark)
+- [`nextLink([options])`](../api/class-screenreader#screenreader-next-link)
 - [`previous([options])`](../api/class-screenreader#screenreader-previous)
+- [`previousHeading([options])`](../api/class-screenreader#screenreader-previous-heading)
+- [`previousLandmark([options])`](../api/class-screenreader#screenreader-previous-landmark)
+- [`previousLink([options])`](../api/class-screenreader#screenreader-previous-link)
 - [`perform(command[, options])`](../api/class-screenreader#screenreader-perform)
 - [`lastSpokenPhrase()`](../api/class-screenreader#screenreader-last-spoken-phrase)
 
@@ -42,33 +48,43 @@ await voiceOver.previous();
 
 In practice, `next()` and `previous()` are the low-level building blocks for a screen reader style reading order traversal. They are the API equivalents of stepping through what the screen reader would present to a user.
 
+## Navigate via popular techniques
+
+According to [the annual WebAIM screen reader survey](https://webaim.org/projects/screenreadersurvey10/#finding), some of the most popular techniques among screen reader users for finding information are navigating by heading, landmark, and link.
+
+Guidepup supports all three of these navigation techniques:
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+await voiceOver.start();
+
+try {
+  await voiceOver.nextHeading();
+  await voiceOver.nextLandmark();
+  await voiceOver.nextLink();
+} finally {
+  await voiceOver.stop();
+}
+```
+
+With matching APIs for moving backwards.
+
 ## Targeted navigation with `perform`
 
 For predictable page structure checks, `perform()` is used with a specific command object from the keyboard command catalog:
 
 ```ts
-await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
+await voiceOver.perform(voiceOver.keyboardCommands.findNextGraphic);
 expect(await voiceOver.lastSpokenPhrase()).toContain("Pricing");
 ```
 
 ```ts
-await nvda.perform(nvda.keyboardCommands.moveToNextHeading);
+await nvda.perform(nvda.keyboardCommands.moveToNextGraphic);
 expect(await nvda.lastSpokenPhrase()).toContain("Pricing");
 ```
 
-The command objects in the API docs are commands specific to the chosen screen reader. They describe navigation commands such as heading, link, landmark, form control, table, and similar semantic operations. That keeps the top-level API stable while still exposing each reader's command vocabulary.
-
-Examples that fit the same pattern include:
-
-```ts
-await voiceOver.perform(voiceOver.keyboardCommands.findNextLink);
-expect(await voiceOver.lastSpokenPhrase()).toContain("Add to basket");
-```
-
-```ts
-await nvda.perform(nvda.keyboardCommands.moveToNextLink);
-expect(await nvda.lastSpokenPhrase()).toContain("Add to basket");
-```
+The command objects in the API docs are commands specific to the chosen screen reader. They describe navigation commands such as heading, link, landmark, form control, table, and similar semantic operations. This keeps the top-level API stable while still exposing each reader's command vocabulary.
 
 ## Assert on the spoken result
 
@@ -78,7 +94,7 @@ Navigation tests in Guidepup usually pair a cursor operation with a spoken phras
 await voiceOver.start();
 
 try {
-  await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
+  await voiceOver.nextHeading();
 
   const headingOutput = await voiceOver.lastSpokenPhrase();
   expect(headingOutput).toContain("Products");
@@ -93,7 +109,7 @@ The same pattern works for NVDA:
 await nvda.start();
 
 try {
-  await nvda.perform(nvda.keyboardCommands.moveToNextHeading);
+  await nvda.nextHeading();
 
   const headingOutput = await nvda.lastSpokenPhrase();
   expect(headingOutput).toContain("Products");
@@ -109,7 +125,7 @@ The exact spoken phrase can vary between readers and browser/OS configurations. 
 A dependable Guidepup navigation test generally follows the same shape:
 
 1. Start the screen reader.
-2. Move the current cursor with `next()`, `previous()`, or an explicit `perform()` command.
+2. Move the current cursor with `next()`, `previous()`, common navigation techniques, or an explicit `perform()` command.
 3. Read the latest result from `lastSpokenPhrase()`.
 4. Assert against the expected content.
 5. Stop the reader in a `finally` block.

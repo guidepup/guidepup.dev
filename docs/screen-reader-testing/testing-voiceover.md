@@ -62,7 +62,7 @@ When using [`@guidepup/playwright`](https://www.npmjs.com/package/@guidepup/play
 VoiceOver navigation is usually expressed through its [`keyboardCommands`](../api/class-voiceover#voiceover-keyboard-commands) collection and the [`perform()` API](../api/class-voiceover#voiceover-perform):
 
 ```ts
-await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
+await voiceOver.perform(voiceOver.keyboardCommands.findNextGraphic);
 
 expect(await voiceOver.lastSpokenPhrase()).toContain("Products");
 ```
@@ -89,9 +89,9 @@ await voiceOver.navigateToWebContent();
 VoiceOver can be used to interact with the same controls a user would encounter during a workflow:
 
 ```ts
-await voiceOver.perform(voiceOver.keyboardCommands.findNextLink);
+await voiceOver.nextLink();
 
-expect(await voiceOver.lastSpokenPhrase()).toContain("Add to basket");
+expect(await voiceOver.lastSpokenPhrase()).toContain("View all");
 
 await voiceOver.act();
 ```
