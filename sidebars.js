@@ -11,6 +11,10 @@ const sidebars = {
           type: "doc",
           id: "introduction/guidepup-vs-other-accessibility-testing",
         },
+        {
+          type: "doc",
+          id: "introduction/accessibility-testing-gotchas",
+        },
         { type: "doc", id: "introduction/what-can-i-test" },
       ],
       collapsed: false,
