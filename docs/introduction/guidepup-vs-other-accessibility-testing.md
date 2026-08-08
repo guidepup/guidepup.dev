@@ -11,14 +11,14 @@ Different tools test different aspects of an application, and a strong accessibi
 
 ## Different tools, different questions
 
-| Tool                                                                                     | What it helps you test                                 |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| [axe](https://www.deque.com/axe/)                                                        | Automatically detectable accessibility violations      |
-| [Playwright](https://playwright.dev/)                                                    | Application behaviour and UI interactions              |
-| [Playwright accessibility assertions](https://playwright.dev/docs/accessibility-testing) | Expected accessible names, roles, states and structure |
-| [Guidepup Virtual Screen Reader](../virtual-screen-reader/introduction)                  | Screen reader behaviour in fast, isolated tests        |
-| [Guidepup with VoiceOver or NVDA](../getting-started)                                    | Screen reader behaviour using a real screen reader     |
-| Manual testing                                                                           | Real-world accessibility and usability                 |
+| Layer                      | Example Tool                                                                             | What it helps you test                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Static Analysis            | [axe](https://github.com/dequelabs/axe-core)                                             | Statically detectable accessibility violations              |
+| Browser Accessibility Tree | [Playwright accessibility assertions](https://playwright.dev/docs/accessibility-testing) | Expected accessible names, roles, states and structure      |
+| Browser / Component        | [Playwright](https://playwright.dev/)                                                    | Application behaviour under browser UI interactions         |
+| Simulated Screen Reader    | [Guidepup Virtual Screen Reader](../virtual-screen-reader/introduction)                  | Expected screen reader behaviour in fast, isolated tests    |
+| Real Screen Reader         | [Guidepup with VoiceOver or NVDA](../getting-started)                                    | Application behaviour under real screen reader interactions |
+| User                       | Manual assistive technology testing                                                      | Real-world accessibility and usability                      |
 
 The distinction is important.
 
