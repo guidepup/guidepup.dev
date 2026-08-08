@@ -20,7 +20,7 @@ npx @guidepup/setup setup
 
 On some machines, screen reader automation requires additional configuration. This command configures your machine and only needs to be run once per machine.
 
-For more information, see the [machine setup guide](../guides/machine-setup).
+For more information, see the [machine setup guide](/docs/guides/machine-setup).
 
 ## Installation
 
@@ -142,4 +142,4 @@ Guidepup starts the screen reader, moves to the next item, captures what was spo
 
 From here, you can start writing screen reader tests around your application's real user journeys.
 
-See the [real world example](./real-world-example) to see how Guidepup can be used with Playwright.
+See the [real world example](/docs/getting-started/real-world-example) to see how Guidepup can be used with Playwright.
