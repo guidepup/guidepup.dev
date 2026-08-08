@@ -18,7 +18,7 @@ This package aims to supplement your testing by enabling you to automate a Virtu
 >
 > This package should not replace but augment your screen reader testing, there is no substitute for testing with real screen readers and with real users.
 
-If you are looking to automate real screen readers, see the [Guidepup API documentation](../getting-started/getting-started) and the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) package.
+If you are looking to automate real screen readers, see the [Guidepup API documentation](/docs/getting-started) and the [`@guidepup/guidepup`](https://github.com/guidepup/guidepup) package.
 
 See the [getting started](./getting-started) guide for a minimal setup and the [Jest, Vitest, and Testing Library](./using-with-jest-vitest-testing-library) guide for framework-specific examples.
 
