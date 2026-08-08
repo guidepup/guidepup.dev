@@ -60,7 +60,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Guides",
+      label: "Setup guides",
       items: [
         { type: "doc", id: "guides/machine-setup" },
         { type: "doc", id: "guides/manual-voiceover-setup" },

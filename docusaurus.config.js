@@ -143,8 +143,16 @@ const config = {
             title: "Docs",
             items: [
               {
+                label: "Introduction",
+                to: "/docs/introduction/what-is-guidepup",
+              },
+              {
                 label: "Getting Started",
                 to: "/docs/getting-started",
+              },
+              {
+                label: "Virtual Screen Reader",
+                to: "/docs/virtual-screen-reader/introduction",
               },
               {
                 label: "API Reference",
