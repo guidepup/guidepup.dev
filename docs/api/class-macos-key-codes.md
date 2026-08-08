@@ -1,5 +1,6 @@
 ---
 title: "MacOSKeyCodes"
+description: Reference macOS key code values and screen reader command helpers.
 ---
 
 Key codes for macOS.

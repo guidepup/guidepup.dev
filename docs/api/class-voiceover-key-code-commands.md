@@ -1,5 +1,6 @@
 ---
 title: "voiceOverKeyCodeCommands"
+description: Reference VoiceOver key code command definitions for Guidepup automation.
 ---
 
 **Extends:** [object]

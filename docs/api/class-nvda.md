@@ -1,5 +1,6 @@
 ---
 title: "NVDA"
+description: Reference the NVDA automation API in the Guidepup library.
 ---
 
 **Implements:** [IScreenReader]

@@ -1,5 +1,6 @@
 ---
 title: "macOSQuit"
+description: Quit macOS applications through the Guidepup VoiceOver automation API.
 ---
 
 **Contents:**

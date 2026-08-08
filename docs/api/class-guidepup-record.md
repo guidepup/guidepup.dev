@@ -1,5 +1,6 @@
 ---
 title: "Guidepup Record Library"
+description: Reference the Guidepup Record API for screen reader recording and export.
 ---
 
 # Guidepup Record Library

@@ -1,5 +1,6 @@
 ---
 title: "ScreenReader"
+description: Reference the common screen reader API exposed by Guidepup automation.
 ---
 
 **Implements:** [IScreenReader]

@@ -1,5 +1,6 @@
 ---
 title: "CommandOptions"
+description: Reference command options used across Guidepup screen reader automation APIs.
 ---
 
 **Extends:** [object]

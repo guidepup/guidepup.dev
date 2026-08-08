@@ -1,5 +1,6 @@
 ---
 title: "Virtual"
+description: Reference the Virtual Screen Reader API for DOM-based screen reader simulation.
 ---
 
 **Implements:** [IScreenReader]

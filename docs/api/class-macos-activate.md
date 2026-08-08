@@ -1,5 +1,6 @@
 ---
 title: "macOSActivate"
+description: Activate macOS apps and automation targets with the Guidepup API.
 ---
 
 **Contents:**

@@ -1,5 +1,6 @@
 ---
 title: "StartOptions"
+description: Reference start options for launching a Guidepup screen reader session.
 ---
 
 **Extends:** [CommandOptions]

@@ -1,5 +1,6 @@
 ---
 title: "MacOSApplications"
+description: Reference macOS application automation constants and helpers in Guidepup.
 ---
 
 Identifiers for standard applications available on macOS.

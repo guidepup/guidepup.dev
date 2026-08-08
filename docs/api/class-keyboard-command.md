@@ -1,5 +1,6 @@
 ---
 title: "KeyboardCommand"
+description: Reference the keyboard command API used in Guidepup screen reader automation.
 ---
 
 **Type:** [KeyCodeCommand] | [KeystrokeCommand]

@@ -1,5 +1,6 @@
 ---
 title: "KeyboardOptions"
+description: Reference keyboard options for Guidepup command execution.
 ---
 
 **Extends:** [CommandOptions]

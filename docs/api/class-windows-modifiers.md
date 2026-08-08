@@ -1,5 +1,6 @@
 ---
 title: "WindowsModifiers"
+description: Reference Windows modifier keys used in Guidepup NVDA automation.
 ---
 
 Modifier keys for Windows.

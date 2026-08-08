@@ -1,5 +1,6 @@
 ---
 title: "windowsQuit"
+description: Quit Windows applications through the Guidepup NVDA automation API.
 ---
 
 **Contents:**

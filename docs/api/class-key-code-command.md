@@ -1,5 +1,6 @@
 ---
 title: "KeyCodeCommand"
+description: Reference key code command helpers for Guidepup screen reader automation.
 ---
 
 **Extends:** [object]

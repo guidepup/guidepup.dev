@@ -1,5 +1,6 @@
 ---
 title: "VoiceOverCommanderCommands"
+description: Reference VoiceOver commander command constants for Guidepup automation.
 ---
 
 Collection of [VoiceOver Commander](https://support.apple.com/en-gb/guide/voiceover/cpvoukbcmdr/mac) commands.

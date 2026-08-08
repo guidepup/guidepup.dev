@@ -1,5 +1,6 @@
 ---
 title: "MacOSKeyCodeCommand"
+description: Reference the macOS key code command API for Guidepup VoiceOver automation.
 ---
 
 **Extends:** [KeyCodeCommand]
