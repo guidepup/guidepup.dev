@@ -1,5 +1,6 @@
 ---
 title: "ClickOptions"
+description: Reference click options for Guidepup screen reader automation and Virtual Screen Reader tests.
 ---
 
 **Extends:** [CommandOptions]

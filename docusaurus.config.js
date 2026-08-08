@@ -119,7 +119,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "introduction/what-is-guidepup",
             position: "left",
             label: "Docs",
           },
@@ -144,7 +144,7 @@ const config = {
             items: [
               {
                 label: "Getting Started",
-                to: "/docs/intro",
+                to: "/docs/getting-started",
               },
               {
                 label: "API Reference",

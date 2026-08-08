@@ -1,5 +1,6 @@
 ---
 title: "VirtualCommands"
+description: Reference Virtual Screen Reader command constants and navigation helpers.
 ---
 
 **Extends:** [object]

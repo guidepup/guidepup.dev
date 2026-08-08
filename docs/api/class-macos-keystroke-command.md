@@ -1,5 +1,6 @@
 ---
 title: "MacOSKeystrokeCommand"
+description: Reference the macOS keystroke command API for Guidepup VoiceOver automation.
 ---
 
 **Extends:** [KeystrokeCommand]

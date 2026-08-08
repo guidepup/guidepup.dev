@@ -1,5 +1,6 @@
 ---
 title: "WindowsKeyCodeCommand"
+description: Reference the Windows key code command API for Guidepup NVDA automation.
 ---
 
 **Extends:** [KeyCodeCommand]

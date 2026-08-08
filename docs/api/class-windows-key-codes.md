@@ -1,5 +1,6 @@
 ---
 title: "WindowsKeyCodes"
+description: Reference Windows key code values and screen reader command helpers.
 ---
 
 Key codes for Windows.

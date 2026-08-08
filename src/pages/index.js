@@ -16,9 +16,9 @@ function HomepageHero({ title, tagline }) {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/introduction/what-is-guidepup"
           >
-            Get Started
+            Learn More
           </Link>
         </div>
       </div>
@@ -52,7 +52,7 @@ function HomepageBottom() {
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg margin-horiz--md"
-            to="/docs/intro"
+            to="/docs/getting-started"
           >
             Get Started
           </Link>

@@ -1,5 +1,6 @@
 ---
 title: "MacOSModifiers"
+description: Reference macOS modifier key enums used in Guidepup VoiceOver automation.
 ---
 
 Modifier keys for macOS.

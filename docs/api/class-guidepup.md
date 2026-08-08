@@ -1,5 +1,6 @@
 ---
 title: "Guidepup Library"
+description: Overview of the Guidepup library and its real screen reader automation APIs.
 ---
 
 # Guidepup Library

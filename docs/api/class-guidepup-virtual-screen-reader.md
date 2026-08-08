@@ -1,5 +1,6 @@
 ---
 title: "Virtual Screen Reader Library"
+description: Overview of the Guidepup Virtual Screen Reader library for DOM-based automation.
 ---
 
 # Virtual Screen Reader Library
@@ -34,10 +35,10 @@ describe("Screen Reader Tests", () => {
     // Set up a page using a framework and testing library of your choice
     setupBasicPage();
 
-    // Start your virtual screen reader instance
+    // Start your Virtual Screen Reader instance
     await virtual.start({ container: document.body });
 
-    // Navigate your environment with the virtual screen reader just as your users would
+    // Navigate your environment with the Virtual Screen Reader just as your users would
     while ((await virtual.lastSpokenPhrase()) !== "end of document") {
       await virtual.next();
     }
@@ -65,7 +66,7 @@ describe("Screen Reader Tests", () => {
       "end of document",
     ]);
 
-    // Stop your virtual screen reader instance
+    // Stop your Virtual Screen Reader instance
     await virtual.stop();
   });
 });

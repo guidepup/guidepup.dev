@@ -1,5 +1,6 @@
 ---
 title: "NVDAKeyCodeCommands"
+description: Reference NVDA key code command definitions for Guidepup automation.
 ---
 
 **Extends:** [object]

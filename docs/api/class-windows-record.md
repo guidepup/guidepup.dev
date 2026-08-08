@@ -1,5 +1,6 @@
 ---
 title: "windowsRecord"
+description: Record Guidepup NVDA automation sessions on Windows.
 ---
 
 **Contents:**

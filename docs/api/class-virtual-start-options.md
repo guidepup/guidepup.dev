@@ -1,5 +1,6 @@
 ---
 title: "VirtualStartOptions"
+description: Reference start options for running the Guidepup Virtual Screen Reader in a DOM environment.
 ---
 
 Options for starting the Virtual Screen Reader.

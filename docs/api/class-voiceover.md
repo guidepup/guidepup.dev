@@ -1,5 +1,6 @@
 ---
 title: "VoiceOver"
+description: Reference the VoiceOver automation API in the Guidepup library.
 ---
 
 **Implements:** [IScreenReader]

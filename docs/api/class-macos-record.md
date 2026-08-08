@@ -1,5 +1,6 @@
 ---
 title: "macOSRecord"
+description: Record Guidepup VoiceOver sessions on macOS.
 ---
 
 **Contents:**

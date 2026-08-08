@@ -1,5 +1,6 @@
 ---
 title: "KeystrokeCommand"
+description: Reference keystroke command helpers for Guidepup screen reader automation.
 ---
 
 **Extends:** [object]

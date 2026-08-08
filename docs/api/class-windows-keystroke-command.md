@@ -1,5 +1,6 @@
 ---
 title: "WindowsKeystrokeCommand"
+description: Reference Windows keystroke commands for Guidepup NVDA automation.
 ---
 
 **Extends:** [KeystrokeCommand]

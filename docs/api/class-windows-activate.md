@@ -1,5 +1,6 @@
 ---
 title: "windowsActivate"
+description: Activate Windows applications through the Guidepup NVDA automation API.
 ---
 
 **Contents:**

@@ -1,5 +1,6 @@
 ---
 title: "IScreenReader"
+description: Understand the shared screen reader contract used by Guidepup automation APIs.
 ---
 
 Abstract base interface for screen reader classes.

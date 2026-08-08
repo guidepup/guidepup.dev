@@ -1,5 +1,6 @@
 ---
 title: "Manual VoiceOver setup"
+description: Set up VoiceOver automation on macOS without using @guidepup/setup.
 ---
 
 import Tabs from "@theme/Tabs";
