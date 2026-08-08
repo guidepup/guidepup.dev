@@ -46,9 +46,15 @@ See also:
 - [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
 - [screenReader.lastSpokenPhrase()](./class-screenreader#screenreader-last-spoken-phrase)
 - [screenReader.next([options])](./class-screenreader#screenreader-next)
+- [screenReader.nextHeading([options])](./class-screenreader#screenreader-next-heading)
+- [screenReader.nextLandmark([options])](./class-screenreader#screenreader-next-landmark)
+- [screenReader.nextLink([options])](./class-screenreader#screenreader-next-link)
 - [screenReader.perform(command, [options])](./class-screenreader#screenreader-perform)
 - [screenReader.press(key, [options])](./class-screenreader#screenreader-press)
 - [screenReader.previous([options])](./class-screenreader#screenreader-previous)
+- [screenReader.previousHeading([options])](./class-screenreader#screenreader-previous-heading)
+- [screenReader.previousLandmark([options])](./class-screenreader#screenreader-previous-landmark)
+- [screenReader.previousLink([options])](./class-screenreader#screenreader-previous-link)
 - [screenReader.spokenPhraseLog()](./class-screenreader#screenreader-spoken-phrase-log)
 - [screenReader.start([options])](./class-screenreader#screenreader-start)
 - [screenReader.stop([options])](./class-screenreader#screenreader-stop)
@@ -367,6 +373,81 @@ import { screenReader } from "@guidepup/guidepup";
 
 **Returns:** [Promise]&#60;[void]&#62;
 
+## screenReader.nextHeading([options]) {#screenreader-next-heading}
+
+Move the screen reader cursor to the next heading.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next heading.
+  await screenReader.nextHeading();
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.nextLandmark([options]) {#screenreader-next-landmark}
+
+Move the screen reader cursor to the next landmark.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next landmark.
+  await screenReader.nextLandmark();
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.nextLink([options]) {#screenreader-next-link}
+
+Move the screen reader cursor to the next link.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next link.
+  await screenReader.nextLink();
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
 ## screenReader.perform(command[, options]) {#screenreader-perform}
 
 Perform a screen reader command.
@@ -460,6 +541,81 @@ import { screenReader } from "@guidepup/guidepup";
 
   // Move to the previous item.
   await screenReader.previous();
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.previousHeading([options]) {#screenreader-previous-heading}
+
+Move the screen reader cursor to the previous heading.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous heading.
+  await screenReader.nextHeading();
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.previousLandmark([options]) {#screenreader-previous-landmark}
+
+Move the screen reader cursor to the previous landmark.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous landmark.
+  await screenReader.previousLandmark();
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.previousLink([options]) {#screenreader-previous-link}
+
+Move the screen reader cursor to the previous link.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous link.
+  await screenReader.previousLink();
 
   // Stop the screen reader.
   await screenReader.stop();

@@ -63,7 +63,7 @@ test("checkout is accessible", async ({ page, voiceOver }) => {
 
   await voiceOver.navigateToWebContent();
 
-  await voiceOver.perform(voiceOver.keyboardCommands.findNextHeading);
+  await voiceOver.nextHeading();
 
   expect(await voiceOver.lastSpokenPhrase()).toBe("heading level 1, Checkout");
 });

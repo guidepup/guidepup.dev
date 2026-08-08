@@ -28,7 +28,7 @@ import { voiceOver } from "@guidepup/guidepup";
 await voiceOver.start();
 
 try {
-  await voiceOver.perform(voiceOver.keyboardCommands.findNextLink);
+  await voiceOver.nextLink();
   await voiceOver.act();
 } finally {
   await voiceOver.stop();

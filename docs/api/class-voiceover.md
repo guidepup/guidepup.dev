@@ -44,9 +44,15 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.itemTextLog()](./class-voiceover#voiceover-item-text-log)
 - [voiceOver.lastSpokenPhrase()](./class-voiceover#voiceover-last-spoken-phrase)
 - [voiceOver.next([options])](./class-voiceover#voiceover-next)
+- [voiceOver.nextHeading([options])](./class-voiceover#voiceover-next-heading)
+- [voiceOver.nextLandmark([options])](./class-voiceover#voiceover-next-landmark)
+- [voiceOver.nextLink([options])](./class-voiceover#voiceover-next-link)
 - [voiceOver.perform(command[, options])](./class-voiceover#voiceover-perform)
 - [voiceOver.press(key[, options])](./class-voiceover#voiceover-press)
 - [voiceOver.previous([options])](./class-voiceover#voiceover-previous)
+- [voiceOver.previousHeading([options])](./class-voiceover#voiceover-previous-heading)
+- [voiceOver.previousLandmark([options])](./class-voiceover#voiceover-previous-landmark)
+- [voiceOver.previousLink([options])](./class-voiceover#voiceover-previous-link)
 - [voiceOver.saveLastSpokenPhrase([options])](./class-voiceover#voiceover-save-last-spoken-phrase)
 - [voiceOver.spokenPhraseLog()](./class-voiceover#voiceover-spoken-phrase-log)
 - [voiceOver.start([options])](./class-voiceover#voiceover-start)
@@ -482,6 +488,87 @@ import { voiceOver } from "@guidepup/guidepup";
 
 **Returns:** [Promise]&#60;[void]&#62;
 
+## voiceOver.nextHeading([options]) {#voiceover-next-heading}
+
+Move the VoiceOver cursor to the next heading.
+
+Equivalent of executing `VO-Command-H`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next heading.
+  await voiceOver.nextHeading();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.nextLandmark([options]) {#voiceover-next-landmark}
+
+Move the VoiceOver cursor to the next landmark.
+
+Equivalent of executing `VO-Command-N`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next landmark.
+  await voiceOver.nextLandmark();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.nextLink([options]) {#voiceover-next-link}
+
+Move the VoiceOver cursor to the next link.
+
+Equivalent of executing `VO-Command-L`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next link.
+  await voiceOver.nextLink();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
 ## voiceOver.perform(command[, options]) {#voiceover-perform}
 
 Perform a VoiceOver command.
@@ -577,6 +664,87 @@ import { voiceOver } from "@guidepup/guidepup";
 
   // Move to the previous item.
   await voiceOver.previous();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.previousHeading([options]) {#voiceover-previous-heading}
+
+Move the VoiceOver cursor to the previous heading.
+
+Equivalent of executing `VO-Command-Shift-H`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous heading.
+  await voiceOver.previousHeading();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.previousLandmark([options]) {#voiceover-previous-landmark}
+
+Move the VoiceOver cursor to the previous landmark.
+
+Equivalent of executing `VO-Command-Shift-N`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous landmark.
+  await voiceOver.previousLandmark();
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+**Parameters:**
+
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.previousLink([options]) {#voiceover-previous-link}
+
+Move the VoiceOver cursor to the previous link.
+
+Equivalent of executing `VO-Command-Shift-L`.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous link.
+  await voiceOver.previousLink();
 
   // Stop VoiceOver.
   await voiceOver.stop();
