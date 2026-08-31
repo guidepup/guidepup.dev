@@ -79,6 +79,40 @@ const config = {
   organizationName: "guidepup",
   projectName: "guidepup.dev",
 
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            from: "/docs/example",
+            to: "docs/getting-started/real-world-example",
+          },
+          {
+            from: "/docs/guides/automated-environment-setup",
+            to: "/docs/guides/machine-setup",
+          },
+          {
+            from: "/docs/intro",
+            to: "docs/introduction/what-is-guidepup",
+          },
+          {
+            from: "/docs/release",
+            to: "/docs/reference/release-notes",
+          },
+          {
+            from: "/docs/support",
+            to: "/docs/reference/support-matrix",
+          },
+          {
+            from: "/docs/virtual",
+            to: "/docs/virtual-screen-reader/introduction",
+          },
+        ],
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",
