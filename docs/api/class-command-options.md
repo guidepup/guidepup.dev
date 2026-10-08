@@ -53,7 +53,7 @@ Default is `"initial"`.
 
 **Optional:** Number of times to retry.
 
-Default is `3`.
+Default is `1` for mutable commands and `3` otherwise.
 
 **Type:** [number]
 
@@ -61,7 +61,7 @@ Default is `3`.
 
 **Optional:** How long to wait until the command times out in ms.
 
-Default is `10000`.
+Default is `30000` for startup and shutdown commands and `5000` otherwise.
 
 **Type:** [number]
 
