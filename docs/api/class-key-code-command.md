@@ -7,6 +7,9 @@ description: Reference key code command helpers for Guidepup screen reader autom
 
 Object representing a key code command.
 
+Orca commands use the separate [OrcaKeyCodeCommand] format; this key-code
+object is not accepted by [`unstable_orca.perform`](./class-orca#unstable-orca-perform).
+
 For example, use when performing a VoiceOver command:
 
 ```ts
@@ -40,6 +43,7 @@ const moveToNextKeyCodeCommand = {
 See also:
 
 - [MacOSKeyCodeCommand]
+- [OrcaKeyCodeCommand]
 - [VoiceOverKeyCodeCommands]
 
 **Contents:**
@@ -60,6 +64,7 @@ The key code or key codes to send.
 **Type:** [Array]&#60;[string]&#62
 
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
+[orcakeycodecommand]: ./class-orca-key-code-command "OrcaKeyCodeCommand"
 [voiceoverkeycodecommands]: ./class-voiceover-key-code-commands "VoiceOverKeyCodeCommands"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"

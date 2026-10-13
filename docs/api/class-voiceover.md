@@ -5,7 +5,7 @@ description: Reference the VoiceOver automation API in the Guidepup library.
 
 **Implements:** [IScreenReader]
 
-A VoiceOver instance can be used to launch and control VoiceOver.
+A VoiceOver instance can be used to launch and control VoiceOver on macOS.
 
 Here's a typical example using a [VoiceOver] instance:
 

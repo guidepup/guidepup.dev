@@ -5,7 +5,7 @@ description: Reference the common screen reader API exposed by Guidepup automati
 
 **Implements:** [IScreenReader]
 
-A ScreenReader instance can be used to launch and control the default screen reader for the environment: VoiceOver for macOS and NVDA for Windows.
+A ScreenReader instance can be used to launch and control the default screen reader for the environment: VoiceOver for macOS, NVDA for Windows, and Orca for Linux.
 
 Here's a typical example using a [ScreenReader] instance:
 
@@ -27,6 +27,7 @@ import { screenReader } from "@guidepup/guidepup";
 See also:
 
 - [NVDA]
+- [Orca]
 - [VoiceOver]
 
 **Contents:**
@@ -63,12 +64,12 @@ See also:
 
 ## screenReader.name {#screenreader-name}
 
-Getter for the screen reader name, either "NVDA" or "VoiceOver".
+Getter for the screen reader name: `"NVDA"`, `"Orca"`, or `"VoiceOver"`.
 
 ```ts
 import { screenReader } from "@guidepup/guidepup";
 
-console.log(screenReader.name); // "NVDA" or "VoiceOver"
+console.log(screenReader.name); // "NVDA", "Orca", or "VoiceOver"
 ```
 
 **Returns:** [string]
@@ -244,7 +245,7 @@ Returns all the current settings for this screen reader instance.
 
 Interact with the item under the screen reader cursor.
 
-Provided as a compatibility layer for VoiceOver; NVDA does not require users to perform an additional command to interact with the item in the NVDA cursor.
+VoiceOver and Orca require an additional command to interact with the item in the screen reader cursor. NVDA does not require this command.
 
 ```ts
 import { screenReader } from "@guidepup/guidepup";
@@ -256,7 +257,7 @@ import { screenReader } from "@guidepup/guidepup";
   // Move to the next item.
   await screenReader.next();
 
-  // Interact with the item - does nothing on NVDA.
+  // Interact with the item. This is a no-op on NVDA.
   await screenReader.interact();
 
   // Stop the screen reader.
@@ -455,6 +456,7 @@ Perform a screen reader command.
 ```ts
 import {
   NVDAKeyCodeCommands,
+  orcaKeyCodeCommands,
   voiceOverKeyCodeCommands,
 } from "@guidepup/guidepup";
 
@@ -467,7 +469,9 @@ import {
 
   if (screenReader.name === "NVDA") {
     await screenReader.perform(NVDAKeyCodeCommands.performDefaultActionForItem);
-  } else {
+  } else if (screenReader.name === "Orca") {
+    await screenReader.perform(orcaKeyCodeCommands.PerformAction);
+  } else if (screenReader.name === "VoiceOver") {
     await screenReader.perform(
       voiceOverKeyCodeCommands.performDefaultActionForItem,
     );
@@ -488,6 +492,9 @@ import {
 ## screenReader.press(key[, options]) {#screenreader-press}
 
 Press a key on the focused item.
+
+Orca does not currently implement this method; calling it while Orca is active
+throws an error.
 
 `key` can specify the intended [`keyboardEvent.key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key)
 value or a single character to generate the text for. A superset of the `key` values can be found
@@ -707,7 +714,7 @@ import { screenReader } from "@guidepup/guidepup";
 
 Stop interacting with the current item.
 
-Provided as a compatibility layer for VoiceOver; NVDA does not require users to perform an additional command to stop interacting with the item in the NVDA cursor.
+VoiceOver and Orca require an additional command to stop interacting with the item in the screen reader cursor. NVDA does not require this command.
 
 ```ts
 import { screenReader } from "@guidepup/guidepup";
@@ -716,12 +723,12 @@ import { screenReader } from "@guidepup/guidepup";
   // Start the screen reader.
   await screenReader.start();
 
-  // Interact with the item - does nothing on NVDA.
+  // Interact with the item. This is a no-op on NVDA.
   await screenReader.interact();
 
   // ... perform some commands.
 
-  // Stop interacting with the item - does nothing on NVDA.
+  // Stop interacting with the item. This is a no-op on NVDA.
   await screenReader.stopInteracting();
 
   // Stop the screen reader.
@@ -738,6 +745,9 @@ import { screenReader } from "@guidepup/guidepup";
 ## screenReader.type(text[, options]) {#screenreader-type}
 
 Type text into the focused item.
+
+Orca does not currently implement this method; calling it while Orca is active
+throws an error.
 
 To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`screenReader.press(key[, options])`](./class-screenreader#screenreader-press).
 
@@ -774,6 +784,7 @@ import { screenReader } from "@guidepup/guidepup";
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
 [nvda]: ./class-nvda "NVDA"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
+[orca]: ./class-orca "Orca"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
 [startoptions]: ./class-start-options "StartOptions"

@@ -5,7 +5,7 @@ description: Reference the NVDA automation API in the Guidepup library.
 
 **Implements:** [IScreenReader]
 
-A NVDA instance can be used to launch and control NVDA.
+A NVDA instance can be used to launch and control NVDA on Windows.
 
 Here's a typical example using a [NVDA] instance:
 

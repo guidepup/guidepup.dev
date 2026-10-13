@@ -6,7 +6,8 @@ const FeatureList = [
     title: "Full control",
     description: (
       <>
-        If VoiceOver or NVDA have a keyboard command, then Guidepup supports it.
+        If NVDA, VoiceOver, or Orca have a keyboard command, then Guidepup
+        supports it.
       </>
     ),
   },

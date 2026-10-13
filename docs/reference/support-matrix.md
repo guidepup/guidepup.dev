@@ -1,12 +1,13 @@
 ---
 title: Support matrix
-description: Guidepup's support matrix for VoiceOver on macOS and NVDA on Windows
+description: Guidepup's support matrix for VoiceOver on macOS, NVDA on Windows, and Orca on Linux.
 ---
 
 Guidepup currently supports the following screen readers:
 
 - **VoiceOver** for macOS
 - **NVDA** for Windows
+- **Orca** for Linux (through the unstable `unstable_orca` API)
 - **Virtual Screen Reader** for DOM environments (when using the `@guidepup/virtual-screen-reader` package)
 
 ## Runtime compatibility
@@ -15,10 +16,11 @@ Each release of `@guidepup/guidepup` includes a `manifest.json` that specifies t
 
 The current manifest supports:
 
-| Screen reader | Platform | Supported versions                                                            |
-| :------------ | :------- | :---------------------------------------------------------------------------- |
-| NVDA          | Windows  | The manifest provides the default NVDA asset for Windows.                     |
-| VoiceOver     | macOS    | macOS 12 (Monterey), 13 (Ventura), 14 (Sonoma), 15 (Sequoia), and 26 (Tahoe). |
+| Screen reader | Platform | Supported versions                                                                                                        |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------------------------ |
+| NVDA          | Windows  | The manifest provides default NVDA assets for Windows.                                                                    |
+| Orca          | Linux    | The manifest provides default Orca assets for Linux. Linux kernel release 7, Ubuntu 26.04 and Debian 13.                  |
+| VoiceOver     | macOS    | macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma), macOS 15 (Sequoia), macOS 26 (Tahoe), macOS 27 (Golden Gate). |
 
 The manifest changes with Guidepup releases. After upgrading `@guidepup/guidepup`, rerun `npx @guidepup/setup install` to download the assets supported by that release.
 
@@ -42,6 +44,12 @@ To learn NVDA commands please refer to the following popular guides:
 - [NVDA 2026.1 Commands Quick Reference](https://download.nvaccess.org/releases/2026.1/documentation/keyCommands.html)
 - [WebAIM Keyboard Shortcuts for NVDA](https://webaim.org/resources/shortcuts/nvda)
 - [Deque University NVDA Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
+
+## Orca
+
+[Orca](https://gitlab.gnome.org/GNOME/orca) is the free, open-source screen reader for the GNOME desktop. Guidepup's Orca API is currently in preview.
+
+To learn Orca commands please refer to [GNOME Orca screen reader help website](https://help.gnome.org/orca/index.html).
 
 ## Virtual Screen Reader
 

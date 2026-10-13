@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <Layout
       title="Screen reader automation library for testing"
-      description="Reliable automation for your screen reader accessibility test workflows with Guidepup. Drive VoiceOver and NVDA a11y tests with ease"
+      description="Reliable automation for your screen reader accessibility test workflows with Guidepup. Drive NVDA, Orca, and VoiceOver a11y tests with ease."
     >
       <HomepageMain />
     </Layout>

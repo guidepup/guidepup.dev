@@ -86,7 +86,7 @@ const config = {
         redirects: [
           {
             from: "/docs/example",
-            to: "docs/getting-started/real-world-example",
+            to: "/docs/getting-started/real-world-example",
           },
           {
             from: "/docs/guides/automated-environment-setup",
@@ -94,7 +94,7 @@ const config = {
           },
           {
             from: "/docs/intro",
-            to: "docs/introduction/what-is-guidepup",
+            to: "/docs/introduction/what-is-guidepup",
           },
           {
             from: "/docs/release",

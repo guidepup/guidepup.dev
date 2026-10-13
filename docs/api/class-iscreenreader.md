@@ -9,6 +9,7 @@ See also:
 
 - [ScreenReader]
 - [NVDA]
+- [Orca]
 - [Virtual]
 - [VoiceOver]
 
@@ -317,6 +318,7 @@ To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`s
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
 [nvda]: ./class-nvda "NVDA"
+[orca]: ./class-orca "Orca"
 [screenreader]: ./class-iscreenreader "ScreenReader"
 [startoptions]: ./class-start-options "StartOptions"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
