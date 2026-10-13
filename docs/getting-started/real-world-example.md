@@ -19,7 +19,7 @@ The test will:
 3. Find the first heading.
 4. Assert the screen reader output.
 
-The same approach can be used with NVDA on Windows.
+The same approach can be used with NVDA on Windows and Orca on Linux.
 
 ## Machine setup
 

@@ -14,7 +14,10 @@ Guidepup exposes phrase capture APIs for that:
 - [`clearSpokenPhraseLog()`](../api/class-screenreader#screenreader-clear-spoken-phrase-log)
 - [`clearItemTextLog()`](../api/class-screenreader#screenreader-clear-item-text-log)
 
-Those APIs are available on the shared screen reader interface and on the concrete reader instances such as [`voiceOver`](../api/class-voiceover) and [`nvda`](../api/class-nvda).
+Those APIs are available on the shared screen reader interface and on concrete
+reader instances such as [`voiceOver`](../api/class-voiceover),
+[`nvda`](../api/class-nvda), and
+[`unstable_orca`](../api/class-orca).
 
 ## Capture the latest spoken phrase
 
@@ -41,6 +44,15 @@ The same shape works with NVDA:
 await nvda.next();
 
 const phrase = await nvda.lastSpokenPhrase();
+expect(phrase).toContain("Products");
+```
+
+And with Orca:
+
+```ts
+await unstable_orca.next();
+
+const phrase = await unstable_orca.lastSpokenPhrase();
 expect(phrase).toContain("Products");
 ```
 

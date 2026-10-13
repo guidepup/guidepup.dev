@@ -16,7 +16,7 @@ The common interaction APIs in the screen reader contract are:
 - [`click([options])`](../api/class-screenreader#screenreader-click)
 - [`itemText()`](../api/class-screenreader#screenreader-item-text)
 
-These methods are available on the concrete screen reader objects, including [`voiceOver`](../api/class-voiceover) and [`nvda`](../api/class-nvda), and they share the same broad testing shape across both readers.
+These methods are available on the concrete screen reader objects, including [`voiceOver`](../api/class-voiceover), [`nvda`](../api/class-nvda), and [`unstable_orca`](../api/class-orca), and they share the same broad testing shape across all screen readers.
 
 ## Activate the current item
 
@@ -59,7 +59,7 @@ try {
 }
 ```
 
-For VoiceOver, `interact()` is the step that moves into an item interaction mode. NVDA treats the page as flat so does not need the extra `interact()` step, but it can be provided for consistency:
+For VoiceOver and Orca, `interact()` is the step that moves into an item interaction mode. NVDA treats the page as flat so does not need the extra `interact()` step, but it can be provided for consistency:
 
 ```ts
 await nvda.next();
@@ -81,6 +81,8 @@ await nvda.type("checkout");
 ```
 
 Use `press()` for shortcuts and `type()` for text input on the currently focused control.
+
+These methods are not implemented for Orca yet.
 
 ## Click through a control model
 

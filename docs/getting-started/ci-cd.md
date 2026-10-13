@@ -62,16 +62,26 @@ jobs:
 
 Real screen reader tests have different requirements from browser-only tests.
 
-For example, VoiceOver tests require a macOS runner, while NVDA tests require a Windows runner.
+For example, VoiceOver tests require a macOS runner, NVDA tests require a
+Windows runner, and Orca tests require a supported Linux runner.
 
 Choose the runner based on the screen reader you are testing:
 
-| Screen reader | CI operating system |
-| ------------- | ------------------- |
-| VoiceOver     | macOS               |
-| NVDA          | Windows             |
+| Screen reader  | CI operating system                         |
+| -------------- | ------------------------------------------- |
+| VoiceOver      | macOS                                       |
+| NVDA           | Windows                                     |
+| Orca (preview) | Linux (Kernel 7: Ubuntu 26.04 or Debian 13) |
 
 See the [support matrix](../reference/support-matrix) for the current platform and screen reader support.
+
+When running Orca, add `xvfb-run dbus-run-session` before your command to ensure all processes share the same X virtual framebuffer display and D-Bus session:
+
+```bash
+xvfb-run dbus-run-session -- npm run test
+```
+
+See [testing Orca](../screen-reader-testing/testing-orca) for setup details.
 
 ## Run screen reader tests separately
 

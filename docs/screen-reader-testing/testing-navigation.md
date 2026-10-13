@@ -20,7 +20,10 @@ The common API surface is documented in the screen reader reference docs:
 - [`perform(command[, options])`](../api/class-screenreader#screenreader-perform)
 - [`lastSpokenPhrase()`](../api/class-screenreader#screenreader-last-spoken-phrase)
 
-Those methods are available on the concrete implementations, including [`voiceOver`](../api/class-voiceover) and [`nvda`](../api/class-nvda). The platform screen reader wrapper, [`screenReader`](../api/class-screenreader), exposes the same navigation workflow when a test can run against the default environment reader.
+Those methods are available on the concrete implementations, including
+[`voiceOver`](../api/class-voiceover), [`nvda`](../api/class-nvda), and [`unstable_orca`](../api/class-orca). The platform screen reader
+wrapper, [`screenReader`](../api/class-screenreader), exposes the same navigation
+workflow when a test can run against the default environment reader.
 
 ## Move through the reading order
 
@@ -84,6 +87,11 @@ await nvda.perform(nvda.keyboardCommands.moveToNextGraphic);
 expect(await nvda.lastSpokenPhrase()).toContain("Pricing");
 ```
 
+```ts
+await unstable_orca.perform(unstable_orca.keyboardCommands.NextImage);
+expect(await unstable_orca.lastSpokenPhrase()).toContain("Pricing");
+```
+
 The command objects in the API docs are commands specific to the chosen screen reader. They describe navigation commands such as heading, link, landmark, form control, table, and similar semantic operations. This keeps the top-level API stable while still exposing each reader's command vocabulary.
 
 ## Assert on the spoken result
@@ -118,6 +126,21 @@ try {
 }
 ```
 
+And for Orca:
+
+```ts
+await unstable_orca.start();
+
+try {
+  await unstable_orca.nextHeading();
+
+  const headingOutput = await unstable_orca.lastSpokenPhrase();
+  expect(headingOutput).toContain("Products");
+} finally {
+  await unstable_orca.stop();
+}
+```
+
 The exact spoken phrase can vary between readers and browser/OS configurations. In most cases it is more reliable to assert on a stable substring rather than a full literal match.
 
 ## Navigation checklist
@@ -130,4 +153,4 @@ A dependable Guidepup navigation test generally follows the same shape:
 4. Assert against the expected content.
 5. Stop the reader in a `finally` block.
 
-This pattern is the foundation for higher-level accessibility workflows, such as those described in [testing VoiceOver](./testing-voiceover), [testing NVDA](./testing-nvda), and [testing interactions](./testing-interactions).
+This pattern is the foundation for higher-level accessibility workflows, such as those described in [testing VoiceOver](./testing-voiceover), [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), and [testing interactions](./testing-interactions).

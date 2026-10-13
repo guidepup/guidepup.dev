@@ -118,7 +118,8 @@ The [`lastSpokenPhrase()` API](../api/class-voiceover#voiceover-last-spoken-phra
 
 Guidepup exposes a common screen reader API where possible, while also providing access to VoiceOver specific commands and settings.
 
-This means tests can share the same general structure across VoiceOver and NVDA without hiding the differences between the two screen readers.
+This means tests can share the same general structure across VoiceOver, NVDA,
+and Orca without hiding the differences between screen readers.
 
 Where there are VoiceOver specific commands the [`perform()` API](../api/class-voiceover#voiceover-perform) provides an escape hatch:
 
@@ -128,4 +129,5 @@ await voiceOver.perform(voiceOver.keyboardCommands.readPreviousSentence);
 
 This API is the same extension point described in the VoiceOver reference docs and is the place to use VoiceOver only navigation commands that do not exist on the shared `screenReader` abstraction.
 
-See [testing NVDA](./testing-nvda) for the equivalent NVDA workflow.
+See [testing NVDA](./testing-nvda) and [testing Orca](./testing-orca) for the
+equivalent workflows.

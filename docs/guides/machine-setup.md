@@ -97,6 +97,7 @@ You can install an individual supported screen reader when needed:
 ```bash
 npx @guidepup/setup install voiceover
 npx @guidepup/setup install nvda
+npx @guidepup/setup install orca
 ```
 
 ### Cache location

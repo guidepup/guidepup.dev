@@ -24,7 +24,8 @@ These changes are not always captured by static accessibility checks.
 
 ## Manual testing does not scale
 
-Screen reader testing has traditionally relied on manually operating VoiceOver, NVDA, or another screen reader.
+Screen reader testing has traditionally relied on manually operating VoiceOver,
+NVDA, Orca, or another screen reader.
 
 Manual testing remains essential, but repeatedly checking the same workflows by hand is time-consuming and makes it difficult to detect regressions continuously.
 

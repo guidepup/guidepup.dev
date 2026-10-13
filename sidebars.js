@@ -39,6 +39,7 @@ const sidebars = {
         },
         { type: "doc", id: "screen-reader-testing/testing-voiceover" },
         { type: "doc", id: "screen-reader-testing/testing-nvda" },
+        { type: "doc", id: "screen-reader-testing/testing-orca" },
         { type: "doc", id: "screen-reader-testing/testing-navigation" },
         { type: "doc", id: "screen-reader-testing/testing-announcements" },
         { type: "doc", id: "screen-reader-testing/testing-interactions" },
