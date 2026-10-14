@@ -13,6 +13,10 @@
   --ifm-code-padding-vertical: 0.1rem;
 }
 
+a {
+  text-underline-offset: 0.2em;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
