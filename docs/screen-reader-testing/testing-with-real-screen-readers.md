@@ -48,7 +48,7 @@ The screen reader you use depends on your test environment:
 
 See [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), and [testing VoiceOver](./testing-voiceover) for platform-specific setup and examples.
 
-The API layer for NVDA is described in [class-nvda](../api/class-nvda#nvda-perform), the Orca API in [class-orca](../api/class-orca#unstable-orca-perform), and the VoiceOver API in [class-voiceover](../api/class-voiceover#perform).
+The API layer for NVDA is described in [class-nvda](../api/class-nvda#nvda-perform), the Orca API in [class-orca](../api/class-orca#unstable-orca-perform), and the VoiceOver API in [class-voiceover](../api/class-voiceover#voiceover-perform).
 
 ## Real screen readers in automated tests
 
