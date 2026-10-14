@@ -82,21 +82,20 @@ values={[
 > <TabItem value="ts">
 
 ```ts title="./playwright.config.ts"
-import { screenReaderConfig } from "@guidepup/playwright";
-import { devices, PlaywrightTestConfig } from "@playwright/test";
+import { withGuidepup } from "@guidepup/playwright";
+import { devices } from "@playwright/test";
 
-const config: PlaywrightTestConfig = {
-  ...screenReaderConfig,
+const config = withGuidepup({
   reportSlowTests: null,
   timeout: 3 * 60 * 1000,
   retries: 2,
   projects: [
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"], headless: false },
+      use: { ...devices["Desktop Safari"] },
     },
   ],
-};
+});
 
 export default config;
 ```
@@ -105,21 +104,20 @@ export default config;
 <TabItem value="js">
 
 ```js title="./playwright.config.js"
-const { screenReaderConfig } = require("@guidepup/playwright");
+const { withGuidepup } = require("@guidepup/playwright");
 const { devices } = require("@playwright/test");
 
-const config = {
-  ...screenReaderConfig,
+const config = withGuidepup({
   reportSlowTests: null,
   timeout: 3 * 60 * 1000,
   retries: 2,
   projects: [
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"], headless: false },
+      use: { ...devices["Desktop Safari"] },
     },
   ],
-};
+});
 
 module.exports = config;
 ```
@@ -127,7 +125,7 @@ module.exports = config;
 </TabItem>
 </Tabs>
 
-The `screenReaderConfig` provides the recommended Playwright configuration for screen reader testing, including running with a single worker because a screen reader can only interact with one browser instance at a time.
+`withGuidepup` applies the recommended Playwright settings for screen reader testing: a single worker, no full parallelization, and headed browsers. These settings are applied to the base config and each project, so project-level browser options cannot accidentally re-enable headless mode.
 
 The longer timeout and disabled slow-test reporting account for the additional time involved in controlling a screen reader.
 

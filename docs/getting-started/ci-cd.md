@@ -107,14 +107,14 @@ This keeps the normal test suite fast while still running screen reader regressi
 If you are using [`@guidepup/playwright`](https://www.npmjs.com/package/@guidepup/playwright), use the configuration provided by the package:
 
 ```ts
-import { screenReaderConfig } from "@guidepup/playwright";
+import { withGuidepup } from "@guidepup/playwright";
 
-export default {
-  ...screenReaderConfig,
-};
+export default withGuidepup({
+  // ... your custom config
+});
 ```
 
-The configuration includes settings required for reliable screen reader automation, including limiting tests to a single worker where required by the screen reader.
+`withGuidepup` applies settings required for reliable screen reader automation, including limiting tests to a single worker, disabling full parallelization, and forcing headed browsers for the base config and each project.
 
 See the [real world example](./real-world-example) for a complete Playwright configuration.
 
