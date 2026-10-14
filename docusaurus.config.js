@@ -136,7 +136,7 @@ const config = {
         {
           name: "keywords",
           content:
-            "Guidepup, screen reader, accessibility, a11y, VoiceOver, NVDA, testing, automation",
+            "Guidepup, screen reader, accessibility, a11y, NVDA, Orca, VoiceOver, testing, automation",
         },
       ],
       image: "/img/logo.png",

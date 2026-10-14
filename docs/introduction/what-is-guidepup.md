@@ -7,7 +7,7 @@ description: Automate real screen reader interactions and test accessibility fro
 
 Guidepup is a screen reader automation library for testing.
 
-It lets you control screen readers such as [VoiceOver](../screen-reader-testing/testing-voiceover), [NVDA](../screen-reader-testing/testing-nvda), and [Orca](../screen-reader-testing/testing-orca) from automated tests, navigate web pages with screen reader commands, interact with content, and assert what a screen reader user experiences.
+It lets you control screen readers such as [NVDA](../screen-reader-testing/testing-nvda), [Orca](../screen-reader-testing/testing-orca), and [VoiceOver](../screen-reader-testing/testing-voiceover) from automated tests, navigate web pages with screen reader commands, interact with content, and assert what a screen reader user experiences.
 
 That makes screen reader behaviour testable as part of your automated test suite.
 

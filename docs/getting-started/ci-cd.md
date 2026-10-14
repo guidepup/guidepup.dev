@@ -67,11 +67,11 @@ Windows runner, and Orca tests require a supported Linux runner.
 
 Choose the runner based on the screen reader you are testing:
 
-| Screen reader  | CI operating system                         |
-| -------------- | ------------------------------------------- |
-| VoiceOver      | macOS                                       |
-| NVDA           | Windows                                     |
-| Orca (preview) | Linux (Kernel 7: Ubuntu 26.04 or Debian 13) |
+| Screen reader  | CI operating system                                 |
+| -------------- | --------------------------------------------------- |
+| NVDA           | Windows                                             |
+| Orca (preview) | Linux (Kernel version 7: Ubuntu 26.04 or Debian 13) |
+| VoiceOver      | macOS                                               |
 
 See the [support matrix](../reference/support-matrix) for the current platform and screen reader support.
 

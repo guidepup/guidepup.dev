@@ -152,5 +152,4 @@ await unstable_orca.perform(unstable_orca.keyboardCommands.MoveToNextSibling);
 Orca does not currently implement `press()` or `type()`. Use Playwright's
 browser APIs for keyboard input or text entry.
 
-See [testing VoiceOver](./testing-voiceover) and
-[testing NVDA](./testing-nvda) for the equivalent workflows.
+See [testing NVDA](./testing-nvda) and [testing VoiceOver](./testing-voiceover) for the equivalent workflows.

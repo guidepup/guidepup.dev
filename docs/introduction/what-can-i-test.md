@@ -71,6 +71,6 @@ The same approach can be used for navigation, search, dialogs, menus, authentica
 
 ## Real or Virtual Screen Reader
 
-These behaviours can be tested with real screen readers such as [VoiceOver](../screen-reader-testing/testing-voiceover), [NVDA](../screen-reader-testing/testing-nvda), and [Orca](../screen-reader-testing/testing-orca), or with [Guidepup Virtual Screen Reader](../virtual-screen-reader/introduction).
+These behaviours can be tested with real screen readers such as [NVDA](../screen-reader-testing/testing-nvda), [Orca](../screen-reader-testing/testing-orca), and [VoiceOver](../screen-reader-testing/testing-voiceover), or with [Guidepup Virtual Screen Reader](../virtual-screen-reader/introduction).
 
 Use the Virtual Screen Reader when you need fast, isolated tests, and real screen readers when you want higher-fidelity end-to-end coverage.

@@ -17,7 +17,7 @@ Different tools test different aspects of an application, and a strong accessibi
 | Browser Accessibility Tree | [Playwright accessibility assertions](https://playwright.dev/docs/accessibility-testing) | Expected accessible names, roles, states and structure      |
 | Browser / Component        | [Playwright](https://playwright.dev/)                                                    | Application behaviour under browser UI interactions         |
 | Simulated Screen Reader    | [Guidepup Virtual Screen Reader](../virtual-screen-reader/introduction)                  | Expected screen reader behaviour in fast, isolated tests    |
-| Real Screen Reader         | [Guidepup with VoiceOver, NVDA, or Orca](../getting-started)                             | Application behaviour under real screen reader interactions |
+| Real Screen Reader         | [Guidepup with NVDA, Orca, or VoiceOver](../getting-started)                             | Application behaviour under real screen reader interactions |
 | User                       | Manual assistive technology testing                                                      | Real-world accessibility and usability                      |
 
 The distinction is important.
@@ -45,7 +45,7 @@ Guidepup provides two ways to automate screen reader behaviour:
 
 ### Real screen readers
 
-Guidepup can automate real screen readers such as VoiceOver, NVDA, and Orca.
+Guidepup can automate real screen readers such as NVDA, Orca, and VoiceOver.
 
 That gives you higher-fidelity end-to-end coverage of the actual screen reader experience.
 

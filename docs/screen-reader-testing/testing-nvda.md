@@ -118,8 +118,7 @@ The [`lastSpokenPhrase()` API](../api/class-nvda#nvda-last-spoken-phrase) and th
 
 Guidepup exposes a common screen reader API where possible, while also providing access to NVDA specific commands and settings.
 
-This means tests can share the same general structure across NVDA, VoiceOver,
-and Orca without hiding the differences between screen readers.
+This means tests can share the same general structure across NVDA, Orca, and VoiceOver without hiding the differences between screen readers.
 
 Where there are NVDA specific commands the [`perform` API](../api/class-nvda#nvda-perform) provides an escape hatch:
 
@@ -129,5 +128,4 @@ await nvda.perform(nvda.keyboardCommands.readPreviousSentence);
 
 This API is the public extension point for NVDA-only reading commands that belong to the active screen reader vocabulary rather than the shared screen reader abstraction.
 
-See [testing VoiceOver](./testing-voiceover) and [testing Orca](./testing-orca)
-for the equivalent workflows.
+See [testing Orca](./testing-orca) and [testing VoiceOver](./testing-voiceover) for the equivalent workflows.

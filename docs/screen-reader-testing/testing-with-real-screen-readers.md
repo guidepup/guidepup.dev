@@ -7,13 +7,12 @@ description: Learn how to automate real screen readers with Guidepup for end-to-
 
 Guidepup can automate real screen readers, allowing you to test accessibility behaviour in the same environment your users rely on.
 
-Guidepup supports automating [VoiceOver](./testing-voiceover) on macOS,
-[NVDA](./testing-nvda) on Windows, and [Orca](./testing-orca)
-on Linux.
+Guidepup supports automating [NVDA](./testing-nvda) on Windows, [Orca](./testing-orca)
+on Linux, and [VoiceOver](./testing-voiceover) on macOS.
 
 The common test model is the same regardless of the reader in use: start the reader, move it through the page using shared commands or commands specific to the reader, capture what it says, and then make an assertion.
 
-The shared APIs are described in the API reference for [screenReader](../api/class-screenreader), [VoiceOver](../api/class-voiceover), [NVDA](../api/class-nvda), and [Orca](../api/class-orca). In each case, the navigation workflow is centred around `next()`, `previous()`, `perform()`, and `lastSpokenPhrase()`.
+The shared APIs are described in the API reference for [screenReader](../api/class-screenreader), [NVDA](../api/class-nvda), [Orca](../api/class-orca), and [VoiceOver](../api/class-voiceover). In each case, the navigation workflow is centred around `next()`, `previous()`, `perform()`, and `lastSpokenPhrase()`.
 
 ## Why test with real screen readers?
 
@@ -35,7 +34,7 @@ With a real screen reader, you can automate workflows involving:
 
 See [testing navigation](./testing-navigation), [testing announcements](./testing-announcements), and [testing interactions](./testing-interactions) for focused examples.
 
-## VoiceOver, NVDA, and Orca
+## NVDA, Orca, and VoiceOver
 
 Guidepup provides a consistent API across supported screen readers while retaining access to behaviour specific to the selected screen reader when required.
 
@@ -43,13 +42,13 @@ The screen reader you use depends on your test environment:
 
 | Screen reader  | Operating system | Guidepup        |
 | -------------- | ---------------- | --------------- |
-| VoiceOver      | macOS            | `voiceOver`     |
 | NVDA           | Windows          | `nvda`          |
 | Orca (preview) | Linux            | `unstable_orca` |
+| VoiceOver      | macOS            | `voiceOver`     |
 
-See [testing VoiceOver](./testing-voiceover), [testing NVDA](./testing-nvda), and [testing Orca](./testing-orca) for platform-specific setup and examples.
+See [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), and [testing VoiceOver](./testing-voiceover) for platform-specific setup and examples.
 
-The API layer for VoiceOver is described in [class-voiceover](../api/class-voiceover#voiceover-perform), the NVDA API in [class-nvda](../api/class-nvda#nvda-perform), and Orca API in [class-orca](../api/class-orca#unstable-orca-perform).
+The API layer for NVDA is described in [class-nvda](../api/class-nvda#nvda-perform), the Orca API in [class-orca](../api/class-orca#unstable-orca-perform), and the VoiceOver API in [class-voiceover](../api/class-voiceover#perform).
 
 ## Real screen readers in automated tests
 
@@ -74,7 +73,7 @@ test("checkout is accessible", async ({ page, voiceOver }) => {
 
 The browser automation and screen reader automation work together: Playwright controls the application, while Guidepup controls and observes the screen reader.
 
-The same high-level test shape is visible in the real screen reader docs for [testing VoiceOver](./testing-voiceover), [testing NVDA](./testing-nvda), and [testing Orca](./testing-orca): start the reader, move to a target, inspect the phrase, and compare it with the expectation.
+The same high-level test shape is visible in the real screen reader docs for [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), and [testing VoiceOver](./testing-voiceover): start the reader, move to a target, inspect the phrase, and compare it with the expectation.
 
 ## Running real screen readers reliably
 

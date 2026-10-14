@@ -1,13 +1,13 @@
 ---
 title: Support matrix
-description: Guidepup's support matrix for VoiceOver on macOS, NVDA on Windows, and Orca on Linux.
+description: Guidepup's support matrix for NVDA on Windows, Orca on Linux, and VoiceOver on macOS.
 ---
 
 Guidepup currently supports the following screen readers:
 
-- **VoiceOver** for macOS
 - **NVDA** for Windows
-- **Orca** for Linux (through the unstable `unstable_orca` API)
+- **Orca** for Linux (through the preview `unstable_orca` API)
+- **VoiceOver** for macOS
 - **Virtual Screen Reader** for DOM environments (when using the `@guidepup/virtual-screen-reader` package)
 
 ## Runtime compatibility
@@ -19,19 +19,10 @@ The current manifest supports:
 | Screen reader | Platform | Supported versions                                                                                                        |
 | :------------ | :------- | :------------------------------------------------------------------------------------------------------------------------ |
 | NVDA          | Windows  | The manifest provides default NVDA assets for Windows.                                                                    |
-| Orca          | Linux    | The manifest provides default Orca assets for Linux. Linux kernel release 7, Ubuntu 26.04 and Debian 13.                  |
+| Orca          | Linux    | The manifest provides default Orca assets for Linux. Linux kernel version 7, Ubuntu 26.04 and Debian 13.                  |
 | VoiceOver     | macOS    | macOS 12 (Monterey), macOS 13 (Ventura), macOS 14 (Sonoma), macOS 15 (Sequoia), macOS 26 (Tahoe), macOS 27 (Golden Gate). |
 
 The manifest changes with Guidepup releases. After upgrading `@guidepup/guidepup`, rerun `npx @guidepup/setup install` to download the assets supported by that release.
-
-## VoiceOver
-
-[VoiceOver](https://support.apple.com/en-gb/guide/voiceover-guide/welcome/web) is an advanced screen-reading technology integrated into the Mac OS X operating system. VoiceOver enables users with visual disabilities to control their computer using a rich set of keyboard commands and gestures. This chapter provides an overview of VoiceOver and key topics such as the VoiceOver cursor and current focus, keyboard shortcuts, and using function keys on some keyboards.
-
-To learn VoiceOver commands please refer to the following popular guides:
-
-- [VoiceOver commands and gestures on Mac](https://support.apple.com/en-gb/guide/voiceover/vo14111/mac)
-- [Deque University VoiceOver Keyboard Shortcuts on a Mac](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
 
 ## NVDA
 
@@ -50,6 +41,15 @@ To learn NVDA commands please refer to the following popular guides:
 [Orca](https://gitlab.gnome.org/GNOME/orca) is the free, open-source screen reader for the GNOME desktop. Guidepup's Orca API is currently in preview.
 
 To learn Orca commands please refer to [GNOME Orca screen reader help website](https://help.gnome.org/orca/index.html).
+
+## VoiceOver
+
+[VoiceOver](https://support.apple.com/en-gb/guide/voiceover-guide/welcome/web) is an advanced screen-reading technology integrated into the Mac OS X operating system. VoiceOver enables users with visual disabilities to control their computer using a rich set of keyboard commands and gestures. This chapter provides an overview of VoiceOver and key topics such as the VoiceOver cursor and current focus, keyboard shortcuts, and using function keys on some keyboards.
+
+To learn VoiceOver commands please refer to the following popular guides:
+
+- [VoiceOver commands and gestures on Mac](https://support.apple.com/en-gb/guide/voiceover/vo14111/mac)
+- [Deque University VoiceOver Keyboard Shortcuts on a Mac](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
 
 ## Virtual Screen Reader
 

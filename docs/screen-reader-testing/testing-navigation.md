@@ -153,4 +153,4 @@ A dependable Guidepup navigation test generally follows the same shape:
 4. Assert against the expected content.
 5. Stop the reader in a `finally` block.
 
-This pattern is the foundation for higher-level accessibility workflows, such as those described in [testing VoiceOver](./testing-voiceover), [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), and [testing interactions](./testing-interactions).
+This pattern is the foundation for higher-level accessibility workflows, such as those described in [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), [testing VoiceOver](./testing-voiceover), and [testing interactions](./testing-interactions).

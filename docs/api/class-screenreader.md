@@ -5,7 +5,7 @@ description: Reference the common screen reader API exposed by Guidepup automati
 
 **Implements:** [IScreenReader]
 
-A ScreenReader instance can be used to launch and control the default screen reader for the environment: VoiceOver for macOS, NVDA for Windows, and Orca for Linux.
+A ScreenReader instance can be used to launch and control the default screen reader for the environment: NVDA for Windows, Orca for Linux, and VoiceOver for macOS.
 
 Here's a typical example using a [ScreenReader] instance:
 
