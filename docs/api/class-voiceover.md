@@ -193,7 +193,7 @@ test("capture VoiceOver output while clicking a button", async ({ page }) => {
 
 - `action` () => [Promise]&#60;T&#62; | T The action to perform while
   capturing VoiceOver output.
-- **Optional:** `options` Pick&#60;[CommandOptions], "capture"&#62; Capture options.
+- **Optional:** `options` [CommandOptions] Capture options.
 
 **Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
 VoiceOver output.

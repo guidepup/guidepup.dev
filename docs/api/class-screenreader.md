@@ -35,6 +35,7 @@ See also:
 - [screenReader.name](./class-screenreader#screenreader-name)
 - [screenReader.version](./class-screenreader#screenreader-version)
 - [screenReader.act([options])](./class-screenreader#screenreader-act)
+- [screenReader.capture(action[, options])](./class-screenreader#screenreader-capture)
 - [screenReader.clearItemTextLog()](./class-screenreader#screenreader-clear-item-text-log)
 - [screenReader.clearSpokenPhraseLog()](./class-screenreader#screenreader-clear-spoken-phrase-log)
 - [screenReader.click([options])](./class-screenreader#screenreader-click)
@@ -113,6 +114,42 @@ import { screenReader } from "@guidepup/guidepup";
 - **Optional:** `options` [CommandOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.capture(action[, options]) {#screenreader-capture}
+
+Capture screen reader output produced while an action runs. The action can be
+performed using an external automation tool such as Playwright. The returned
+capture contains the action's result and the screen reader output associated
+with the action.
+
+```ts
+import { test } from "@playwright/test";
+import { screenReader } from "@guidepup/guidepup";
+
+test("capture screen reader output while clicking a button", async ({ page }) => {
+  await screenReader.start();
+
+  const capture = await screenReader.capture(() =>
+    page
+      .getByRole("button", {
+        name: "Submit",
+      })
+      .click(),
+  );
+  console.log(capture);
+
+  await screenReader.stop();
+});
+```
+
+**Parameters:**
+
+- `action` () => [Promise]&#60;T&#62; The action to perform while capturing
+  screen reader output.
+- **Optional:** `options` [CommandOptions] Capture options.
+
+**Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
+screen reader output.
 
 ## screenReader.clearItemTextLog() {#screenreader-clear-item-text-log}
 
@@ -207,7 +244,7 @@ import { screenReader } from "@guidepup/guidepup";
 })();
 ```
 
-**Returns:** [Promise]&#60;[boolean]&#62;
+**Returns:** [boolean]
 
 ## screenReader.detect() {#screenreader-detect}
 
@@ -484,7 +521,7 @@ import {
 
 **Parameters:**
 
-- `command` [any] Screen reader command to execute.
+- `command` [unknown] Screen reader command to execute.
 - **Optional:** `options` [CommandOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
@@ -775,6 +812,7 @@ import { screenReader } from "@guidepup/guidepup";
 **Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
+[capture]: ./class-capture "Capture"
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"

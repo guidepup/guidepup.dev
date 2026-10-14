@@ -18,6 +18,7 @@ See also:
 - [screenReader.name](./class-iscreenreader#screenreader-name)
 - [screenReader.version](./class-iscreenreader#screenreader-version)
 - [screenReader.act([options])](./class-iscreenreader#screenreader-act)
+- [screenReader.capture(action[, options])](./class-iscreenreader#screenreader-capture)
 - [screenReader.clearItemTextLog()](./class-iscreenreader#screenreader-clear-item-text-log)
 - [screenReader.clearSpokenPhraseLog()](./class-iscreenreader#screenreader-clear-spoken-phrase-log)
 - [screenReader.click([options])](./class-iscreenreader#screenreader-click)
@@ -66,6 +67,22 @@ Perform the default action for the item in the screen reader cursor.
 - **Optional:** `options` [CommandOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.capture(action[, options]) {#screenreader-capture}
+
+Capture screen reader output produced while an action runs. The action can be
+performed using an external automation tool such as Playwright. The returned
+capture contains the action's result and the screen reader output associated
+with the action.
+
+**Parameters:**
+
+- `action` () => [Promise]&#60;T&#62; The action to perform while capturing
+  screen reader output.
+- **Optional:** `options` [CommandOptions] Capture options.
+
+**Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
+screen reader output.
 
 ## screenReader.clearItemTextLog() {#screenreader-clear-item-text-log}
 
@@ -191,7 +208,7 @@ Perform a screen reader command.
 
 **Parameters:**
 
-- `command` [any] Screen reader command to execute.
+- `command` [unknown] Screen reader command to execute.
 - **Optional:** `options` [CommandOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
@@ -314,6 +331,7 @@ To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`s
 **Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
+[capture]: ./class-capture "Capture"
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
