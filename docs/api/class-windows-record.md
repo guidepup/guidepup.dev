@@ -5,9 +5,9 @@ description: Record Guidepup NVDA automation sessions on Windows.
 
 **Contents:**
 
-- [`windowsRecord(filePath)`](./class-windows-record#windows-record)
+- [`windowsRecord(filepath)`](./class-windows-record#windows-record)
 
-## windowsRecord(filePath) {#windows-record}
+## windowsRecord(filepath) {#windows-record}
 
 Start a screen recording on Windows.
 
@@ -20,8 +20,8 @@ import { windowsRecord } from "@guidepup/record";
 
   // ... perform some commands.
 
-  // Stop the screen recording.
-  stopRecording();
+  // Stop and finalize the screen recording.
+  await stopRecording();
 })();
 ```
 
@@ -29,7 +29,7 @@ import { windowsRecord } from "@guidepup/record";
 
 - `filepath` [string] The file path to save the screen recording to.
 
-**Returns:** [Function] A function to stop the screen recording.
+**Returns:** [Function] An async function returning `Promise<void>` that stops and finalizes the screen recording.
 
 [function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function "Function"
 [string]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String "string"

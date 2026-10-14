@@ -140,6 +140,8 @@ const sidebars = {
           type: "category",
           label: "Classes",
           items: [
+            { type: "doc", id: "api/class-record" },
+            { type: "doc", id: "api/class-linux-record" },
             { type: "doc", id: "api/class-macos-record" },
             { type: "doc", id: "api/class-windows-record" },
           ],
