@@ -6,7 +6,7 @@ description: Reference the Orca automation API in the Guidepup library.
 **Implements:** [IScreenReader]
 
 An Orca instance can be used to launch and control Orca on Linux. The API is
-currently available through the unstable `unstable_orca` export.
+currently available through the preview `unstable_orca` export.
 
 Here's a typical example using an [Orca] instance:
 
@@ -162,9 +162,9 @@ test("capture Orca output while clicking a button", async ({ page }) => {
 
 **Parameters:**
 
-- `action` `() => [Promise]&#60;T&#62; | T` The action to perform while
+- `action` () => [Promise]&#60;T&#62; | T The action to perform while
   capturing Orca output.
-- **Optional:** `options` `Pick<[CommandOptions], "capture">` Capture options.
+- **Optional:** `options` Pick&#60;[CommandOptions], "capture"&#62; Capture options.
 
 **Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
 Orca output.

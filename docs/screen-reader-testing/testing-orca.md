@@ -6,7 +6,7 @@ description: Automate Orca with Guidepup for end-to-end accessibility testing on
 # Testing Orca
 
 Guidepup provides preview support for [Orca](https://orca.gnome.org/), the
-open-source screen reader for Linux. The API is available through the unstable
+open-source screen reader for Linux. The API is available through the preview
 `unstable_orca` export.
 
 You can use Guidepup to start and stop Orca, navigate web content, interact with

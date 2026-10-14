@@ -11,7 +11,7 @@ Guidepup currently supports the following screen readers:
 
 - VoiceOver for macOS
 - NVDA for Windows
-- Orca for Linux (through the unstable `unstable_orca` API)
+- Orca for Linux (through the preview `unstable_orca` API)
 
 Here's a typical example:
 
@@ -162,8 +162,7 @@ import { screenReader } from "@guidepup/guidepup";
 
 **Type:** [Orca]
 
-This object can be used to launch and control Orca on Linux. This API is
-currently unstable.
+This object can be used to launch and control Orca on Linux. This API is currently in preview.
 
 Here's a typical example:
 
