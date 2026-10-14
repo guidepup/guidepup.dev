@@ -35,6 +35,7 @@ import { screenReader } from "@guidepup/guidepup";
 **Contents:**
 
 - [macOSActivate](./class-guidepup#guidepup-macos-activate)
+- [macOSActivateId](./class-guidepup#guidepup-macos-activate-id)
 - [MacOSApplications](./class-guidepup#guidepup-macos-applications)
 - [MacOSKeyCodes](./class-guidepup#guidepup-macos-key-codes)
 - [MacOSModifiers](./class-guidepup#guidepup-macos-modifiers)
@@ -58,6 +59,12 @@ import { screenReader } from "@guidepup/guidepup";
 **See:** [macOSActivate]
 
 Opens a macOS application if not already open, and focuses the application.
+
+## macOSActivateId {#guidepup-macos-activate-id}
+
+**See:** [macOSActivateId]
+
+Opens a macOS application from it's ID, if not already open, and focuses the application.
 
 ## MacOSApplications {#guidepup-macos-applications}
 

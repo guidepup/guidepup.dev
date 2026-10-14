@@ -31,6 +31,7 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.name](./class-voiceover#voiceover-name)
 - [voiceOver.version](./class-voiceover#voiceover-version)
 - [voiceOver.act([options])](./class-voiceover#voiceover-act)
+- [voiceOver.capture(action[, options])](./class-voiceover#voiceover-capture)
 - [voiceOver.clearItemTextLog()](./class-voiceover#voiceover-clear-item-text-log)
 - [voiceOver.clearSpokenPhraseLog()](./class-voiceover#voiceover-clear-spoken-phrase-log)
 - [voiceOver.click([options])](./class-voiceover#voiceover-click)
@@ -160,6 +161,42 @@ import { voiceOver } from "@guidepup/guidepup";
 - **Optional:** `options` [CommandOptions] Additional options.
 
 **Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.capture(action[, options]) {#voiceover-capture}
+
+Capture VoiceOver output produced while an action runs. The action can be
+performed using an external automation tool such as Playwright. The returned
+capture contains the action's result and the VoiceOver output associated with
+the action.
+
+```ts
+import { test } from "@playwright/test";
+import { voiceOver } from "@guidepup/guidepup";
+
+test("capture VoiceOver output while clicking a button", async ({ page }) => {
+  await voiceOver.start();
+
+  const capture = await voiceOver.capture(() =>
+    page
+      .getByRole("button", {
+        name: "Submit",
+      })
+      .click(),
+  );
+  console.log(capture);
+
+  await voiceOver.stop();
+});
+```
+
+**Parameters:**
+
+- `action` `() => [Promise]&#60;T&#62; | T` The action to perform while
+  capturing VoiceOver output.
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
+VoiceOver output.
 
 ## voiceOver.clearItemTextLog() {#voiceover-clear-item-text-log}
 
@@ -958,6 +995,7 @@ import { voiceOver } from "@guidepup/guidepup";
 **Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
+[capture]: ./class-capture "Capture"
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"

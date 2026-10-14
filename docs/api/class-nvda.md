@@ -30,6 +30,7 @@ import { nvda } from "@guidepup/guidepup";
 - [nvda.name](./class-nvda#nvda-name)
 - [nvda.version](./class-nvda#nvda-version)
 - [nvda.act([options])](./class-nvda#nvda-act)
+- [nvda.capture(action[, options])](./class-nvda#nvda-capture)
 - [nvda.clearItemTextLog()](./class-nvda#nvda-clear-item-text-log)
 - [nvda.clearSpokenPhraseLog()](./class-nvda#nvda-clear-spoken-phrase-log)
 - [nvda.click([options])](./class-nvda#nvda-click)
@@ -133,6 +134,41 @@ import { nvda } from "@guidepup/guidepup";
 - **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
 
 **Returns:** [Promise]&#60;[void]&#62;
+
+## nvda.capture(action[, options]) {#nvda-capture}
+
+Capture NVDA output produced while an action runs. The action can be performed
+using an external automation tool such as Playwright. The returned capture
+contains the action's result and the NVDA output associated with the action.
+
+```ts
+import { test } from "@playwright/test";
+import { nvda } from "@guidepup/guidepup";
+
+test("capture NVDA output while clicking a button", async ({ page }) => {
+  await nvda.start();
+
+  const capture = await nvda.capture(() =>
+    page
+      .getByRole("button", {
+        name: "Submit",
+      })
+      .click(),
+  );
+  console.log(capture);
+
+  await nvda.stop();
+});
+```
+
+**Parameters:**
+
+- `action` `() => [Promise]&#60;T&#62; | T` The action to perform while
+  capturing NVDA output.
+- **Optional:** `options` [CommandOptions] Additional options.
+
+**Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
+NVDA output.
 
 ## nvda.clearItemTextLog() {#nvda-clear-item-text-log}
 
@@ -827,6 +863,7 @@ import { nvda } from "@guidepup/guidepup";
 **Returns:** [Promise]&#60;[void]&#62;
 
 [clickoptions]: ./class-click-options "ClickOptions"
+[capture]: ./class-capture "Capture"
 [commandoptions]: ./class-command-options "CommandOptions"
 [nvda]: ./class-nvda "NVDA"
 [windowsmodifiers]: ./class-windows-modifiers "WindowsModifiers"

@@ -92,6 +92,7 @@ const sidebars = {
           type: "category",
           label: "Classes",
           items: [
+            { type: "doc", id: "api/class-capture" },
             { type: "doc", id: "api/class-click-options" },
             { type: "doc", id: "api/class-command-options" },
             { type: "doc", id: "api/class-iscreenreader" },

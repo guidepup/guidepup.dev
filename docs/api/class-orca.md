@@ -162,11 +162,12 @@ test("capture Orca output while clicking a button", async ({ page }) => {
 
 **Parameters:**
 
-- `action` `() => Promise<T> | T` The action to perform while capturing Orca
-  output.
-- **Optional:** `options` `Pick<CommandOptions, "capture">` Capture options.
+- `action` `() => [Promise]&#60;T&#62; | T` The action to perform while
+  capturing Orca output.
+- **Optional:** `options` `Pick<[CommandOptions], "capture">` Capture options.
 
-**Returns:** `Promise<Capture<T>>` The action's result and captured Orca output.
+**Returns:** [Promise]&#60;[Capture]&#60;T&#62;> The action's result and captured
+Orca output.
 
 ## unstable_orca.clearItemTextLog() {#unstable-orca-clear-item-text-log}
 
@@ -673,10 +674,12 @@ import { unstable_orca } from "@guidepup/guidepup";
 implemented for Orca. Calling it throws an error.
 
 [clickoptions]: ./class-click-options "ClickOptions"
+[capture]: ./class-capture "Capture"
 [commandoptions]: ./class-command-options "CommandOptions"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [orcakeycodecommands]: ./class-orca-key-code-commands "OrcaKeyCodeCommands"
 [orca]: ./class-orca "Orca"
+[pick]: https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys "Pick"
 [startoptions]: ./class-start-options "StartOptions"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
