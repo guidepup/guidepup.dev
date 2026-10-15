@@ -25,6 +25,9 @@ Orca automation requires:
 For the current supported versions and configurations, see the
 [support matrix](../reference/support-matrix).
 
+To use a preconfigured Linux container for Orca testing, see the
+[Orca Docker guide](../guides/orca-docker).
+
 ## Machine setup
 
 Configure your Linux machine for Orca automation:

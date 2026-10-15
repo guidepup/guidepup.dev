@@ -211,6 +211,10 @@ const config = {
             title: "GitHub",
             items: [
               {
+                label: "@guidepup/setup",
+                href: "https://github.com/guidepup/setup",
+              },
+              {
                 label: "@guidepup/guidepup",
                 href: "https://github.com/guidepup/guidepup",
               },
@@ -219,16 +223,16 @@ const config = {
                 href: "https://github.com/guidepup/guidepup-playwright",
               },
               {
+                label: "ghcr.io/guidepup/guidepup",
+                href: "https://github.com/guidepup/guidepup-docker/pkgs/container/guidepup",
+              },
+              {
                 label: "@guidepup/virtual-screen-reader",
                 href: "https://github.com/guidepup/virtual-screen-reader",
               },
               {
                 label: "@guidepup/jest",
                 href: "https://github.com/guidepup/jest",
-              },
-              {
-                label: "@guidepup/setup",
-                href: "https://github.com/guidepup/setup",
               },
             ],
           },

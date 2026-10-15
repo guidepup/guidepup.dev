@@ -68,6 +68,7 @@ const sidebars = {
       label: "Setup guides",
       items: [
         { type: "doc", id: "guides/machine-setup" },
+        { type: "doc", id: "guides/orca-docker" },
         { type: "doc", id: "guides/manual-voiceover-setup" },
       ],
       collapsed: false,

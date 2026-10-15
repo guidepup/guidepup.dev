@@ -75,6 +75,8 @@ Choose the runner based on the screen reader you are testing:
 
 See the [support matrix](../reference/support-matrix) for the current platform and screen reader support.
 
+For container workflows such as Docker, also see the [Orca Docker guide](../guides/orca-docker).
+
 When running Orca, add `xvfb-run dbus-run-session` before your command to ensure all processes share the same X virtual framebuffer display and D-Bus session:
 
 ```bash
