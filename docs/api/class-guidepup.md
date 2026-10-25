@@ -34,6 +34,8 @@ import { screenReader } from "@guidepup/guidepup";
 
 **Contents:**
 
+- [LinuxKeyCodes](./class-guidepup#guidepup-linux-key-codes)
+- [LinuxModifiers](./class-guidepup#guidepup-linux-modifiers)
 - [macOSActivate](./class-guidepup#guidepup-macos-activate)
 - [macOSActivateId](./class-guidepup#guidepup-macos-activate-id)
 - [MacOSApplications](./class-guidepup#guidepup-macos-applications)
@@ -53,6 +55,18 @@ import { screenReader } from "@guidepup/guidepup";
 - [WindowsKeyCodes](./class-guidepup#guidepup-windows-key-codes)
 - [WindowsModifiers](./class-guidepup#guidepup-windows-modifiers)
 - [windowsQuit](./class-guidepup#guidepup-windows-quit)
+
+## LinuxKeyCodes {#guidepup-linux-key-codes}
+
+**Type:** [LinuxKeyCodes]
+
+Key codes for Linux.
+
+## LinuxModifiers {#guidepup-linux-modifiers}
+
+**Type:** [LinuxModifiers]
+
+Modifier keys for Linux.
 
 ## macOSActivate {#guidepup-macos-activate}
 
@@ -244,6 +258,8 @@ Modifier keys for Windows.
 
 Quits a Windows application if running.
 
+[linuxkeycodes]: ./class-linux-key-codes "LinuxKeyCodes"
+[linuxmodifiers]: ./class-linux-modifiers "LinuxModifiers"
 [macosactivate]: ./class-macos-activate "macOSActivate"
 [macosapplications]: ./class-macos-applications "MacOSApplications"
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
