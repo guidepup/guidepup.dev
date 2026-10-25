@@ -17,7 +17,7 @@ Guidepup exposes phrase capture APIs for that:
 Those APIs are available on the shared screen reader interface and on concrete
 reader instances such as [`voiceOver`](../api/class-voiceover),
 [`nvda`](../api/class-nvda), and
-[`unstable_orca`](../api/class-orca).
+[`orca`](../api/class-orca).
 
 ## Capture the latest spoken phrase
 
@@ -50,9 +50,9 @@ expect(phrase).toContain("Products");
 And with Orca:
 
 ```ts
-await unstable_orca.next();
+await orca.next();
 
-const phrase = await unstable_orca.lastSpokenPhrase();
+const phrase = await orca.lastSpokenPhrase();
 expect(phrase).toContain("Products");
 ```
 

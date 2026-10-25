@@ -21,7 +21,7 @@ The common API surface is documented in the screen reader reference docs:
 - [`lastSpokenPhrase()`](../api/class-screenreader#screenreader-last-spoken-phrase)
 
 Those methods are available on the concrete implementations, including
-[`voiceOver`](../api/class-voiceover), [`nvda`](../api/class-nvda), and [`unstable_orca`](../api/class-orca). The platform screen reader
+[`voiceOver`](../api/class-voiceover), [`nvda`](../api/class-nvda), and [`orca`](../api/class-orca). The platform screen reader
 wrapper, [`screenReader`](../api/class-screenreader), exposes the same navigation
 workflow when a test can run against the default environment reader.
 
@@ -88,8 +88,8 @@ expect(await nvda.lastSpokenPhrase()).toContain("Pricing");
 ```
 
 ```ts
-await unstable_orca.perform(unstable_orca.keyboardCommands.NextImage);
-expect(await unstable_orca.lastSpokenPhrase()).toContain("Pricing");
+await orca.perform(orca.keyboardCommands.NextImage);
+expect(await orca.lastSpokenPhrase()).toContain("Pricing");
 ```
 
 The command objects in the API docs are commands specific to the chosen screen reader. They describe navigation commands such as heading, link, landmark, form control, table, and similar semantic operations. This keeps the top-level API stable while still exposing each reader's command vocabulary.
@@ -129,15 +129,15 @@ try {
 And for Orca:
 
 ```ts
-await unstable_orca.start();
+await orca.start();
 
 try {
-  await unstable_orca.nextHeading();
+  await orca.nextHeading();
 
-  const headingOutput = await unstable_orca.lastSpokenPhrase();
+  const headingOutput = await orca.lastSpokenPhrase();
   expect(headingOutput).toContain("Products");
 } finally {
-  await unstable_orca.stop();
+  await orca.stop();
 }
 ```
 

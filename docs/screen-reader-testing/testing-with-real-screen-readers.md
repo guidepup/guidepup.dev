@@ -40,15 +40,15 @@ Guidepup provides a consistent API across supported screen readers while retaini
 
 The screen reader you use depends on your test environment:
 
-| Screen reader  | Operating system | Guidepup        |
-| -------------- | ---------------- | --------------- |
-| NVDA           | Windows          | `nvda`          |
-| Orca (preview) | Linux            | `unstable_orca` |
-| VoiceOver      | macOS            | `voiceOver`     |
+| Screen reader | Operating system | Guidepup    |
+| ------------- | ---------------- | ----------- |
+| NVDA          | Windows          | `nvda`      |
+| Orca          | Linux            | `orca`      |
+| VoiceOver     | macOS            | `voiceOver` |
 
 See [testing NVDA](./testing-nvda), [testing Orca](./testing-orca), and [testing VoiceOver](./testing-voiceover) for platform-specific setup and examples.
 
-The API layer for NVDA is described in [class-nvda](../api/class-nvda#nvda-perform), the Orca API in [class-orca](../api/class-orca#unstable-orca-perform), and the VoiceOver API in [class-voiceover](../api/class-voiceover#voiceover-perform).
+The API layer for NVDA is described in [class-nvda](../api/class-nvda#nvda-perform), the Orca API in [class-orca](../api/class-orca#orca-perform), and the VoiceOver API in [class-voiceover](../api/class-voiceover#voiceover-perform).
 
 ## Real screen readers in automated tests
 

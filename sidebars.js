@@ -101,6 +101,8 @@ const sidebars = {
             { type: "doc", id: "api/class-keyboard-command" },
             { type: "doc", id: "api/class-keyboard-options" },
             { type: "doc", id: "api/class-keystroke-command" },
+            { type: "doc", id: "api/class-linux-key-codes" },
+            { type: "doc", id: "api/class-linux-modifiers" },
             { type: "doc", id: "api/class-macos-activate" },
             { type: "doc", id: "api/class-macos-applications" },
             { type: "doc", id: "api/class-macos-key-code-command" },

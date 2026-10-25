@@ -6,7 +6,7 @@ description: Guidepup's support matrix for NVDA on Windows, Orca on Linux, and V
 Guidepup currently supports the following screen readers:
 
 - **NVDA** for Windows
-- **Orca** for Linux (through the preview `unstable_orca` API)
+- **Orca** for Linux
 - **VoiceOver** for macOS
 - **Virtual Screen Reader** for DOM environments (when using the `@guidepup/virtual-screen-reader` package)
 
@@ -38,7 +38,7 @@ To learn NVDA commands please refer to the following popular guides:
 
 ## Orca
 
-[Orca](https://gitlab.gnome.org/GNOME/orca) is the free, open-source screen reader for the GNOME desktop. Guidepup's Orca API is currently in preview.
+[Orca](https://gitlab.gnome.org/GNOME/orca) is the free, open-source screen reader for the GNOME desktop.
 
 To learn Orca commands please refer to [GNOME Orca screen reader help website](https://help.gnome.org/orca/index.html).
 

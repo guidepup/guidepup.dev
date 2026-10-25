@@ -9,20 +9,20 @@ description: Reference Orca key code command definitions for Guidepup automation
 
 Keyboard commands supported by Guidepup for the Orca screen reader on Linux.
 
-Use with `unstable_orca.perform` to invoke a command:
+Use with `orca.perform` to invoke a command:
 
 ```ts
-import { unstable_orca } from "@guidepup/guidepup";
+import { orca } from "@guidepup/guidepup";
 
 (async () => {
   // Start Orca.
-  await unstable_orca.start();
+  await orca.start();
 
   // Move to the next item.
-  await unstable_orca.perform(unstable_orca.keyboardCommands.MoveToNextSibling);
+  await orca.perform(orca.keyboardCommands.MoveToNextSibling);
 
   // Stop Orca.
-  await unstable_orca.stop();
+  await orca.stop();
 })();
 ```
 
@@ -204,7 +204,6 @@ Each command exposes its command name, description, keyboard representation, and
 - [orcaKeyCodeCommands.PresentTitle](./class-orca-key-code-commands#key-code-commands-presenttitle)
 - [orcaKeyCodeCommands.WhereAmIBasic](./class-orca-key-code-commands#key-code-commands-whereamibasic)
 - [orcaKeyCodeCommands.WhereAmIDetailed](./class-orca-key-code-commands#key-code-commands-whereamidetailed)
-
 
 ## orcaKeyCodeCommands.EndOfFile {#key-code-commands-endoffile}
 

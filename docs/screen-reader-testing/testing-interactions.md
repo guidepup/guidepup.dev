@@ -16,7 +16,7 @@ The common interaction APIs in the screen reader contract are:
 - [`click([options])`](../api/class-screenreader#screenreader-click)
 - [`itemText()`](../api/class-screenreader#screenreader-item-text)
 
-These methods are available on the concrete screen reader objects, including [`voiceOver`](../api/class-voiceover), [`nvda`](../api/class-nvda), and [`unstable_orca`](../api/class-orca), and they share the same broad testing shape across all screen readers.
+These methods are available on the concrete screen reader objects, including [`voiceOver`](../api/class-voiceover), [`nvda`](../api/class-nvda), and [`orca`](../api/class-orca), and they share the same broad testing shape across all screen readers.
 
 ## Activate the current item
 

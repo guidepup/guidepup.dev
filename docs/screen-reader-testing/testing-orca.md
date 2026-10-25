@@ -5,9 +5,8 @@ description: Automate Orca with Guidepup for end-to-end accessibility testing on
 
 # Testing Orca
 
-Guidepup provides preview support for [Orca](https://orca.gnome.org/), the
-open-source screen reader for Linux. The API is available through the preview
-`unstable_orca` export.
+Guidepup provides support for [Orca](https://orca.gnome.org/), the
+open-source screen reader for Linux.
 
 You can use Guidepup to start and stop Orca, navigate web content, interact with
 controls, and capture what Orca communicates to the user.
@@ -47,35 +46,35 @@ about the configuration performed by `@guidepup/setup`.
 
 ## Starting Orca
 
-The `unstable_orca` instance provides direct control over Orca:
+The `orca` instance provides direct control over Orca:
 
 ```ts
-import { unstable_orca } from "@guidepup/guidepup";
+import { orca } from "@guidepup/guidepup";
 
-await unstable_orca.start();
+await orca.start();
 
 try {
   // Orca automation.
 } finally {
-  await unstable_orca.stop();
+  await orca.stop();
 }
 ```
 
 Always stop Orca when the test completes, including when the test fails.
 
-When combining Orca with Playwright, start and stop `unstable_orca` directly in
+When combining Orca with Playwright, start and stop `orca` directly in
 your test.
 
 ## Navigating web content
 
 Orca navigation is usually expressed through its
-[`keyboardCommands`](../api/class-orca#unstable-orca-keyboard-commands)
-collection and the [`perform()` API](../api/class-orca#unstable-orca-perform):
+[`keyboardCommands`](../api/class-orca#orca-keyboard-commands)
+collection and the [`perform()` API](../api/class-orca#orca-perform):
 
 ```ts
-await unstable_orca.perform(unstable_orca.keyboardCommands.MoveToNextSibling);
+await orca.perform(orca.keyboardCommands.MoveToNextSibling);
 
-expect(await unstable_orca.lastSpokenPhrase()).toContain("Products");
+expect(await orca.lastSpokenPhrase()).toContain("Products");
 ```
 
 Guidepup also provides common navigation methods, including navigating by:
@@ -105,11 +104,11 @@ await orca.navigateToWebContent();
 Orca can be used to interact with controls during a workflow:
 
 ```ts
-await unstable_orca.nextLink();
+await orca.nextLink();
 
-expect(await unstable_orca.lastSpokenPhrase()).toContain("View all");
+expect(await orca.lastSpokenPhrase()).toContain("View all");
 
-await unstable_orca.act();
+await orca.act();
 ```
 
 You can combine these commands with Playwright's browser APIs to create
@@ -123,16 +122,16 @@ links, and other interactive content.
 Guidepup can capture what Orca speaks during a test:
 
 ```ts
-await unstable_orca.act();
+await orca.act();
 
-expect(await unstable_orca.lastSpokenPhrase()).toContain("Added to basket");
+expect(await orca.lastSpokenPhrase()).toContain("Added to basket");
 ```
 
 You can also inspect the spoken phrase history when you need to verify a
 sequence of announcements.
 
-The [`lastSpokenPhrase()` API](../api/class-orca#unstable-orca-last-spoken-phrase)
-and the [`spokenPhraseLog()` API](../api/class-orca#unstable-orca-spoken-phrase-log)
+The [`lastSpokenPhrase()` API](../api/class-orca#orca-last-spoken-phrase)
+and the [`spokenPhraseLog()` API](../api/class-orca#orca-spoken-phrase-log)
 are the main observation points for test assertions. See
 [testing announcements](./testing-announcements) for more examples.
 
@@ -145,11 +144,11 @@ This means tests can share the same general structure across Orca, VoiceOver,
 and NVDA without hiding the differences between screen readers.
 
 Orca supports `interact()` and `stopInteracting()` for entering and leaving an
-item's interaction mode. The [`perform()` API](../api/class-orca#unstable-orca-perform)
+item's interaction mode. The [`perform()` API](../api/class-orca#orca-perform)
 provides access to Orca-specific commands:
 
 ```ts
-await unstable_orca.perform(unstable_orca.keyboardCommands.MoveToNextSibling);
+await orca.perform(orca.keyboardCommands.MoveToNextSibling);
 ```
 
 Orca does not currently implement `press()` or `type()`. Use Playwright's

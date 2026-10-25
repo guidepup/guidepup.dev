@@ -6,23 +6,23 @@ description: Reference the Orca key code command type for Guidepup automation.
 **Extends:** [object]
 
 An object representing a keyboard command for the Orca screen reader. Get
-available commands from [`unstable_orca.keyboardCommands`](./class-orca#unstable-orca-keyboard-commands)
+available commands from [`orca.keyboardCommands`](./class-orca#orca-keyboard-commands)
 or the [orcaKeyCodeCommands] collection.
 
 ```ts
-import { unstable_orca } from "@guidepup/guidepup";
+import { orca } from "@guidepup/guidepup";
 
 (async () => {
-  await unstable_orca.start();
+  await orca.start();
 
-  const command = unstable_orca.keyboardCommands.MoveToNextSibling;
+  const command = orca.keyboardCommands.MoveToNextSibling;
   console.log(command.command);
   console.log(command.description);
   console.log(command.representation);
   console.log(command.service);
 
-  await unstable_orca.perform(command);
-  await unstable_orca.stop();
+  await orca.perform(command);
+  await orca.stop();
 })();
 ```
 

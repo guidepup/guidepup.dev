@@ -8,7 +8,7 @@ description: Reference key code command helpers for Guidepup screen reader autom
 Object representing a key code command.
 
 Orca commands use the separate [OrcaKeyCodeCommand] format; this key-code
-object is not accepted by [`unstable_orca.perform`](./class-orca#unstable-orca-perform).
+object is not accepted by [`orca.perform`](./class-orca#orca-perform).
 
 For example, use when performing a VoiceOver command:
 

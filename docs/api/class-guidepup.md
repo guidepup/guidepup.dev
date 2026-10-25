@@ -11,7 +11,7 @@ Guidepup currently supports the following screen readers:
 
 - VoiceOver for macOS
 - NVDA for Windows
-- Orca for Linux (through the preview `unstable_orca` API)
+- Orca for Linux
 
 Here's a typical example:
 
@@ -45,7 +45,7 @@ import { screenReader } from "@guidepup/guidepup";
 - [OrcaKeyCodeCommand](./class-guidepup#guidepup-orca-key-code-command)
 - [orcaKeyCodeCommands](./class-guidepup#guidepup-orca-key-code-commands)
 - [screenReader](./class-guidepup#guidepup-screenreader)
-- [unstable_orca](./class-guidepup#guidepup-unstable-orca)
+- [orca](./class-guidepup#guidepup-orca)
 - [voiceOver](./class-guidepup#guidepup-voiceover)
 - [VoiceOverCommanderCommands](./class-guidepup#guidepup-voiceover-commander-commands)
 - [voiceOverKeyCodeCommands](./class-guidepup#guidepup-voiceover-key-code-commands)
@@ -158,28 +158,28 @@ import { screenReader } from "@guidepup/guidepup";
 })();
 ```
 
-## unstable_orca {#guidepup-unstable-orca}
+## orca {#guidepup-orca}
 
 **Type:** [Orca]
 
-This object can be used to launch and control Orca on Linux. This API is currently in preview.
+This object can be used to launch and control Orca on Linux.
 
 Here's a typical example:
 
 ```ts
-import { unstable_orca } from "@guidepup/guidepup";
+import { orca } from "@guidepup/guidepup";
 
 (async () => {
   // Start Orca.
-  await unstable_orca.start();
+  await orca.start();
 
   // Move to the next item.
-  await unstable_orca.next();
+  await orca.next();
 
   // ... perform some commands.
 
   // Stop Orca.
-  await unstable_orca.stop();
+  await orca.stop();
 })();
 ```
 
