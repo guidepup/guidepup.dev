@@ -187,13 +187,11 @@ test.describe("Playwright VoiceOver", () => {
       waitUntil: "load",
     });
 
-    await expect(page.locator('header[role="banner"]')).toBeVisible();
+    await expect(page.locator("header")).toBeVisible();
 
     await voiceOver.navigateToWebContent();
 
-    while ((await voiceOver.itemText()) !== "Guidepup heading level 1") {
-      await voiceOver.nextHeading();
-    }
+    await voiceOver.navigateNextHeadingUntil("heading level 1 Guidepup");
 
     expect(JSON.stringify(await voiceOver.spokenPhraseLog())).toMatchSnapshot();
   });
