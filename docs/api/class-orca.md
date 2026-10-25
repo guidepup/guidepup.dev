@@ -42,6 +42,14 @@ import { orca } from "@guidepup/guidepup";
 - [orca.itemText()](./class-orca#orca-item-text)
 - [orca.itemTextLog()](./class-orca#orca-item-text-log)
 - [orca.lastSpokenPhrase()](./class-orca#orca-last-spoken-phrase)
+- [orca.navigateNextUntil(matcher[, options])](./class-orca#orca-navigate-next-until)
+- [orca.navigateNextHeadingUntil(matcher[, options])](./class-orca#orca-navigate-next-heading-until)
+- [orca.navigateNextLandmarkUntil(matcher[, options])](./class-orca#orca-navigate-next-landmark-until)
+- [orca.navigateNextLinkUntil(matcher[, options])](./class-orca#orca-navigate-next-link-until)
+- [orca.navigatePreviousUntil(matcher[, options])](./class-orca#orca-navigate-previous-until)
+- [orca.navigatePreviousHeadingUntil(matcher[, options])](./class-orca#orca-navigate-previous-heading-until)
+- [orca.navigatePreviousLandmarkUntil(matcher[, options])](./class-orca#orca-navigate-previous-landmark-until)
+- [orca.navigatePreviousLinkUntil(matcher[, options])](./class-orca#orca-navigate-previous-link-until)
 - [orca.next([options])](./class-orca#orca-next)
 - [orca.nextHeading([options])](./class-orca#orca-next-heading)
 - [orca.nextLandmark([options])](./class-orca#orca-next-landmark)
@@ -375,6 +383,258 @@ import { orca } from "@guidepup/guidepup";
 ```
 
 **Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
+
+## orca.navigateNextUntil(matcher[, options]) {#orca-navigate-next-until}
+
+Move the Orca cursor to the next location until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the next item containing the exact spoken phrase.
+  await orca.navigateNextUntil(/Submit/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## orca.navigateNextHeadingUntil(matcher[, options]) {#orca-navigate-next-heading-until}
+
+Move the Orca cursor to the next heading until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the next heading with a matching spoken phrase.
+  await orca.navigateNextHeadingUntil(/Account/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## orca.navigateNextLandmarkUntil(matcher[, options]) {#orca-navigate-next-landmark-until}
+
+Move the Orca cursor to the next landmark until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the next landmark with a matching spoken phrase.
+  await orca.navigateNextLandmarkUntil(/Main/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## orca.navigateNextLinkUntil(matcher[, options]) {#orca-navigate-next-link-until}
+
+Move the Orca cursor to the next link until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the next link with a matching spoken phrase.
+  await orca.navigateNextLinkUntil(/Home/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## orca.navigatePreviousUntil(matcher[, options]) {#orca-navigate-previous-until}
+
+Move the Orca cursor to the previous location until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the previous item containing the exact spoken phrase.
+  await orca.navigatePreviousUntil(/Submit/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## orca.navigatePreviousHeadingUntil(matcher[, options]) {#orca-navigate-previous-heading-until}
+
+Move the Orca cursor to the previous heading until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the previous heading with a matching spoken phrase.
+  await orca.navigatePreviousHeadingUntil(/Account/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## orca.navigatePreviousLandmarkUntil(matcher[, options]) {#orca-navigate-previous-landmark-until}
+
+Move the Orca cursor to the previous landmark until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the previous landmark with a matching spoken phrase.
+  await orca.navigatePreviousLandmarkUntil(/Main/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## orca.navigatePreviousLinkUntil(matcher[, options]) {#orca-navigate-previous-link-until}
+
+Move the Orca cursor to the previous link until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { orca } from "@guidepup/guidepup";
+
+(async () => {
+  // Start Orca.
+  await orca.start();
+
+  // Move to the previous link with a matching spoken phrase.
+  await orca.navigatePreviousLinkUntil(/Home/);
+
+  // Stop Orca.
+  await orca.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## orca.next([options]) {#orca-next}
 
@@ -741,9 +1001,11 @@ import { orca } from "@guidepup/guidepup";
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [linuxkeycodes]: ./class-linux-key-codes "LinuxKeyCodes"
 [linuxmodifiers]: ./class-linux-modifiers "LinuxModifiers"
+[navigateoptions]: ./class-navigate-options "NavigateOptions"
 [orcakeycodecommands]: ./class-orca-key-code-commands "OrcaKeyCodeCommands"
 [orca]: ./class-orca "Orca"
 [pick]: https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys "Pick"
+[spokenphrasematcher]: ./class-spoken-phrase-matcher "SpokenPhraseMatcher"
 [startoptions]: ./class-start-options "StartOptions"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"

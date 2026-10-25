@@ -47,12 +47,20 @@ See also:
 - [screenReader.itemText()](./class-screenreader#screenreader-item-text)
 - [screenReader.itemTextLog()](./class-screenreader#screenreader-item-text-log)
 - [screenReader.lastSpokenPhrase()](./class-screenreader#screenreader-last-spoken-phrase)
+- [screenReader.navigateNextUntil(matcher[, options])](./class-screenreader#screenreader-navigate-next-until)
+- [screenReader.navigateNextHeadingUntil(matcher[, options])](./class-screenreader#screenreader-navigate-next-heading-until)
+- [screenReader.navigateNextLandmarkUntil(matcher[, options])](./class-screenreader#screenreader-navigate-next-landmark-until)
+- [screenReader.navigateNextLinkUntil(matcher[, options])](./class-screenreader#screenreader-navigate-next-link-until)
+- [screenReader.navigatePreviousUntil(matcher[, options])](./class-screenreader#screenreader-navigate-previous-until)
+- [screenReader.navigatePreviousHeadingUntil(matcher[, options])](./class-screenreader#screenreader-navigate-previous-heading-until)
+- [screenReader.navigatePreviousLandmarkUntil(matcher[, options])](./class-screenreader#screenreader-navigate-previous-landmark-until)
+- [screenReader.navigatePreviousLinkUntil(matcher[, options])](./class-screenreader#screenreader-navigate-previous-link-until)
 - [screenReader.next([options])](./class-screenreader#screenreader-next)
 - [screenReader.nextHeading([options])](./class-screenreader#screenreader-next-heading)
 - [screenReader.nextLandmark([options])](./class-screenreader#screenreader-next-landmark)
 - [screenReader.nextLink([options])](./class-screenreader#screenreader-next-link)
-- [screenReader.perform(command, [options])](./class-screenreader#screenreader-perform)
-- [screenReader.press(key, [options])](./class-screenreader#screenreader-press)
+- [screenReader.perform(command[, options])](./class-screenreader#screenreader-perform)
+- [screenReader.press(key[, options])](./class-screenreader#screenreader-press)
 - [screenReader.previous([options])](./class-screenreader#screenreader-previous)
 - [screenReader.previousHeading([options])](./class-screenreader#screenreader-previous-heading)
 - [screenReader.previousLandmark([options])](./class-screenreader#screenreader-previous-landmark)
@@ -126,7 +134,9 @@ with the action.
 import { test } from "@playwright/test";
 import { screenReader } from "@guidepup/guidepup";
 
-test("capture screen reader output while clicking a button", async ({ page }) => {
+test("capture screen reader output while clicking a button", async ({
+  page,
+}) => {
   await screenReader.start();
 
   const capture = await screenReader.capture(() =>
@@ -385,6 +395,258 @@ import { screenReader } from "@guidepup/guidepup";
 ```
 
 **Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
+
+## screenReader.navigateNextUntil(matcher[, options]) {#screenreader-navigate-next-until}
+
+Move the screen reader cursor to the next location until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next item containing the exact spoken phrase.
+  await screenReader.navigateNextUntil(/Submit/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## screenReader.navigateNextHeadingUntil(matcher[, options]) {#screenreader-navigate-next-heading-until}
+
+Move the screen reader cursor to the next heading until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next heading with a matching spoken phrase.
+  await screenReader.navigateNextHeadingUntil(/Account/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigateNextLandmarkUntil(matcher[, options]) {#screenreader-navigate-next-landmark-until}
+
+Move the screen reader cursor to the next landmark until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next landmark with a matching spoken phrase.
+  await screenReader.navigateNextLandmarkUntil(/Main/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigateNextLinkUntil(matcher[, options]) {#screenreader-navigate-next-link-until}
+
+Move the screen reader cursor to the next link until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the next link with a matching spoken phrase.
+  await screenReader.navigateNextLinkUntil(/Home/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigatePreviousUntil(matcher[, options]) {#screenreader-navigate-previous-until}
+
+Move the screen reader cursor to the previous location until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous item containing the exact spoken phrase.
+  await screenReader.navigatePreviousUntil(/Submit/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## screenReader.navigatePreviousHeadingUntil(matcher[, options]) {#screenreader-navigate-previous-heading-until}
+
+Move the screen reader cursor to the previous heading until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous heading with a matching spoken phrase.
+  await screenReader.navigatePreviousHeadingUntil(/Account/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigatePreviousLandmarkUntil(matcher[, options]) {#screenreader-navigate-previous-landmark-until}
+
+Move the screen reader cursor to the previous landmark until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous landmark with a matching spoken phrase.
+  await screenReader.navigatePreviousLandmarkUntil(/Main/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigatePreviousLinkUntil(matcher[, options]) {#screenreader-navigate-previous-link-until}
+
+Move the screen reader cursor to the previous link until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { screenReader } from "@guidepup/guidepup";
+
+(async () => {
+  // Start the screen reader.
+  await screenReader.start();
+
+  // Move to the previous link with a matching spoken phrase.
+  await screenReader.navigatePreviousLinkUntil(/Home/);
+
+  // Stop the screen reader.
+  await screenReader.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.next([options]) {#screenreader-next}
 
@@ -820,11 +1082,13 @@ import { screenReader } from "@guidepup/guidepup";
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
+[navigateoptions]: ./class-navigate-options "NavigateOptions"
 [nvda]: ./class-nvda "NVDA"
 [nvdakeycodecommands]: ./class-nvda-key-code-commands "NVDAKeyCodeCommands"
 [orca]: ./class-orca "Orca"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
 [screenreader]: ./class-screenreader "ScreenReader"
+[spokenphrasematcher]: ./class-spoken-phrase-matcher "SpokenPhraseMatcher"
 [startoptions]: ./class-start-options "StartOptions"
 [voiceover]: ./class-voiceover "VoiceOver"
 [windowskeycodecommand]: ./class-windows-key-code-command "WindowsKeyCodeCommand"

@@ -44,6 +44,14 @@ import { voiceOver } from "@guidepup/guidepup";
 - [voiceOver.itemText()](./class-voiceover#voiceover-item-text)
 - [voiceOver.itemTextLog()](./class-voiceover#voiceover-item-text-log)
 - [voiceOver.lastSpokenPhrase()](./class-voiceover#voiceover-last-spoken-phrase)
+- [voiceOver.navigateNextUntil(matcher[, options])](./class-voiceover#voiceover-navigate-next-until)
+- [voiceOver.navigateNextHeadingUntil(matcher[, options])](./class-voiceover#voiceover-navigate-next-heading-until)
+- [voiceOver.navigateNextLandmarkUntil(matcher[, options])](./class-voiceover#voiceover-navigate-next-landmark-until)
+- [voiceOver.navigateNextLinkUntil(matcher[, options])](./class-voiceover#voiceover-navigate-next-link-until)
+- [voiceOver.navigatePreviousUntil(matcher[, options])](./class-voiceover#voiceover-navigate-previous-until)
+- [voiceOver.navigatePreviousHeadingUntil(matcher[, options])](./class-voiceover#voiceover-navigate-previous-heading-until)
+- [voiceOver.navigatePreviousLandmarkUntil(matcher[, options])](./class-voiceover#voiceover-navigate-previous-landmark-until)
+- [voiceOver.navigatePreviousLinkUntil(matcher[, options])](./class-voiceover#voiceover-navigate-previous-link-until)
 - [voiceOver.next([options])](./class-voiceover#voiceover-next)
 - [voiceOver.nextHeading([options])](./class-voiceover#voiceover-next-heading)
 - [voiceOver.nextLandmark([options])](./class-voiceover#voiceover-next-landmark)
@@ -497,6 +505,258 @@ import { voiceOver } from "@guidepup/guidepup";
 ```
 
 **Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
+
+## voiceOver.navigateNextUntil(matcher[, options]) {#voiceover-navigate-next-until}
+
+Move the VoiceOver cursor to the next location until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next item containing the exact spoken phrase.
+  await voiceOver.navigateNextUntil(/Submit/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## voiceOver.navigateNextHeadingUntil(matcher[, options]) {#voiceover-navigate-next-heading-until}
+
+Move the VoiceOver cursor to the next heading until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next heading with a matching spoken phrase.
+  await voiceOver.navigateNextHeadingUntil(/Account/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.navigateNextLandmarkUntil(matcher[, options]) {#voiceover-navigate-next-landmark-until}
+
+Move the VoiceOver cursor to the next landmark until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next landmark with a matching spoken phrase.
+  await voiceOver.navigateNextLandmarkUntil(/Main/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.navigateNextLinkUntil(matcher[, options]) {#voiceover-navigate-next-link-until}
+
+Move the VoiceOver cursor to the next link until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the next link with a matching spoken phrase.
+  await voiceOver.navigateNextLinkUntil(/Home/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.navigatePreviousUntil(matcher[, options]) {#voiceover-navigate-previous-until}
+
+Move the VoiceOver cursor to the previous location until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous item containing the exact spoken phrase.
+  await voiceOver.navigatePreviousUntil(/Submit/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## voiceOver.navigatePreviousHeadingUntil(matcher[, options]) {#voiceover-navigate-previous-heading-until}
+
+Move the VoiceOver cursor to the previous heading until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous heading with a matching spoken phrase.
+  await voiceOver.navigatePreviousHeadingUntil(/Account/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.navigatePreviousLandmarkUntil(matcher[, options]) {#voiceover-navigate-previous-landmark-until}
+
+Move the VoiceOver cursor to the previous landmark until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous landmark with a matching spoken phrase.
+  await voiceOver.navigatePreviousLandmarkUntil(/Main/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## voiceOver.navigatePreviousLinkUntil(matcher[, options]) {#voiceover-navigate-previous-link-until}
+
+Move the VoiceOver cursor to the previous link until its spoken phrase matches
+the provided matcher.
+
+```ts
+import { voiceOver } from "@guidepup/guidepup";
+
+(async () => {
+  // Start VoiceOver.
+  await voiceOver.start();
+
+  // Move to the previous link with a matching spoken phrase.
+  await voiceOver.navigatePreviousLinkUntil(/Home/);
+
+  // Stop VoiceOver.
+  await voiceOver.stop();
+})();
+```
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## voiceOver.next([options]) {#voiceover-next}
 
@@ -998,13 +1258,15 @@ import { voiceOver } from "@guidepup/guidepup";
 [capture]: ./class-capture "Capture"
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
+[iscreenreader]: ./class-iscreenreader "IScreenReader"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
 [macoskeycodecommand]: ./class-macos-key-code-command "MacOSKeyCodeCommand"
 [macoskeycodes]: ./class-macos-key-codes "MacOSKeyCodes"
 [macoskeystrokecommand]: ./class-macos-keystroke-command "MacOSKeystrokeCommand"
 [macosmodifiers]: ./class-macos-modifiers "MacOSModifiers"
-[iscreenreader]: ./class-iscreenreader "ScreenReader"
+[navigateoptions]: ./class-navigate-options "NavigateOptions"
 [screenreader]: ./class-screenreader "ScreenReader"
+[spokenphrasematcher]: ./class-spoken-phrase-matcher "SpokenPhraseMatcher"
 [startoptions]: ./class-start-options "StartOptions"
 [voiceover]: ./class-voiceover "VoiceOver"
 [voiceovercommandercommands]: ./class-voiceover-commander-commands "VoiceOverCommanderCommands"

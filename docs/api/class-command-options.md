@@ -30,6 +30,8 @@ See also:
 
 - [ClickOptions]
 - [KeyboardOptions]
+- [NavigateOptions]
+- [StartOptions]
 
 **Contents:**
 
@@ -67,6 +69,8 @@ Default is `30000` for startup and shutdown commands and `5000` otherwise.
 
 [clickoptions]: ./class-click-options "ClickOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
+[navigateoptions]: ./class-navigate-options "NavigateOptions"
+[startoptions]: ./class-start-options "StartOptions"
 [boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean "boolean"
 [number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number "number"
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object "object"

@@ -30,12 +30,20 @@ See also:
 - [screenReader.itemText()](./class-iscreenreader#screenreader-item-text)
 - [screenReader.itemTextLog()](./class-iscreenreader#screenreader-item-text-log)
 - [screenReader.lastSpokenPhrase()](./class-iscreenreader#screenreader-last-spoken-phrase)
+- [screenReader.navigateNextUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-next-until)
+- [screenReader.navigateNextHeadingUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-next-heading-until)
+- [screenReader.navigateNextLandmarkUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-next-landmark-until)
+- [screenReader.navigateNextLinkUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-next-link-until)
+- [screenReader.navigatePreviousUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-previous-until)
+- [screenReader.navigatePreviousHeadingUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-previous-heading-until)
+- [screenReader.navigatePreviousLandmarkUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-previous-landmark-until)
+- [screenReader.navigatePreviousLinkUntil(matcher[, options])](./class-iscreenreader#screenreader-navigate-previous-link-until)
 - [screenReader.next([options])](./class-iscreenreader#screenreader-next)
 - [screenReader.nextHeading([options])](./class-iscreenreader#screenreader-next-heading)
 - [screenReader.nextLandmark([options])](./class-iscreenreader#screenreader-next-landmark)
 - [screenReader.nextLink([options])](./class-iscreenreader#screenreader-next-link)
-- [screenReader.perform(command, [options])](./class-iscreenreader#screenreader-perform)
-- [screenReader.press(key, [options])](./class-iscreenreader#screenreader-press)
+- [screenReader.perform(command[, options])](./class-iscreenreader#screenreader-perform)
+- [screenReader.press(key[, options])](./class-iscreenreader#screenreader-press)
 - [screenReader.previous([options])](./class-iscreenreader#screenreader-previous)
 - [screenReader.previousHeading([options])](./class-iscreenreader#screenreader-previous-heading)
 - [screenReader.previousLandmark([options])](./class-iscreenreader#screenreader-previous-landmark)
@@ -161,6 +169,138 @@ Get the log of all visited item text for this screen reader instance.
 Get the last spoken phrase.
 
 **Returns:** [Promise]&#60;[string]&#62; The last spoken phrase.
+
+## screenReader.navigateNextUntil(matcher[, options]) {#screenreader-navigate-next-until}
+
+Move the screen reader cursor to the next location until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## screenReader.navigateNextHeadingUntil(matcher[, options]) {#screenreader-navigate-next-heading-until}
+
+Move the screen reader cursor to the next heading until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigateNextLandmarkUntil(matcher[, options]) {#screenreader-navigate-next-landmark-until}
+
+Move the screen reader cursor to the next landmark until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigateNextLinkUntil(matcher[, options]) {#screenreader-navigate-next-link-until}
+
+Move the screen reader cursor to the next link until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigatePreviousUntil(matcher[, options]) {#screenreader-navigate-previous-until}
+
+Move the screen reader cursor to the previous location until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+## screenReader.navigatePreviousHeadingUntil(matcher[, options]) {#screenreader-navigate-previous-heading-until}
+
+Move the screen reader cursor to the previous heading until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigatePreviousLandmarkUntil(matcher[, options]) {#screenreader-navigate-previous-landmark-until}
+
+Move the screen reader cursor to the previous landmark until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
+
+## screenReader.navigatePreviousLinkUntil(matcher[, options]) {#screenreader-navigate-previous-link-until}
+
+Move the screen reader cursor to the previous link until its spoken phrase matches
+the provided matcher.
+
+The matcher can be an exact matching string, a regular expression, or a function
+that returns whether the spoken phrase matches. The command throws if no
+match is found within `maxNavigationAttempts` (default is `10`). If the last spoken phrase is
+already a match then no navigation occurs.
+
+**Parameters:**
+
+- `matcher` [SpokenPhraseMatcher] Matcher to navigate until reached.
+- **Optional:** `options` [NavigateOptions] Additional options.
+
+**Returns:** [Promise]&#60;[void]&#62;
 
 ## screenReader.next([options]) {#screenreader-next}
 
@@ -335,11 +475,13 @@ To press a special key, like <kbd>Control</kbd> or <kbd>ArrowDown</kbd>, use [`s
 [commandoptions]: ./class-command-options "CommandOptions"
 [keyboardoptions]: ./class-keyboard-options "KeyboardOptions"
 [macoskeyboardcommand]: ./class-macos-keyboard-command "MacOSKeyboardCommand"
+[navigateoptions]: ./class-navigate-options "NavigateOptions"
 [nvda]: ./class-nvda "NVDA"
 [orca]: ./class-orca "Orca"
-[screenreader]: ./class-iscreenreader "ScreenReader"
+[screenreader]: ./class-screenreader "ScreenReader"
 [startoptions]: ./class-start-options "StartOptions"
 [iscreenreader]: ./class-iscreenreader "IScreenReader"
+[spokenphrasematcher]: ./class-spoken-phrase-matcher "SpokenPhraseMatcher"
 [virtual]: ./class-virtual "Virtual"
 [voiceover]: ./class-voiceover "VoiceOver"
 [array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
